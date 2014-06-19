@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.3" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <interface id="1" language="java" name="it.fabaris.wfp.listener.FormDownloaderListener" project="AndroidWFP" 
+    file="/AndroidWFP/src/it/fabaris/wfp/listener/FormDownloaderListener.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="308" x="128" y="214"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="2" language="java" name="it.fabaris.wfp.listener.DeleteFormsListener" project="AndroidWFP" 
+    file="/AndroidWFP/src/it/fabaris/wfp/listener/DeleteFormsListener.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="143" x="476" y="214"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="3" language="java" name="it.fabaris.wfp.listener.InstanceUploaderListener" project="AndroidWFP" 
+    file="/AndroidWFP/src/it/fabaris/wfp/listener/InstanceUploaderListener.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="263" x="904" y="214"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="4" language="java" name="it.fabaris.wfp.listener.FormLoaderListener" project="AndroidWFP" 
+    file="/AndroidWFP/src/it/fabaris/wfp/listener/FormLoaderListener.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="205" x="659" y="214"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="5" language="java" name="it.fabaris.wfp.listener.DiskSyncListener" project="AndroidWFP" 
+    file="/AndroidWFP/src/it/fabaris/wfp/listener/DiskSyncListener.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="154" x="1207" y="214"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="6" language="java" name="it.fabaris.wfp.listener.DeleteInstancesListener" project="AndroidWFP" 
+    file="/AndroidWFP/src/it/fabaris/wfp/listener/DeleteInstancesListener.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="163" x="1401" y="214"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="7" language="java" name="it.fabaris.wfp.listener.MyCallback" project="AndroidWFP" 
+    file="/AndroidWFP/src/it/fabaris/wfp/listener/MyCallback.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="113" x="1604" y="214"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="8" language="java" name="it.fabaris.wfp.listener.FormSavedListener" project="AndroidWFP" 
+    file="/AndroidWFP/src/it/fabaris/wfp/listener/FormSavedListener.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="144" x="1757" y="214"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="9" language="java" name="it.fabaris.wfp.listener.AdvanceToNextListener" project="AndroidWFP" 
+    file="/AndroidWFP/src/it/fabaris/wfp/listener/AdvanceToNextListener.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="159" x="1941" y="214"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="10" language="java" name="it.fabaris.wfp.listener.FormListDownloaderListener" project="AndroidWFP" 
+    file="/AndroidWFP/src/it/fabaris/wfp/listener/FormListDownloaderListener.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="347" x="2140" y="214"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

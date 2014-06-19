@@ -1,0 +1,252 @@
+/*******************************************************************************
+ * Copyright (c) 2012 Fabaris SRL.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the GNU Lesser Public License v2.1
+ * which accompanies this distribution, and is available at
+ * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * 
+ * Contributors:
+ *     Fabaris SRL - initial API and implementation
+ ******************************************************************************/
+/*
+ * Copyright (C) 2009 University of Washington
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License. You may obtain a copy of the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software distributed under the License
+ * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+ * or implied. See the License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+package it.fabaris.wfp.widget;
+
+import it.fabaris.wfp.activities.FormEntryActivity;
+import it.fabaris.wfp.view.MediaLayout;
+import it.fabaris.wfp.view.ODKView;
+
+import java.util.HashMap;
+import java.util.Vector;
+
+import org.javarosa.core.model.FormIndex;
+import org.javarosa.core.model.SelectChoice;
+import org.javarosa.core.model.data.IAnswerData;
+import org.javarosa.core.model.data.SelectOneData;
+import org.javarosa.core.model.data.helper.Selection;
+import org.javarosa.form.api.FormEntryCaption;
+import org.javarosa.form.api.FormEntryPrompt;
+
+import android.content.Context;
+import android.util.TypedValue;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.ImageView;
+import android.widget.RadioButton;
+
+/**
+ * SelectOneWidgets handles select-one fields using radio buttons.
+ * 
+ * @author Carl Hartung (carlhartung@gmail.com)
+ * @author Yaw Anokwa (yanokwa@gmail.com)
+ * @author Fabaris Srl: Leonardo Luciani www.fabaris.it
+ */
+public class SelectOneWidget extends QuestionWidget implements
+		OnCheckedChangeListener {
+
+	private static final int RANDOM_BUTTON_ID = 4853487;
+	Vector<SelectChoice> mItems;
+	Vector<RadioButton> buttons;
+	Vector<MediaLayout> layout;
+	Context context;
+	String s = null;
+	FormEntryPrompt prompt;
+
+	public SelectOneWidget(final Context context, FormEntryPrompt prompt) {
+		super(context, prompt);
+		this.context = context;
+
+		mItems = prompt.getSelectChoices();
+		buttons = new Vector<RadioButton>();
+		layout = new Vector<MediaLayout>();
+
+		if (prompt.getAnswerValue() != null) {
+			s = ((Selection) prompt.getAnswerValue().getValue()).getValue();
+		}
+		makeLabelColored(prompt, s);
+		if (prompt.isRequired()) {
+			assignMandatoryColors();
+		} else {
+			assignStandardColors();
+		}
+		// if(s==null){
+		// makeLabelColored(prompt, s, Color.YELLOW);
+		// }else{
+		// makeLabelColored(prompt, s, Color.WHITE);
+		// }
+	}
+
+	public void makeLabelColored(FormEntryPrompt prompt, String s) {
+		
+		if (prompt.getSelectChoices() != null) {
+
+			for (int i = 0; i < mItems.size(); i++) {
+				RadioButton r = new RadioButton(getContext());
+				r.setOnCheckedChangeListener(this);
+				r.setText(prompt.getSelectChoiceText(mItems.get(i)));
+				r.setTextSize(TypedValue.COMPLEX_UNIT_DIP, mAnswerFontsize);
+
+				r.setId(i + RANDOM_BUTTON_ID);
+				r.setEnabled(!prompt.isReadOnly());
+				r.setFocusable(!prompt.isReadOnly());
+				// r.setFocusableInTouchMode(true);
+				buttons.add(r);
+
+				if (mItems.get(i).getValue().equals(s)) {
+					r.setChecked(true);
+				}
+
+				String audioURI = null;
+				audioURI = prompt.getSpecialFormSelectChoiceText(mItems.get(i),
+						FormEntryCaption.TEXT_FORM_AUDIO);
+
+				String imageURI = null;
+				imageURI = prompt.getSpecialFormSelectChoiceText(mItems.get(i),
+						FormEntryCaption.TEXT_FORM_IMAGE);
+
+				String videoURI = null;
+				videoURI = prompt.getSpecialFormSelectChoiceText(mItems.get(i),
+						"video");
+
+				String bigImageURI = null;
+				bigImageURI = prompt.getSpecialFormSelectChoiceText(
+						mItems.get(i), "big-image");
+
+				MediaLayout mediaLayout = new MediaLayout(getContext());
+				mediaLayout
+						.setAVT(r, audioURI, imageURI, videoURI, bigImageURI);
+				addView(mediaLayout);
+				layout.add(mediaLayout);
+
+				// Last, add the dividing line (except for the last element)
+				ImageView divider = new ImageView(getContext());
+				divider.setBackgroundResource(android.R.drawable.divider_horizontal_bright);
+				if (i != mItems.size() - 1) {
+					mediaLayout.addDivider(divider);
+				}
+			}
+		}
+	}
+
+	@Override
+	public void clearAnswer() {
+		for (RadioButton button : this.buttons) {
+			if (button.isChecked()) {
+				button.setChecked(false);
+				return;
+			}
+		}
+	}
+
+	@Override
+	public IAnswerData getAnswer() {
+		int i = getCheckedId();
+		if (i == -1) {
+			return null;
+		} else {
+			SelectChoice sc = mItems.elementAt(i - RANDOM_BUTTON_ID);
+			return new SelectOneData(new Selection(sc));
+		}
+	}
+
+	@Override
+	public void setFocus(Context context) {
+		for (RadioButton button : this.buttons) {
+			if (button.isChecked()) {
+				button.setFocusableInTouchMode(true);
+				button.requestFocus();
+			}
+		}
+		// Hide the soft keyboard if it's showing.
+		InputMethodManager inputManager = (InputMethodManager) context
+				.getSystemService(Context.INPUT_METHOD_SERVICE);
+		inputManager.hideSoftInputFromWindow(this.getWindowToken(), 0);
+		// FormEntryActivity.radioFirstCheck = true;
+	}
+
+	public int getCheckedId() {
+		for (RadioButton button : this.buttons) {
+			if (button.isChecked()) {
+				return button.getId();
+			}
+		}
+		return -1;
+	}
+
+	@Override
+	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+		if (!FormEntryActivity.fromHyera) {
+			try {
+				HashMap<FormIndex, IAnswerData> answers = ((ODKView) ((FormEntryActivity) context).mCurrentView)
+						.getAnswers();
+				
+				FormIndex index = SelectOneWidget.this.getPrompt().getIndex();
+				((FormEntryActivity) context).saveAnswer(answers.get(index),
+						index, true);
+				
+				if (isChecked && FormEntryActivity.radioFirstCheck) {
+					assignStandardColors();
+					FormEntryActivity.radioFirstCheck = false;
+					answers = ((ODKView) ((FormEntryActivity) context).mCurrentView)
+							.getAnswers();
+					index = SelectOneWidget.this.getPrompt().getIndex();
+					((FormEntryActivity) context).saveAnswer(
+							answers.get(index), index, true);
+					((FormEntryActivity) context).refreshCurrentView(index);
+					((FormEntryActivity) context).verifica = true;
+				
+				}
+				if(mPrompt.isRequired())
+					assignMandatoryColors();
+				else 
+					assignStandardColors();
+					for (RadioButton button : this.buttons) {
+					if (button.isChecked() && !(buttonView == button)) {
+						
+						button.setChecked(false);
+						answers = ((ODKView) ((FormEntryActivity) context).mCurrentView)
+								.getAnswers();
+						index = SelectOneWidget.this.getPrompt().getIndex();
+						((FormEntryActivity) context).saveAnswer(
+								answers.get(index), index, true);
+						((FormEntryActivity) context).refreshCurrentView(index);
+						((FormEntryActivity) context).verifica = true;
+					}
+				}
+				FormEntryActivity.fromHyera = false;
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+	@Override
+	public void setOnLongClickListener(OnLongClickListener l) {
+		for (RadioButton r : buttons) {
+			r.setOnLongClickListener(l);
+		}
+	}
+
+	@Override
+	public void cancelLongPress() {
+		super.cancelLongPress();
+		for (RadioButton button : this.buttons) {
+			button.cancelLongPress();
+		}
+	}
+
+}

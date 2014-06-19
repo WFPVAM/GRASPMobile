@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2012 Fabaris SRL.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the GNU Lesser Public License v2.1
+  which accompanies this distribution, and is available at
+  http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+  
+  Contributors:
+      Fabaris SRL - initial API and implementation
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+			package="it.fabaris.wfp.activities" 
+			android:versionCode="1"
+			android:versionName="0.1.49">
+	<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="10"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+  	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.WRITE_SMS"/>
+	<uses-permission android:name="android.permission.READ_SMS"/>
+	<uses-permission android:name="android.permission.SEND_SMS"/>
+	<uses-permission android:name="android.permission.RECEIVE_SMS"/>
+	<uses-permission android:name="android.permission.VIBRATE"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.GET_TASKS"/>
+	<uses-permission android:name="android.permission.INSTALL_PACKAGES"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+	<supports-screens android:anyDensity="true"/>
+	
+    <application 
+        android:icon="@drawable/icona_app_wfp" 
+        android:label="@string/app_name"
+        android:name="utils.ApplicationExt">
+        <!--  android:theme="@android:style/Theme.NoTitleBar.Fullscreen" -->
+         
+    	<activity android:name="SplashScreenActivity" android:label="@string/app_name">
+        	<intent-filter>
+            	<action android:name="android.intent.action.MAIN" />
+            	<category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".FormListActivity" />
+        <activity android:name=".FormListNewActivity" android:label="@string/app_name"  />
+        <activity android:name=".FormListSavedActivity" android:label="@string/app_name"  />
+        <activity android:name=".FormListCompletedActivity" android:label="@string/app_name"  />
+        <activity android:name=".FormListSubmittedActivity" android:label="@string/app_name" android:screenOrientation="portrait"/>
+        <activity android:name=".FormListFinalizedActivity" android:label="@string/app_name"  />
+        <activity android:name=".SmsListActivity" android:label="@string/app_name"  />
+        <activity android:name=".GeoPointActivity"  />"
+        <activity android:name=".MenuActivity" android:label="@string/app_name" android:screenOrientation="portrait"/>
+        <activity android:name=".PreferencesActivity" android:label="@string/app_name"  />
+        <activity android:name=".FormHierarchyActivity" android:label="@string/app_name"  />
+        <activity android:name=".CreditsActivity" android:label="@string/app_name"  />
+        <activity android:name=".HelpActivity" android:label="@string/app_name"  />
+        <activity android:name=".ControlActivity" android:label="@string/app_name"  />
+     	<activity android:name=".FormEntryActivity" android:label="@string/app_name" android:screenOrientation="portrait" 
+				android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+			<intent-filter>
+	            <action android:name="android.intent.action.VIEW" />
+	            <action android:name="android.intent.action.EDIT" />
+	            <category android:name="android.intent.category.DEFAULT" />
+	            <data android:mimeType="vnd.android.cursor.item/vnd.odk.form" />
+	            <data android:mimeType="vnd.android.cursor.item/vnd.odk.instance" />
+            </intent-filter>
+		</activity>
+        <provider android:name="it.fabaris.wfp.provider.FormProvider"
+                    android:authorities="mnt.sdcard.fabarisODK.forms"/>
+        <provider android:name="it.fabaris.wfp.provider.MessageProvider"
+                    android:authorities="mnt.sdcard.fabarisODK.message"/>
+		<provider android:name="it.fabaris.wfp.provider.InstanceProvider"
+					android:authorities="mnt.sdcard.fabarisODK"/>
+		<receiver android:name="it.fabaris.wfp.broadcast.SmsReceiverBroadcast" >
+			<intent-filter android:priority="10000" >
+				<action android:name="android.provider.Telephony.SMS_RECEIVED" />
+			</intent-filter>
+		</receiver>
+    </application>
+</manifest>
