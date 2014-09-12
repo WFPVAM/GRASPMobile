@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="large" parent="@android:style/TextAppearance.Large">
+        <item name="android:textSize">25sp</item>
+    </style>
+    <style name="small" parent="@android:style/TextAppearance.Small">
+        <item name="android:textSize">21sp</item>
+    </style>
+</resources>

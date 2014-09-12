@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="C:\Users\mureed\AndroidstudioProjects\GRASPMobile\app\build\intermediates\pre-dexed\release\xercesImpl-e2bb5be32b98cf185298b6858f56cfd189344bd7.jar"
+        jar="C:\Users\mureed\AndroidstudioProjects\GRASPMobile\app\lib\xercesImpl.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="78e8536aa8b161c13232f37a32910666f787a5af"/>
+    <item
+        dex="C:\Users\mureed\AndroidstudioProjects\GRASPMobile\app\build\intermediates\pre-dexed\release\regexp-me-53ee64f697b9c390c82d815dfda958899fbd6e8b.jar"
+        jar="C:\Users\mureed\AndroidstudioProjects\GRASPMobile\app\lib\regexp-me.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="27edcd147dfc908a3c3c837a57d3672d52f2f609"/>
+    <item
+        dex="C:\Users\mureed\AndroidstudioProjects\GRASPMobile\app\build\intermediates\pre-dexed\release\w3c-dom-d982d97fe36542a4f90d9584cc446ee368afe4c4.jar"
+        jar="C:\Users\mureed\AndroidstudioProjects\GRASPMobile\app\lib\w3c-dom.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="c9dbc011544bfe3790f940cde9af0986addac744"/>
+    <item
+        dex="C:\Users\mureed\AndroidstudioProjects\GRASPMobile\app\build\intermediates\pre-dexed\release\joda-time-2.0-4b86beb0b119ea66f5e41712d27bea2424a7ce90.jar"
+        jar="C:\Users\mureed\AndroidstudioProjects\GRASPMobile\app\lib\joda-time-2.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="752c0fe8a5b2d6704c9d9d6f06d9abdcacf4045d"/>
+    <item
+        dex="C:\Users\mureed\AndroidstudioProjects\GRASPMobile\app\build\intermediates\pre-dexed\release\kxml2-2.2.3-c61da982101b405777113365e5b68be2f3978a8f.jar"
+        jar="C:\Users\mureed\AndroidstudioProjects\GRASPMobile\app\lib\kxml2-2.2.3.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="2c239293db424c0cc7dac6076f6dc406694a8356"/>
+
+</pre-dex-items>

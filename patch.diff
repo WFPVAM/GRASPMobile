@@ -1,0 +1,587 @@
+diff --git a/.idea/libraries/apache_mime4j_core_0_7.xml b/.idea/libraries/apache_mime4j_core_0_7.xml
+deleted file mode 100644
+index e6ecf75..0000000
+--- a/.idea/libraries/apache_mime4j_core_0_7.xml
++++ /dev/null
+@@ -1,9 +0,0 @@
+-<component name="libraryTable">
+-  <library name="apache-mime4j-core-0.7">
+-    <CLASSES>
+-      <root url="jar://$PROJECT_DIR$/app/lib/apache-mime4j-core-0.7.jar!/" />
+-    </CLASSES>
+-    <JAVADOC />
+-    <SOURCES />
+-  </library>
+-</component>
+\ No newline at end of file
+diff --git a/.idea/libraries/joda_time_2_0.xml b/.idea/libraries/joda_time_2_0.xml
+deleted file mode 100644
+index 20a6a90..0000000
+--- a/.idea/libraries/joda_time_2_0.xml
++++ /dev/null
+@@ -1,9 +0,0 @@
+-<component name="libraryTable">
+-  <library name="joda-time-2.0">
+-    <CLASSES>
+-      <root url="jar://$PROJECT_DIR$/app/lib/joda-time-2.0.jar!/" />
+-    </CLASSES>
+-    <JAVADOC />
+-    <SOURCES />
+-  </library>
+-</component>
+\ No newline at end of file
+diff --git a/.idea/libraries/kxml2_2_2_3.xml b/.idea/libraries/kxml2_2_2_3.xml
+deleted file mode 100644
+index f7b899d..0000000
+--- a/.idea/libraries/kxml2_2_2_3.xml
++++ /dev/null
+@@ -1,9 +0,0 @@
+-<component name="libraryTable">
+-  <library name="kxml2-2.2.3">
+-    <CLASSES>
+-      <root url="jar://$PROJECT_DIR$/app/lib/kxml2-2.2.3.jar!/" />
+-    </CLASSES>
+-    <JAVADOC />
+-    <SOURCES />
+-  </library>
+-</component>
+\ No newline at end of file
+diff --git a/.idea/libraries/regexp_me.xml b/.idea/libraries/regexp_me.xml
+deleted file mode 100644
+index 26cafa1..0000000
+--- a/.idea/libraries/regexp_me.xml
++++ /dev/null
+@@ -1,9 +0,0 @@
+-<component name="libraryTable">
+-  <library name="regexp-me">
+-    <CLASSES>
+-      <root url="jar://$PROJECT_DIR$/app/lib/regexp-me.jar!/" />
+-    </CLASSES>
+-    <JAVADOC />
+-    <SOURCES />
+-  </library>
+-</component>
+\ No newline at end of file
+diff --git a/.idea/libraries/w3c_dom.xml b/.idea/libraries/w3c_dom.xml
+deleted file mode 100644
+index 930bb5b..0000000
+--- a/.idea/libraries/w3c_dom.xml
++++ /dev/null
+@@ -1,9 +0,0 @@
+-<component name="libraryTable">
+-  <library name="w3c-dom">
+-    <CLASSES>
+-      <root url="jar://$PROJECT_DIR$/app/lib/w3c-dom.jar!/" />
+-    </CLASSES>
+-    <JAVADOC />
+-    <SOURCES />
+-  </library>
+-</component>
+\ No newline at end of file
+diff --git a/.idea/libraries/xercesImpl.xml b/.idea/libraries/xercesImpl.xml
+deleted file mode 100644
+index a8b07c8..0000000
+--- a/.idea/libraries/xercesImpl.xml
++++ /dev/null
+@@ -1,9 +0,0 @@
+-<component name="libraryTable">
+-  <library name="xercesImpl">
+-    <CLASSES>
+-      <root url="jar://$PROJECT_DIR$/app/lib/xercesImpl.jar!/" />
+-    </CLASSES>
+-    <JAVADOC />
+-    <SOURCES />
+-  </library>
+-</component>
+\ No newline at end of file
+diff --git a/app/lib/apache-mime4j-core-0.7.jar b/app/lib/apache-mime4j-core-0.7.jar
+deleted file mode 100644
+index e3c6252..0000000
+Binary files a/app/lib/apache-mime4j-core-0.7.jar and /dev/null differ
+diff --git a/app/src/main/res/values-ar/array.xml b/app/src/main/res/values-ar/array.xml
+new file mode 100644
+index 0000000..1551439
+--- /dev/null
++++ b/app/src/main/res/values-ar/array.xml
+@@ -0,0 +1,180 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!--
++  Copyright (c) 2012 Fabaris SRL.
++  All rights reserved. This program and the accompanying materials
++  are made available under the terms of the GNU Lesser Public License v2.1
++  which accompanies this distribution, and is available at
++  http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
++  
++  Contributors:
++      Fabaris SRL - initial API and implementation
++-->
++<resources>
++
++    <string-array name="entries_list_preference">
++        <item>Saved, Not Completed</item>
++        <item>Completed, Not Submitted</item>
++        <item>Submitted</item>
++    </string-array>
++    <!-- Used in app/menu examples -->
++    <string-array name="entryvalues_list_preference">
++        <item>saved</item>
++        <item>done</item>
++        <item>submitted</item>
++    </string-array>
++    <string-array name="entries_saved_preference">
++        <item>Saved, Not Completed</item>
++        <item>Completed, Not Submitted</item>
++    </string-array>
++    <!-- Used in app/menu examples -->
++    <string-array name="entryvalues_saved_preference">
++        <item>saved</item>
++        <item>done</item>
++    </string-array>
++    <!-- make sure to match these values in preferences activity -->
++    <string-array name="protocol_entry_values">
++        <item>odk_default</item>
++        <item>google</item>
++        <item></item>
++    </string-array>
++    <string-array name="protocol_entries">
++        <item>ODK Aggregate</item>
++        <item>Google Forms</item>
++        <item>OpenRosa 1.0</item>
++    </string-array>
++    <string-array name="font_size_entry_values">
++        <item>29</item>
++        <item>25</item>
++        <item>21</item>
++        <item>17</item>
++        <item>13</item>
++    </string-array>
++    <string-array name="font_size_entries">
++        <item>Extra Large</item>
++        <item>Large</item>
++        <item>Medium</item>
++        <item>Small</item>
++        <item>Extra Small</item>
++    </string-array>
++    
++    
++    <string-array name="protocol_choices_values">
++        <item>1</item>
++        <item>2</item>
++    </string-array>
++    <string-array name="protocol_choices_entries">
++        <item>http</item>
++        <item>https</item>
++    </string-array>
++    
++    
++    <string-array name="updateInterval">
++        <item name="1000">Every 1 second</item>
++        <item name="5000">Every 5 seconds</item>
++        <item name="30000">Every 30 seconds</item>
++        <item name="60000">Every 1 minute</item>
++        <item name="300000">Every 5 minutes</item>
++    </string-array>
++    <string-array name="updateIntervalValues">
++        <item name="1000">1000</item>
++        <item name="5000">5000</item>
++        <item name="30000">30000</item>
++        <item name="60000">60000</item>
++        <item name="300000">300000</item>
++    </string-array>
++    <string-array name="connection_type">
++        <item name="sms">SMS only</item>
++        <item name="gprsumts">GPRS/UMTS only</item>
++        <item name="gprsumtspref">GPRS/UMTS preferred</item>
++    </string-array>
++    <string-array name="connection_type_values">
++        <item name="sms">sms only</item>
++        <item name="gprsumts">gprs/umts only</item>
++        <item name="gprsumtspref">gprs/umts preferred</item>
++    </string-array>
++
++    <string-array name="textcolor_foreground_entries">
++        <item>Blue</item>
++        <item>White</item>
++        <item>Yellow</item>
++        <item>Green</item>
++        <item>Black</item>
++    </string-array>
++    <string-array name="textcolor_foreground_entry_values">
++        <item>#000066</item>
++        <item>#FFFFFF</item>
++        <item>#FFFF00</item>
++        <item>#00FF00</item>
++        <item>#000000</item>
++    </string-array>
++    <string-array name="textcolor_background_entries">
++        <item>Cyan</item>
++        <item>Black</item>
++        <item>Green</item>
++        <item>Yellow</item>
++        <item>White</item>
++    </string-array>
++    <string-array name="textcolor_background_entry_values">        
++        <item>#00FFFF</item>
++        <item>#000000</item>
++        <item>#00FF00</item>
++        <item>#FFFF00</item>
++        <item>#FFFFFF</item>
++    </string-array>
++    <string-array name="textcolor_mandatory_foreground_entries">
++        <item>Blue</item>
++        <item>White</item>
++        <item>Yellow</item>
++        <item>Green</item>
++        <item>Black</item>
++    </string-array>
++    <string-array name="textcolor_mandatory_foreground_entry_values">
++        <item>#000066</item>
++        <item>#FFFFFF</item>
++        <item>#FFFF00</item>
++        <item>#00FF00</item>
++        <item>#000000</item>
++    </string-array>
++    <string-array name="textcolor_mandatory_background_entries">
++        <item>Cyan</item>
++        <item>Black</item>
++        <item>Green</item>
++        <item>Yellow</item>
++        <item>White</item>
++    </string-array>
++    <string-array name="textcolor_mandatory_background_entry_values">        
++        <item>#00FFFF</item>
++        <item>#000000</item>
++        <item>#00FF00</item>
++        <item>#FFFF00</item>
++        <item>#FFFFFF</item>
++    </string-array>
++    <string-array name="textcolor_error_foreground_entries">
++        <item>Blue</item>
++        <item>White</item>
++        <item>Orange</item>
++        <item>Red</item>
++        <item>Black</item>
++    </string-array>
++    <string-array name="textcolor_error_foreground_entry_values">
++        <item>#000066</item>
++        <item>#FFFFFF</item>
++        <item>#007cf9</item>
++        <item>#FF0000</item>
++        <item>#000000</item>
++    </string-array>
++    <string-array name="textcolor_error_background_entries">
++        <item>Cyan</item>
++        <item>Black</item>
++        <item>Green</item>
++        <item>Yellow</item>
++        <item>White</item>
++    </string-array>
++    <string-array name="textcolor_error_background_entry_values">        
++        <item>#00FFFF</item>
++        <item>#000000</item>
++        <item>#00FF00</item>
++        <item>#FFFF00</item>
++        <item>#FFFFFF</item>
++    </string-array>
++</resources>
+\ No newline at end of file
+diff --git a/app/src/main/res/values-ar/color.xml b/app/src/main/res/values-ar/color.xml
+new file mode 100644
+index 0000000..fef963f
+--- /dev/null
++++ b/app/src/main/res/values-ar/color.xml
+@@ -0,0 +1,43 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!--
++  Copyright (c) 2012 Fabaris SRL.
++  All rights reserved. This program and the accompanying materials
++  are made available under the terms of the GNU Lesser Public License v2.1
++  which accompanies this distribution, and is available at
++  http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
++  
++  Contributors:
++      Fabaris SRL - initial API and implementation
++-->
++<resources>
++    <color name="fg_std">#FFFFFF</color>
++    <color name="bg_std">#000000</color>
++    
++    <color name="fg_mand">#000000</color>
++    <color name="bg_mand">#FFFFB5</color>
++    
++    <color name="fg_err">#FF0000</color>
++    <color name="bg_err">#000000</color>
++    
++    <color name="fg_readonly">#666666</color>
++    <color name="bg_readonly">#FFFFFF</color>
++    
++    <color name="fg_readonly_inv">#000000</color>
++    <color name="bg_readonly_inv">#000000</color>
++    
++    <color name="fg_readonly_err">#000000</color>
++    <color name="bg_readonly_err">#FF0000</color>
++    
++    <color name="red">#FF0000</color>
++    <color name="white">#FFFFFF</color>
++    <color name="black_1">#000000</color>
++    <color name="black_2">#202020</color>
++    <color name="blue">#0000FF</color>
++    <color name="green">#008000</color>
++    <color name="yellow">#FFFF00</color>
++    <color name="gray">#808080</color>
++    <color name="wfp_azure1">#39ACFF</color>
++    <color name="wfp_azure2">#006DC2</color>
++    <color name="dark_grey">#333333</color>
++    
++</resources>
+diff --git a/app/src/main/res/values-ar/style.xml b/app/src/main/res/values-ar/style.xml
+new file mode 100644
+index 0000000..d9dcd0a
+--- /dev/null
++++ b/app/src/main/res/values-ar/style.xml
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources xmlns:android="http://schemas.android.com/apk/res/android">
++    <style name="large" parent="@android:style/TextAppearance.Large">
++        <item name="android:textSize">25sp</item>
++    </style>
++    <style name="small" parent="@android:style/TextAppearance.Small">
++        <item name="android:textSize">21sp</item>
++    </style>
++</resources>
+diff --git a/app/src/main/res/values-ar/sysconfig.xml b/app/src/main/res/values-ar/sysconfig.xml
+new file mode 100644
+index 0000000..3298774
+--- /dev/null
++++ b/app/src/main/res/values-ar/sysconfig.xml
+@@ -0,0 +1,5 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++    <string name="new_app_url">http://www.brainsen.com/wfp/grasp/AndroidWFP.apk</string>
++    
++</resources>
+diff --git a/app/src/main/res/values-en-rZA/color.xml b/app/src/main/res/values-en-rZA/color.xml
+new file mode 100644
+index 0000000..fef963f
+--- /dev/null
++++ b/app/src/main/res/values-en-rZA/color.xml
+@@ -0,0 +1,43 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!--
++  Copyright (c) 2012 Fabaris SRL.
++  All rights reserved. This program and the accompanying materials
++  are made available under the terms of the GNU Lesser Public License v2.1
++  which accompanies this distribution, and is available at
++  http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
++  
++  Contributors:
++      Fabaris SRL - initial API and implementation
++-->
++<resources>
++    <color name="fg_std">#FFFFFF</color>
++    <color name="bg_std">#000000</color>
++    
++    <color name="fg_mand">#000000</color>
++    <color name="bg_mand">#FFFFB5</color>
++    
++    <color name="fg_err">#FF0000</color>
++    <color name="bg_err">#000000</color>
++    
++    <color name="fg_readonly">#666666</color>
++    <color name="bg_readonly">#FFFFFF</color>
++    
++    <color name="fg_readonly_inv">#000000</color>
++    <color name="bg_readonly_inv">#000000</color>
++    
++    <color name="fg_readonly_err">#000000</color>
++    <color name="bg_readonly_err">#FF0000</color>
++    
++    <color name="red">#FF0000</color>
++    <color name="white">#FFFFFF</color>
++    <color name="black_1">#000000</color>
++    <color name="black_2">#202020</color>
++    <color name="blue">#0000FF</color>
++    <color name="green">#008000</color>
++    <color name="yellow">#FFFF00</color>
++    <color name="gray">#808080</color>
++    <color name="wfp_azure1">#39ACFF</color>
++    <color name="wfp_azure2">#006DC2</color>
++    <color name="dark_grey">#333333</color>
++    
++</resources>
+diff --git a/app/src/main/res/values-en-rZA/style.xml b/app/src/main/res/values-en-rZA/style.xml
+new file mode 100644
+index 0000000..d9dcd0a
+--- /dev/null
++++ b/app/src/main/res/values-en-rZA/style.xml
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources xmlns:android="http://schemas.android.com/apk/res/android">
++    <style name="large" parent="@android:style/TextAppearance.Large">
++        <item name="android:textSize">25sp</item>
++    </style>
++    <style name="small" parent="@android:style/TextAppearance.Small">
++        <item name="android:textSize">21sp</item>
++    </style>
++</resources>
+diff --git a/app/src/main/res/values-en-rZA/sysconfig.xml b/app/src/main/res/values-en-rZA/sysconfig.xml
+new file mode 100644
+index 0000000..3298774
+--- /dev/null
++++ b/app/src/main/res/values-en-rZA/sysconfig.xml
+@@ -0,0 +1,5 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++    <string name="new_app_url">http://www.brainsen.com/wfp/grasp/AndroidWFP.apk</string>
++    
++</resources>
+diff --git a/app/src/main/res/values-es/color.xml b/app/src/main/res/values-es/color.xml
+new file mode 100644
+index 0000000..fef963f
+--- /dev/null
++++ b/app/src/main/res/values-es/color.xml
+@@ -0,0 +1,43 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!--
++  Copyright (c) 2012 Fabaris SRL.
++  All rights reserved. This program and the accompanying materials
++  are made available under the terms of the GNU Lesser Public License v2.1
++  which accompanies this distribution, and is available at
++  http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
++  
++  Contributors:
++      Fabaris SRL - initial API and implementation
++-->
++<resources>
++    <color name="fg_std">#FFFFFF</color>
++    <color name="bg_std">#000000</color>
++    
++    <color name="fg_mand">#000000</color>
++    <color name="bg_mand">#FFFFB5</color>
++    
++    <color name="fg_err">#FF0000</color>
++    <color name="bg_err">#000000</color>
++    
++    <color name="fg_readonly">#666666</color>
++    <color name="bg_readonly">#FFFFFF</color>
++    
++    <color name="fg_readonly_inv">#000000</color>
++    <color name="bg_readonly_inv">#000000</color>
++    
++    <color name="fg_readonly_err">#000000</color>
++    <color name="bg_readonly_err">#FF0000</color>
++    
++    <color name="red">#FF0000</color>
++    <color name="white">#FFFFFF</color>
++    <color name="black_1">#000000</color>
++    <color name="black_2">#202020</color>
++    <color name="blue">#0000FF</color>
++    <color name="green">#008000</color>
++    <color name="yellow">#FFFF00</color>
++    <color name="gray">#808080</color>
++    <color name="wfp_azure1">#39ACFF</color>
++    <color name="wfp_azure2">#006DC2</color>
++    <color name="dark_grey">#333333</color>
++    
++</resources>
+diff --git a/app/src/main/res/values-es/style.xml b/app/src/main/res/values-es/style.xml
+new file mode 100644
+index 0000000..d9dcd0a
+--- /dev/null
++++ b/app/src/main/res/values-es/style.xml
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources xmlns:android="http://schemas.android.com/apk/res/android">
++    <style name="large" parent="@android:style/TextAppearance.Large">
++        <item name="android:textSize">25sp</item>
++    </style>
++    <style name="small" parent="@android:style/TextAppearance.Small">
++        <item name="android:textSize">21sp</item>
++    </style>
++</resources>
+diff --git a/app/src/main/res/values-es/sysconfig.xml b/app/src/main/res/values-es/sysconfig.xml
+new file mode 100644
+index 0000000..3298774
+--- /dev/null
++++ b/app/src/main/res/values-es/sysconfig.xml
+@@ -0,0 +1,5 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++    <string name="new_app_url">http://www.brainsen.com/wfp/grasp/AndroidWFP.apk</string>
++    
++</resources>
+diff --git a/app/src/main/res/values-it/color.xml b/app/src/main/res/values-it/color.xml
+new file mode 100644
+index 0000000..fef963f
+--- /dev/null
++++ b/app/src/main/res/values-it/color.xml
+@@ -0,0 +1,43 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!--
++  Copyright (c) 2012 Fabaris SRL.
++  All rights reserved. This program and the accompanying materials
++  are made available under the terms of the GNU Lesser Public License v2.1
++  which accompanies this distribution, and is available at
++  http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
++  
++  Contributors:
++      Fabaris SRL - initial API and implementation
++-->
++<resources>
++    <color name="fg_std">#FFFFFF</color>
++    <color name="bg_std">#000000</color>
++    
++    <color name="fg_mand">#000000</color>
++    <color name="bg_mand">#FFFFB5</color>
++    
++    <color name="fg_err">#FF0000</color>
++    <color name="bg_err">#000000</color>
++    
++    <color name="fg_readonly">#666666</color>
++    <color name="bg_readonly">#FFFFFF</color>
++    
++    <color name="fg_readonly_inv">#000000</color>
++    <color name="bg_readonly_inv">#000000</color>
++    
++    <color name="fg_readonly_err">#000000</color>
++    <color name="bg_readonly_err">#FF0000</color>
++    
++    <color name="red">#FF0000</color>
++    <color name="white">#FFFFFF</color>
++    <color name="black_1">#000000</color>
++    <color name="black_2">#202020</color>
++    <color name="blue">#0000FF</color>
++    <color name="green">#008000</color>
++    <color name="yellow">#FFFF00</color>
++    <color name="gray">#808080</color>
++    <color name="wfp_azure1">#39ACFF</color>
++    <color name="wfp_azure2">#006DC2</color>
++    <color name="dark_grey">#333333</color>
++    
++</resources>
+diff --git a/app/src/main/res/values-it/style.xml b/app/src/main/res/values-it/style.xml
+new file mode 100644
+index 0000000..d9dcd0a
+--- /dev/null
++++ b/app/src/main/res/values-it/style.xml
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources xmlns:android="http://schemas.android.com/apk/res/android">
++    <style name="large" parent="@android:style/TextAppearance.Large">
++        <item name="android:textSize">25sp</item>
++    </style>
++    <style name="small" parent="@android:style/TextAppearance.Small">
++        <item name="android:textSize">21sp</item>
++    </style>
++</resources>
+diff --git a/app/src/main/res/values-it/sysconfig.xml b/app/src/main/res/values-it/sysconfig.xml
+new file mode 100644
+index 0000000..3298774
+--- /dev/null
++++ b/app/src/main/res/values-it/sysconfig.xml
+@@ -0,0 +1,5 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++    <string name="new_app_url">http://www.brainsen.com/wfp/grasp/AndroidWFP.apk</string>
++    
++</resources>

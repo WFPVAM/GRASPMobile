@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2012 Fabaris SRL.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the GNU Lesser Public License v2.1
+  which accompanies this distribution, and is available at
+  http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+  
+  Contributors:
+      Fabaris SRL - initial API and implementation
+-->
+<resources>
+    <color name="fg_std">#FFFFFF</color>
+    <color name="bg_std">#000000</color>
+    
+    <color name="fg_mand">#000000</color>
+    <color name="bg_mand">#FFFFB5</color>
+    
+    <color name="fg_err">#FF0000</color>
+    <color name="bg_err">#000000</color>
+    
+    <color name="fg_readonly">#666666</color>
+    <color name="bg_readonly">#FFFFFF</color>
+    
+    <color name="fg_readonly_inv">#000000</color>
+    <color name="bg_readonly_inv">#000000</color>
+    
+    <color name="fg_readonly_err">#000000</color>
+    <color name="bg_readonly_err">#FF0000</color>
+    
+    <color name="red">#FF0000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black_1">#000000</color>
+    <color name="black_2">#202020</color>
+    <color name="blue">#0000FF</color>
+    <color name="green">#008000</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="gray">#808080</color>
+    <color name="wfp_azure1">#39ACFF</color>
+    <color name="wfp_azure2">#006DC2</color>
+    <color name="dark_grey">#333333</color>
+    
+</resources>

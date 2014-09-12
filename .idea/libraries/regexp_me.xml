@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="regexp-me">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/lib/regexp-me.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

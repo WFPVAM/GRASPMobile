@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceScreen
+        android:key="info"
+        android:summary="@string/click_to_web"
+        android:title="@string/app_name" >
+    </PreferenceScreen>
+
+    <PreferenceCategory android:title="@string/server_preferences" >
+        
+        <ListPreference
+            android:defaultValue="1"
+            android:dialogTitle="@string/choose_protocol"
+			android:entries="@array/protocol_choices_entries"
+			android:entryValues="@array/protocol_choices_values"
+			android:key="list_protocol"
+			android:title="@string/portocol_choice"/>
+        
+        
+        <EditTextPreference
+            android:dialogTitle="@string/digit_server_ip"
+            android:key="server_ip"
+            android:title="@string/server_IP" />
+        
+        <EditTextPreference
+            android:dialogTitle="@string/digit_server_port"
+            android:key="server_port"
+            android:title="@string/server_port" />
+
+        <EditTextPreference
+            android:dialogTitle="@string/digit_server_directory"
+            android:key="server_directory"
+            android:title="@string/server_directory" />
+        <!-- 
+        <EditTextPreference
+            android:defaultValue="@string/default_server_url"
+            android:dialogTitle="@string/change_server_url"
+            android:key="server_url"
+            android:title="@string/server_url" />
+         -->
+        <EditTextPreference
+            android:dialogTitle="@string/change_server_telephone"
+            android:key="server_telephone"
+            android:title="@string/server_telephone" />
+    </PreferenceCategory>
+    
+    
+    <PreferenceCategory android:title="@string/client" >
+        <ListPreference
+            android:defaultValue="21"
+            android:dialogTitle="@string/change_font_size"
+            android:entries="@array/font_size_entries"
+            android:entryValues="@array/font_size_entry_values"
+            android:key="font_size"
+            android:title="@string/font_size" />
+
+        <EditTextPreference
+            android:dialogTitle="@string/change_client_telephone"
+            android:key="client_telephone"
+            android:title="@string/client_telephone" />
+
+        <ListPreference
+            android:defaultValue="gprs/umts preferred"
+            android:dialogTitle="Change connection type"
+            android:entries="@array/connection_type"
+            android:entryValues="@array/connection_type_values"
+            android:key="select_type"
+            android:title="@string/sending_method" />
+
+        <Preference
+            android:key="insert_time"
+            android:title="@string/time_before" />
+        <Preference
+            android:key="button_check_conn"
+            android:title="@string/check_connection" />
+        <Preference
+            android:key="button_check_new_app"
+            android:title="@string/check_new_app" />
+    </PreferenceCategory>
+    <!-- PreferenceCategory android:title="@string/colors"  >
+        <ListPreference
+            android:defaultValue="White"
+            android:dialogTitle="@string/change_textcolor_foreground"
+            android:entries="@array/textcolor_foreground_entries"
+            android:entryValues="@array/textcolor_foreground_entry_values"
+            android:key="textcolor_foreground"
+            android:title="@string/textcolor_foreground" />
+        <ListPreference
+            android:defaultValue="Black"
+            android:dialogTitle="@string/change_textcolor_background"
+            android:entries="@array/textcolor_background_entries"
+            android:entryValues="@array/textcolor_background_entry_values"
+            android:key="textcolor_background"
+            android:title="@string/textcolor_background" />
+        <ListPreference
+            android:defaultValue="Green"
+            android:dialogTitle="@string/change_textcolor_mandatory_foreground"
+            android:entries="@array/textcolor_mandatory_foreground_entries"
+            android:entryValues="@array/textcolor_mandatory_foreground_entry_values"
+            android:key="textcolor_mandatory_foreground"
+            android:title="@string/textcolor_mandatory_foreground" />
+        <ListPreference
+            android:defaultValue="Yellow"
+            android:dialogTitle="@string/change_textcolor_mandatory_background"
+            android:entries="@array/textcolor_mandatory_background_entries"
+            android:entryValues="@array/textcolor_mandatory_background_entry_values"
+            android:key="textcolor_mandatory_background"
+            android:title="@string/textcolor_mandatory_background" />
+        <ListPreference
+            android:defaultValue="Red"
+            android:dialogTitle="@string/change_textcolor_error_foreground"
+            android:entries="@array/textcolor_error_foreground_entries"
+            android:entryValues="@array/textcolor_error_foreground_entry_values"
+            android:key="textcolor_error_foreground"
+            android:title="@string/textcolor_error_foreground" />
+        <ListPreference
+            android:defaultValue="Green"
+            android:dialogTitle="@string/change_textcolor_error_background"
+            android:entries="@array/textcolor_error_background_entries"
+            android:entryValues="@array/textcolor_error_background_entry_values"
+            android:key="textcolor_error_background"
+            android:title="@string/textcolor_error_background" />
+    </PreferenceCategory-->
+
+</PreferenceScreen>
