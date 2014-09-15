@@ -308,11 +308,12 @@ public class DecimalWidget extends StringWidget    //QuestionAndStringAswerWidge
     public IAnswerData getAnswer() {
         String s = mAnswer.getText().toString();
         if (s == null || s.equals("")) {
-            if(mPrompt.isRequired()){
-                return null;
-            }else{
-                return new DecimalData(Double.parseDouble("0"));
-            }
+            return null;
+//            if(mPrompt.isRequired()){
+//                return null;
+//            }else{
+//                return new DecimalData(Double.parseDouble("0"));
+//            }
         } else {
         	try {
                 return new DecimalData(Double.parseDouble(s));
