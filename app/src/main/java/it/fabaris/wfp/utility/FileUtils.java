@@ -45,6 +45,13 @@ public class FileUtils {
     // Used to validate and display valid form names.
     public static final String VALID_FILENAME = "[ _\\-A-Za-z0-9]*.x[ht]*ml";
 
+    public static String FORMID = "formid";
+    public static String UI = "uiversion";
+    public static String MODEL = "modelversion";
+    public static String TITLE = "title";
+    public static String SUBMISSIONURI = "submission";
+    public static String BASE64_RSA_PUBLIC_KEY = "base64RsaPublicKey";
+
 
     public static boolean createFolder(String path) {
         boolean made = true;
@@ -237,12 +244,7 @@ public class FileUtils {
 
     }
 
-    public static String FORMID = "formid";
-    public static String UI = "uiversion";
-    public static String MODEL = "modelversion";
-    public static String TITLE = "title";
-    public static String SUBMISSIONURI = "submission";
-    public static String BASE64_RSA_PUBLIC_KEY = "base64RsaPublicKey";
+
 
     public static HashMap<String, String> parseXML(File xmlFile) {
         HashMap<String, String> fields = new HashMap<String, String>();

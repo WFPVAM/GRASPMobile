@@ -86,11 +86,22 @@ public class HierarchyElementView extends RelativeLayout {
                 imageView.setId(3);
                 imageView.setImageBitmap(myBitmap);
                 imageView.setPadding(0, 4, 4, 25);
+
+
+                imageView.setMaxHeight(300);
+                imageView.setMaxWidth(300);
                 imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+
+
 
                 LayoutParams layoutParams = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
                 layoutParams.addRule(RelativeLayout.BELOW, mPrimaryTextView.getId());
                 addView(imageView, layoutParams);
+
+                LayoutParams params = (LayoutParams) imageView.getLayoutParams();
+                params.width = 300;
+                params.height = 300;
+                imageView.setLayoutParams(params);
             }
         }
 

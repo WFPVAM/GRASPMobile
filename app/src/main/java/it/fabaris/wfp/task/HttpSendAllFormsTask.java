@@ -45,6 +45,7 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import it.fabaris.wfp.utility.NewFileUtils;
 import object.FormInnerListProxy;
 
 import org.apache.http.HttpResponse;
@@ -260,7 +261,7 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
                         String syncImagesPath = Collect.IMAGES_PATH + "/" + phone.replaceAll(plus,"");
                         if (FileUtils.createFolder(syncImagesPath)) {
                             File newImage = new File(syncImagesPath + "/" + imageName);
-                            FileUtils.copyFile(originalImage, newImage);
+                            NewFileUtils.copyFile(originalImage, newImage);
                             images.put(dataElements.getChildAt(j).getName(), phone.replaceAll(plus,"") + "\\" + imageName);
                         }
 
