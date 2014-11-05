@@ -154,6 +154,8 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
      */
     @Override
     protected void onPreExecute() {
+        Log.i("pd ", "Helloooooooooooooooooooooooooooooooooooooooooooo");
+
         this.pd = ProgressDialog.show(context,
                 context.getString(R.string.checking_server),
                 context.getString(R.string.wait));
@@ -171,14 +173,21 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
             numOfFormSent = 1;//set the number of forms to send, 1 to start
             for (FormInnerListProxy mydata : completedformslistfirst) {//loop on "the form to send" list
                 data = decodeForm(mydata);//the form to send, encoded
+
+//                Log.i("data  in httpSendPostTaskOnPostEx ", data);
+
                 result = sendFormCall(http, phone, data);
-                Log.i("httpSendPostTaskOnPostEx", result);
+
+//
+//                Log.i("===================================", "");
+//                Log.i("httpSendPostTaskOnPostEx", result);
+//                Log.i("===================================", "");
 
 
-                if (result.trim().toLowerCase().startsWith("ok")) //the server answered ok. The form has been
+                if (result.trim().toLowerCase().startsWith("ok") && !result.trim().toLowerCase().contains("HTTP 404")) //the server answered ok. The form has been
                 //received correctly from the server
                 {
-                    Log.i("RESULT", "messaggio ricevuto dal server");
+//                    Log.i("RESULT", "Message return from server");
                     numOfFormSent = numOfFormSent++;
                     //--------------------------------------------------------------------------
                     XPathFactory factory = XPathFactory.newInstance();
@@ -211,7 +220,7 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
 
 
 						/*
-						if(numOfFormSent == completedformslistfirst.size()){//se sono state spedite tutte le form lancia il finish su formListCompletedActivity
+                        if(numOfFormSent == completedformslistfirst.size()){//se sono state spedite tutte le form lancia il finish su formListCompletedActivity
 							FormListCompletedActivity fmla = new FormListCompletedActivity();
 							fmla.finishListCompletedActivity();
 						}
@@ -219,7 +228,12 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
 
 
                 } else {//the form has not been received from the server or something has gone bad
-                    formNotSent.put(mydata.getFormNameInstance(), result);//list of the forms not sent with the motivation of the failure
+                    if (formNotSent != null && mydata != null) {
+                        formNotSent.put(mydata.getFormNameInstance(), result);//list of the forms not sent with the motivation of the failure
+                    } else {
+                        Log.i("the data is ", "fail to send message to server");
+                        return "ko";
+                    }
                     //form not sent name-> key = formNameInstance
                     //motivation of the failure-> value = answer from the server
                 }
@@ -254,15 +268,19 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
         for (int j = 0; j < dataElements.getNumChildren(); j++) {
             if (dataElements.getChildAt(j) != null && dataElements.getChildAt(j).getValue() != null && dataElements.getChildAt(j).getValue().getDisplayText().indexOf("jpg") > 0) {
                 imageName = dataElements.getChildAt(j).getValue().getDisplayText();
+                if(imageName.contains("/instances")){
+                    imageName= imageName.substring(imageName.lastIndexOf("/") + 1);
+                }
+
                 File originalImage = new File(filePath.substring(0, filePath.lastIndexOf("/") + 1) + imageName);
                 if (originalImage.exists()) {
                     try {
-                        String plus="\\+";
-                        String syncImagesPath = Collect.IMAGES_PATH + "/" + phone.replaceAll(plus,"");
+                        String plus = "\\+";
+                        String syncImagesPath = Collect.IMAGES_PATH + "/" + phone.replaceAll(plus, "");
                         if (FileUtils.createFolder(syncImagesPath)) {
                             File newImage = new File(syncImagesPath + "/" + imageName);
                             NewFileUtils.copyFile(originalImage, newImage);
-                            images.put(dataElements.getChildAt(j).getName(), phone.replaceAll(plus,"") + "\\" + imageName);
+                            images.put(dataElements.getChildAt(j).getName(), phone.replaceAll(plus, "") + "\\" + imageName);
                         }
 
                     } catch (Exception e) {
@@ -327,7 +345,7 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
     /**
      * effectively send the form to the server
      *
-     * @param server url
+     * @param url of the server
      * @param phone  client phone number
      * @param data   xml form
      * @return the call response
@@ -490,6 +508,7 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
                 NodeList nodeList = doc.getElementsByTagName(key);
                 Node node = nodeList.item(0);
                 node.setTextContent(images.get(key));
+                Log.i("node.getTextContent() ------------ ", node.getTextContent());
             }
         }
 

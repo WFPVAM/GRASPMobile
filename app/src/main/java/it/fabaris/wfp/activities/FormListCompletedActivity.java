@@ -45,6 +45,7 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
 import it.fabaris.wfp.utility.FileUtils;
+import it.fabaris.wfp.utility.NewFileUtils;
 import object.FormInnerListProxy;
 
 import org.javarosa.core.model.instance.TreeElement;
@@ -130,6 +131,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
     private String connectionType;
 
     private String numClient;
+    private String senderPhone;
     private String numModem;
     private String httpServer;
     private String encodeXml;
@@ -184,19 +186,15 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
 
         settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
 
-        connectionType = settings.getString(
-                PreferencesActivity.KEY_CONNECTION_TYPE,
-                getString(R.string.default_connection_type));
+        connectionType = settings.getString(PreferencesActivity.KEY_CONNECTION_TYPE, getString(R.string.default_connection_type));
 
-        numClient = settings.getString(
-                PreferencesActivity.KEY_CLIENT_TELEPHONE,
-                getString(R.string.default_client_telephone));
-        numModem = settings.getString(PreferencesActivity.KEY_SERVER_TELEPHONE,
-                getString(R.string.default_server_telephone));
-        httpServer = settings.getString(PreferencesActivity.KEY_SERVER_URL,
-                getString(R.string.default_server_url));
+        numClient = settings.getString(PreferencesActivity.KEY_CLIENT_TELEPHONE, getString(R.string.default_client_telephone));
+        senderPhone = settings.getString(PreferencesActivity.KEY_CLIENT_TELEPHONE, getString(R.string.default_client_telephone));
+        numModem = settings.getString(PreferencesActivity.KEY_SERVER_TELEPHONE, getString(R.string.default_server_telephone));
+        httpServer = settings.getString(PreferencesActivity.KEY_SERVER_URL,getString(R.string.default_server_url));
 
         Button sendAll = (Button) findViewById(R.id.sendAll);
+
         if (!isNetworkConnected())
             sendAll.setVisibility(View.GONE);
 
@@ -283,7 +281,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog,
                                                         int id) {
-
+                                        dialog.dismiss();
                                         //LL 14-05-2014 db grasp dismesso non ci sono piu' problemi di allineamento
                                         //ArrayList<FormInnerListProxy> mycomplete = getCompleteParceableList();//LL aggiunti perche' qui non avevo visibilita' sulle variabili d'istanza
                                         ArrayList<FormInnerListProxy> mycompleted = getCompletedParceableList();//LL aggiunti perche' qui non avevo visibilita' sulle variabili d'istanza
@@ -519,7 +517,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog,
                                                         int id) {
-                                        dialog.cancel();
+                                        dialog.dismiss();
                                     }
                                 }
                         );
@@ -801,11 +799,13 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
         );
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
+                dialog.dismiss();
             }
         });
         builder.setNegativeButton("Cancel",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
+                        dialog.dismiss();
                     }
                 }
         );
@@ -854,6 +854,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
         DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
                 switch (which) {
                     case DialogInterface.BUTTON_POSITIVE:
 
@@ -1016,15 +1017,20 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
         for (int j = 0; j < dataElements.getNumChildren(); j++) {
             if (dataElements.getChildAt(j) != null && dataElements.getChildAt(j).getValue() != null && dataElements.getChildAt(j).getValue().getDisplayText().indexOf("jpg") > 0) {
                 imageName = dataElements.getChildAt(j).getValue().getDisplayText();
+
+                if(imageName.contains("/instances")){
+                    imageName= imageName.substring(imageName.lastIndexOf("/") + 1);
+                }
+
                 File originalImage = new File(filePath.substring(0, filePath.lastIndexOf("/") + 1) + imageName);
                 if (originalImage.exists()) {
                     try {
                         String plus="\\+";
-                        String syncImagesPath = Collect.IMAGES_PATH + "/" + numClient.replaceAll(plus,"");
+                        String syncImagesPath = Collect.IMAGES_PATH + "/" + senderPhone.replaceAll(plus,"");
                         if (FileUtils.createFolder(syncImagesPath)) {
                             File newImage = new File(syncImagesPath + "/" + imageName);
-                            FileUtils.copyFile(originalImage, newImage);
-                            images.put(dataElements.getChildAt(j).getName(), numClient.replaceAll(plus,"") + "\\" + imageName);
+                            NewFileUtils.copyFile(originalImage, newImage);
+                            images.put(dataElements.getChildAt(j).getName(), senderPhone.replaceAll(plus,"") + "\\" + imageName);
                         }
 
                     } catch (Exception e) {
@@ -1059,7 +1065,8 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
         } else {
 
             HttpCheckAndSendPostTask asyncTask = new HttpCheckAndSendPostTask(context, url, number, form, callback, isSendAllForms);
-            Log.i("FUNZIONE HttpCheckAndSendPostTask", "thread: " + form);
+//            Log.i("url HttpCheckAndSendPostTask FormListCompletedActivity ", "thread: " + url);
+//            Log.i("FUNZIONE HttpCheckAndSendPostTask FormListCompletedActivity ", "thread: " + form);
             asyncTask.execute();
             if (asyncTask.getStatus() != HttpCheckAndSendPostTask.Status.FINISHED) {
 
@@ -1158,38 +1165,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
                 ApplicationExt.getDatabaseAdapter().close();
             }
         }  
-        
-       
-		
-		/*
-		Cursor cursor = ApplicationExt.getDatabaseAdapter().open()
-				.fetchAllCompleted();
-				
-		try {
-			while (cursor.moveToNext()) {
-				FormInnerListProxy completed = new FormInnerListProxy();
-				completed.setFormId(cursor.getString(cursor
-						.getColumnIndex(DbAdapterGrasp.COMPLETED_FORM_ID_KEY)));
-				completed
-						.setFormName(cursor.getString(cursor
-								.getColumnIndex(DbAdapterGrasp.COMPLETED_FORM_NOME_FORM)));
-				completed.setDataDiCompletamento(cursor.getString(cursor
-						.getColumnIndex(DbAdapterGrasp.COMPLETED_FORM_DATA)));
-				completed.setFormEnumeratorId(cursor.getString(cursor
-						.getColumnIndex(DbAdapterGrasp.COMPLETED_FORM_BY)));
-				
-				
-				
-				this.complete.add(completed);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			if (cursor != null) {
-				cursor.close();
-				ApplicationExt.getDatabaseAdapter().close();
-			}
-		}*/
+
     }
 
     /**

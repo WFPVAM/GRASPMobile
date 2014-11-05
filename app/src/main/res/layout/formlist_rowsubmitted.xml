@@ -31,19 +31,7 @@
         android:textColor="#fff"
         android:textSize="16sp" />
     
-	<TextView
-        android:id="@+id/by"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/label"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="18dp"
-        android:layout_marginLeft="10dp"
-        android:text="@string/by"
-        android:textColor="#fff"
-        android:textSize="16sp" />
 
-	
 
     <TextView
         android:id="@+id/textSubmittedOn"
@@ -55,8 +43,18 @@
         android:layout_toRightOf="@+id/submittedOnLabel"
         android:textColor="#fff"
         android:textSize="16sp" />
-    
 
+    <TextView
+        android:id="@+id/by"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/label"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/by"
+        android:textColor="#fff"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textBy"

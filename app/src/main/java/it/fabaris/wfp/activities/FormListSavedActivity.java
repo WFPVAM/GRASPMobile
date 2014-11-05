@@ -190,7 +190,7 @@ public class FormListSavedActivity extends Activity
 							ApplicationExt.getDatabaseAdapter().open().delete("SAVED", saved.get(position).getFormName());
 							ApplicationExt.getDatabaseAdapter().close();
 							*/
-
+                                        dialog.dismiss();
                                         DatabaseHelper dbh = new DatabaseHelper("forms.db");
                                         String query = "UPDATE forms SET status='cancelled' WHERE displayNameInstance = '"
                                                 + saved.get(position).getFormNameInstance()
@@ -223,9 +223,9 @@ public class FormListSavedActivity extends Activity
                         {
                             public void onClick(DialogInterface dialog,	int id)
                             {
-                                dialog.cancel();
+                                dialog.dismiss();
                             }
-                        }).show();;
+                        }).show();
                 return false;
             }
         });

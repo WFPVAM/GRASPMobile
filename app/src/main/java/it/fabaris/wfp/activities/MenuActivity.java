@@ -298,6 +298,7 @@ public class MenuActivity extends Activity
              */
             alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int whichButton) {
+                    dialog.dismiss();
                     String numTel = input1.getEditableText().toString();
 
 
@@ -324,8 +325,8 @@ public class MenuActivity extends Activity
                         serverurl = serverurl.trim();//LL 16-05-2014
                     }
 
-                    Log.i("The server url is ",serverurl);
-                    System.out.println("The server url is "+serverurl);
+//                    Log.i("The server url is ",serverurl);
+//                    System.out.println("The server url is "+serverurl);
 
                     SharedPreferences.Editor editor = settings.edit();
                     editor.putString(PreferencesActivity.KEY_SERVER_TELEPHONE, numTel);
@@ -337,6 +338,7 @@ public class MenuActivity extends Activity
 
             alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int whichButton) {
+                    dialog.dismiss();
                 }
             });
 
@@ -427,7 +429,7 @@ public class MenuActivity extends Activity
                         {
                             public void onClick(DialogInterface dialog, int id)
                             {
-                                dialog.cancel();
+                                dialog.dismiss();
                             }
                         });
                 builder.show();

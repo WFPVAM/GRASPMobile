@@ -54,13 +54,13 @@ import android.util.Log;
 import android.util.Patterns;
 import android.widget.LinearLayout;
 import android.widget.TimePicker;
+import android.widget.Toast;
+
 /**
- *
  * Class that manage the preferences of the app
- *
  */
 public class PreferencesActivity extends PreferenceActivity implements
-        OnSharedPreferenceChangeListener{
+        OnSharedPreferenceChangeListener {
 
     public static String SERVER_ONLINE = "NO";
     public static String KEY_FONT_SIZE = "font_size";
@@ -72,6 +72,7 @@ public class PreferencesActivity extends PreferenceActivity implements
     public static String KEY_CONNECTION_TYPE = "select_type";
     public static String KEY_TIME_RANGE = "insert_time";
     public static String KEY_BUTTON_CHECK_NEW_APPLICATION = "button_check_new_app";
+    public static String KEY_BUTTON_CONVERT_SUBM_TO_COMP = "button_convert_submitted_to_complete";
     public static String KEY_BUTTON_CHECK = "button_check_conn";
     public static String TEXT_BACKGROUND_COLOR = "textcolor_background";
     public static String TEXT_FOREGROUND_COLOR = "textcolor_foreground";
@@ -85,11 +86,7 @@ public class PreferencesActivity extends PreferenceActivity implements
     public static String KEY_PORT = "server_port";
     public static String KEY_DIRECTORY = "server_directory";
 
-    public final static String serviceName="mobileConnection.aspx";
-
-
-
-
+    public final static String serviceName = "mobileConnection.aspx";
 
 
     public static boolean TO_SAVE_FORM = false;
@@ -108,14 +105,13 @@ public class PreferencesActivity extends PreferenceActivity implements
     private String protocol = new String();
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.preferences);
         setTitle(getString(R.string.app_name) + " > " + getString(R.string.settings));
 
-        final SharedPreferences settings =  PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        final SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
 
 
         //set the Progress dialog
@@ -131,21 +127,21 @@ public class PreferencesActivity extends PreferenceActivity implements
         /**
          * settings ip and port
          */
-        String ip = settings.getString(PreferencesActivity.KEY_IP,null);
-        String port = settings.getString(PreferencesActivity.KEY_PORT,null);
-        String directory = settings.getString(PreferencesActivity.KEY_DIRECTORY,null);
+        String ip = settings.getString(PreferencesActivity.KEY_IP, null);
+        String port = settings.getString(PreferencesActivity.KEY_PORT, null);
+        String directory = settings.getString(PreferencesActivity.KEY_DIRECTORY, null);
 
-        if(ip != null){
+        if (ip != null) {
             EditTextPreference mIpPreference = (EditTextPreference) findPreference(KEY_IP);
             mIpPreference.setSummary(mIpPreference.getText());
         }
 
-        if(port != null){
+        if (port != null) {
             EditTextPreference mPortPreference = (EditTextPreference) findPreference(KEY_PORT);
             mPortPreference.setSummary(mPortPreference.getText());
         }
 
-        if(directory != null){
+        if (directory != null) {
             EditTextPreference mDirectoryPreference = (EditTextPreference) findPreference(KEY_DIRECTORY);
             mDirectoryPreference.setSummary(mDirectoryPreference.getText());
         }
@@ -156,10 +152,10 @@ public class PreferencesActivity extends PreferenceActivity implements
          */
         protocol = settings.getString(PreferencesActivity.KEY_PROTOCOL, null);
         ListPreference listprotocolo = (ListPreference) findPreference(KEY_PROTOCOL);
-        if( protocol.equals("http") || protocol.equals("1") ){//show the http radio group widget
+        if (protocol.equals("http") || protocol.equals("1")) {//show the http radio group widget
             listprotocolo.setValueIndex(0);
             listprotocolo.setSummary("http");
-        }else{
+        } else {
             listprotocolo.setValueIndex(1);////show the https radio group widget
             listprotocolo.setSummary("https");
         }
@@ -167,9 +163,9 @@ public class PreferencesActivity extends PreferenceActivity implements
         /**
          * set the time
          */
-        Preference buttonTimePreference = (Preference)findPreference(KEY_TIME_RANGE);
-        buttonTimePreference.setOnPreferenceClickListener(new OnPreferenceClickListener(){
-            public boolean onPreferenceClick(Preference pref){
+        Preference buttonTimePreference = (Preference) findPreference(KEY_TIME_RANGE);
+        buttonTimePreference.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+            public boolean onPreferenceClick(Preference pref) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(pref.getContext());
                 final TimePicker timePick = new TimePicker(pref.getContext());
                 timePick.setIs24HourView(true);
@@ -183,6 +179,7 @@ public class PreferencesActivity extends PreferenceActivity implements
                 builder.setMessage("Hours and Minutes before enabling re-submit");
                 builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
                         mTimeRangeHour = timePick.getCurrentHour();
                         mTimeRangeMinute = timePick.getCurrentMinute();
 
@@ -200,19 +197,17 @@ public class PreferencesActivity extends PreferenceActivity implements
          * the purpose of this button is check whether the server is on line or not,
          * using the server url and the client phone number
          */
-        Preference buttonCheckConn = (Preference)findPreference(KEY_BUTTON_CHECK);
-        buttonCheckConn.setOnPreferenceClickListener(new OnPreferenceClickListener()
-        {
-            public boolean onPreferenceClick(Preference pref)
-            {
-                SharedPreferences settings =  PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        Preference buttonCheckConn = (Preference) findPreference(KEY_BUTTON_CHECK);
+        buttonCheckConn.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+            public boolean onPreferenceClick(Preference pref) {
+                SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
                 String httpServer = settings.getString(PreferencesActivity.KEY_SERVER_URL, getString(R.string.default_server_url));
                 String numClient = settings.getString(PreferencesActivity.KEY_CLIENT_TELEPHONE, getString(R.string.default_client_telephone));
 
                 //SCELTA CONNESSIONE A RICHIESTA
                 String onRequest = settings.getString(PreferencesActivity.KEY_REQUEST_CHOISE, getString(R.string.on_request));
 
-                String http = httpServer+"/test";
+                String http = httpServer + "/test";
                 String phone = numClient;
                 String data = "test";
                 HttpCheckPostTask asyncTask = new HttpCheckPostTask(PreferencesActivity.this, http, phone, data);
@@ -225,17 +220,47 @@ public class PreferencesActivity extends PreferenceActivity implements
         /**
          * check and install a new app version
          */
-        Preference buttonCheckNewApplication = (Preference)findPreference(KEY_BUTTON_CHECK_NEW_APPLICATION);
-        buttonCheckNewApplication.setOnPreferenceClickListener(new OnPreferenceClickListener()
-        {
-            public boolean onPreferenceClick(Preference pref)
-            {
+        Preference buttonCheckNewApplication = (Preference) findPreference(KEY_BUTTON_CHECK_NEW_APPLICATION);
+        buttonCheckNewApplication.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+            public boolean onPreferenceClick(Preference pref) {
 //                SharedPreferences settings =  PreferenceManager.getDefaultSharedPreferences(PreferencesActivity.this);
 //                String httpServer = settings.getString(PreferencesActivity.APP_URL, getString(R.string.new_app_url));
 
                 DownloadFile downloadFile = new DownloadFile();
 //                downloadFile.execute(getString(R.string.new_app_url));
                 downloadFile.execute(getAPKURL());
+                return true;
+            }
+        });
+
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        /**
+         * convert submitted to completed
+         */
+        Preference buttonConvertSubmittedToComplated = (Preference) findPreference(KEY_BUTTON_CONVERT_SUBM_TO_COMP);
+        buttonConvertSubmittedToComplated.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+            public boolean onPreferenceClick(Preference pref) {
+
+                builder.setMessage(getString(R.string.convert_form_to_complate))
+                        .setCancelable(false)
+                        .setPositiveButton(R.string.confirm,
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        dialog.dismiss();
+                                        DatabaseHelper dbh = new DatabaseHelper("forms.db");
+                                        String query = "UPDATE forms SET status='completed',submissionDate=null WHERE  status='submitted'";
+                                        dbh.getWritableDatabase().execSQL(query);
+                                        dbh.close();
+                                        finish();
+                                    }
+                                }
+                        ).setNegativeButton(getString(R.string.negative_choise), new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
+                    }
+                }).show();
+
                 return true;
             }
         });
@@ -249,7 +274,7 @@ public class PreferencesActivity extends PreferenceActivity implements
             public boolean onPreferenceChange(Preference preference, Object newValue) {
                 // newValue is the value you choose
                 SharedPreferences.Editor editor = settings.edit();
-                if(newValue.toString().equals("1")){
+                if (newValue.toString().equals("1")) {
                     editor.putString(PreferencesActivity.KEY_PROTOCOL, "http");
 
                     String serverurl = new String();
@@ -259,15 +284,13 @@ public class PreferencesActivity extends PreferenceActivity implements
                     String directory = (settings.getString(PreferencesActivity.KEY_DIRECTORY, getString(R.string.server_directory))).trim();
 
 
-
                     editor.commit();
 
-                    if(isValidUrl("http://"+ip) & !isIP(ip)){
-                        serverurl = "http" + "://" + ip  +((directory!=null && directory.trim().length()>0)?("/" + directory):"")+"/"+serviceName;
-                    }else{
-                        serverurl = "http" + "://" + ip +":" + port +((directory!=null && directory.trim().length()>0)?("/" + directory):"")+"/"+serviceName;
+                    if (isValidUrl("http://" + ip) & !isIP(ip)) {
+                        serverurl = "http" + "://" + ip + ((directory != null && directory.trim().length() > 0) ? ("/" + directory) : "") + "/" + serviceName;
+                    } else {
+                        serverurl = "http" + "://" + ip + ":" + port + ((directory != null && directory.trim().length() > 0) ? ("/" + directory) : "") + "/" + serviceName;
                     }
-
 
 
                     editor.putString(PreferencesActivity.KEY_SERVER_URL, serverurl);
@@ -278,7 +301,7 @@ public class PreferencesActivity extends PreferenceActivity implements
 
                     listprotocolo.setSummary("http");
 
-                }else{
+                } else {
                     editor.putString(PreferencesActivity.KEY_PROTOCOL, "https");
                     String serverurl = new String();
                     String ip = (settings.getString(PreferencesActivity.KEY_IP, getString(R.string.server_IP))).trim();
@@ -287,10 +310,10 @@ public class PreferencesActivity extends PreferenceActivity implements
 
                     editor.commit();
 
-                    if(isValidUrl("https://"+ip) & !isIP(ip)){
-                        serverurl = "https" + "://" + ip +((directory!=null && directory.trim().length()>0)?("/" + directory):"")+"/"+serviceName;
-                    }else{
-                        serverurl = "https" + "://" + ip +":" + port+((directory!=null && directory.trim().length()>0)?("/" + directory):"")+"/"+serviceName;
+                    if (isValidUrl("https://" + ip) & !isIP(ip)) {
+                        serverurl = "https" + "://" + ip + ((directory != null && directory.trim().length() > 0) ? ("/" + directory) : "") + "/" + serviceName;
+                    } else {
+                        serverurl = "https" + "://" + ip + ":" + port + ((directory != null && directory.trim().length() > 0) ? ("/" + directory) : "") + "/" + serviceName;
                     }
 
                     editor.putString(PreferencesActivity.KEY_SERVER_URL, serverurl);
@@ -339,23 +362,24 @@ public class PreferencesActivity extends PreferenceActivity implements
      */
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-		 /*if (key.equals(KEY_SERVER_URL)) {
+         /*if (key.equals(KEY_SERVER_URL)) {
 			 updateServerUrl();    LL l'ho appena tolto io!!!
-	     }else */if (key.equals(KEY_SERVER_TELEPHONE)) {
+	     }else */
+        if (key.equals(KEY_SERVER_TELEPHONE)) {
             updateServerTelephone();
-        }else if (key.equals(KEY_CLIENT_TELEPHONE)) {
+        } else if (key.equals(KEY_CLIENT_TELEPHONE)) {
             updateClientTelephone();
-        }else if (key.equals(KEY_FONT_SIZE)){
+        } else if (key.equals(KEY_FONT_SIZE)) {
             updateFontSize();
-        }else if(key.equals(KEY_CONNECTION_TYPE)){
+        } else if (key.equals(KEY_CONNECTION_TYPE)) {
             updateConnectType();
-        }else if(key.equals(KEY_TIME_RANGE)){
+        } else if (key.equals(KEY_TIME_RANGE)) {
             updateTimeRange();
-        }else if(key.equals(KEY_IP)){
+        } else if (key.equals(KEY_IP)) {
             updateServerIP();
-        }else if(key.equals(KEY_PORT)){
+        } else if (key.equals(KEY_PORT)) {
             updateServerPort();
-        }else if(key.equals(KEY_DIRECTORY)){
+        } else if (key.equals(KEY_DIRECTORY)) {
             updateServerDirectory();
         }
     }
@@ -364,12 +388,12 @@ public class PreferencesActivity extends PreferenceActivity implements
      * @param sceltaradio the choice took from the protocol radio button
      * @return the protocol to set as a string
      */
-    private String getProtocolFromRadioButton(String sceltaradio){
+    private String getProtocolFromRadioButton(String sceltaradio) {
         String protocollo = new String();
-        if(sceltaradio.equals("1")){
+        if (sceltaradio.equals("1")) {
             protocollo = "https";
             ConstantUtility.protocol = "https";
-        }else{
+        } else {
             protocollo = "http";
             ConstantUtility.protocol = "http";
         }
@@ -392,20 +416,20 @@ public class PreferencesActivity extends PreferenceActivity implements
     /**
      * update the ip, if the ip is an url then set the port to right value
      */
-    private void updateServerIP(){
+    private void updateServerIP() {
 
         //SharedPreferences settings =  PreferenceManager.getDefaultSharedPreferences(PreferencesActivity.this);
         //String httpServerurl = settings.getString(PreferencesActivity.KEY_SERVER_URL, getString(R.string.server_url));
 
         EditTextPreference mIpPreference = (EditTextPreference) findPreference(KEY_IP);
         mIpPreference.setSummary(mIpPreference.getText());
-        SharedPreferences settings =  PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         String serverurl = new String();
         String protoc = (getProtocolFromRadioButton(getString(R.string.portocol_choice))).trim();
         String ip = (settings.getString(PreferencesActivity.KEY_IP, getString(R.string.server_IP))).trim();
 
 
-        if(isValidUrl(protoc+"://"+ip) & !isIP(ip)){//if as ip there is an url
+        if (isValidUrl(protoc + "://" + ip) & !isIP(ip)) {//if as ip there is an url
             EditTextPreference mPortPreference = (EditTextPreference) findPreference(KEY_PORT);
             mPortPreference.setText("");
             SharedPreferences.Editor editor = settings.edit();
@@ -414,13 +438,13 @@ public class PreferencesActivity extends PreferenceActivity implements
 
             String port = (settings.getString(PreferencesActivity.KEY_PORT, getString(R.string.server_port))).trim();
             String directory = (settings.getString(PreferencesActivity.KEY_DIRECTORY, getString(R.string.server_directory))).trim();
-            serverurl = (protoc + "://" + ip +"/" + ((directory!=null && directory.trim().length()>0)?("/" + directory):"")+"/"+serviceName).trim();
+            serverurl = (protoc + "://" + ip + "/" + ((directory != null && directory.trim().length() > 0) ? ("/" + directory) : "") + "/" + serviceName).trim();
 
-        }else{
+        } else {
             String port = (settings.getString(PreferencesActivity.KEY_PORT, getString(R.string.server_port))).trim();
             String directory = (settings.getString(PreferencesActivity.KEY_DIRECTORY, getString(R.string.server_directory))).trim();
 
-            serverurl = (protoc + "://" + ip +":" + port+((directory!=null && directory.trim().length()>0)?("/" + directory):"")+"/"+serviceName).trim();
+            serverurl = (protoc + "://" + ip + ":" + port + ((directory != null && directory.trim().length() > 0) ? ("/" + directory) : "") + "/" + serviceName).trim();
         }
         SharedPreferences.Editor editor = settings.edit();
         editor.putString(PreferencesActivity.KEY_SERVER_URL, serverurl);
@@ -432,30 +456,30 @@ public class PreferencesActivity extends PreferenceActivity implements
      * update the value of the port of the server and update the url
      * of the server also in relation to the value of ip in the preferences
      */
-    private void updateServerPort(){
+    private void updateServerPort() {
         EditTextPreference mPortPreference = (EditTextPreference) findPreference(KEY_PORT);
         mPortPreference.setSummary(mPortPreference.getText());
-        SharedPreferences settings =  PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         String serverurl = new String();
         String protoc = (getProtocolFromRadioButton(getString(R.string.portocol_choice))).trim();
         String ip = (settings.getString(PreferencesActivity.KEY_IP, getString(R.string.server_IP))).trim();
         String port = (settings.getString(PreferencesActivity.KEY_PORT, getString(R.string.server_port))).trim();
         String directory = (settings.getString(PreferencesActivity.KEY_DIRECTORY, getString(R.string.server_directory))).trim();
 
-        if(isValidUrl(protoc+"://"+ip) & !isIP(ip)){
-            serverurl = protoc + "://" + ip +"/" + port+((directory!=null && directory.trim().length()>0)?("/" + directory):"")+"/"+serviceName;
-        }else{
-            serverurl = protoc + "://" + ip +":" + port+((directory!=null && directory.trim().length()>0)?("/" + directory):"")+"/"+serviceName;
+        if (isValidUrl(protoc + "://" + ip) & !isIP(ip)) {
+            serverurl = protoc + "://" + ip + "/" + port + ((directory != null && directory.trim().length() > 0) ? ("/" + directory) : "") + "/" + serviceName;
+        } else {
+            serverurl = protoc + "://" + ip + ":" + port + ((directory != null && directory.trim().length() > 0) ? ("/" + directory) : "") + "/" + serviceName;
         }
         SharedPreferences.Editor editor = settings.edit();
         editor.putString(PreferencesActivity.KEY_SERVER_URL, serverurl);
         editor.commit();
     }
 
-    private void updateServerDirectory(){
+    private void updateServerDirectory() {
         EditTextPreference mDirectPreference = (EditTextPreference) findPreference(KEY_DIRECTORY);
         mDirectPreference.setSummary(mDirectPreference.getText());
-        SharedPreferences settings =  PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         String serverurl = new String();
 
         String protoc = (getProtocolFromRadioButton(getString(R.string.portocol_choice))).trim();
@@ -463,10 +487,10 @@ public class PreferencesActivity extends PreferenceActivity implements
         String port = (settings.getString(PreferencesActivity.KEY_PORT, getString(R.string.server_port))).trim();
         String directory = (settings.getString(PreferencesActivity.KEY_DIRECTORY, getString(R.string.server_directory))).trim();
 
-        if(isValidUrl(protoc+"://"+ip) & !isIP(ip)){
-            serverurl = protoc + "://" + ip +"/" + ((directory!=null && directory.trim().length()>0)?("/" + directory):"")+"/"+serviceName;
-        }else{
-            serverurl = protoc + "://" + ip +":" + port+((directory!=null && directory.trim().length()>0)?("/" + directory):"")+"/"+serviceName;
+        if (isValidUrl(protoc + "://" + ip) & !isIP(ip)) {
+            serverurl = protoc + "://" + ip + "/" + ((directory != null && directory.trim().length() > 0) ? ("/" + directory) : "") + "/" + serviceName;
+        } else {
+            serverurl = protoc + "://" + ip + ":" + port + ((directory != null && directory.trim().length() > 0) ? ("/" + directory) : "") + "/" + serviceName;
         }
         SharedPreferences.Editor editor = settings.edit();
         editor.putString(PreferencesActivity.KEY_SERVER_URL, serverurl);
@@ -474,22 +498,22 @@ public class PreferencesActivity extends PreferenceActivity implements
     }
 
 
-    private String getAPKURL(){
+    private String getAPKURL() {
         String serverURL = new String();
 
-        SharedPreferences settings =  PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         String protoc = (getProtocolFromRadioButton(getString(R.string.portocol_choice))).trim();
         String ip = (settings.getString(PreferencesActivity.KEY_IP, getString(R.string.server_IP))).trim();
         String port = (settings.getString(PreferencesActivity.KEY_PORT, getString(R.string.server_port))).trim();
         String directory = (settings.getString(PreferencesActivity.KEY_DIRECTORY, getString(R.string.server_directory))).trim();
 
-        if(isValidUrl(protoc+"://"+ip) & !isIP(ip)){
-            serverURL = protoc + "://" + ip +"/" + ((directory!=null && directory.trim().length()>0)?("/" + directory):"")+"/Public/grasp.apk";
-        }else{
-            serverURL = protoc + "://" + ip + ((port!=null && port.trim().length()>0)?(":"  + port):"")+((directory!=null && directory.trim().length()>0)?("/" + directory):"")+"/Public/grasp.apk";
+        if (isValidUrl(protoc + "://" + ip) & !isIP(ip)) {
+            serverURL = protoc + "://" + ip + "/" + ((directory != null && directory.trim().length() > 0) ? ("/" + directory) : "") + "/Public/grasp.apk";
+        } else {
+            serverURL = protoc + "://" + ip + ((port != null && port.trim().length() > 0) ? (":" + port) : "") + ((directory != null && directory.trim().length() > 0) ? ("/" + directory) : "") + "/Public/grasp.apk";
         }
-        Log.i("The server url is ",serverURL);
-        System.out.println("The server url is "+serverURL);
+        Log.i("The server url is ", serverURL);
+        System.out.println("The server url is " + serverURL);
         return serverURL;
     }
 
@@ -513,19 +537,19 @@ public class PreferencesActivity extends PreferenceActivity implements
         createImageFolders(mClientTelephonePreference.getText().trim());
     }
 
-    private boolean createImageFolders(String phoneNumber){
-        try{
+    private boolean createImageFolders(String phoneNumber) {
+        try {
             /**
              * Create binary files folder (Images,..)
              */
-            File dir = new File(Collect.IMAGES_PATH +"/"+ phoneNumber.replaceAll("\\+",""));
+            File dir = new File(Collect.IMAGES_PATH + "/" + phoneNumber.replaceAll("\\+", ""));
             if (!dir.exists()) {
                 if (!dir.mkdirs()) {
                     return false;
                 }
             }
             return true;
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -556,28 +580,23 @@ public class PreferencesActivity extends PreferenceActivity implements
      */
     private void updateTimeRange() {
         mTimeRangePreference = (EditTextPreference) findPreference(KEY_TIME_RANGE);
-        mTimeRangePreference.setSummary(String.valueOf(mTimeRangeHour)+String.valueOf(mTimeRangeMinute));
+        mTimeRangePreference.setSummary(String.valueOf(mTimeRangeHour) + String.valueOf(mTimeRangeMinute));
     }
 
 
     /**
      * this class is used to download a new version of the app,
      * install it and delete all the previous forms and folders
-     *
      */
-    private class DownloadFile extends AsyncTask<String, Integer, String>
-    {
-        protected void onPreExecute()
-        {
+    private class DownloadFile extends AsyncTask<String, Integer, String> {
+        protected void onPreExecute() {
             super.onPreExecute();
             mProgressDialog.show();
         }
 
         @Override
-        protected String doInBackground(String... sUrl)
-        {
-            try
-            {
+        protected String doInBackground(String... sUrl) {
+            try {
                 URL url = new URL(sUrl[0]);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.connect();
@@ -591,7 +610,7 @@ public class PreferencesActivity extends PreferenceActivity implements
                 /**
                  * CREATE A TEMPORARY FOLDER
                  */
-                File temporaryDirectory = new File(Environment.getExternalStorageDirectory().getPath()+"/temporary/");
+                File temporaryDirectory = new File(Environment.getExternalStorageDirectory().getPath() + "/temporary/");
                 temporaryDirectory.mkdirs();
 
 
@@ -609,41 +628,36 @@ public class PreferencesActivity extends PreferenceActivity implements
                 byte data[] = new byte[1024];
                 long total = 0;
                 int count;
-                while ((count = input.read(data)) != -1)
-                {
+                while ((count = input.read(data)) != -1) {
                     total += count;
                     /**
                      *  publishing the progress....
                      */
                     publishProgress((int) (total * 100 / fileLength));
-                    Log.i("downloaded", "scaricati "+ total);
+                    Log.i("downloaded", "scaricati " + total);
                     fileOutput.write(data, 0, count);
                 }
                 fileOutput.flush();
                 fileOutput.close();
                 input.close();
-            }
-            catch (Exception e)
-            {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
             return null;
         }
-        protected void onProgressUpdate(Integer... progress)
-        {
+
+        protected void onProgressUpdate(Integer... progress) {
             super.onProgressUpdate(progress);
             mProgressDialog.setProgress(progress[0]);
         }
 
-        protected void onPostExecute(String sResponse)
-        {
+        protected void onPostExecute(String sResponse) {
             mProgressDialog.dismiss();
-            if(sResponse == null)
-            {
+            if (sResponse == null) {
                 DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        switch (which){
+                        switch (which) {
                             case DialogInterface.BUTTON_POSITIVE:
                                 //Yes button clicked
 
@@ -697,6 +711,7 @@ public class PreferencesActivity extends PreferenceActivity implements
 
     /**
      * This is used to check whether the given URL is valid or not.
+     *
      * @param url an url as a string
      * @return true if is a valid url false if not
      */
@@ -704,7 +719,7 @@ public class PreferencesActivity extends PreferenceActivity implements
     private boolean isValidUrl(String url) {
         Pattern p = Patterns.WEB_URL;
         Matcher m = p.matcher(url);
-        if(m.matches())
+        if (m.matches())
             return true;
         else
             return false;
@@ -713,17 +728,19 @@ public class PreferencesActivity extends PreferenceActivity implements
 
     /**
      * This is used to check whether the given IP is valid or not.
+     *
      * @param ip an ip as a string
      * @return true if is a valid ip false if not
      */
-    private boolean isIP(String ip){
+    private boolean isIP(String ip) {
         boolean isIP = false;
         final Pattern IP_ADDRESS
                 = Pattern.compile(
                 "((25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[1-9][0-9]|[1-9])\\.(25[0-5]|2[0-4]"
                         + "[0-9]|[0-1][0-9]{2}|[1-9][0-9]|[1-9]|0)\\.(25[0-5]|2[0-4][0-9]|[0-1]"
                         + "[0-9]{2}|[1-9][0-9]|[1-9]|0)\\.(25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}"
-                        + "|[1-9][0-9]|[0-9]))");
+                        + "|[1-9][0-9]|[0-9]))"
+        );
         Matcher matcher = IP_ADDRESS.matcher(ip);
         if (matcher.matches()) {
             // ip is correct

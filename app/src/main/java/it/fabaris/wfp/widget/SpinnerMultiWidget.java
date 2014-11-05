@@ -99,6 +99,7 @@ public class SpinnerMultiWidget extends QuestionWidget {
 								new DialogInterface.OnClickListener() {
 									public void onClick(DialogInterface dialog,
 											int id) {
+                                        dialog.dismiss();
 										boolean first = true;
 										selectionText.setText("");
 										for (int i = 0; i < selections.length; i++) {

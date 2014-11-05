@@ -1,9 +1,11 @@
 package content;
+
 import it.fabaris.wfp.activities.*;
 
 import java.util.ArrayList;
 
 import object.FormInnerListProxy;
+
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -18,8 +20,7 @@ import android.widget.TextView;
  * @author UtenteSviluppo
  */
 
-public class FormSubmittedAdapter  extends BaseAdapter
-{
+public class FormSubmittedAdapter extends BaseAdapter {
 
     private Activity activity;
     private ArrayList<FormInnerListProxy> item;
@@ -32,12 +33,11 @@ public class FormSubmittedAdapter  extends BaseAdapter
         activity = a;
         item = list;
         //data = submitted; LL 14-05-2014 elminato per dismissione del db grasp non ci sono piu' due oggetti parcellizzati quindi non c'e' piu' problema di disallineamento
-        inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
-    public int getCount()
-    {
+    public int getCount() {
         return item.size();
     }
 
@@ -52,37 +52,21 @@ public class FormSubmittedAdapter  extends BaseAdapter
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent)
-    {
-        View vi=convertView;
-        if(convertView==null)
+    public View getView(int position, View convertView, ViewGroup parent) {
+        View vi = convertView;
+        if (convertView == null)
             vi = inflater.inflate(R.layout.formlist_rowsubmitted, null);
 
-        //relativeBG = (RelativeLayout) vi.findViewById(R.id.prodottiBackground); 
-
-        TextView text = (TextView)vi.findViewById(R.id.label);
+        TextView text = (TextView) vi.findViewById(R.id.label);
         text.setText(item.get(position).getFormName()); //LL deleted because the object "item" is not aligned with the position's value//LL 14-05-2014 rimesso per dismissione db grasp
-        
-        /*LL 14-05-2014 eliminato per dismissione db grasp
-        String[] formNameA = data.get(position).getFormName().split("_");
-        String formName = formNameA[0];
-        if(formNameA.length > 2){//if the form name contains one or more underscore
-        	for(int i=1; i < formNameA.length-1; i++){
-        		formName = formName + "_"+formNameA[i];
-        	}
-        }
-        text.setText(formName);*/
 
         TextView textBy = (TextView) vi.findViewById(R.id.textBy);
         TextView textSubmittedOn = (TextView) vi.findViewById(R.id.textSubmittedOn);
 
-        try
-        {
-            textBy.setText(item.get(position).getFormEnumeratorId());
+        try {
             textSubmittedOn.setText(item.get(position).getSubmissionDate());
-        }
-        catch(Exception e)
-        {
+            textBy.setText(item.get(position).getFormEnumeratorId());
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return vi;

@@ -1628,7 +1628,7 @@ public class FormEntryActivity extends Activity implements AnimationListener,
                 .setNeutralButton(getString(R.string.do_not_exit),
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-                                dialog.cancel();
+                                dialog.dismiss();
                             }
                         }
                 )
@@ -1947,9 +1947,10 @@ public class FormEntryActivity extends Activity implements AnimationListener,
                             .setMessage(R.string.exit_dialog_form)
                             .setPositiveButton(R.string.confirm,
                                     new DialogInterface.OnClickListener() {
-                                        public void onClick(DialogInterface arg0,
+                                        public void onClick(DialogInterface dialog,
                                                             int arg1) {
                                             Log.i("clickOKsuDialog", "1");
+                                            dialog.dismiss();
                                             saveDataToDisk(EXIT,
                                                     isInstanceComplete(false), null);
                                         }
@@ -1959,7 +1960,7 @@ public class FormEntryActivity extends Activity implements AnimationListener,
                                     new DialogInterface.OnClickListener() {
                                         public void onClick(DialogInterface dialog,
                                                             int id) {
-                                            dialog.cancel();
+                                            dialog.dismiss();
                                         }
                                     }
                             );

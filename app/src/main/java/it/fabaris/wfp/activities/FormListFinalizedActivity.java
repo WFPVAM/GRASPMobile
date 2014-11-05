@@ -282,7 +282,7 @@ public class FormListFinalizedActivity extends Activity implements MyCallback
 					       		})
 					       		.setNegativeButton(getString(R.string.negative_choise), new DialogInterface.OnClickListener() {
 					       			public void onClick(DialogInterface dialog, int id) {
-					                dialog.cancel();
+					                dialog.dismiss();
 					           }
 					       });
 					AlertDialog alert = builder.create();

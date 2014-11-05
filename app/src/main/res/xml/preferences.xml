@@ -77,6 +77,10 @@
         <Preference
             android:key="button_check_new_app"
             android:title="@string/check_new_app" />
+
+        <Preference
+            android:key="button_convert_submitted_to_complete"
+            android:title="@string/convert_submitted_to_complete" />
     </PreferenceCategory>
     <!-- PreferenceCategory android:title="@string/colors"  >
         <ListPreference

@@ -357,5 +357,6 @@
 
     <string name="exit_button">EXIT</string>
     <string name="on_request">On Request</string>
-	
+    <string name="convert_submitted_to_complete">Convert submitted forms to completed </string>
+    <string name="convert_form_to_complate">Are you sure you want to convert all submitted forms to completed?</string>
 </resources>

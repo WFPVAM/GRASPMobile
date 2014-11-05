@@ -245,6 +245,8 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
         /**
          *  set parameter
          */
+        Log.i("URL ------------ ", url);
+
         String result = null;
         HttpPost httpPost = new HttpPost(url);
         HttpParams httpParameters = new BasicHttpParams();

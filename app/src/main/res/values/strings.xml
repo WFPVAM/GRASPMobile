@@ -32,7 +32,8 @@
     <string name="send_form">Do you want to send the form?</string>
  
     <string name="check_new_app">Update the Application</string>
-    
+
+
     <string name="checking_server">Checking server...</string>
     <string name="negative">No</string>
        
@@ -341,6 +342,9 @@
     <string name="server_directory">Virtual directory</string>
 
     <string name="take_signature">Take Signature</string>
+
+    <string name="convert_submitted_to_complete">Convert submitted forms to completed </string>
+    <string name="convert_form_to_complate">Are you sure you want to convert all submitted forms to completed?</string>
 	
 	
 </resources>

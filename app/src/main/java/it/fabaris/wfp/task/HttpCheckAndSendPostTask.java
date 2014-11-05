@@ -119,7 +119,6 @@ public class HttpCheckAndSendPostTask extends AsyncTask<String, Void, String> {
     @Override
     protected String doInBackground(String... params)
     {
-
         result = ControlConnection(http1, phone, data);
         Log.i("result in doInBackground", result);
         return result;
