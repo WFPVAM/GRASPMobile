@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2012 Fabaris SRL.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the GNU Lesser Public License v2.1
+  which accompanies this distribution, and is available at
+  http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+  
+  Contributors:
+      Fabaris SRL - initial API and implementation
+
+-->
+<resources>
+
+    <string-array name="entries_list_preference">
+        <item>Guardado, Desconocido</item>
+        <item>Relleno, no Enviado</item>
+        <item>Enviado</item>
+    </string-array>
+    <!-- Used in app/menu examples -->
+    <string-array name="entryvalues_list_preference">
+        <item>guardado</item>
+        <item>terminado</item>
+        <item>presentado</item>
+    </string-array>
+    <string-array name="entries_saved_preference">
+        <item>Guardado, Desconocido</item>
+        <item>Relleno, no Enviado</item>
+    </string-array>
+    <!-- Used in app/menu examples -->
+    <string-array name="entryvalues_saved_preference">
+        <item>guardado</item>
+        <item>terminado</item>
+    </string-array>
+    <!-- make sure to match these values in preferences activity -->
+    <string-array name="protocol_entry_values">
+        <item>odk_default</item>
+        <item>google</item>
+        <item></item>
+    </string-array>
+    <string-array name="protocol_entries">
+        <item>ODK Aggregate</item>
+        <item>Google Forms</item>
+        <item>OpenRosa 1.0</item>
+    </string-array>
+    <string-array name="font_size_entry_values">
+        <item>29</item>
+        <item>25</item>
+        <item>21</item>
+        <item>17</item>
+        <item>13</item>
+    </string-array>
+    <string-array name="font_size_entries">
+        <item>Extra Grande</item>
+        <item>Grande</item>
+        <item>Medio</item>
+        <item>Pequeño</item>
+        <item>Mas Pequeño</item>
+    </string-array>
+    
+    <string-array name="protocol_choices_values">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="protocol_choices_entries">
+        <item>http</item>
+        <item>https</item>
+    </string-array>
+    
+    <string-array name="updateInterval">
+        <item name="1000">Cada 1 segundo</item>
+        <item name="5000">Cada 5 segundos</item>
+        <item name="30000">Cada 30 segundos</item>
+        <item name="60000">Cada 1 minuto</item>
+        <item name="300000">Cada 5 minutos</item>
+    </string-array>
+    <string-array name="updateIntervalValues">
+        <item name="1000">1000</item>
+        <item name="5000">5000</item>
+        <item name="30000">30000</item>
+        <item name="60000">60000</item>
+        <item name="300000">300000</item>
+    </string-array>
+    <string-array name="connection_type">
+        <item name="sms">SMS solamente</item>
+        <item name="gprsumts">GPRS/UMTS solamente</item>
+        <item name="gprsumtspref">GPRS/UMTS favorito</item>
+    </string-array>
+    <string-array name="connection_type_values">
+        <item name="sms">sms only</item>
+        <item name="gprsumts">gprs/umts only</item>
+        <item name="gprsumtspref">gprs/umts preferred</item>
+    </string-array>
+
+    <string-array name="textcolor_foreground_entries">
+        <item>Azul</item>
+        <item>Blanco</item>
+        <item>Amarillo</item>
+        <item>Verde</item>
+        <item>Negro</item>
+    </string-array>
+    <string-array name="textcolor_foreground_entry_values">
+        <item>#000066</item>
+        <item>#FFFFFF</item>
+        <item>#FFFF00</item>
+        <item>#00FF00</item>
+        <item>#000000</item>
+    </string-array>
+    <string-array name="textcolor_background_entries">
+        <item>Cian</item>
+        <item>Negro</item>
+        <item>Verde</item>
+        <item>Amarillo</item>
+        <item>Blanco</item>
+    </string-array>
+    <string-array name="textcolor_background_entry_values">        
+        <item>#00FFFF</item>
+        <item>#000000</item>
+        <item>#00FF00</item>
+        <item>#FFFF00</item>
+        <item>#FFFFFF</item>
+    </string-array>
+    <string-array name="textcolor_mandatory_foreground_entries">
+        <item>Azul</item>
+        <item>Blanco</item>
+        <item>Amarillo</item>
+        <item>Verde</item>
+        <item>Negro</item>
+    </string-array>
+    <string-array name="textcolor_mandatory_foreground_entry_values">
+        <item>#000066</item>
+        <item>#FFFFFF</item>
+        <item>#FFFF00</item>
+        <item>#00FF00</item>
+        <item>#000000</item>
+    </string-array>
+    <string-array name="textcolor_mandatory_background_entries">
+        <item>Cian</item>
+        <item>Negro</item>
+        <item>Verde</item>
+        <item>Amarillo</item>
+        <item>Blanco</item>
+    </string-array>
+    <string-array name="textcolor_mandatory_background_entry_values">        
+        <item>#00FFFF</item>
+        <item>#000000</item>
+        <item>#00FF00</item>
+        <item>#FFFF00</item>
+        <item>#FFFFFF</item>
+    </string-array>
+    <string-array name="textcolor_error_foreground_entries">
+        <item>Azul</item>
+        <item>Blanco</item>
+        <item>Naranja</item>
+        <item>Tinto</item>
+        <item>Negro</item>
+    </string-array>
+    <string-array name="textcolor_error_foreground_entry_values">
+        <item>#000066</item>
+        <item>#FFFFFF</item>
+        <item>#007cf9</item>
+        <item>#FF0000</item>
+        <item>#000000</item>
+    </string-array>
+    <string-array name="textcolor_error_background_entries">
+        <item>Cian</item>
+        <item>Negro</item>
+        <item>Verde</item>
+        <item>Amarillo</item>
+        <item>Blanco</item>
+    </string-array>
+    <string-array name="textcolor_error_background_entry_values">        
+        <item>#00FFFF</item>
+        <item>#000000</item>
+        <item>#00FF00</item>
+        <item>#FFFF00</item>
+        <item>#FFFFFF</item>
+    </string-array>
+</resources>
