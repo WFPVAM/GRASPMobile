@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2012 Fabaris SRL.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the GNU Lesser Public License v2.1
+  which accompanies this distribution, and is available at
+  http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+  
+  Contributors:
+      Fabaris SRL - initial API and implementation
+-->
+<RelativeLayout
+    android:layout_height="wrap_content" 
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<ScrollView
+    android:layout_height="match_parent" 
+    android:layout_width="match_parent"
+    android:layout_marginTop="0dp"
+    android:fillViewport="true"
+    >
+    
+	<LinearLayout 
+  		android:layout_width="fill_parent"
+ 	 	android:layout_height="wrap_content"
+ 	 	android:orientation="vertical"
+ 	 	android:focusable="true"
+ 	 	android:gravity="top"
+  		android:id="@+id/rl" >  
+ 
+<!--<ProgressBar 
+    android:id="@+id/progressbar"
+    android:progressDrawable="@+drawable/progressbar" 
+    android:indeterminateDrawable="@+drawable/progressbar" 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:indeterminateOnly="false" 
+    android:minHeight="20dip" 
+    android:maxHeight="20dip"
+    android:layout_alignParentBottom="true" /> 
+    
+-->
+	</LinearLayout>
+	
+</ScrollView>
+
+</RelativeLayout>
+<!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/layout-xlarge/form_entry.xml -->

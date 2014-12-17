@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2012 Fabaris SRL.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the GNU Lesser Public License v2.1
+  which accompanies this distribution, and is available at
+  http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+  
+  Contributors:
+      Fabaris SRL - initial API and implementation
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" >
+        <shape>
+            <solid
+                android:color="@color/wfp_azure1" />
+            <stroke
+                android:width="1dp"
+                android:color="@color/wfp_azure1" />
+            <corners
+                android:radius="4dp" />
+            <padding
+                android:left="15dp"
+                android:top="15dp"
+                android:right="15dp"
+                android:bottom="15dp" />
+        </shape>
+    </item>
+    <item android:state_pressed="false">
+        <shape>
+            <gradient
+                android:startColor="@color/wfp_azure1"
+                android:centerColor="@color/wfp_azure2"
+                android:endColor="@color/wfp_azure1"
+                android:angle="270" />
+            <stroke
+                android:width="1dp"
+                android:color="@color/wfp_azure1" />
+            <corners
+                android:radius="4dp" />
+            <padding
+                android:left="15dp"
+                android:top="15dp"
+                android:right="15dp"
+                android:bottom="15dp" />
+        </shape>
+    </item>
+</selector>
+<!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/drawable-ldpi/button_blue.xml -->

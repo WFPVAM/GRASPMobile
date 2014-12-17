@@ -2,34 +2,34 @@
 <pre-dex-items>
 
     <item
-        dex="C:\Users\mureed\AndroidstudioProjects\GRASPMobile\app\build\intermediates\pre-dexed\release\xercesImpl-e2bb5be32b98cf185298b6858f56cfd189344bd7.jar"
-        jar="C:\Users\mureed\AndroidstudioProjects\GRASPMobile\app\lib\xercesImpl.jar"
+        dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\xercesImpl-b0d00df5e4dc644816a5bceb49468de82c41a447.jar"
+        jar="C:\Projects\GRASPMobilePal\app\lib\xercesImpl.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="78e8536aa8b161c13232f37a32910666f787a5af"/>
     <item
-        dex="C:\Users\mureed\AndroidstudioProjects\GRASPMobile\app\build\intermediates\pre-dexed\release\regexp-me-53ee64f697b9c390c82d815dfda958899fbd6e8b.jar"
-        jar="C:\Users\mureed\AndroidstudioProjects\GRASPMobile\app\lib\regexp-me.jar"
+        dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\kxml2-2.2.3-c36fc58c247b8f1931d38d7c867d9ccbad619a04.jar"
+        jar="C:\Projects\GRASPMobilePal\app\lib\kxml2-2.2.3.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="27edcd147dfc908a3c3c837a57d3672d52f2f609"/>
+        sha1="2c239293db424c0cc7dac6076f6dc406694a8356"/>
     <item
-        dex="C:\Users\mureed\AndroidstudioProjects\GRASPMobile\app\build\intermediates\pre-dexed\release\w3c-dom-d982d97fe36542a4f90d9584cc446ee368afe4c4.jar"
-        jar="C:\Users\mureed\AndroidstudioProjects\GRASPMobile\app\lib\w3c-dom.jar"
+        dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\w3c-dom-fbb10ceb71b51d7fe9bb90927dd57e129a3794e3.jar"
+        jar="C:\Projects\GRASPMobilePal\app\lib\w3c-dom.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="c9dbc011544bfe3790f940cde9af0986addac744"/>
     <item
-        dex="C:\Users\mureed\AndroidstudioProjects\GRASPMobile\app\build\intermediates\pre-dexed\release\joda-time-2.0-4b86beb0b119ea66f5e41712d27bea2424a7ce90.jar"
-        jar="C:\Users\mureed\AndroidstudioProjects\GRASPMobile\app\lib\joda-time-2.0.jar"
+        dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\regexp-me-4cecfd2d22eae45f1117c4036b8fdf7b33b96e5c.jar"
+        jar="C:\Projects\GRASPMobilePal\app\lib\regexp-me.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="27edcd147dfc908a3c3c837a57d3672d52f2f609"/>
+    <item
+        dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\joda-time-2.0-2cf3c0fd813eeb12246632a7f6873e378839ca8d.jar"
+        jar="C:\Projects\GRASPMobilePal\app\lib\joda-time-2.0.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="752c0fe8a5b2d6704c9d9d6f06d9abdcacf4045d"/>
-    <item
-        dex="C:\Users\mureed\AndroidstudioProjects\GRASPMobile\app\build\intermediates\pre-dexed\release\kxml2-2.2.3-c61da982101b405777113365e5b68be2f3978a8f.jar"
-        jar="C:\Users\mureed\AndroidstudioProjects\GRASPMobile\app\lib\kxml2-2.2.3.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="2c239293db424c0cc7dac6076f6dc406694a8356"/>
 
 </pre-dex-items>

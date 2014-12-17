@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GRASPMobile.iml" filepath="$PROJECT_DIR$/GRASPMobile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GRASPMobilePal.iml" filepath="$PROJECT_DIR$/GRASPMobilePal.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

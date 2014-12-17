@@ -271,7 +271,7 @@ public class MenuActivity extends Activity
             TVdirectory.setText("Virtual directory");
 
             ETport.setText("80");
-            ETdirectory.setText("grasp");
+            ETdirectory.setText("graspreporting");
 
             //add to the principal LinearLayout "lila1" all the widgets
             lila1.addView(text1);//Server telephone

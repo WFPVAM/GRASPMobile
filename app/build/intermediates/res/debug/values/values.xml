@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/array.xml -->
+    <eat-comment />
+
+    <string-array name="connection_type">
+        <item name="sms">SMS only</item>
+        <item name="gprsumts">GPRS/UMTS only</item>
+        <item name="gprsumtspref">GPRS/UMTS preferred</item>
+    </string-array>
+    <string-array name="connection_type_values">
+        <item name="sms">sms only</item>
+        <item name="gprsumts">gprs/umts only</item>
+        <item name="gprsumtspref">gprs/umts preferred</item>
+    </string-array>
+    <string-array name="entries_list_preference">
+        <item>Saved, Not Completed</item>
+        <item>Completed, Not Submitted</item>
+        <item>Submitted</item>
+    </string-array>
+    <string-array name="entries_saved_preference">
+        <item>Saved, Not Completed</item>
+        <item>Completed, Not Submitted</item>
+    </string-array>
+    <string-array name="entryvalues_list_preference">
+        <item>saved</item>
+        <item>done</item>
+        <item>submitted</item>
+    </string-array>
+    <string-array name="entryvalues_saved_preference">
+        <item>saved</item>
+        <item>done</item>
+    </string-array>
+    <string-array name="font_size_entries">
+        <item>Extra Large</item>
+        <item>Large</item>
+        <item>Medium</item>
+        <item>Small</item>
+        <item>Extra Small</item>
+    </string-array>
+    <string-array name="font_size_entry_values">
+        <item>29</item>
+        <item>25</item>
+        <item>21</item>
+        <item>17</item>
+        <item>13</item>
+    </string-array>
+    <string-array name="protocol_choices_entries">
+        <item>http</item>
+        <item>https</item>
+    </string-array>
+    <string-array name="protocol_choices_values">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="protocol_entries">
+        <item>ODK Aggregate</item>
+        <item>Google Forms</item>
+        <item>OpenRosa 1.0</item>
+    </string-array>
+    <string-array name="protocol_entry_values">
+        <item>odk_default</item>
+        <item>google</item>
+        <item/>
+    </string-array>
+    <string-array name="textcolor_background_entries">
+        <item>Cyan</item>
+        <item>Black</item>
+        <item>Green</item>
+        <item>Yellow</item>
+        <item>White</item>
+    </string-array>
+    <string-array name="textcolor_background_entry_values">
+        <item>#00FFFF</item>
+        <item>#000000</item>
+        <item>#00FF00</item>
+        <item>#FFFF00</item>
+        <item>#FFFFFF</item>
+    </string-array>
+    <string-array name="textcolor_error_background_entries">
+        <item>Cyan</item>
+        <item>Black</item>
+        <item>Green</item>
+        <item>Yellow</item>
+        <item>White</item>
+    </string-array>
+    <string-array name="textcolor_error_background_entry_values">
+        <item>#00FFFF</item>
+        <item>#000000</item>
+        <item>#00FF00</item>
+        <item>#FFFF00</item>
+        <item>#FFFFFF</item>
+    </string-array>
+    <string-array name="textcolor_error_foreground_entries">
+        <item>Blue</item>
+        <item>White</item>
+        <item>Orange</item>
+        <item>Red</item>
+        <item>Black</item>
+    </string-array>
+    <string-array name="textcolor_error_foreground_entry_values">
+        <item>#000066</item>
+        <item>#FFFFFF</item>
+        <item>#007cf9</item>
+        <item>#FF0000</item>
+        <item>#000000</item>
+    </string-array>
+    <string-array name="textcolor_foreground_entries">
+        <item>Blue</item>
+        <item>White</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Black</item>
+    </string-array>
+    <string-array name="textcolor_foreground_entry_values">
+        <item>#000066</item>
+        <item>#FFFFFF</item>
+        <item>#FFFF00</item>
+        <item>#00FF00</item>
+        <item>#000000</item>
+    </string-array>
+    <string-array name="textcolor_mandatory_background_entries">
+        <item>Cyan</item>
+        <item>Black</item>
+        <item>Green</item>
+        <item>Yellow</item>
+        <item>White</item>
+    </string-array>
+    <string-array name="textcolor_mandatory_background_entry_values">
+        <item>#00FFFF</item>
+        <item>#000000</item>
+        <item>#00FF00</item>
+        <item>#FFFF00</item>
+        <item>#FFFFFF</item>
+    </string-array>
+    <string-array name="textcolor_mandatory_foreground_entries">
+        <item>Blue</item>
+        <item>White</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Black</item>
+    </string-array>
+    <string-array name="textcolor_mandatory_foreground_entry_values">
+        <item>#000066</item>
+        <item>#FFFFFF</item>
+        <item>#FFFF00</item>
+        <item>#00FF00</item>
+        <item>#000000</item>
+    </string-array>
+    <string-array name="updateInterval">
+        <item name="1000">Every 1 second</item>
+        <item name="5000">Every 5 seconds</item>
+        <item name="30000">Every 30 seconds</item>
+        <item name="60000">Every 1 minute</item>
+        <item name="300000">Every 5 minutes</item>
+    </string-array>
+    <string-array name="updateIntervalValues">
+        <item name="1000">1000</item>
+        <item name="5000">5000</item>
+        <item name="30000">30000</item>
+        <item name="60000">60000</item>
+        <item name="300000">300000</item>
+    </string-array>
+    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/color.xml -->
+    <eat-comment />
+
+    <color name="bg_err">#000000</color>
+    <color name="bg_mand">#FFFFB5</color>
+    <color name="bg_readonly">#FFFFFF</color>
+    <color name="bg_readonly_err">#FF0000</color>
+    <color name="bg_readonly_inv">#000000</color>
+    <color name="bg_std">#000000</color>
+    <color name="black_1">#000000</color>
+    <color name="black_2">#202020</color>
+    <color name="blue">#0000FF</color>
+    <color name="dark_grey">#333333</color>
+    <color name="fg_err">#FF0000</color>
+    <color name="fg_mand">#000000</color>
+    <color name="fg_readonly">#666666</color>
+    <color name="fg_readonly_err">#000000</color>
+    <color name="fg_readonly_inv">#000000</color>
+    <color name="fg_std">#FFFFFF</color>
+    <color name="gray">#808080</color>
+    <color name="green">#008000</color>
+    <color name="red">#FF0000</color>
+    <color name="wfp_azure1">#39ACFF</color>
+    <color name="wfp_azure2">#006DC2</color>
+    <color name="white">#FFFFFF</color>
+    <color name="yellow">#FFFF00</color>
+    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="accept_location">Get GPS coordinates</string>
+    <string name="access_error">Error while accessing %s: </string>
+    <string name="accuracy">Accuracy</string>
+    <string name="activity_not_found">No activity found to handle: %s</string>
+    <string name="add_another">Yes</string>
+    <string name="add_another_repeat">Add another entry?</string>
+    <string name="add_repeat">Add a new entry?</string>
+    <string name="add_repeat_no">No</string>
+    <string name="advance">forward to\nnext\npage</string>
+    <string name="altitude">Altitude</string>
+    <string name="app_name">GRASP Mobile Tool</string>
+    <string name="app_url">http://opendatakit.org</string>
+    <string name="audio_capture">audio capture</string>
+    <string name="audio_file_error">No audio file was specified.</string>
+    <string name="audio_file_invalid">File: %s is not a valid audio file.</string>
+    <string name="backup">back to\nprevious\nprompt</string>
+    <string name="bad_uri">Bad URI: </string>
+    <string name="barcode_scanner_error">Sorry, Barcode Scanner is not installed!</string>
+    <string name="blank_answer">The form is uncompleted please check blank answer</string>
+    <string name="button_in">Login</string>
+    <string name="by">By:</string>
+    <string name="cancel">Cancel</string>
+    <string name="cancel_loading_form">Cancel</string>
+    <string name="cancel_location">Cancel</string>
+    <string name="cancel_saving_form">Cancel</string>
+    <string name="cancelform">You delete the form</string>
+    <string name="cannot_edit_completed_form">This form cannot be edited once it has been marked as complete.</string>
+    <string name="capture_audio">Record Sound</string>
+    <string name="capture_image">Take Picture</string>
+    <string name="capture_video">Record Video</string>
+    <string name="change_client_telephone">Client Telephone</string>
+    <string name="change_connection">Connection Type</string>
+    <string name="change_font_size">Text Font Size</string>
+    <string name="change_formlist_url">Form List Path (appended to Server URL)</string>
+    <string name="change_language">Change Language</string>
+    <string name="change_password">Password</string>
+    <string name="change_protocol">Protocol</string>
+    <string name="change_server_telephone">Server Telephone</string>
+    <string name="change_server_url">Server URL</string>
+    <string name="change_splash_path">Change Image</string>
+    <string name="change_submission_url">Submission Path (appended to Server URL)</string>
+    <string name="change_textcolor_background">Choose background color text</string>
+    <string name="change_textcolor_error_background">Choose background color text on error</string>
+    <string name="change_textcolor_error_foreground">Choose foreground color text on error</string>
+    <string name="change_textcolor_foreground">Choose foreground color text</string>
+    <string name="change_textcolor_mandatory_background">Choose background color of mandatory text</string>
+    <string name="change_textcolor_mandatory_foreground">Choose foreground color of mandatory text</string>
+    <string name="change_username">ODK Username</string>
+    <string name="check_connection">Check Server Connection</string>
+    <string name="check_new_app">Update the Application</string>
+    <string name="check_url">Cannot contact the server, check the URL or try to check connection in the settings area</string>
+    <string name="checking_server">Checking server...</string>
+    <string name="choose_image">Choose Image</string>
+    <string name="choose_protocol">Choose the protocol</string>
+    <string name="choose_sound">Choose Sound</string>
+    <string name="choose_video">Choose Video</string>
+    <string name="chose_audio">choose audio</string>
+    <string name="clear_answer">Remove response</string>
+    <string name="clear_answer_ask">Remove This Response?</string>
+    <string name="clear_answer_no">Cancel</string>
+    <string name="clearanswer_confirm">Remove the response to \"%s\"?</string>
+    <string name="click_to_web">Tap to visit http://</string>
+    <string name="client">Client</string>
+    <string name="client_telephone">Client Telephone</string>
+    <string name="colors">Colors</string>
+    <string name="completed_data">Complete (%s)</string>
+    <string name="confirm">Yes</string>
+    <string name="contDesc">Description</string>
+    <string name="convert_form_to_complate">Are you sure you want to convert all submitted forms to completed?</string>
+    <string name="convert_submitted_to_complete">Convert submitted forms to completed </string>
+    <string name="credits">ABOUT</string>
+    <string name="data">Saved Forms</string>
+    <string name="data_saved_error">Sorry, form save failed!</string>
+    <string name="data_saved_ok">Form successfully saved!</string>
+    <string name="date">Date:</string>
+    <string name="default_client_telephone"></string>
+    <string name="default_completed">Default to Finalized</string>
+    <string name="default_completed_summary">Mark form as finalized by default</string>
+    <string name="default_connection_type"></string>
+    <string name="default_odk_formlist">/formList</string>
+    <string name="default_odk_submission">/submission</string>
+    <string name="default_server_telephone"></string>
+    <string name="default_server_url"></string>
+    <string name="default_splash_path">ODK Default</string>
+    <string name="delete_confirm">Delete %s form(s)?</string>
+    <string name="delete_file">Delete Selected</string>
+    <string name="delete_form">Do you want to delete the selected form?</string>
+    <string name="delete_no">Do Not Delete</string>
+    <string name="delete_repeat">Remove group</string>
+    <string name="delete_repeat_ask">Remove This Group?</string>
+    <string name="delete_repeat_confirm">Remove group \"%s\" and all of its sub-groups?</string>
+    <string name="delete_repeat_no">Cancel</string>
+    <string name="delete_yes">Delete Forms</string>
+    <string name="designed">Designed and Developed by Brains Engineering srl</string>
+    <string name="device_not_online">Your device is not online</string>
+    <string name="dialog_save">There are saved forms, you want to complete them before you compile a new one?</string>
+    <string name="digit_server_directory">Digit virtual directory</string>
+    <string name="digit_server_ip">Digit server IP</string>
+    <string name="digit_server_port">Digit server port</string>
+    <string name="discard_answer">Remove response</string>
+    <string name="discard_group">Remove group</string>
+    <string name="do_not_change">Cancel</string>
+    <string name="do_not_exit">Cancel</string>
+    <string name="do_not_save">Ignore Changes</string>
+    <string name="done">Done</string>
+    <string name="double_back">Please click BACK again to exit</string>
+    <string name="download">Get Selected</string>
+    <string name="download_all_successful">All forms downloaded successfully.</string>
+    <string name="download_complete">Form successfully received</string>
+    <string name="download_failed_with_error">Form \"%1$s\" failed. %2$s.</string>
+    <string name="download_forms_result">Download Result</string>
+    <string name="downloading_data">Connecting to Server</string>
+    <string name="edit_prompt">Edit Prompt</string>
+    <string name="enter">start</string>
+    <string name="enter_data">Fill Blank Form</string>
+    <string name="enter_data_button">Fill Blank Form</string>
+    <string name="enter_data_description">You are at the start of the form. Swipe the screen as shown below to begin.</string>
+    <string name="enter_data_message">To navigate, swipe your finger horizontally on the screen as if turning pages in a book. Press the Menu button for more choices.</string>
+    <string name="entering_repeat">Yes</string>
+    <string name="entering_repeat_ask">Add New Group?</string>
+    <string name="error">Error</string>
+    <string name="error_downloading">Error Getting Form</string>
+    <string name="error_network">Error network disabled</string>
+    <string name="error_no_pdu">Errore no PDU found</string>
+    <string name="error_no_service">Error no service available</string>
+    <string name="error_occured">Error Occurred</string>
+    <string name="error_sms_not_delivered">Error sms not delivered</string>
+    <string name="exit_button">EXIT</string>
+    <string name="exit_dialog">Do you want to quit?</string>
+    <string name="exit_dialog_form">Do you want to exit from the form?</string>
+    <string name="exit_dialog_title">Exit</string>
+    <string name="exit_dialog_title_form">Exit from the form</string>
+    <string name="fetching_file">Getting %1$s.\n\nForm %2$s of %3$s form(s).</string>
+    <string name="fetching_manifest">%s. Getting manifest </string>
+    <string name="file_delete_in_progress">Sorry, a form delete action is already in progress!</string>
+    <string name="file_deleted_error">Sorry, %1$s of %2$s selected form(s) failed to delete!</string>
+    <string name="file_deleted_ok">%s form(s) successfully deleted!</string>
+    <string name="file_fetch_failed">Error: %2$s (%3$s) at %1$s</string>
+    <string name="file_invalid">File: %s is invalid.</string>
+    <string name="file_missing">File: %s is missing.</string>
+    <string name="finished_disk_scan">Finished scanning. All forms loaded.</string>
+    <string name="first_run">Do first run on restart</string>
+    <string name="font_size">Text Font Size</string>
+    <string name="form_download_progress">%1$s. Getting media files: %2$s of %3$s</string>
+    <string name="form_name">Form Name:</string>
+    <string name="form_not_available">The form is not available on server</string>
+    <string name="form_present">This form already exist in saved list, do you want continue?</string>
+    <string name="form_renamed">%1$s was renamed %2$s.</string>
+    <string name="form_scan_finished">Form scanning completed</string>
+    <string name="form_scan_starting">Scanning for forms...</string>
+    <string name="form_uncompleted">Form uncompleted</string>
+    <string name="formlist_url">Form List Path</string>
+    <string name="forms_downloaded">Forms correctly downloaded</string>
+    <string name="forms_sent">Forms correctly sent</string>
+    <string name="general_preferences">Change Settings</string>
+    <string name="generic_error">Generic error</string>
+    <string name="get_barcode">Get Barcode</string>
+    <string name="get_forms">Get Blank Form</string>
+    <string name="get_location">Get GPS coordinates</string>
+    <string name="getting_location">Loading Location</string>
+    <string name="go_to_location">Go to Location</string>
+    <string name="google_account">Select Google Account</string>
+    <string name="gps">Network</string>
+    <string name="grasp">GRASP - Geo Referential realtime Acquisition Statistic Platform</string>
+    <string name="hard_reset">Do you want to make a cancellation of forms previously completed and sync, and restore the application as a new installation?</string>
+    <string name="help">HELP</string>
+    <string name="home">HOME</string>
+    <string name="image_directory_creation_faild">Failed to create image directory</string>
+    <string name="imported">Form correctly imported</string>
+    <string name="invalid_answer_error">Check for red fields they are invalid!</string>
+    <string name="jump_to_beginning">Go To Start</string>
+    <string name="jump_to_end">Go To End</string>
+    <string name="jump_to_previous">Go Up</string>
+    <string name="keep_changes">Save Changes</string>
+    <string name="last_saved_date">Last saved:</string>
+    <string name="latitude">Latitude</string>
+    <string name="leave_repeat_yes">No</string>
+    <string name="leaving_repeat">Add entry</string>
+    <string name="leaving_repeat_ask">Add a new entry</string>
+    <string name="list_failed_with_error">Form listing failed. %s.</string>
+    <string name="list_form">LIST FORMS</string>
+    <string name="load_remote_form_error">Error Getting Form List</string>
+    <string name="loading_form">Loading Form</string>
+    <string name="location_accuracy">Accuracy is %1$s m</string>
+    <string name="location_provider">Using %1$s provider. Please wait for greater accuracy.</string>
+    <string name="location_provider_accuracy">Using %1$s. Accuracy is %2$s m.</string>
+    <string name="longitude">Longitude</string>
+    <string name="main_menu_details">This is GRASP data collection</string>
+    <string name="main_menu_message">GRASP MOBILE TOOL</string>
+    <string name="manage_files">Delete Saved Form</string>
+    <string name="manifest_server_error">Manifest reply does not report an OpenRosa version -- bad server?</string>
+    <string name="manifest_tag_error">Manifest entry %s is missing one or more tags: filename, hash, or downloadUrl</string>
+    <string name="mark_finished">Mark form as finalized</string>
+    <string name="menu">MENU</string>
+    <string name="more_form">More than one possible parent form</string>
+    <string name="negative">No</string>
+    <string name="negative_choise">No</string>
+    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/sysconfig.xml -->
+    <eat-comment />
+
+    <string name="new_app_url">http://www.brainsen.com/wfp/grasp/AndroidWFP.apk</string>
+    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="new_form">INBOX</string>
+    <string name="no">No</string>
+    <string name="no_answer_recorded">Warning: does not match any answers. No answer recorded</string>
+    <string name="no_capture">Nothing recorded yet.</string>
+    <string name="no_connection">No network connection available</string>
+    <string name="no_forms_to_download">There are no forms to download</string>
+    <string name="no_forms_uploaded">Sorry, no form was uploaded.</string>
+    <string name="no_items_display">Nothing available to display.</string>
+    <string name="no_items_display_forms">Nothing available to display.\n\nTry getting and filling out a blank form.</string>
+    <string name="no_items_display_instances">Nothing available to display.\n\nTry finalizing saved forms before sending.</string>
+    <string name="no_items_error">Nothing available to %s!</string>
+    <string name="no_pref">No, only update</string>
+    <string name="no_sd_error">Sorry, your memory card is not working!</string>
+    <string name="noselect_error">Sorry, you have not selected any forms!</string>
+    <string name="number_error">The server telephone number is not inserted, please enter it</string>
+    <string name="offline">Offline</string>
+    <string name="ok">OK</string>
+    <string name="on_request">On Request</string>
+    <string name="one_capture">Multimedia recorded.</string>
+    <string name="open_data_kit">Open Data Kit</string>
+    <string name="parent_form_not_exist">Parent form does not exist </string>
+    <string name="parse_error">Sorry, unable to parse form.</string>
+    <string name="parse_legacy_formlist_failed">The server has not provided an available-forms document compatible with Aggregate 0.9.x. : %s</string>
+    <string name="parse_openrosa_formlist_failed">The server has not provided an available-forms document compatible with the OpenRosa version 1.0 standard: %s</string>
+    <string name="password">Password</string>
+    <string name="passwordText">Enter the password</string>
+    <string name="password_error">The password you typed is incorrect</string>
+    <string name="phone_not_in_server">Phone number not in server&amp;s contact list</string>
+    <string name="play_audio">Play Sound</string>
+    <string name="play_video">Play Video</string>
+    <string name="please_insert_your_phone_number">Please insert your phone number preceded by country code</string>
+    <string name="please_wait">Please wait a few moments.</string>
+    <string name="please_wait_long">Please wait. This could take a few minutes.</string>
+    <string name="portocol_choice">Protocol</string>
+    <string name="positive_choise">Ok</string>
+    <string name="powered_by_odk">v1.1.7 - Powered by Open Data Kit</string>
+    <string name="protocol">Protocol</string>
+    <string name="provider_disabled_error">Please activate GPS and/or WIFI location</string>
+    <string name="quit_application">Exit %s</string>
+    <string name="quit_entry">Save Form as Completed</string>
+    <string name="refresh">SYNCHRONIZE</string>
+    <string name="replace_audio">Replace Sound</string>
+    <string name="replace_barcode">Replace Barcode</string>
+    <string name="replace_image">Replace Picture</string>
+    <string name="replace_location">Replace Location</string>
+    <string name="replace_video">Replace Video</string>
+    <string name="required_answer_error">Check for yellow fields they are required!</string>
+    <string name="review">continue</string>
+    <string name="review_data">Edit Saved Form</string>
+    <string name="review_data_button">Edit Saved Form</string>
+    <string name="root_element_error">Root element is not &lt;manifest\> -- was %s</string>
+    <string name="root_namespace_error">Root element Namespace is incorrect: %s</string>
+    <string name="save_all_answers">Save Form</string>
+    <string name="save_as_error">Saved name must not be blank!</string>
+    <string name="save_data_message">Please save form to keep your responses.</string>
+    <string name="save_enter_data_description">You are at the end of the form.</string>
+    <string name="save_form_as">Name this form:</string>
+    <string name="saved_data">Incomplete (%s)</string>
+    <string name="saving_form">Saving Form</string>
+    <string name="select_another_image">Select Another Image</string>
+    <string name="select_answer">Select Answer</string>
+    <string name="selected">Selected: </string>
+    <string name="send">send</string>
+    <string name="send_all">Send all form</string>
+    <string name="send_data">Send Finalized Form</string>
+    <string name="send_data_button">Send Finalized Form</string>
+    <string name="send_form">Do you want to send the form?</string>
+    <string name="send_form_by_network_or_sms">Choose how to send the forms</string>
+    <string name="send_selected_data">Send Selected</string>
+    <string name="sending_data">Sending data to server...</string>
+    <string name="sending_items">Sending %1$s of %2$s form(s)</string>
+    <string name="sending_method">Sending Method</string>
+    <string name="sending_sms">Sending data to server, please wait</string>
+    <string name="server_IP">IP</string>
+    <string name="server_auth_credentials">Please enter username and password for server:\n%s</string>
+    <string name="server_directory">Virtual directory</string>
+    <string name="server_not_online">The server is not online or the URL address is not correct</string>
+    <string name="server_on_line">Server Online</string>
+    <string name="server_port">Port</string>
+    <string name="server_preferences">Server</string>
+    <string name="server_requires_auth">Server Requires Authentication</string>
+    <string name="server_telephone">Server Telephone</string>
+    <string name="server_url">Server URL</string>
+    <string name="server_url_not_inserted">The server url is not inserted, please enter it</string>
+    <string name="settings">SETTINGS</string>
+    <string name="show_location">Show Location</string>
+    <string name="show_splash">Show Splash Screen</string>
+    <string name="show_splash_summary">Shows when application starts</string>
+    <string name="sms">Sms</string>
+    <string name="sms_delivered">SMS delivered</string>
+    <string name="splash_path">Selected Splash Image</string>
+    <string name="submission_url">Submission Path</string>
+    <string name="submitted_on">Submitted on:</string>
+    <string name="success">Success</string>
+    <string name="suggest">...password</string>
+    <string name="syncronyze">Syncronyze forms...</string>
+    <string name="tab_completed">Completed</string>
+    <string name="tab_finalized">Pending</string>
+    <string name="tab_new">New</string>
+    <string name="tab_saved">Saved</string>
+    <string name="tab_submitted">Submitted</string>
+    <string name="take_signature">Take Signature</string>
+    <string name="telephone_number">Please enter you telephone number</string>
+    <string name="telephone_number_country">Telephone number must be preceded by country code</string>
+    <string name="textcolor_background">Background color text</string>
+    <string name="textcolor_error_background">Background color text on error</string>
+    <string name="textcolor_error_foreground">Foreground color text on error</string>
+    <string name="textcolor_foreground">Foreground color text</string>
+    <string name="textcolor_mandatory_background">Background color of mandatory text</string>
+    <string name="textcolor_mandatory_foreground">Foreground color of mandatory text</string>
+    <string name="time_before">Time before re-submit allowed</string>
+    <string name="todo">TODO</string>
+    <string name="toggle_selected">Toggle All</string>
+    <string name="trigger">OK. Please continue.</string>
+    <string name="unrecognized_uri">unrecognized URI:</string>
+    <string name="update_toast">Can\'\t download updates: SD not present</string>
+    <string name="upload_all_successful">%s form(s) sent successfully.</string>
+    <string name="upload_results">Upload Results</string>
+    <string name="upload_some_failed">Sorry, %s form(s) failed to send!</string>
+    <string name="uploading_data">Sending Form</string>
+    <string name="url_error">Sorry, invalid URL!</string>
+    <string name="use_odk_default">Use Default Image</string>
+    <string name="username">Username</string>
+    <string name="view_hierarchy">Go To Prompt</string>
+    <string name="wait">Please wait...</string>
+    <string name="xform_parse_error">XForm parse error. %1$s is missing element %2$s</string>
+    <string name="yes_pref">Yes, delete all</string>
+    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/style.xml -->
+    <eat-comment />
+
+    <style name="large" parent="@android:style/TextAppearance.Large">
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="small" parent="@android:style/TextAppearance.Small">
+        <item name="android:textSize">21sp</item>
+    </style>
+
+</resources>

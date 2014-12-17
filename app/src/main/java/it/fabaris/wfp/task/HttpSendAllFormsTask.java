@@ -1,15 +1,30 @@
 package it.fabaris.wfp.task;
 
-import it.fabaris.wfp.activities.FormListActivity;
-import it.fabaris.wfp.activities.FormListCompletedActivity;
-import it.fabaris.wfp.activities.PreferencesActivity;
-import it.fabaris.wfp.activities.R;
-import it.fabaris.wfp.application.Collect;
-import it.fabaris.wfp.listener.MyCallback;
-import it.fabaris.wfp.logic.PropertyManager;
-import it.fabaris.wfp.provider.FormProvider.DatabaseHelper;
-import it.fabaris.wfp.utility.FileUtils;
-import it.fabaris.wfp.utility.FormCompletedDataDBUpdate;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.AsyncTask;
+import android.provider.Settings;
+import android.telephony.TelephonyManager;
+import android.util.Base64;
+import android.util.Log;
+import android.widget.Toast;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpParams;
+import org.apache.http.util.EntityUtils;
+import org.javarosa.core.model.instance.TreeElement;
+import org.javarosa.xform.parse.XFormParser;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -28,57 +43,28 @@ import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.locks.Lock;
 import java.util.zip.GZIPOutputStream;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathExpression;
-import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import it.fabaris.wfp.activities.FormListCompletedActivity;
+import it.fabaris.wfp.activities.R;
+import it.fabaris.wfp.application.Collect;
+import it.fabaris.wfp.listener.MyCallback;
+import it.fabaris.wfp.provider.FormProvider.DatabaseHelper;
+import it.fabaris.wfp.utility.FileUtils;
 import it.fabaris.wfp.utility.NewFileUtils;
 import object.FormInnerListProxy;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.params.BasicHttpParams;
-import org.apache.http.params.HttpParams;
-import org.apache.http.util.EntityUtils;
-import org.javarosa.core.model.instance.TreeElement;
-import org.javarosa.core.model.instance.TreeReference;
-import org.javarosa.form.api.FormEntryController;
-import org.javarosa.xform.parse.XFormParser;
-import org.w3c.dom.Node;
-import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
-
 import utils.ApplicationExt;
-
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.os.AsyncTask;
-import android.provider.Settings;
-import android.telephony.TelephonyManager;
-import android.util.Base64;
-import android.util.Log;
-import android.view.Gravity;
-import android.widget.Toast;
 
 /**
  * This class is called when the user wants to send
@@ -385,7 +371,8 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
             if (result.equalsIgnoreCase("\r\n")) {
                 return result = "formnotonserver";
             } else {
-                return result = "ok-" + result;
+               // return result = "ok-" + result;
+                return result;
             }
         } catch (Exception e) {
             e.printStackTrace();

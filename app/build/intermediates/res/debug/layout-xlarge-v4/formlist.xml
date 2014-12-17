@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@android:id/tabhost"      
+	android:layout_width="fill_parent"
+	android:layout_height="match_parent"
+	android:cacheColorHint="#00000000">
+	<LinearLayout 
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/black_1">
+
+		<TabWidget
+			android:id="@android:id/tabs"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:cacheColorHint="#00000000">
+
+		</TabWidget>
+
+		<FrameLayout
+		    android:id="@android:id/tabcontent"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:cacheColorHint="#00000000" >
+	
+		</FrameLayout>
+
+	</LinearLayout>
+
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="20dp"
+	    android:orientation="horizontal"
+	    android:visibility="visible" >
+
+	    <LinearLayout
+	        android:id="@+id/linearLayout1"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:orientation="vertical" >
+
+	        <TextView
+	            android:id="@+id/text1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="5dp"
+	            android:layout_gravity="right"
+	            android:gravity="right"
+	            android:textColor="#2040d7"
+	            android:textSize="15sp"
+	            android:textStyle="bold" />
+	    </LinearLayout>
+
+	    <LinearLayout
+	        android:id="@+id/linearLayout2"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:orientation="vertical" >
+
+	        <TextView
+	            android:id="@+id/text2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="5dp"
+	            android:layout_gravity="right"
+	            android:gravity="right"
+	            android:textColor="#2040d7"
+	            android:textSize="15sp"
+	            android:textStyle="bold" />
+	    </LinearLayout>
+
+	    <LinearLayout
+	        android:id="@+id/linearLayout3"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:orientation="vertical" >
+
+	        <TextView
+	            android:id="@+id/text3"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="5dp"
+	            android:layout_gravity="right"
+	            android:gravity="right"
+	            android:textColor="#2040d7"
+	            android:textSize="15sp"
+	            android:textStyle="bold" />
+	    </LinearLayout>
+
+	    <LinearLayout
+	        android:id="@+id/linearLayout4"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:orientation="vertical" >
+
+	        <TextView
+	            android:id="@+id/text4"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="5dp"
+	            android:layout_gravity="right"
+	            android:gravity="right"
+	            android:textColor="#2040d7"
+	            android:textSize="15sp"
+	            android:textStyle="bold" />
+	    </LinearLayout>
+
+	    <LinearLayout
+	        android:id="@+id/linearLayout5"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:orientation="vertical" >
+
+	        <TextView
+	            android:id="@+id/text5"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="5dp"
+	            android:layout_gravity="right"
+	            android:gravity="right"
+	            android:textColor="#2040d7"
+	            android:textSize="15sp"
+	            android:textStyle="bold" />
+	    </LinearLayout>
+	</LinearLayout>
+
+</TabHost>
+
+
+<!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/layout-xlarge/formlist.xml -->
