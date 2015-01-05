@@ -210,6 +210,7 @@
     <string name="bad_uri">Bad URI: </string>
     <string name="barcode_scanner_error">Sorry, Barcode Scanner is not installed!</string>
     <string name="blank_answer">The form is uncompleted please check blank answer</string>
+    <string name="button_check">Check for latest version of the application</string>
     <string name="button_in">Login</string>
     <string name="by">By:</string>
     <string name="cancel">Cancel</string>

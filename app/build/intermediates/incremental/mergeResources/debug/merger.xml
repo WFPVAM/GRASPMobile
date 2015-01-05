@@ -1806,6 +1806,8 @@ Completed, Not Submitted
                 </string>
                 <string name="leave_repeat_yes" >No
                 </string>
+                <string name="button_check" >Check for latest version of the application
+                </string>
                 <string name="please_wait" >Please wait a few moments.
                 </string>
                 <string name="main_menu_message" >GRASP MOBILE TOOL

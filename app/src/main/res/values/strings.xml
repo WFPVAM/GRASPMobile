@@ -278,6 +278,7 @@
 	<string name="button_in">Login</string>
 	<string name="suggest">...password</string>
 	<string name="password_error">The password you typed is incorrect</string>
+    <string name="button_check">Check for latest version of the application</string>
 
 	<string name="imported">Form correctly imported</string>
 	<string name="number_error">The server telephone number is not inserted, please enter it</string>

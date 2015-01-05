@@ -7,13 +7,20 @@
  ******************************************************************************/
 package it.fabaris.wfp.task;
 
-import it.fabaris.wfp.activities.FormEntryActivity;
-import it.fabaris.wfp.listener.FormSavedListener;
-import it.fabaris.wfp.logic.FormController;
-import it.fabaris.wfp.provider.FormProviderAPI;
-import it.fabaris.wfp.provider.FormProvider.DatabaseHelper;
-import it.fabaris.wfp.provider.FormProviderAPI.FormsColumns;
-import it.fabaris.wfp.utility.EncryptionUtils;
+import android.content.ContentValues;
+import android.database.Cursor;
+import android.net.Uri;
+import android.os.AsyncTask;
+import android.util.Log;
+
+import org.javarosa.core.model.FormDef;
+import org.javarosa.core.model.FormIndex;
+import org.javarosa.core.model.instance.FormInstance;
+import org.javarosa.core.services.transport.payload.ByteArrayPayload;
+import org.javarosa.form.api.FormEntryController;
+import org.javarosa.model.xform.XFormSerializingVisitor;
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -31,22 +38,13 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathFactory;
 
-import org.javarosa.core.model.FormDef;
-import org.javarosa.core.model.FormIndex;
-import org.javarosa.core.model.instance.FormInstance;
-import org.javarosa.core.services.transport.payload.ByteArrayPayload;
-import org.javarosa.form.api.FormEntryController;
-import org.javarosa.model.xform.XFormSerializingVisitor;
-import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
-
-import utils.ApplicationExt;
-
-import android.content.ContentValues;
-import android.database.Cursor;
-import android.net.Uri;
-import android.os.AsyncTask;
-import android.util.Log;
+import it.fabaris.wfp.activities.FormEntryActivity;
+import it.fabaris.wfp.listener.FormSavedListener;
+import it.fabaris.wfp.logic.FormController;
+import it.fabaris.wfp.provider.FormProvider.DatabaseHelper;
+import it.fabaris.wfp.provider.FormProviderAPI;
+import it.fabaris.wfp.provider.FormProviderAPI.FormsColumns;
+import it.fabaris.wfp.utility.EncryptionUtils;
 
 /**
  * Background task for saving a form,
@@ -275,7 +273,7 @@ public class SaveToDiskTask extends AsyncTask<Void, String, Integer> {
                     "submissionUri," +
                     "canEditWhenComplete," +
 
-                    "enumeratorID," +          //LL 14-05-2014 added after the deleting of the grasp db
+                   "enumeratorID," +          //LL 14-05-2014 added after the deleting of the grasp db
                     "formNameAndXmlFormid," +  //LL 14-05-2014 added after the deleting of the grasp db
 
 

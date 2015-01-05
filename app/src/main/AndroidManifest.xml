@@ -12,7 +12,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="it.fabaris.wfp.activities"
     android:versionCode="1"
-    android:versionName="0.1.56">
+    android:versionName="0.1.57">
+
     <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="10"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -42,20 +43,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FormListActivity" />
-        <activity android:name=".FormListNewActivity" android:label="@string/app_name"  />
-        <activity android:name=".FormListSavedActivity" android:label="@string/app_name"  />
-        <activity android:name=".FormListCompletedActivity" android:label="@string/app_name"  />
-        <activity android:name=".FormListSubmittedActivity" android:label="@string/app_name" android:screenOrientation="portrait"/>
-        <activity android:name=".FormListFinalizedActivity" android:label="@string/app_name"  />
-        <activity android:name=".SmsListActivity" android:label="@string/app_name"  />
+
+        <activity android:name=".FormListActivity" android:configChanges="orientation|screenLayout" />
+        <activity android:name=".FormListNewActivity" android:label="@string/app_name" android:configChanges="orientation|screenLayout" />
+        <activity android:name=".FormListSavedActivity" android:label="@string/app_name" android:configChanges="orientation|screenLayout" />
+        <activity android:name=".FormListCompletedActivity" android:label="@string/app_name" android:configChanges="orientation|screenLayout" />
+        <activity android:name=".FormListSubmittedActivity" android:label="@string/app_name" android:screenOrientation="portrait" />
+        <activity android:name=".FormListFinalizedActivity" android:label="@string/app_name" android:configChanges="orientation|screenLayout" />
+        <activity android:name=".SmsListActivity" android:label="@string/app_name" />
         <activity android:name=".GeoPointActivity"  />"
         <activity android:name=".MenuActivity" android:label="@string/app_name" android:screenOrientation="portrait"/>
         <activity android:name=".PreferencesActivity" android:label="@string/app_name"  />
-        <activity android:name=".FormHierarchyActivity" android:label="@string/app_name"  />
-        <activity android:name=".CreditsActivity" android:label="@string/app_name"  />
+        <activity android:name=".FormHierarchyActivity" android:label="@string/app_name"/>
+        <activity android:name=".CreditsActivity" android:label="@string/app_name" />
         <activity android:name=".HelpActivity" android:label="@string/app_name"  />
-        <activity android:name=".ControlActivity" android:label="@string/app_name"  />
+        <activity android:name=".ControlActivity" android:label="@string/app_name" />
         <activity android:name=".FormEntryActivity" android:label="@string/app_name" android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
             <intent-filter>
@@ -65,6 +67,7 @@
                 <data android:mimeType="vnd.android.cursor.item/vnd.odk.form" />
                 <data android:mimeType="vnd.android.cursor.item/vnd.odk.instance" />
             </intent-filter>
+
         </activity>
         <provider android:name="it.fabaris.wfp.provider.FormProvider"
             android:authorities="mnt.sdcard.fabarisODK.forms"/>

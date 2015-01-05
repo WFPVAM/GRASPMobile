@@ -32,15 +32,15 @@ import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
 
-import it.fabaris.wfp.application.Collect;
-import it.fabaris.wfp.database.ODKSQLiteOpenHelper;
-import it.fabaris.wfp.provider.FormProviderAPI.FormsColumns;
-import it.fabaris.wfp.utility.FileUtils;
-
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+
+import it.fabaris.wfp.application.Collect;
+import it.fabaris.wfp.database.ODKSQLiteOpenHelper;
+import it.fabaris.wfp.provider.FormProviderAPI.FormsColumns;
+import it.fabaris.wfp.utility.FileUtils;
 /**
  *
  *Class that manage the FormsDB
