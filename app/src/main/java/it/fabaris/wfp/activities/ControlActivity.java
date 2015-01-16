@@ -111,7 +111,7 @@ public class ControlActivity extends Activity
                 String apkURL= new String();
                 //TODO Change the IP address to the IP address of the server
                 //TODO Change the apk file name
-                apkURL ="http://172.31.99.39:80/graspreporting/Public/app-debug.apk";
+                apkURL ="http://grasp.wfppal.org:80/graspreporting/Public/GraspMobile.apk";
                 downloadFile.execute(apkURL);
 
 
@@ -146,7 +146,7 @@ public class ControlActivity extends Activity
                 temporaryDirectory.mkdirs();
 
 
-                File output = new File(Environment.getExternalStorageDirectory().getPath() + "/temporary/grasp1.apk");
+                File output = new File(Environment.getExternalStorageDirectory().getPath() + "/temporary/grasp.apk");
                 //File output = new File(Environment.getExternalStorageDirectory().getPath() + "/GRASP/grasp.apk");
                 //File output = new File(PreferencesActivity.this.getCacheDir() + "/GRASP/grasp.apk");
 

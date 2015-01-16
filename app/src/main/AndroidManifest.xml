@@ -44,12 +44,12 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".FormListActivity" android:configChanges="orientation|screenLayout" />
+        <activity android:name=".FormListActivity" android:configChanges="orientation|screenLayout"  />
         <activity android:name=".FormListNewActivity" android:label="@string/app_name" android:configChanges="orientation|screenLayout" />
         <activity android:name=".FormListSavedActivity" android:label="@string/app_name" android:configChanges="orientation|screenLayout" />
-        <activity android:name=".FormListCompletedActivity" android:label="@string/app_name" android:configChanges="orientation|screenLayout" />
+        <activity android:name=".FormListCompletedActivity" android:label="@string/app_name" android:configChanges="orientation|screenLayout"  />
         <activity android:name=".FormListSubmittedActivity" android:label="@string/app_name" android:screenOrientation="portrait" />
-        <activity android:name=".FormListFinalizedActivity" android:label="@string/app_name" android:configChanges="orientation|screenLayout" />
+        <activity android:name=".FormListFinalizedActivity" android:label="@string/app_name" android:configChanges="orientation|screenLayout"  />
         <activity android:name=".SmsListActivity" android:label="@string/app_name" />
         <activity android:name=".GeoPointActivity"  />"
         <activity android:name=".MenuActivity" android:label="@string/app_name" android:screenOrientation="portrait"/>

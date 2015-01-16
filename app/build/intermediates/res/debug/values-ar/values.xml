@@ -210,6 +210,7 @@
     <string name="bad_uri">Bad URI: </string>
     <string name="barcode_scanner_error">	عذرا، لم يتم تثبيت الماسح الضوئى للباركود!	</string>
     <string name="blank_answer">The form is uncompleted please check blank answer</string>
+    <string name="button_check">تحديث التطبيق</string>
     <string name="button_in">Login</string>
     <string name="by">By:</string>
     <string name="cancel">	إلغاء	</string>

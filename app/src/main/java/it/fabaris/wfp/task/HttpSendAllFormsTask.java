@@ -85,7 +85,8 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
     MyCallback finishFormListCompleted;
     public String IMEI = "";
     private TelephonyManager mTelephonyManager;
-
+    ////////////////////////////////////////
+    String formResult="";
 
     //parcelable object that contains useful info about the form
     ArrayList<FormInnerListProxy> completedformslistfirst; //fabaris parcelable object
@@ -161,10 +162,27 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
             numOfFormSent = 1;//set the number of forms to send, 1 to start
             for (FormInnerListProxy mydata : completedformslistfirst) {//loop on "the form to send" list
                 data = decodeForm(mydata);//the form to send, encoded
+                    String str =mydata.getStrPathInstance();
+                String str1[] = str.replace("/storage/emulated/0/GRASP/instances/","").split("/");
+                String formName = str1[0];
+///////////////////////This is to check whether the file is 0kb////////////////
+                if (data == null) {
 
+
+                   // int i = completedformslistfirst.indexOf(mydata);
+                   // String s = mydata.getStrPathInstance();
+                    completedformslistfirst.iterator().next();
+//                    DatabaseHelper dbh = new DatabaseHelper("forms.db");
+//                   String query = "UPDATE forms SET status='cancelled' WHERE instanceFilePath='"+mydata.getStrPathInstance()+"'";
+//
+//                    dbh.getWritableDatabase().execSQL(query);
+//                    dbh.close();
+                    //  Log.i("0 kb",data);
+                    formResult="empty";
+                } else {
 //                Log.i("data  in httpSendPostTaskOnPostEx ", data);
 
-                result = sendFormCall(http, phone, data);
+                    result = sendFormCall(http, phone, data, formName);
 
 //
 //                Log.i("===================================", "");
@@ -226,11 +244,16 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
                     //motivation of the failure-> value = answer from the server
                 }
             }
+            }
         }
         if (formNotSent != null) {
             if (!formNotSent.isEmpty()) {
                 return "ko";
-            } else { //if there were some problems during the sending
+            }
+//            else if(formResult=="empty"){
+//                return "ko";
+//            }
+            else { //if there were some problems during the sending
                 //and some or all the forms are not been sent to the server
                 return "ok";
             }
@@ -290,10 +313,14 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
                 pd.dismiss();
             }
         }
+        if(!(formResult=="empty")){
         if (result == "ok") {//if all the forms are been sent
             Toast.makeText(context, "All forms have been sent succesfully", Toast.LENGTH_SHORT).show();
         } else {// not all the forms are been sent correctly
             Toast.makeText(context, "There has been some problems sending one or more forms", Toast.LENGTH_SHORT).show();
+        }}
+            else {// not all the forms are been sent correctly
+                Toast.makeText(context, "One or more forms does not exist!", Toast.LENGTH_SHORT).show();
             //////metto il salvataggio di quelle che stanno qui nelle finalizzate?
 			/*
 			if (result.trim().toLowerCase().startsWith("ok"))
@@ -338,7 +365,7 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
      * @param data   xml form
      * @return the call response
      */
-    private String sendFormCall(String url, String phone, String data) {
+    private String sendFormCall(String url, String phone, String data, String id) {
         /**
          *  set parameter
          */
@@ -348,9 +375,10 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
         // HttpConnectionParams.setConnectionTimeout(httpParameters, 10000);
         // HttpConnectionParams.setSoTimeout(httpParameters, 10000);
         DefaultHttpClient httpClient = new DefaultHttpClient(httpParameters);
-        List<NameValuePair> nameValuePair = new ArrayList<NameValuePair>(2);
+        List<NameValuePair> nameValuePair = new ArrayList<NameValuePair>(3);
         nameValuePair.add(new BasicNameValuePair("phoneNumber", phone));
         nameValuePair.add(new BasicNameValuePair("data", data));
+        nameValuePair.add(new BasicNameValuePair("formName", id));
 
         if (http.contains(".aspx")) {
             nameValuePair.add(new BasicNameValuePair("imei", IMEI));//only if we are sending the form to the server, we send the IMEI

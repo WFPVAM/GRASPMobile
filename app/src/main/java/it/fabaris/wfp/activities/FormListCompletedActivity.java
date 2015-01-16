@@ -10,12 +10,46 @@
  ******************************************************************************/
 package it.fabaris.wfp.activities;
 
-import it.fabaris.wfp.application.Collect;
-import it.fabaris.wfp.listener.MyCallback;
-import it.fabaris.wfp.provider.FormProvider.DatabaseHelper;
-import it.fabaris.wfp.provider.InstanceProviderAPI;
-import it.fabaris.wfp.task.HttpCheckAndSendPostTask;
-import it.fabaris.wfp.task.HttpSendAllFormsTask;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.app.Dialog;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.ProgressDialog;
+import android.content.BroadcastReceiver;
+import android.content.ContentValues;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.net.Uri;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.telephony.SmsManager;
+import android.util.Base64;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.webkit.MimeTypeMap;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView.OnItemLongClickListener;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import org.javarosa.core.model.instance.TreeElement;
+import org.javarosa.xform.parse.XFormParser;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -41,65 +75,20 @@ import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+import content.FormCompletedAdapter;
+import it.fabaris.wfp.application.Collect;
+import it.fabaris.wfp.listener.MyCallback;
+import it.fabaris.wfp.provider.FormProvider.DatabaseHelper;
+import it.fabaris.wfp.provider.InstanceProviderAPI;
+import it.fabaris.wfp.task.HttpCheckAndSendPostTask;
+import it.fabaris.wfp.task.HttpSendAllFormsTask;
 import it.fabaris.wfp.utility.FileUtils;
+import it.fabaris.wfp.utility.FormCompletedDataDBUpdate;
 import it.fabaris.wfp.utility.NewFileUtils;
 import object.FormInnerListProxy;
-
-import org.javarosa.core.model.instance.TreeElement;
-import org.javarosa.xform.parse.XFormParser;
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.w3c.dom.ls.DOMImplementationLS;
-import org.w3c.dom.ls.LSSerializer;
-
 import utils.ApplicationExt;
-
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
-import android.app.Dialog;
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.app.ProgressDialog;
-import android.content.BroadcastReceiver;
-import android.content.ContentValues;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.SharedPreferences;
-import android.database.Cursor;
-import android.media.MediaRecorder;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.net.Uri;
-import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.telephony.SmsManager;
-import android.util.Base64;
-import android.util.Log;
-import android.view.Gravity;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.webkit.MimeTypeMap;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.AdapterView.OnItemLongClickListener;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.Toast;
-
-import com.sun.org.apache.xml.internal.serialize.OutputFormat;
-
-import content.FormCompletedAdapter;
-import database.DbAdapterGrasp;
-
-import it.fabaris.wfp.utility.FormCompletedDataDBUpdate;
 
 /**
  * Class that defines the tab for the list of the completed forms
@@ -136,6 +125,8 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
     private String httpServer;
     private String encodeXml;
     private static boolean isSendAllForms = false;
+    ///////////////////////////////////////////////
+    private String formId;
 
     public static String idForm;
 
@@ -195,8 +186,8 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
 
         Button sendAll = (Button) findViewById(R.id.sendAll);
 
-        if (!isNetworkConnected())
-            sendAll.setVisibility(View.GONE);
+//        if (!isNetworkConnected())
+//            sendAll.setVisibility(View.GONE);
 
         complete = new ArrayList<FormInnerListProxy>();
         complete = getIntent().getExtras().getParcelableArrayList("completed");
@@ -287,7 +278,12 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
                                         ArrayList<FormInnerListProxy> mycompleted = getCompletedParceableList();//LL aggiunti perche' qui non avevo visibilita' sulle variabili d'istanza
 
                                         idFormNameInstance = mycompleted.get(position).getFormName();
+                                        ///////////////////////////////////////////////////////////////c
+                                       String str = mycompleted.get(position).getStrPathInstance();
+                                        String str1[] = str.replace("/storage/emulated/0/GRASP/instances/","").split("/");
+                                        String formId = str1[0];
 
+                                        /////////////////////////////////////////////////////////////
                                         //int positioncomplete = getPositionCompletedToSubmit(position); //LL 14-05-2014 db grasp dismesso non ci sono piu' problemi di disallineamento
 
                                         // ****************************************************
@@ -307,7 +303,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
                                         FormCompletedDataDBUpdate myFormCompletedDataDBUpdate = new FormCompletedDataDBUpdate(idFormNameInstance, nomeform, autore);
                                         listDataToUpdateDB.add(myFormCompletedDataDBUpdate);//qui dentro metto i dati per fare l'update del DB grasp che verra' effettuato dalla chiamata di callback una volta che la form e' stata inviata al server
 										
-									
+
 										/*LL 20-03-2014 da rimettere per form di test 
 										String[] splittedFormName = nomeform.split("_");
 										String endOfForm = splittedFormName[splittedFormName.length-1];//se l'ultima occorrenza e' test
@@ -333,7 +329,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
                                                             httpServer,
                                                             numClient,
                                                             encodeXml,
-                                                            FormListCompletedActivity.this);
+                                                            FormListCompletedActivity.this,formId);
                                                     adapter.notifyDataSetInvalidated();
                                                     adapter.notifyDataSetChanged();
                                                 } else if (connectionType
@@ -346,7 +342,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
                                                                 httpServer,
                                                                 numClient,
                                                                 encodeXml,
-                                                                FormListCompletedActivity.this);
+                                                                FormListCompletedActivity.this,formId);
                                                     } catch (InterruptedException e) {
                                                         // TODO
                                                         // Auto-generated
@@ -851,44 +847,142 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
      */
     private void sendFormInList(final ArrayList<FormInnerListProxy> complete) {//LL 17-04-2014 aggiunto ultimo parametro per far vedere il toast dell'invio andato bene solo una volta
 
-        DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-                switch (which) {
-                    case DialogInterface.BUTTON_POSITIVE:
+//        DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                dialog.dismiss();
+//                switch (which) {
+//                    case DialogInterface.BUTTON_POSITIVE:
 
-                        try {
-                            sendAllFormsWithNetwork(FormListCompletedActivity.this, httpServer, numClient, complete);
-                        } catch (InterruptedException e1) {
-                            // TODO Auto-generated catch block
-                            e1.printStackTrace();
-                        }//chiamo il task asincrono per inviare tutte le form
-                        //finish(); //LL 29-04-2014 per ora lo commento
-
-                        break;
-
-                    case DialogInterface.BUTTON_NEGATIVE:
-                        //send by sms
-                        for (int k = 0; k < complete.size(); k++) {
-                            String xml = null;
-                            xml = decodeForm(complete.get(k));
-                            try {
-                                sendSMS(numModem, xml, FormListCompletedActivity.this);
-                            } catch (Exception e) {
-                                // TODO Auto-generated catch block
-                                e.printStackTrace();
-                            }
-                        }
-                        break;
+        if (isNetworkConnected()) {
+        try {
+            if (connectionType
+                    .equalsIgnoreCase("sms only")) {
+                for (int k = 0; k < complete.size(); k++) {
+                    String xml = null;
+                    xml = decodeForm(complete.get(k));
+                    try {
+                        sendSMS(numModem, xml, FormListCompletedActivity.this);
+                    } catch (Exception e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
                 }
+            } else if (connectionType
+                    .equalsIgnoreCase("gprs/umts only")) {
+
+                try {
+                    sendAllFormsWithNetwork(FormListCompletedActivity.this, httpServer, numClient, complete);
+                } catch (InterruptedException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                }
+            } else if (connectionType
+                    //.equalsIgnoreCase(getString(R.string.on_request))) {   LL 14-1-14
+                    .equalsIgnoreCase("gprs/umts preferred")) { //LL 14-1-14
+
+                try {
+                    sendAllFormsWithNetwork(FormListCompletedActivity.this, httpServer, numClient, complete);
+                } catch (InterruptedException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                }
+
             }
-        };
-        AlertDialog.Builder builder = new AlertDialog.Builder(FormListCompletedActivity.this);
-        builder.setMessage(getString(R.string.send_form_by_network_or_sms))
-                .setPositiveButton(getString(R.string.gps), dialogClickListener)
-                .setNegativeButton(getString(R.string.sms), dialogClickListener).show();
+
+//
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
+
+
+
+        else if (!isNetworkConnected()) {
+            try {
+                // invio solo tramite sms
+                if (connectionType
+                        //.equalsIgnoreCase("sms") LL 14-01-14
+                        .equalsIgnoreCase("sms only") //LL
+                    //|| connectionType.equalsIgnoreCase("gprs/umts") //LL 14-01-14
+                    //|| connectionType.equalsIgnoreCase("gprs/umts preferred")) { //LL
+                        ) { //LL
+
+                    for (int k = 0; k < complete.size(); k++) {
+                        String xml = null;
+                        xml = decodeForm(complete.get(k));
+                        try {
+                            sendSMS(numModem, xml, FormListCompletedActivity.this);
+                        } catch (Exception e) {
+                            // TODO Auto-generated catch block
+                            e.printStackTrace();
+                        }
+                    }
+                } else if (connectionType.equalsIgnoreCase("gprs/umts only")) { // gprs/umts only
+                    //it is not possible to send the form wait for the connection
+                    CharSequence[] items = {"There isn't a connection it isn't possible send the form"};
+                    new AlertDialog.Builder(
+                            FormListCompletedActivity.this)
+                            .setSingleChoiceItems(
+                                    items, 0,
+                                    null)
+                            .setPositiveButton(
+                                    R.string.positive_choise,
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(
+                                                DialogInterface dialog,
+                                                int whichButton) {
+                                            dialog.dismiss();
+                                        }
+                                    }
+                            )
+                            .show();
+
+                } else if (connectionType.equalsIgnoreCase("gprs/umts preferred")) { //here there is no data connection
+                    //it is not possible to send the form by network do u want to send it by sms?
+                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(FormListCompletedActivity.this);
+                    alertDialogBuilder.setTitle("Connection not present!");
+                    alertDialogBuilder
+                            .setMessage("do you want to send the form by sms?")
+                            .setPositiveButton(
+                                    R.string.positive_choise,
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(
+                                                DialogInterface dialog,
+                                                int whichButton) {
+                                            dialog.dismiss();
+                                            for (int k = 0; k < complete.size(); k++) {
+                                                String xml = null;
+                                                xml = decodeForm(complete.get(k));
+                                                try {
+                                                    sendSMS(numModem, xml, FormListCompletedActivity.this);
+                                                } catch (Exception e) {
+                                                    // TODO Auto-generated catch block
+                                                    e.printStackTrace();
+                                                }}
+                                        }
+                                    }
+                            )
+                            .setNegativeButton(
+                                    R.string.negative_choise,
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(
+                                                DialogInterface dialog,
+                                                int whichButton) {
+                                            dialog.dismiss();
+                                        }
+                                    }
+                            )
+
+                            .show();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+                }
+
 
     /**
      * form decoded
@@ -1054,7 +1148,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
      * @throws InterruptedException
      */
     private void sendWithNetwork(Context context, String url, String number,
-                                 String form, MyCallback callback) throws InterruptedException {
+                                 String form, MyCallback callback,String formId) throws InterruptedException {
 
         if (httpServer.equalsIgnoreCase("") || httpServer == null) {
             Toast toast = Toast.makeText(getApplicationContext(),
@@ -1064,7 +1158,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
             toast.show();
         } else {
 
-            HttpCheckAndSendPostTask asyncTask = new HttpCheckAndSendPostTask(context, url, number, form, callback, isSendAllForms);
+            HttpCheckAndSendPostTask asyncTask = new HttpCheckAndSendPostTask(context, url, number, form, callback, isSendAllForms,formId);
 //            Log.i("url HttpCheckAndSendPostTask FormListCompletedActivity ", "thread: " + url);
 //            Log.i("FUNZIONE HttpCheckAndSendPostTask FormListCompletedActivity ", "thread: " + form);
             asyncTask.execute();

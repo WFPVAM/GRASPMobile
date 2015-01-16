@@ -24,18 +24,6 @@
 
 package it.fabaris.wfp.widget;
 
-import it.fabaris.wfp.activities.FormEntryActivity;
-import it.fabaris.wfp.activities.PreferencesActivity;
-import it.fabaris.wfp.activities.R;
-import it.fabaris.wfp.application.Collect;
-import it.fabaris.wfp.utility.FileUtils;
-
-import java.io.File;
-
-import org.javarosa.core.model.data.IAnswerData;
-import org.javarosa.core.model.data.StringData;
-import org.javarosa.form.api.FormEntryPrompt;
-
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -53,9 +41,19 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.javarosa.core.model.data.IAnswerData;
+import org.javarosa.core.model.data.StringData;
+import org.javarosa.form.api.FormEntryPrompt;
+
+import java.io.File;
+
+import it.fabaris.wfp.activities.FormEntryActivity;
+import it.fabaris.wfp.activities.R;
+import it.fabaris.wfp.application.Collect;
+import it.fabaris.wfp.utility.FileUtils;
 
 /**
  * Widget that allows user to take pictures, sounds or video and add them to the form.
@@ -97,7 +95,10 @@ public class ImageWidget extends QuestionWidget implements IBinaryWidget {
         mCaptureButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, mAnswerFontsize);
         mCaptureButton.setPadding(20, 20, 20, 20);
         mCaptureButton.setEnabled(!prompt.isReadOnly());
-        
+        if(prompt.isRequired()){
+            mCaptureButton.setBackgroundColor(colorHelper.getMandatoryBackgroundColor());
+         //   mChooseButton.setBackgroundColor(colorHelper.getMandatoryBackgroundColor());
+        }
         /**
          * launch capture intent on click
          */
@@ -124,6 +125,7 @@ public class ImageWidget extends QuestionWidget implements IBinaryWidget {
                     //********************
                     //mBinaryName = 
                     //********************
+
                 } catch (ActivityNotFoundException e) {
                     Toast.makeText(getContext(),
                         getContext().getString(R.string.activity_not_found, "image capture"),
@@ -141,7 +143,9 @@ public class ImageWidget extends QuestionWidget implements IBinaryWidget {
         mChooseButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, mAnswerFontsize);
         mChooseButton.setPadding(20, 20, 20, 20);
         mChooseButton.setEnabled(!prompt.isReadOnly());
-
+        if(prompt.isRequired()){
+              mChooseButton.setBackgroundColor(colorHelper.getMandatoryBackgroundColor());
+        }
         /**
          *  launch capture intent on click
          */
@@ -159,7 +163,7 @@ public class ImageWidget extends QuestionWidget implements IBinaryWidget {
                     
                     //mBinaryName = prompt.getAnswerText();
                     //previewPhoto();
-                    
+
                 } catch (ActivityNotFoundException e) {
                     Toast.makeText(getContext(),
                         getContext().getString(R.string.activity_not_found, "choose image"),
@@ -311,6 +315,8 @@ public class ImageWidget extends QuestionWidget implements IBinaryWidget {
      */
     public IAnswerData getAnswer() {
         if (mBinaryName != null) {
+            mCaptureButton.setBackgroundColor(colorHelper.getReadOnlyBackgroundColor());
+            mChooseButton.setBackgroundColor(colorHelper.getReadOnlyBackgroundColor());
         	return new StringData(mBinaryName.toString());
         } else {
             return null;

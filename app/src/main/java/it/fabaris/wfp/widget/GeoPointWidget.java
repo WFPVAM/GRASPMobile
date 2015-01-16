@@ -24,17 +24,6 @@
 
 package it.fabaris.wfp.widget;
 
-import it.fabaris.wfp.activities.FormEntryActivity;
-import it.fabaris.wfp.activities.GeoPointActivity;
-import it.fabaris.wfp.activities.PreferencesActivity;
-import it.fabaris.wfp.activities.R;
-
-import java.text.DecimalFormat;
-
-import org.javarosa.core.model.data.GeoPointData;
-import org.javarosa.core.model.data.IAnswerData;
-import org.javarosa.form.api.FormEntryPrompt;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -46,6 +35,16 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TextView;
+
+import org.javarosa.core.model.data.GeoPointData;
+import org.javarosa.core.model.data.IAnswerData;
+import org.javarosa.form.api.FormEntryPrompt;
+
+import java.text.DecimalFormat;
+
+import it.fabaris.wfp.activities.FormEntryActivity;
+import it.fabaris.wfp.activities.GeoPointActivity;
+import it.fabaris.wfp.activities.R;
 
 /**
  * GeoPointWidget is the widget that allows the user to get GPS readings.
@@ -86,6 +85,7 @@ public class GeoPointWidget extends QuestionWidget implements IBinaryWidget {
         mGetLocationButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, mAnswerFontsize);
         mGetLocationButton.setEnabled(!prompt.isReadOnly());
         mGetLocationButton.setLayoutParams(params);
+       // mGetLocationButton.setBackgroundColor(colorHelper.getMandatoryBackgroundColor());
 
         // setup play button
         mViewButton = new Button(getContext());
@@ -93,7 +93,9 @@ public class GeoPointWidget extends QuestionWidget implements IBinaryWidget {
         mViewButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, mAnswerFontsize);
         mViewButton.setPadding(20, 20, 20, 20);
         mViewButton.setLayoutParams(params);
-        
+        if(prompt.isRequired()){
+            mGetLocationButton.setBackgroundColor(colorHelper.getMandatoryBackgroundColor());
+        }
         /**
          *  on play, launch the appropriate viewer
          */
@@ -122,11 +124,13 @@ public class GeoPointWidget extends QuestionWidget implements IBinaryWidget {
         mAnswerDisplay.setTextSize(TypedValue.COMPLEX_UNIT_DIP, mAnswerFontsize);
         mAnswerDisplay.setGravity(Gravity.CENTER);
 
+
         String s = prompt.getAnswerText();
         if (s != null && !s.equals("")) {
         	mGetLocationButton.setText(getContext().getString(R.string.replace_location));
             setBinaryData(s);
             mViewButton.setEnabled(true);
+            mGetLocationButton.setBackgroundColor(colorHelper.getReadOnlyBackgroundColor());
         } else {
             mViewButton.setEnabled(false);
         }
@@ -183,6 +187,7 @@ public class GeoPointWidget extends QuestionWidget implements IBinaryWidget {
         mAnswerDisplay.setText(null);
         mGetLocationButton.setText(getContext().getString(R.string.get_location));
 
+
     }
 
 
@@ -203,8 +208,9 @@ public class GeoPointWidget extends QuestionWidget implements IBinaryWidget {
                 gp[1] = Double.valueOf(sa[1]).doubleValue();
 //                gp[2] = Double.valueOf(sa[2]).doubleValue();
 //                gp[3] = Double.valueOf(sa[3]).doubleValue();
-
+                mGetLocationButton.setBackgroundColor(colorHelper.getReadOnlyBackgroundColor());
                 return new GeoPointData(gp);
+
             } catch (Exception NumberFormatException) {
                 return null;
             }

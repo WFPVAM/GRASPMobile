@@ -191,6 +191,7 @@
     <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
+    <string name="Network_unavailable">No Networks available, send by SMS?</string>
     <string name="accept_location">Get GPS coordinates</string>
     <string name="access_error">Error while accessing %s: </string>
     <string name="accuracy">Accuracy</string>
@@ -212,7 +213,7 @@
     <string name="blank_answer">The form is uncompleted please check blank answer</string>
     <string name="button_check">Check for latest version of the application</string>
     <string name="button_in">Login</string>
-    <string name="by">By:</string>
+    <string name="by">Title:</string>
     <string name="cancel">Cancel</string>
     <string name="cancel_loading_form">Cancel</string>
     <string name="cancel_location">Cancel</string>
@@ -305,6 +306,7 @@
     <string name="download_forms_result">Download Result</string>
     <string name="downloading_data">Connecting to Server</string>
     <string name="edit_prompt">Edit Prompt</string>
+    <string name="empty">The form you are trying to send does not exist!</string>
     <string name="enter">start</string>
     <string name="enter_data">Fill Blank Form</string>
     <string name="enter_data_button">Fill Blank Form</string>
@@ -366,7 +368,7 @@
     <string name="jump_to_end">Go To End</string>
     <string name="jump_to_previous">Go Up</string>
     <string name="keep_changes">Save Changes</string>
-    <string name="last_saved_date">Last saved:</string>
+    <string name="last_saved_date">First opened:</string>
     <string name="latitude">Latitude</string>
     <string name="leave_repeat_yes">No</string>
     <string name="leaving_repeat">Add entry</string>

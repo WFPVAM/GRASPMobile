@@ -10,43 +10,27 @@
  ******************************************************************************/
 package it.fabaris.wfp.activities;
 
+import android.app.AlertDialog;
+import android.app.TabActivity;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.res.Configuration;
+import android.database.Cursor;
+import android.os.Bundle;
+import android.view.WindowManager;
+import android.widget.TabHost;
+import android.widget.TabHost.TabSpec;
+import android.widget.TextView;
+
 import java.util.ArrayList;
-
-import database.DbAdapterGrasp;
-
-import object.FormInnerListProxy;
-import utils.ApplicationExt;
 
 import it.fabaris.wfp.activities.FormListCompletedActivity.FormListHandlerCompleted;
 import it.fabaris.wfp.activities.FormListFinalizedActivity.FormListHandlerFinalized;
 import it.fabaris.wfp.activities.FormListNewActivity.FormListHandlerNew;
 import it.fabaris.wfp.activities.FormListSavedActivity.FormListHandlerSaved;
 import it.fabaris.wfp.activities.FormListSubmittedActivity.FormListHandlerSubmitted;
-import it.fabaris.wfp.listener.MyCallback;
 import it.fabaris.wfp.provider.FormProvider.DatabaseHelper;
-import it.fabaris.wfp.utility.BadgeView;
-import it.fabaris.wfp.utility.ConstantUtility;
-import android.app.Activity;
-import android.app.ActivityGroup;
-import android.app.AlertDialog;
-import android.app.TabActivity;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.database.Cursor;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.os.Bundle;
-import android.telephony.TelephonyManager;
-import android.util.Log;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.TabHost;
-import android.widget.TabHost.TabSpec;
-import android.widget.TextView;
-import it.fabaris.wfp.activities.R;
+import object.FormInnerListProxy;
 
 /**
  * Class that defines the tab activity of the forms
@@ -97,6 +81,9 @@ public class FormListActivity extends TabActivity  implements 	FormListHandlerNe
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.formlist);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+
 
         /**
          * set the context for the db
@@ -615,7 +602,10 @@ public class FormListActivity extends TabActivity  implements 	FormListHandlerNe
         textInviate.setText(Integer.toString(quanteInviate));
 
     }
+////////////////////////////////////////////////////////
 
+
+//////////////////////////////////////////
 
     /**
      * called after a form has been completed and sets the number of the
@@ -640,7 +630,11 @@ public class FormListActivity extends TabActivity  implements 	FormListHandlerNe
         quanteFinalizzate = finalized.length;
         super.onContentChanged();
     }
-
+    @Override
+    public void onConfigurationChanged(Configuration newConfig)
+    {
+        super.onConfigurationChanged(newConfig);
+    }
 
 
 
@@ -703,4 +697,6 @@ public class FormListActivity extends TabActivity  implements 	FormListHandlerNe
 		ApplicationExt.getDatabaseAdapter().open().insert("SUBMITTED", submitted_id, idFormDataBaseGras, submitted_data, submitted_by); 
 		ApplicationExt.getDatabaseAdapter().close(); 
 	}*/
+
+
 }

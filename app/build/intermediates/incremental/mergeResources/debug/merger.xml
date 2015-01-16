@@ -1408,21 +1408,24 @@ Extra Small
 #FFFFFF
                     </item>
                 </string-array>
-                <string-array name="textcolor_mandatory_background_entry_values" >
+                <string-array name="protocol_entry_values" >
                     <item>
-#00FFFF
+odk_default
                     </item>
                     <item>
-#000000
+google
+                    </item>
+                    <item/>
+                </string-array>
+                <string-array name="entryvalues_list_preference" >
+                    <item>
+saved
                     </item>
                     <item>
-#00FF00
+done
                     </item>
                     <item>
-#FFFF00
-                    </item>
-                    <item>
-#FFFFFF
+submitted
                     </item>
                 </string-array>
                 <string-array name="textcolor_foreground_entries" >
@@ -1442,25 +1445,22 @@ Green
 Black
                     </item>
                 </string-array>
-                <string-array name="entryvalues_list_preference" >
+                <string-array name="textcolor_mandatory_background_entry_values" >
                     <item>
-saved
+#00FFFF
                     </item>
                     <item>
-done
+#000000
                     </item>
                     <item>
-submitted
-                    </item>
-                </string-array>
-                <string-array name="protocol_entry_values" >
-                    <item>
-odk_default
+#00FF00
                     </item>
                     <item>
-google
+#FFFF00
                     </item>
-                    <item/>
+                    <item>
+#FFFFFF
+                    </item>
                 </string-array>
                 <string-array name="connection_type_values" >
                     <item name="sms">
@@ -1481,23 +1481,6 @@ saved
 done
                     </item>
                 </string-array>
-                <string-array name="textcolor_mandatory_background_entries" >
-                    <item>
-Cyan
-                    </item>
-                    <item>
-Black
-                    </item>
-                    <item>
-Green
-                    </item>
-                    <item>
-Yellow
-                    </item>
-                    <item>
-White
-                    </item>
-                </string-array>
                 <string-array name="textcolor_mandatory_foreground_entry_values" >
                     <item>
 #000066
@@ -1515,21 +1498,21 @@ White
 #000000
                     </item>
                 </string-array>
-                <string-array name="font_size_entry_values" >
+                <string-array name="textcolor_mandatory_background_entries" >
                     <item>
-29
+Cyan
                     </item>
                     <item>
-25
+Black
                     </item>
                     <item>
-21
+Green
                     </item>
                     <item>
-17
+Yellow
                     </item>
                     <item>
-13
+White
                     </item>
                 </string-array>
                 <string-array name="updateIntervalValues" >
@@ -1547,6 +1530,23 @@ White
                     </item>
                     <item name="300000">
 300000
+                    </item>
+                </string-array>
+                <string-array name="font_size_entry_values" >
+                    <item>
+29
+                    </item>
+                    <item>
+25
+                    </item>
+                    <item>
+21
+                    </item>
+                    <item>
+17
+                    </item>
+                    <item>
+13
                     </item>
                 </string-array>
                 <string-array name="textcolor_error_background_entries" >
@@ -1600,9 +1600,9 @@ Completed, Not Submitted
                 </color>
                 <color name="black_2" >#202020
                 </color>
-                <color name="dark_grey" >#333333
-                </color>
                 <color name="gray" >#808080
+                </color>
+                <color name="dark_grey" >#333333
                 </color>
                 <color name="fg_mand" >#000000
                 </color>
@@ -1610,15 +1610,15 @@ Completed, Not Submitted
                 </color>
                 <color name="yellow" >#FFFF00
                 </color>
-                <color name="bg_std" >#000000
-                </color>
                 <color name="fg_readonly_err" >#000000
                 </color>
-                <color name="white" >#FFFFFF
+                <color name="bg_std" >#000000
+                </color>
+                <color name="bg_readonly_inv" >#000000
                 </color>
                 <color name="bg_err" >#000000
                 </color>
-                <color name="bg_readonly_inv" >#000000
+                <color name="white" >#FFFFFF
                 </color>
                 <color name="fg_readonly" >#666666
                 </color>
@@ -1650,17 +1650,17 @@ Completed, Not Submitted
                 </string>
                 <string name="file_delete_in_progress" >Sorry, a form delete action is already in progress!
                 </string>
-                <string name="font_size" >Text Font Size
-                </string>
                 <string name="first_run" >Do first run on restart
+                </string>
+                <string name="font_size" >Text Font Size
                 </string>
                 <string name="one_capture" >Multimedia recorded.
                 </string>
                 <string name="enter_data_button" >Fill Blank Form
                 </string>
-                <string name="last_saved_date" >Last saved:
-                </string>
                 <string name="replace_image" >Replace Picture
+                </string>
+                <string name="last_saved_date" >First opened:
                 </string>
                 <string name="update_toast" >Can\'\t download updates: SD not present
                 </string>
@@ -1744,29 +1744,29 @@ Completed, Not Submitted
                 </string>
                 <string name="upload_all_successful" >%s form(s) sent successfully.
                 </string>
-                <string name="select_another_image" >Select Another Image
-                </string>
                 <string name="no_items_error" >Nothing available to %s!
                 </string>
-                <string name="textcolor_mandatory_foreground" >Foreground color of mandatory text
+                <string name="select_another_image" >Select Another Image
                 </string>
                 <string name="form_name" >Form Name:
+                </string>
+                <string name="textcolor_mandatory_foreground" >Foreground color of mandatory text
                 </string>
                 <string name="manifest_tag_error" >Manifest entry %s is missing one or more tags: filename, hash, or downloadUrl
                 </string>
                 <string name="play_audio" >Play Sound
                 </string>
-                <string name="digit_server_ip" >Digit server IP
-                </string>
                 <string name="sending_data" >Sending data to server...
+                </string>
+                <string name="digit_server_ip" >Digit server IP
                 </string>
                 <string name="change_textcolor_mandatory_foreground" >Choose foreground color of mandatory text
                 </string>
-                <string name="save_as_error" >Saved name must not be blank!
+                <string name="review" >continue
                 </string>
                 <string name="form_scan_starting" >Scanning for forms...
                 </string>
-                <string name="review" >continue
+                <string name="save_as_error" >Saved name must not be blank!
                 </string>
                 <string name="server_preferences" >Server
                 </string>
@@ -1778,29 +1778,29 @@ Completed, Not Submitted
                 </string>
                 <string name="digit_server_port" >Digit server port
                 </string>
-                <string name="grasp" >GRASP - Geo Referential realtime Acquisition Statistic Platform
-                </string>
                 <string name="client_telephone" >Client Telephone
                 </string>
-                <string name="tab_submitted" >Submitted
+                <string name="grasp" >GRASP - Geo Referential realtime Acquisition Statistic Platform
                 </string>
                 <string name="server_telephone" >Server Telephone
                 </string>
-                <string name="clear_answer" >Remove response
+                <string name="tab_submitted" >Submitted
                 </string>
-                <string name="username" >Username
+                <string name="clear_answer" >Remove response
                 </string>
                 <string name="check_new_app" >Update the Application
                 </string>
-                <string name="device_not_online" >Your device is not online
+                <string name="username" >Username
                 </string>
                 <string name="enter_data" >Fill Blank Form
                 </string>
-                <string name="server_not_online" >The server is not online or the URL address is not correct
+                <string name="device_not_online" >Your device is not online
+                </string>
+                <string name="help" >HELP
                 </string>
                 <string name="send_form" >Do you want to send the form?
                 </string>
-                <string name="help" >HELP
+                <string name="server_not_online" >The server is not online or the URL address is not correct
                 </string>
                 <string name="required_answer_error" >Check for yellow fields they are required!
                 </string>
@@ -1814,11 +1814,11 @@ Completed, Not Submitted
                 </string>
                 <string name="replace_video" >Replace Video
                 </string>
-                <string name="submitted_on" >Submitted on:
+                <string name="no_items_display" >Nothing available to display.
                 </string>
                 <string name="home" >HOME
                 </string>
-                <string name="no_items_display" >Nothing available to display.
+                <string name="submitted_on" >Submitted on:
                 </string>
                 <string name="change_textcolor_error_foreground" >Choose foreground color text on error
                 </string>
@@ -1830,7 +1830,7 @@ Completed, Not Submitted
                 </string>
                 <string name="refresh" >SYNCHRONIZE
                 </string>
-                <string name="by" >By:
+                <string name="by" >Title:
                 </string>
                 <string name="password_error" >The password you typed is incorrect
                 </string>
@@ -2012,27 +2012,29 @@ Completed, Not Submitted
                 </string>
                 <string name="choose_video" >Choose Video
                 </string>
-                <string name="change_protocol" >Protocol
+                <string name="server_requires_auth" >Server Requires Authentication
                 </string>
                 <string name="parse_error" >Sorry, unable to parse form.
                 </string>
-                <string name="server_requires_auth" >Server Requires Authentication
+                <string name="change_protocol" >Protocol
                 </string>
                 <string name="textcolor_foreground" >Foreground color text
                 </string>
-                <string name="quit_application" >Exit %s
-                </string>
                 <string name="trigger" >OK. Please continue.
                 </string>
+                <string name="quit_application" >Exit %s
+                </string>
                 <string name="audio_file_error" >No audio file was specified.
+                </string>
+                <string name="Network_unavailable" >No Networks available, send by SMS?
                 </string>
                 <string name="file_fetch_failed" >Error: %2$s (%3$s) at %1$s
                 </string>
                 <string name="select_answer" >Select Answer
                 </string>
-                <string name="check_url" >Cannot contact the server, check the URL or try to check connection in the settings area
-                </string>
                 <string name="suggest" >...password
+                </string>
+                <string name="check_url" >Cannot contact the server, check the URL or try to check connection in the settings area
                 </string>
                 <string name="server_auth_credentials" >Please enter username and password for server:\n%s
                 </string>
@@ -2044,6 +2046,8 @@ Completed, Not Submitted
                 </string>
                 <string name="parent_form_not_exist" >Parent form does not exist 
                 </string>
+                <string name="empty" >The form you are trying to send does not exist!
+                </string>
                 <string name="default_connection_type" ></string>
                 <string name="server_port" >Port
                 </string>
@@ -2051,16 +2055,16 @@ Completed, Not Submitted
                 </string>
                 <string name="saved_data" >Incomplete (%s)
                 </string>
+                <string name="default_server_telephone" ></string>
                 <string name="use_odk_default" >Use Default Image
                 </string>
-                <string name="default_server_telephone" ></string>
                 <string name="upload_some_failed" >Sorry, %s form(s) failed to send!
                 </string>
                 <string name="get_barcode" >Get Barcode
                 </string>
-                <string name="selected" >Selected: 
-                </string>
                 <string name="delete_form" >Do you want to delete the selected form?
+                </string>
+                <string name="selected" >Selected: 
                 </string>
                 <string name="default_odk_submission" >/submission
                 </string>
@@ -2078,27 +2082,27 @@ Completed, Not Submitted
                 </string>
                 <string name="error_no_service" >Error no service available
                 </string>
-                <string name="error_network" >Error network disabled
+                <string name="list_failed_with_error" >Form listing failed. %s.
                 </string>
                 <string name="app_url" >http://opendatakit.org
                 </string>
-                <string name="list_failed_with_error" >Form listing failed. %s.
+                <string name="error_network" >Error network disabled
                 </string>
                 <string name="app_name" >GRASP Mobile Tool
                 </string>
                 <string name="loading_form" >Loading Form
                 </string>
-                <string name="designed" >Designed and Developed by Brains Engineering srl
-                </string>
                 <string name="accept_location" >Get GPS coordinates
+                </string>
+                <string name="designed" >Designed and Developed by Brains Engineering srl
                 </string>
                 <string name="no_items_display_instances" >Nothing available to display.\n\nTry finalizing saved forms before sending.
                 </string>
-                <string name="sending_method" >Sending Method
+                <string name="completed_data" >Complete (%s)
                 </string>
                 <string name="audio_capture" >audio capture
                 </string>
-                <string name="completed_data" >Complete (%s)
+                <string name="sending_method" >Sending Method
                 </string>
                 <string name="jump_to_beginning" >Go To Start
                 </string>
@@ -2106,33 +2110,33 @@ Completed, Not Submitted
                 </string>
                 <string name="gps" >Network
                 </string>
-                <string name="capture_video" >Record Video
-                </string>
                 <string name="noselect_error" >Sorry, you have not selected any forms!
                 </string>
-                <string name="open_data_kit" >Open Data Kit
+                <string name="capture_video" >Record Video
                 </string>
                 <string name="cancel_location" >Cancel
+                </string>
+                <string name="open_data_kit" >Open Data Kit
                 </string>
                 <string name="form_renamed" >%1$s was renamed %2$s.
                 </string>
                 <string name="manifest_server_error" >Manifest reply does not report an OpenRosa version -- bad server?
                 </string>
-                <string name="download_failed_with_error" >Form \"%1$s\" failed. %2$s.
+                <string name="uploading_data" >Sending Form
                 </string>
                 <string name="file_invalid" >File: %s is invalid.
                 </string>
-                <string name="uploading_data" >Sending Form
+                <string name="download_failed_with_error" >Form \"%1$s\" failed. %2$s.
                 </string>
                 <string name="capture_audio" >Record Sound
                 </string>
                 <string name="no_forms_uploaded" >Sorry, no form was uploaded.
                 </string>
-                <string name="form_uncompleted" >Form uncompleted
+                <string name="review_data_button" >Edit Saved Form
                 </string>
                 <string name="tab_finalized" >Pending
                 </string>
-                <string name="review_data_button" >Edit Saved Form
+                <string name="form_uncompleted" >Form uncompleted
                 </string>
                 <string name="root_element_error" >Root element is not &lt;manifest\> -- was %s
                 </string>
@@ -2140,21 +2144,21 @@ Completed, Not Submitted
                 </string>
                 <string name="xform_parse_error" >XForm parse error. %1$s is missing element %2$s
                 </string>
-                <string name="exit_dialog_form" >Do you want to exit from the form?
-                </string>
-                <string name="root_namespace_error" >Root element Namespace is incorrect: %s
+                <string name="tab_saved" >Saved
                 </string>
                 <string name="backup" >back to\nprevious\nprompt
                 </string>
-                <string name="tab_saved" >Saved
+                <string name="root_namespace_error" >Root element Namespace is incorrect: %s
                 </string>
-                <string name="delete_file" >Delete Selected
+                <string name="exit_dialog_form" >Do you want to exit from the form?
                 </string>
                 <string name="send_all" >Send all form
                 </string>
-                <string name="go_to_location" >Go to Location
+                <string name="delete_file" >Delete Selected
                 </string>
                 <string name="tab_completed" >Completed
+                </string>
+                <string name="go_to_location" >Go to Location
                 </string>
                 <string name="todo" >TODO
                 </string>
@@ -2162,21 +2166,21 @@ Completed, Not Submitted
                 </string>
                 <string name="downloading_data" >Connecting to Server
                 </string>
-                <string name="offline" >Offline
-                </string>
                 <string name="please_wait_long" >Please wait. This could take a few minutes.
                 </string>
-                <string name="splash_path" >Selected Splash Image
+                <string name="offline" >Offline
                 </string>
                 <string name="tab_new" >New
                 </string>
-                <string name="form_not_available" >The form is not available on server
+                <string name="splash_path" >Selected Splash Image
                 </string>
                 <string name="save_form_as" >Name this form:
                 </string>
-                <string name="change_splash_path" >Change Image
+                <string name="form_not_available" >The form is not available on server
                 </string>
                 <string name="accuracy" >Accuracy
+                </string>
+                <string name="change_splash_path" >Change Image
                 </string>
                 <string name="change_formlist_url" >Form List Path (appended to Server URL)
                 </string>
@@ -2186,11 +2190,11 @@ Completed, Not Submitted
                 </string>
                 <string name="textcolor_background" >Background color text
                 </string>
-                <string name="error_downloading" >Error Getting Form
+                <string name="toggle_selected" >Toggle All
                 </string>
                 <string name="longitude" >Longitude
                 </string>
-                <string name="toggle_selected" >Toggle All
+                <string name="error_downloading" >Error Getting Form
                 </string>
                 <string name="more_form" >More than one possible parent form
                 </string>
@@ -2202,33 +2206,33 @@ Completed, Not Submitted
                 </string>
                 <string name="save_all_answers" >Save Form
                 </string>
-                <string name="submission_url" >Submission Path
-                </string>
                 <string name="cannot_edit_completed_form" >This form cannot be edited once it has been marked as complete.
                 </string>
-                <string name="double_back" >Please click BACK again to exit
+                <string name="submission_url" >Submission Path
                 </string>
                 <string name="delete_repeat_ask" >Remove This Group?
                 </string>
-                <string name="digit_server_directory" >Digit virtual directory
+                <string name="double_back" >Please click BACK again to exit
                 </string>
                 <string name="forms_sent" >Forms correctly sent
                 </string>
-                <string name="keep_changes" >Save Changes
+                <string name="digit_server_directory" >Digit virtual directory
                 </string>
-                <string name="capture_image" >Take Picture
+                <string name="keep_changes" >Save Changes
                 </string>
                 <string name="ok" >OK
                 </string>
-                <string name="textcolor_error_background" >Background color text on error
+                <string name="capture_image" >Take Picture
                 </string>
-                <string name="fetching_manifest" >%s. Getting manifest 
+                <string name="textcolor_error_background" >Background color text on error
                 </string>
                 <string name="file_missing" >File: %s is missing.
                 </string>
-                <string name="exit_dialog_title_form" >Exit from the form
+                <string name="fetching_manifest" >%s. Getting manifest 
                 </string>
                 <string name="imported" >Form correctly imported
+                </string>
+                <string name="exit_dialog_title_form" >Exit from the form
                 </string>
                 <string name="leaving_repeat_ask" >Add a new entry
                 </string>
@@ -2238,9 +2242,9 @@ Completed, Not Submitted
                 </string>
                 <string name="choose_protocol" >Choose the protocol
                 </string>
-                <string name="wait" >Please wait...
-                </string>
                 <string name="sending_items" >Sending %1$s of %2$s form(s)
+                </string>
+                <string name="wait" >Please wait...
                 </string>
                 <string name="generic_error" >Generic error
                 </string>
@@ -2248,27 +2252,27 @@ Completed, Not Submitted
                 </string>
                 <string name="image_directory_creation_faild" >Failed to create image directory
                 </string>
-                <string name="change_textcolor_foreground" >Choose foreground color text
-                </string>
                 <string name="entering_repeat" >Yes
+                </string>
+                <string name="change_textcolor_foreground" >Choose foreground color text
                 </string>
                 <string name="error_occured" >Error Occurred
                 </string>
-                <string name="no_forms_to_download" >There are no forms to download
-                </string>
                 <string name="cancel_saving_form" >Cancel
                 </string>
-                <string name="upload_results" >Upload Results
+                <string name="no_forms_to_download" >There are no forms to download
                 </string>
                 <string name="success" >Success
                 </string>
+                <string name="upload_results" >Upload Results
+                </string>
                 <string name="entering_repeat_ask" >Add New Group?
                 </string>
-                <string name="formlist_url" >Form List Path
+                <string name="do_not_change" >Cancel
                 </string>
                 <string name="blank_answer" >The form is uncompleted please check blank answer
                 </string>
-                <string name="do_not_change" >Cancel
+                <string name="formlist_url" >Form List Path
                 </string>
                 <string name="exit_dialog_title" >Exit
                 </string>
@@ -2516,6 +2520,17 @@ Green
 Black
                     </item>
                 </string-array>
+                <string-array name="entries_list_preference" >
+                    <item>
+Saved, Not Completed
+                    </item>
+                    <item>
+Completed, Not Submitted
+                    </item>
+                    <item>
+Submitted
+                    </item>
+                </string-array>
                 <string-array name="textcolor_error_foreground_entries" >
                     <item>
 Blue
@@ -2533,15 +2548,21 @@ Red
 Black
                     </item>
                 </string-array>
-                <string-array name="entries_list_preference" >
+                <string-array name="font_size_entries" >
                     <item>
-Saved, Not Completed
+Extra Large
                     </item>
                     <item>
-Completed, Not Submitted
+Large
                     </item>
                     <item>
-Submitted
+Medium
+                    </item>
+                    <item>
+Small
+                    </item>
+                    <item>
+Extra Small
                     </item>
                 </string-array>
                 <string-array name="textcolor_mandatory_background_entry_values" >
@@ -2559,23 +2580,6 @@ Submitted
                     </item>
                     <item>
 #FFFFFF
-                    </item>
-                </string-array>
-                <string-array name="font_size_entries" >
-                    <item>
-Extra Large
-                    </item>
-                    <item>
-Large
-                    </item>
-                    <item>
-Medium
-                    </item>
-                    <item>
-Small
-                    </item>
-                    <item>
-Extra Small
                     </item>
                 </string-array>
                 <string-array name="entries_saved_preference" >
@@ -2603,6 +2607,14 @@ Completed, Not Submitted
 #000000
                     </item>
                 </string-array>
+                <string-array name="protocol_choices_entries" >
+                    <item>
+http
+                    </item>
+                    <item>
+https
+                    </item>
+                </string-array>
                 <string-array name="textcolor_background_entry_values" >
                     <item>
 #00FFFF
@@ -2618,14 +2630,6 @@ Completed, Not Submitted
                     </item>
                     <item>
 #FFFFFF
-                    </item>
-                </string-array>
-                <string-array name="protocol_choices_entries" >
-                    <item>
-http
-                    </item>
-                    <item>
-https
                     </item>
                 </string-array>
                 <string-array name="textcolor_error_background_entries" >
@@ -2708,19 +2712,19 @@ done
                 </color>
                 <color name="fg_err" >#FF0000
                 </color>
-                <color name="dark_grey" >#333333
+                <color name="red" >#FF0000
                 </color>
                 <color name="blue" >#0000FF
                 </color>
-                <color name="red" >#FF0000
+                <color name="dark_grey" >#333333
                 </color>
                 <color name="black_1" >#000000
                 </color>
                 <color name="black_2" >#202020
                 </color>
-                <color name="bg_readonly" >#FFFFFF
-                </color>
                 <color name="fg_readonly_inv" >#000000
+                </color>
+                <color name="bg_readonly" >#FFFFFF
                 </color>
             </file>
             <file
@@ -2746,29 +2750,29 @@ done
                 <string name="root_namespace_error" ></string>
                 <string name="fetching_file" >	الحصول على النموذج	
                 </string>
-                <string name="choose_protocol" >Choose the protocol
-                </string>
                 <string name="unrecognized_uri" >unrecognized URI:
+                </string>
+                <string name="choose_protocol" >Choose the protocol
                 </string>
                 <string name="general_preferences" >	تغيير الاعدادات	
                 </string>
-                <string name="textcolor_background" >Background color text
-                </string>
                 <string name="select_another_image" >	حدد صورة أخرى	
+                </string>
+                <string name="textcolor_background" >Background color text
                 </string>
                 <string name="choose_image" >	اختر صورة	
                 </string>
-                <string name="change_textcolor_foreground" >Choose foreground color text
-                </string>
                 <string name="no_connection" >	الاتصال بالشبكة غير متاح	
+                </string>
+                <string name="change_textcolor_foreground" >Choose foreground color text
                 </string>
                 <string name="convert_submitted_to_complete" >Convert submitted forms to completed 
                 </string>
                 <string name="blank_answer" >The form is uncompleted please check blank answer
                 </string>
-                <string name="please_insert_your_phone_number" >	يرجى إدراج رقم الهاتف يسبقه كود البلد
-                </string>
                 <string name="form_download_progress" >	الحصول على ملفات الوسائط	
+                </string>
+                <string name="please_insert_your_phone_number" >	يرجى إدراج رقم الهاتف يسبقه كود البلد
                 </string>
                 <string name="default_completed" ></string>
                 <string name="formlist_url" >	مسار قائمة النماذج 	
@@ -2818,9 +2822,9 @@ done
                 </string>
                 <string name="cancel_saving_form" >	إلغاء	
                 </string>
-                <string name="imported" >Form correctly imported
-                </string>
                 <string name="check_new_app" >Update the Application
+                </string>
+                <string name="imported" >Form correctly imported
                 </string>
                 <string name="please_wait_long" >	الرجاء الانتظار. قد تستغرق هذه العملية بضع دقائق.	
                 </string>
@@ -2828,62 +2832,62 @@ done
                 </string>
                 <string name="list_failed_with_error" >	لم يتم اضافة النموذج %s	
                 </string>
-                <string name="default_server_telephone" ></string>
-                <string name="save_all_answers" >	حفظ النموذج	
-                </string>
                 <string name="send" >	إرسال	
                 </string>
+                <string name="save_all_answers" >	حفظ النموذج	
+                </string>
+                <string name="default_server_telephone" ></string>
                 <string name="required_answer_error" >	تحقق من المدخلات الصفراء فهى مطلوبة!	
                 </string>
                 <string name="tab_finalized" >Pending
                 </string>
-                <string name="todo" ></string>
-                <string name="save_form_as" >	اسم النموذج:	
-                </string>
                 <string name="file_missing" >	الملف %s غير موجود	
                 </string>
+                <string name="save_form_as" >	اسم النموذج:	
+                </string>
+                <string name="todo" ></string>
                 <string name="enter_data_button" >	ملء نموذج فارغ	
                 </string>
                 <string name="enter" >	ابدأ	
                 </string>
-                <string name="get_forms" >	الحصول على نموذج فارغ	
-                </string>
                 <string name="change_protocol" >	بروتوكول	
+                </string>
+                <string name="get_forms" >	الحصول على نموذج فارغ	
                 </string>
                 <string name="default_client_telephone" ></string>
                 <string name="show_location" >	اظهار الموقع	
                 </string>
                 <string name="app_url" >	http://opendatakit.org	
                 </string>
-                <string name="exit_dialog" >Do you want to quit?
+                <string name="server_preferences" >	 الخادم	
                 </string>
                 <string name="one_capture" >	الوسائط المتعددة قد سجلت 	
                 </string>
-                <string name="server_preferences" >	 الخادم	
-                </string>
-                <string name="xform_parse_error" >	ظهر خطأ فى تحليل ملف %1$s عرض البيانات %2$s	
+                <string name="exit_dialog" >Do you want to quit?
                 </string>
                 <string name="main_menu_details" >هذه هو برنامج جمع البيانات GRASP
                 </string>
-                <string name="take_signature" >تسجيل التوقيع
-                </string>
-                <string name="sms" >Sms
+                <string name="xform_parse_error" >	ظهر خطأ فى تحليل ملف %1$s عرض البيانات %2$s	
                 </string>
                 <string name="add_another_repeat" >	إضافة إدخال \"%s\"  آخر	
                 </string>
+                <string name="sms" >Sms
+                </string>
+                <string name="take_signature" >تسجيل التوقيع
+                </string>
                 <string name="audio_file_invalid" >	الملف %s صوتى غيرصالح	
-                </string>
-                <string name="new_form" >صندوق الوارد
-                </string>
-                <string name="send_selected_data" >	إرسال الاختيارات	
                 </string>
                 <string name="username" >	اسم المستخدم 	
                 </string>
+                <string name="send_selected_data" >	إرسال الاختيارات	
+                </string>
+                <string name="new_form" >صندوق الوارد
+                </string>
                 <string name="saving_form" >	حفظ النموذج 	
                 </string>
-                <string name="help" >المساعدة	
-                </string>
                 <string name="change_connection" >	تعريف الاتصال	
+                </string>
+                <string name="help" >المساعدة	
                 </string>
                 <string name="clear_answer" >	 حذف الاجابة	
                 </string>
@@ -2893,15 +2897,15 @@ done
                 </string>
                 <string name="save_data_message" >	الرجاء حفظ النموذج للحفاظ على الاجابات.	
                 </string>
-                <string name="time_before" >Time before re-submit allowed
-                </string>
                 <string name="data_saved_error" >	لطفا، لم يتم حفظ النموذج!	
                 </string>
-                <string name="forms_sent" >Forms correctly sent
+                <string name="time_before" >Time before re-submit allowed
+                </string>
+                <string name="parent_form_not_exist" >Parent form does not exist 
                 </string>
                 <string name="change_textcolor_background" >Choose background color text
                 </string>
-                <string name="parent_form_not_exist" >Parent form does not exist 
+                <string name="forms_sent" >Forms correctly sent
                 </string>
                 <string name="digit_server_ip" >Digit server IP
                 </string>
@@ -3101,15 +3105,17 @@ done
                 </string>
                 <string name="get_barcode" >	الحصول على الباركود	
                 </string>
-                <string name="form_scan_finished" >	تم اكمال المسح الضوئي للنموذج	
+                <string name="button_check" >تحديث التطبيق
                 </string>
-                <string name="passwordText" >Enter the password
+                <string name="form_scan_finished" >	تم اكمال المسح الضوئي للنموذج	
                 </string>
                 <string name="dialog_save" >There are saved forms, you want to complete them before you compile a new one?
                 </string>
-                <string name="send_all" >Send all form
+                <string name="passwordText" >Enter the password
                 </string>
                 <string name="location_provider" >	استخدام %1$s  مزود. يرجى الانتظار لمزيد من الدقة.	
+                </string>
+                <string name="send_all" >Send all form
                 </string>
                 <string name="delete_repeat_no" >	إلغاء	
                 </string>
@@ -3117,15 +3123,15 @@ done
                 </string>
                 <string name="edit_prompt" >	أمر 	
                 </string>
-                <string name="loading_form" >	تحميل النموذج	
-                </string>
                 <string name="click_to_web" >	اضغط لزيارة العنوان الإلكتروني http://	
+                </string>
+                <string name="loading_form" >	تحميل النموذج	
                 </string>
                 <string name="yes_pref" >Yes, delete all
                 </string>
-                <string name="confirm" >Yes
-                </string>
                 <string name="no" >	لا	
+                </string>
+                <string name="confirm" >Yes
                 </string>
                 <string name="cannot_edit_completed_form" >	لا يمكن تحرير هذا النموذج  بعد وضع علامة أنها كاملة.	
                 </string>
@@ -3133,9 +3139,9 @@ done
                 </string>
                 <string name="mark_finished" >	جعل النماذج المحفوظه نهائية	
                 </string>
-                <string name="fetching_manifest" >	لحصول على بيان	
-                </string>
                 <string name="add_repeat_no" >	لا	
+                </string>
+                <string name="fetching_manifest" >	لحصول على بيان	
                 </string>
                 <string name="wait" >Please wait...
                 </string>
@@ -3143,9 +3149,9 @@ done
                 </string>
                 <string name="last_saved_date" >Last saved:
                 </string>
-                <string name="ok" >	موافق	
-                </string>
                 <string name="server_auth_credentials" >	الرجاء إدخال اسم المستخدم وكلمة المرور للخادم: \ N٪ S	
+                </string>
+                <string name="ok" >	موافق	
                 </string>
                 <string name="enter_data_description" >	 أنت فى بداية النموذج. حرك الشاشه كما يظهر لك!	
                 </string>
@@ -3153,13 +3159,13 @@ done
                 </string>
                 <string name="manifest_tag_error" >	سجل لبيانات به واحد أو أكثرمن معرف : اسم الملف، هاش، رابط التحميل	
                 </string>
-                <string name="getting_location" >	تحميل الموقع	
-                </string>
                 <string name="toggle_selected" >	تبديل  	
                 </string>
-                <string name="server_port" >Port
+                <string name="getting_location" >	تحميل الموقع	
                 </string>
                 <string name="uploading_data" >	إرسال النموذج	
+                </string>
+                <string name="server_port" >Port
                 </string>
                 <string name="add_repeat" >	إضافة إدخال  \"%s\"  جديد	
                 </string>
@@ -3169,9 +3175,9 @@ done
                 </string>
                 <string name="no_sd_error" >	لطفا، بطاقة الذاكرة الخاصة بك لا يعمل!	
                 </string>
+                <string name="manifest_server_error" ></string>
                 <string name="generic_error" >Generic error
                 </string>
-                <string name="manifest_server_error" ></string>
                 <string name="tab_saved" >Saved
                 </string>
                 <string name="entering_repeat" >	نعم	
@@ -3184,15 +3190,15 @@ done
                 </string>
                 <string name="open_data_kit" >	فتح صندوق البيانات	
                 </string>
-                <string name="file_delete_in_progress" >	لطفا, حذف النماذج يتم الان!	
+                <string name="server_url" >	عنوان الخادم	
                 </string>
                 <string name="file_deleted_error" >	لطفا, لم يتم حذف النماذج المختارة	
                 </string>
-                <string name="server_url" >	عنوان الخادم	
-                </string>
-                <string name="choose_sound" >	اختر الصوت	
+                <string name="file_delete_in_progress" >	لطفا, حذف النماذج يتم الان!	
                 </string>
                 <string name="play_audio" >	تشغيل الصوت	
+                </string>
+                <string name="choose_sound" >	اختر الصوت	
                 </string>
                 <string name="on_request" >On Request
                 </string>
@@ -3200,49 +3206,49 @@ done
                 </string>
                 <string name="show_splash_summary" >	ظهورعند بدء تشغيل التطبيق	
                 </string>
-                <string name="phone_not_in_server" >Phone number not in server&amp;s contact list
-                </string>
                 <string name="form_uncompleted" >Form uncompleted
                 </string>
-                <string name="sending_sms" >Sending data to server, please wait
+                <string name="phone_not_in_server" >Phone number not in server&amp;s contact list
                 </string>
                 <string name="send_form" >Do you want to send the form?
                 </string>
+                <string name="sending_sms" >Sending data to server, please wait
+                </string>
                 <string name="discard_group" >	حذف المجموعة	
-                </string>
-                <string name="telephone_number" >Please enter you telephone number
-                </string>
-                <string name="textcolor_error_background" >Background color text on error
                 </string>
                 <string name="accuracy" >دقة	
                 </string>
+                <string name="textcolor_error_background" >Background color text on error
+                </string>
+                <string name="telephone_number" >Please enter you telephone number
+                </string>
                 <string name="delete_form" >Do you want to delete the selected form?
-                </string>
-                <string name="save_as_error" >	يجب أن لا يكون الاسم المحفوظ فارغ	
-                </string>
-                <string name="get_location" >	موقع التسجيل	
                 </string>
                 <string name="parse_openrosa_formlist_failed" >	 الخادم لم يقدم الوثيقة الخاصة بالنماذج المتاحة متوافقة مع برنامج OpenRosa	
                 </string>
-                <string name="suggest" >...password
+                <string name="get_location" >	موقع التسجيل	
+                </string>
+                <string name="save_as_error" >	يجب أن لا يكون الاسم المحفوظ فارغ	
                 </string>
                 <string name="home" >الرئيسيه	
                 </string>
-                <string name="negative_choise" >No
+                <string name="suggest" >...password
                 </string>
                 <string name="form_name" >	اسم النموذج	
                 </string>
-                <string name="number_error" >The server telephone number is not inserted, please enter it
+                <string name="negative_choise" >No
                 </string>
                 <string name="upload_some_failed" >	عذرا، لم يتم ارسال النموذج %s!	
                 </string>
-                <string name="finished_disk_scan" >	تم الانتهاء من المسح الضوئي. جميع النماذج تم تحميلها.	
+                <string name="number_error" >The server telephone number is not inserted, please enter it
                 </string>
                 <string name="do_not_save" >	تجاهل التغييرات	
                 </string>
-                <string name="image_directory_creation_faild" >Failed to create image directory
+                <string name="finished_disk_scan" >	تم الانتهاء من المسح الضوئي. جميع النماذج تم تحميلها.	
                 </string>
                 <string name="upload_results" >	تحميل النتائج	
+                </string>
+                <string name="image_directory_creation_faild" >Failed to create image directory
                 </string>
                 <string name="do_not_exit" >	إلغاء	
                 </string>
@@ -3252,24 +3258,24 @@ done
                 </string>
                 <string name="protocol" >	بروتوكول	
                 </string>
-                <string name="exit_dialog_form" >Do you want to exit from the form?
-                </string>
                 <string name="replace_image" >	استبدال الصورة	
+                </string>
+                <string name="exit_dialog_form" >Do you want to exit from the form?
                 </string>
                 <string name="root_element_error" ></string>
                 <string name="view_hierarchy" >	 الذهاب الى شاشة الأوامر	
                 </string>
-                <string name="no_answer_recorded" >Warning: does not match any answers. No answer recorded
-                </string>
                 <string name="no_pref" >No, only update
+                </string>
+                <string name="no_answer_recorded" >Warning: does not match any answers. No answer recorded
                 </string>
                 <string name="tab_submitted" >Submitted
                 </string>
                 <string name="check_url" >Cannot contact the server, check the URL or try to check connection in the settings area
                 </string>
-                <string name="form_renamed" >	أعادة تسمية	
-                </string>
                 <string name="contDesc" >التفصيل	
+                </string>
+                <string name="form_renamed" >	أعادة تسمية	
                 </string>
                 <string name="jump_to_end" >	انتقل إلى النهايه	
                 </string>
@@ -3289,19 +3295,19 @@ done
                 </string>
                 <string name="replace_video" >	استبدال فيديو	
                 </string>
-                <string name="double_back" >Please click BACK again to exit
-                </string>
                 <string name="error_no_pdu" >Errore no PDU found
                 </string>
-                <string name="exit_button" >EXIT
+                <string name="double_back" >Please click BACK again to exit
                 </string>
                 <string name="keep_changes" >	حفظ التغييرات	
+                </string>
+                <string name="exit_button" >EXIT
                 </string>
                 <string name="cancel" >	إلغاء	
                 </string>
                 <string name="default_connection_type" ></string>
-                <string name="default_server_url" ></string>
                 <string name="powered_by_odk" ></string>
+                <string name="default_server_url" ></string>
                 <string name="success" >	نجاح	
                 </string>
                 <string name="portocol_choice" >Protocol
@@ -3320,13 +3326,13 @@ done
                 </string>
                 <string name="discard_answer" >	حذف الاجابات	
                 </string>
-                <string name="change_client_telephone" >	رقم هاتف العميل	
-                </string>
                 <string name="quit_application" >	خروج %s	
                 </string>
-                <string name="replace_audio" >	استبدال الصوت	
+                <string name="change_client_telephone" >	رقم هاتف العميل	
                 </string>
                 <string name="font_size" >	حجم خط النص	
+                </string>
+                <string name="replace_audio" >	استبدال الصوت	
                 </string>
                 <string name="textcolor_mandatory_background" >Background color of mandatory text
                 </string>
@@ -3344,9 +3350,9 @@ done
                 </string>
                 <string name="server_requires_auth" >	الخادم يتطلب مستخدم معتمد	
                 </string>
-                <string name="delete_yes" >	حذف النماذج	
-                </string>
                 <string name="cancel_location" >	إلغاء	
+                </string>
+                <string name="delete_yes" >	حذف النماذج	
                 </string>
                 <string name="change_textcolor_error_foreground" >Choose foreground color text on error
                 </string>
@@ -3356,11 +3362,11 @@ done
                 </string>
                 <string name="access_error" >	خطأ أثناء محاولة الوصول %s	
                 </string>
-                <string name="file_deleted_ok" >	تم حذف النماذج بنجاح	
+                <string name="capture_image" >	أخذ صورة	
                 </string>
                 <string name="delete_repeat" >	 حذف المجموعة	
                 </string>
-                <string name="capture_image" >	أخذ صورة	
+                <string name="file_deleted_ok" >	تم حذف النماذج بنجاح	
                 </string>
             </file>
             <file
@@ -3412,52 +3418,7 @@ GPRS/UMTS solamente
 GPRS/UMTS favorito
                     </item>
                 </string-array>
-                <string-array name="font_size_entries" >
-                    <item>
-Extra Grande
-                    </item>
-                    <item>
-Grande
-                    </item>
-                    <item>
-Medio
-                    </item>
-                    <item>
-Pequeño
-                    </item>
-                    <item>
-Mas Pequeño
-                    </item>
-                </string-array>
-                <string-array name="connection_type_values" >
-                    <item name="sms">
-sms only
-                    </item>
-                    <item name="gprsumts">
-gprs/umts only
-                    </item>
-                    <item name="gprsumtspref">
-gprs/umts preferred
-                    </item>
-                </string-array>
                 <string-array name="textcolor_mandatory_background_entries" >
-                    <item>
-Cian
-                    </item>
-                    <item>
-Negro
-                    </item>
-                    <item>
-Verde
-                    </item>
-                    <item>
-Amarillo
-                    </item>
-                    <item>
-Blanco
-                    </item>
-                </string-array>
-                <string-array name="textcolor_background_entries" >
                     <item>
 Cian
                     </item>
@@ -3519,63 +3480,12 @@ presentado
 #000000
                     </item>
                 </string-array>
-                <string-array name="updateIntervalValues" >
-                    <item name="1000">
-1000
-                    </item>
-                    <item name="5000">
-5000
-                    </item>
-                    <item name="30000">
-30000
-                    </item>
-                    <item name="60000">
-60000
-                    </item>
-                    <item name="300000">
-300000
-                    </item>
-                </string-array>
-                <string-array name="textcolor_error_background_entry_values" >
-                    <item>
-#00FFFF
-                    </item>
-                    <item>
-#000000
-                    </item>
-                    <item>
-#00FF00
-                    </item>
-                    <item>
-#FFFF00
-                    </item>
-                    <item>
-#FFFFFF
-                    </item>
-                </string-array>
                 <string-array name="entries_saved_preference" >
                     <item>
 Guardado, Desconocido
                     </item>
                     <item>
 Relleno, no Enviado
-                    </item>
-                </string-array>
-                <string-array name="updateInterval" >
-                    <item name="1000">
-Cada 1 segundo
-                    </item>
-                    <item name="5000">
-Cada 5 segundos
-                    </item>
-                    <item name="30000">
-Cada 30 segundos
-                    </item>
-                    <item name="60000">
-Cada 1 minuto
-                    </item>
-                    <item name="300000">
-Cada 5 minutos
                     </item>
                 </string-array>
                 <string-array name="textcolor_error_background_entries" >
@@ -3628,23 +3538,6 @@ terminado
 2
                     </item>
                 </string-array>
-                <string-array name="textcolor_foreground_entries" >
-                    <item>
-Azul
-                    </item>
-                    <item>
-Blanco
-                    </item>
-                    <item>
-Amarillo
-                    </item>
-                    <item>
-Verde
-                    </item>
-                    <item>
-Negro
-                    </item>
-                </string-array>
                 <string-array name="entries_list_preference" >
                     <item>
 Guardado, Desconocido
@@ -3673,23 +3566,6 @@ Enviado
 #FFFFFF
                     </item>
                 </string-array>
-                <string-array name="textcolor_foreground_entry_values" >
-                    <item>
-#000066
-                    </item>
-                    <item>
-#FFFFFF
-                    </item>
-                    <item>
-#FFFF00
-                    </item>
-                    <item>
-#00FF00
-                    </item>
-                    <item>
-#000000
-                    </item>
-                </string-array>
                 <string-array name="textcolor_mandatory_background_entry_values" >
                     <item>
 #00FFFF
@@ -3705,17 +3581,6 @@ Enviado
                     </item>
                     <item>
 #FFFFFF
-                    </item>
-                </string-array>
-                <string-array name="protocol_entries" >
-                    <item>
-ODK Aggregate
-                    </item>
-                    <item>
-Google Forms
-                    </item>
-                    <item>
-OpenRosa 1.0
                     </item>
                 </string-array>
                 <string-array name="textcolor_error_foreground_entries" >
@@ -3750,6 +3615,147 @@ Verde
                     </item>
                     <item>
 Negro
+                    </item>
+                </string-array>
+                <string-array name="font_size_entries" >
+                    <item>
+Extra Grande
+                    </item>
+                    <item>
+Grande
+                    </item>
+                    <item>
+Medio
+                    </item>
+                    <item>
+Pequeño
+                    </item>
+                    <item>
+Mas Pequeño
+                    </item>
+                </string-array>
+                <string-array name="connection_type_values" >
+                    <item name="sms">
+sms only
+                    </item>
+                    <item name="gprsumts">
+gprs/umts only
+                    </item>
+                    <item name="gprsumtspref">
+gprs/umts preferred
+                    </item>
+                </string-array>
+                <string-array name="textcolor_background_entries" >
+                    <item>
+Cian
+                    </item>
+                    <item>
+Negro
+                    </item>
+                    <item>
+Verde
+                    </item>
+                    <item>
+Amarillo
+                    </item>
+                    <item>
+Blanco
+                    </item>
+                </string-array>
+                <string-array name="updateIntervalValues" >
+                    <item name="1000">
+1000
+                    </item>
+                    <item name="5000">
+5000
+                    </item>
+                    <item name="30000">
+30000
+                    </item>
+                    <item name="60000">
+60000
+                    </item>
+                    <item name="300000">
+300000
+                    </item>
+                </string-array>
+                <string-array name="textcolor_error_background_entry_values" >
+                    <item>
+#00FFFF
+                    </item>
+                    <item>
+#000000
+                    </item>
+                    <item>
+#00FF00
+                    </item>
+                    <item>
+#FFFF00
+                    </item>
+                    <item>
+#FFFFFF
+                    </item>
+                </string-array>
+                <string-array name="updateInterval" >
+                    <item name="1000">
+Cada 1 segundo
+                    </item>
+                    <item name="5000">
+Cada 5 segundos
+                    </item>
+                    <item name="30000">
+Cada 30 segundos
+                    </item>
+                    <item name="60000">
+Cada 1 minuto
+                    </item>
+                    <item name="300000">
+Cada 5 minutos
+                    </item>
+                </string-array>
+                <string-array name="textcolor_foreground_entries" >
+                    <item>
+Azul
+                    </item>
+                    <item>
+Blanco
+                    </item>
+                    <item>
+Amarillo
+                    </item>
+                    <item>
+Verde
+                    </item>
+                    <item>
+Negro
+                    </item>
+                </string-array>
+                <string-array name="textcolor_foreground_entry_values" >
+                    <item>
+#000066
+                    </item>
+                    <item>
+#FFFFFF
+                    </item>
+                    <item>
+#FFFF00
+                    </item>
+                    <item>
+#00FF00
+                    </item>
+                    <item>
+#000000
+                    </item>
+                </string-array>
+                <string-array name="protocol_entries" >
+                    <item>
+ODK Aggregate
+                    </item>
+                    <item>
+Google Forms
+                    </item>
+                    <item>
+OpenRosa 1.0
                     </item>
                 </string-array>
                 <string-array name="protocol_choices_entries" >
@@ -3790,25 +3796,25 @@ https
                 </color>
                 <color name="fg_std" >#FFFFFF
                 </color>
-                <color name="yellow" >#FFFF00
-                </color>
                 <color name="fg_readonly_err" >#000000
+                </color>
+                <color name="yellow" >#FFFF00
                 </color>
                 <color name="wfp_azure1" >#39ACFF
                 </color>
                 <color name="wfp_azure2" >#006DC2
                 </color>
-                <color name="gray" >#808080
+                <color name="bg_readonly" >#FFFFFF
                 </color>
                 <color name="black_2" >#202020
                 </color>
-                <color name="bg_readonly" >#FFFFFF
+                <color name="gray" >#808080
                 </color>
-                <color name="black_1" >#000000
+                <color name="bg_err" >#000000
                 </color>
                 <color name="bg_mand" >#FFFFB5
                 </color>
-                <color name="bg_err" >#000000
+                <color name="black_1" >#000000
                 </color>
             </file>
             <file
@@ -3842,9 +3848,9 @@ https
                 </string>
                 <string name="capture_audio" >Rekodi Sauti
                 </string>
-                <string name="clearanswer_confirm" >Ondoa jibu kwa \"%s\"?
-                </string>
                 <string name="trigger" >OK. Tafadhali endelea.
+                </string>
+                <string name="clearanswer_confirm" >Ondoa jibu kwa \"%s\"?
                 </string>
                 <string name="clear_answer_no" >Futa
                 </string>
@@ -3852,9 +3858,9 @@ https
                 </string>
                 <string name="manage_files" >Futa Fomu Iliyohifadhiwa
                 </string>
-                <string name="fetching_file" >Inapata %1$s.\n\nFomu %2$s kati ya %3$s fomu.
-                </string>
                 <string name="location_provider_accuracy" >Inatumia %1$s. Usahihi ni %2$s m.
+                </string>
+                <string name="fetching_file" >Inapata %1$s.\n\nFomu %2$s kati ya %3$s fomu.
                 </string>
                 <string name="passwordText" >Enter the password
                 </string>
@@ -3906,15 +3912,15 @@ https
                 </string>
                 <string name="date" >Date:
                 </string>
+                <string name="quit_entry" >Hifadhi Fomu Kama Imekamilika
+                </string>
                 <string name="form_download_progress" >%1$s. Inapata mafaili ya midia: %2$s of %3$s
                 </string>
                 <string name="entering_repeat_ask" >Ongeza Kundi Jipya?
                 </string>
-                <string name="quit_entry" >Hifadhi Fomu Kama Imekamilika
+                <string name="data" >Fomu Zilizohifadhiwa
                 </string>
                 <string name="do_not_change" >Futa
-                </string>
-                <string name="data" >Fomu Zilizohifadhiwa
                 </string>
                 <string name="audio_capture" >audio capture
                 </string>
@@ -3931,12 +3937,12 @@ https
                 <string name="cancel_saving_form" >Futa
                 </string>
                 <string name="default_server_url" ></string>
+                <string name="default_client_telephone" ></string>
                 <string name="google_account" >Chagua Akaunti ya Google
                 </string>
-                <string name="default_client_telephone" ></string>
-                <string name="by" >By:
-                </string>
                 <string name="server_preferences" >Seva
+                </string>
+                <string name="by" >By:
                 </string>
                 <string name="jump_to_previous" >Nenda Juu
                 </string>
@@ -3944,59 +3950,59 @@ https
                 </string>
                 <string name="replace_video" >Badilisha Video
                 </string>
-                <string name="exit_dialog" >Do you want to quit?
-                </string>
                 <string name="barcode_scanner_error" >Samahani, Skana ya Bakodi haijahamiliwa!
+                </string>
+                <string name="exit_dialog" >Do you want to quit?
                 </string>
                 <string name="general_preferences" >Badilisha Mipangio
                 </string>
-                <string name="get_forms" >Pata Fomu Tupu
-                </string>
                 <string name="uploading_data" >Fomu Inatumwa
+                </string>
+                <string name="get_forms" >Pata Fomu Tupu
                 </string>
                 <string name="tab_saved" >Saved
                 </string>
-                <string name="no_forms_uploaded" >Samahani, hakuna fomu iliyopakiwa.
+                <string name="upload_some_failed" >Samahani, %s fomu i(zi)meshindikana kutumwa!
                 </string>
                 <string name="delete_confirm" >Futa % fomu?
                 </string>
-                <string name="upload_some_failed" >Samahani, %s fomu i(zi)meshindikana kutumwa!
-                </string>
-                <string name="sms" >Sms
+                <string name="no_forms_uploaded" >Samahani, hakuna fomu iliyopakiwa.
                 </string>
                 <string name="gps" >Network
                 </string>
+                <string name="sms" >Sms
+                </string>
                 <string name="get_barcode" >Pata Bakodi
                 </string>
-                <string name="clear_answer_ask" >Ondoa Jibu Hili?
-                </string>
                 <string name="leaving_repeat_ask" >Na Kundi Moja Zaidi?
+                </string>
+                <string name="clear_answer_ask" >Ondoa Jibu Hili?
                 </string>
                 <string name="form_scan_finished" >Uchujaji fomu umekamilika
                 </string>
                 <string name="review_data_button" >Rekebisha Fomu Iliyohifadhiwa
                 </string>
-                <string name="delete_repeat_ask" >Ondoa Kundi Hili?
-                </string>
                 <string name="go_to_location" >Nenda Mahali
                 </string>
-                <string name="save_enter_data_description" >Uko mwisho wa fomu.
+                <string name="delete_repeat_ask" >Ondoa Kundi Hili?
                 </string>
                 <string name="username" >Jina la Mtumiaji
                 </string>
-                <string name="generic_error" >Generic error
+                <string name="save_enter_data_description" >Uko mwisho wa fomu.
                 </string>
                 <string name="upload_all_successful" >%s fomu i(zi)mefanikiwa kutumwa.
                 </string>
-                <string name="toggle_selected" >Geuza Zote
+                <string name="generic_error" >Generic error
                 </string>
-                <string name="parse_error" >Samahani, haiwezekani kuchanganua fomu .
+                <string name="toggle_selected" >Geuza Zote
                 </string>
                 <string name="show_splash_summary" >Huonekana programu-tumizi inapoanza
                 </string>
-                <string name="no_forms_to_download" >There are no forms to download
+                <string name="parse_error" >Samahani, haiwezekani kuchanganua fomu .
                 </string>
                 <string name="xform_parse_error" >XKosa kuchambua fomu. %1$s haina elementi %2$s
+                </string>
+                <string name="no_forms_to_download" >There are no forms to download
                 </string>
                 <string name="default_odk_formlist" >/orodhaFomu
                 </string>
@@ -4196,29 +4202,29 @@ https
                 </string>
                 <string name="discard_group" >Ondoa kundi
                 </string>
-                <string name="delete_repeat" >Ondoa kundi
-                </string>
-                <string name="main_menu_details" >Huu ni ukusanyaji data wa GRASP
+                <string name="location_provider" >Inatumia %1$s vitoaji. Tafadhali subiri usahihi mkubwa zaidi.
                 </string>
                 <string name="leaving_repeat" >Ongeza Kundi
                 </string>
-                <string name="location_provider" >Inatumia %1$s vitoaji. Tafadhali subiri usahihi mkubwa zaidi.
+                <string name="main_menu_details" >Huu ni ukusanyaji data wa GRASP
+                </string>
+                <string name="delete_repeat" >Ondoa kundi
                 </string>
                 <string name="please_wait" >Tafadhali subiri muda kidogo.
                 </string>
                 <string name="replace_barcode" >Badilishs Barcode
                 </string>
-                <string name="default_odk_submission" >/uwasilishaji
-                </string>
                 <string name="keep_changes" >Hifadhi Mabadiliko
+                </string>
+                <string name="default_odk_submission" >/uwasilishaji
                 </string>
                 <string name="capture_video" >Rekodi Video
                 </string>
                 <string name="tab_submitted" >Submitted
                 </string>
-                <string name="tab_completed" >Completed
-                </string>
                 <string name="advance" >songa mbele\nukurasa\nufuatao
+                </string>
+                <string name="tab_completed" >Completed
                 </string>
                 <string name="delete_file" >Futa Kilichochaguliwa
                 </string>
@@ -4232,23 +4238,23 @@ https
                 </string>
                 <string name="accuracy" >Usahihi
                 </string>
-                <string name="yes_pref" >Yes, delete all
-                </string>
                 <string name="capture_image" >Piga Picha
+                </string>
+                <string name="yes_pref" >Yes, delete all
                 </string>
                 <string name="select_another_image" >Chagua Taswira Nyingine
                 </string>
-                <string name="syncronyze" >Syncronyze forms...
-                </string>
                 <string name="success" >Mafanikio
+                </string>
+                <string name="syncronyze" >Syncronyze forms...
                 </string>
                 <string name="sms_delivered" >SMS delivered
                 </string>
                 <string name="exit_button" >EXIT
                 </string>
-                <string name="download_failed_with_error" >Fomu \"%1$s\" imeshindikana. %2$s.
-                </string>
                 <string name="splash_path" >Taswira ya Kurushia Iliyochaguliwa
+                </string>
+                <string name="download_failed_with_error" >Fomu \"%1$s\" imeshindikana. %2$s.
                 </string>
                 <string name="error_network" >Error network disabled
                 </string>
@@ -4256,13 +4262,13 @@ https
                 </string>
                 <string name="cannot_edit_completed_form" >Fomu hii haiwezi kuhaririwa ikishawekewa alama ya kukamilika.
                 </string>
-                <string name="blank_answer" >The form is uncompleted please check blank answer
-                </string>
                 <string name="change_submission_url" >Njia ya Uwasilishaji (iliyoambatishwa kwenye URL ya Seva)
                 </string>
-                <string name="please_insert_your_phone_number" >Tafadhali ingiza namba yako ya simu ikitangukiwa na namba kiunganishi ya nchi
+                <string name="blank_answer" >The form is uncompleted please check blank answer
                 </string>
                 <string name="done" >Imekamilika
+                </string>
+                <string name="please_insert_your_phone_number" >Tafadhali ingiza namba yako ya simu ikitangukiwa na namba kiunganishi ya nchi
                 </string>
                 <string name="on_request" >On Request
                 </string>
@@ -4272,61 +4278,61 @@ https
                 </string>
                 <string name="change_connection" >Aina ya Muunganisho
                 </string>
-                <string name="access_error" >Kosa wakati wa kufikia %s:
-                </string>
                 <string name="delete_yes" >Futa Fomu
+                </string>
+                <string name="access_error" >Kosa wakati wa kufikia %s:
                 </string>
                 <string name="client_telephone" >Simu ya Mteja
                 </string>
-                <string name="download_all_successful" >Fomu zote zimefanikiwa kupakuliwa.
-                </string>
                 <string name="help" >MSAADA
+                </string>
+                <string name="download_all_successful" >Fomu zote zimefanikiwa kupakuliwa.
                 </string>
                 <string name="file_missing" >Faili: %s halipo.
                 </string>
-                <string name="confirm" >Yes
+                <string name="enter_data_description" >Uko mwanzo wa fomu. Gusa skrini kama ilivyooneshwa chini kuanza.
                 </string>
                 <string name="parent_form_not_exist" >Parent form does not exist 
                 </string>
-                <string name="enter_data_description" >Uko mwanzo wa fomu. Gusa skrini kama ilivyooneshwa chini kuanza.
+                <string name="confirm" >Yes
                 </string>
                 <string name="phone_not_in_server" >Phone number not in server&amp;s contact list
                 </string>
-                <string name="select_answer" >Chagua Jibu
+                <string name="form_scan_starting" >Inachuja fomu…
                 </string>
                 <string name="change_username" >Jina la Mtumiaji la ODK
                 </string>
-                <string name="form_scan_starting" >Inachuja fomu…
+                <string name="select_answer" >Chagua Jibu
                 </string>
                 <string name="play_video" >Chezesha Video
                 </string>
-                <string name="digit_server_ip" >Digit server IP
-                </string>
                 <string name="password" >Nenosiri
+                </string>
+                <string name="digit_server_ip" >Digit server IP
                 </string>
                 <string name="credits" >YAHUSUYO
                 </string>
                 <string name="client" >Mteja
                 </string>
-                <string name="offline" >Offline
-                </string>
                 <string name="choose_protocol" >Choose the protocol
+                </string>
+                <string name="offline" >Offline
                 </string>
                 <string name="downloading_data" >Inaunganisha na Seva
                 </string>
-                <string name="enter" >anza
+                <string name="no_connection" >Hakuna mtandao
                 </string>
                 <string name="cancel" >Futa
                 </string>
-                <string name="no_connection" >Hakuna mtandao
+                <string name="enter" >anza
                 </string>
                 <string name="please_wait_long" >Tafadhali subiri. Hii inaweza kuchukua dakika kadhaa.
                 </string>
                 <string name="no_pref" >No, only update
                 </string>
-                <string name="delete_form" >Do you want to delete the selected form?
-                </string>
                 <string name="change_protocol" >Itifaki
+                </string>
+                <string name="delete_form" >Do you want to delete the selected form?
                 </string>
                 <string name="enter_data_message" >Kuabiri, tembeza kidole kwenye skrini kwa mlalao kama ufunguavyo kurasa za kitabu. Bonyeza kitufe cha Menyu kwa uchaguzi zaidi.
                 </string>
@@ -4346,15 +4352,15 @@ https
                 </string>
                 <string name="change_password" >Nenosiri
                 </string>
-                <string name="check_new_app" >Update the Application
-                </string>
                 <string name="list_form" >ORODHESHA FOMU
+                </string>
+                <string name="check_new_app" >Update the Application
                 </string>
                 <string name="unrecognized_uri" >unrecognized URI:
                 </string>
-                <string name="send_data" >Tuma Fomu Iliyokamilika
-                </string>
                 <string name="first_run" >Anzisha utendaji unapowasha upya
+                </string>
+                <string name="send_data" >Tuma Fomu Iliyokamilika
                 </string>
                 <string name="negative" >No
                 </string>
@@ -4365,9 +4371,9 @@ https
                 </string>
                 <string name="download_forms_result" >Pakua Matokeo
                 </string>
-                <string name="server_IP" >IP
-                </string>
                 <string name="show_splash" >Onesha Skirini ya Kurushia
+                </string>
+                <string name="server_IP" >IP
                 </string>
                 <string name="delete_no" >Usifute
                 </string>
@@ -4381,9 +4387,9 @@ https
                 </string>
                 <string name="do_not_exit" >Futa
                 </string>
-                <string name="choose_sound" >Chagua Sauti
-                </string>
                 <string name="audio_file_invalid" >Faili: %s sio faili halali la sauti.
+                </string>
+                <string name="choose_sound" >Chagua Sauti
                 </string>
                 <string name="latitude" >Latitudo
                 </string>
@@ -4391,21 +4397,21 @@ https
 <manifest />
  ilikuwa %s
                 </string>
-                <string name="chose_audio" >choose audio
-                </string>
                 <string name="click_to_web" >Donoa kutembelea http://
+                </string>
+                <string name="chose_audio" >choose audio
                 </string>
                 <string name="choose_image" >Chagua Picha
                 </string>
                 <string name="error_sms_not_delivered" >Error sms not delivered
                 </string>
-                <string name="last_saved_date" >Last saved:
-                </string>
                 <string name="altitude" >Mwinuko kutoka usawa wa bahari
                 </string>
-                <string name="portocol_choice" >Protocol
+                <string name="last_saved_date" >Last saved:
                 </string>
                 <string name="save_data_message" >Tafadhali hifadhi kutunza majibu yako.
+                </string>
+                <string name="portocol_choice" >Protocol
                 </string>
                 <string name="enter_data" >Jaza Fomu Tupu
                 </string>
@@ -4413,23 +4419,23 @@ https
                 </string>
                 <string name="tab_new" >New
                 </string>
-                <string name="grasp" >GRASP - Geo Referential realtime Acquisition Statistic Platform
-                </string>
                 <string name="mark_finished" >Tia alama fomu imekamilika
+                </string>
+                <string name="grasp" >GRASP - Geo Referential realtime Acquisition Statistic Platform
                 </string>
                 <string name="replace_location" >Badilisha Mahali
                 </string>
                 <string name="parse_openrosa_formlist_failed" >Seva haijatoa waraka fomu uliopo sambamba na OpenRosa toleo 1.0 standard: %s
                 </string>
-                <string name="edit_prompt" >Hariri Kistuo
+                <string name="new_form" >KASHAPOKEZI
                 </string>
                 <string name="jump_to_end" >Nenda Mwisho
                 </string>
-                <string name="new_form" >KASHAPOKEZI
-                </string>
-                <string name="form_renamed" >%1$s imebadilishwa jina %2$s.
+                <string name="edit_prompt" >Hariri Kistuo
                 </string>
                 <string name="no_items_display_forms" >Hankuna cha kuonesha.\n\nJaribu kupata na kujaza fomu tupu.
+                </string>
+                <string name="form_renamed" >%1$s imebadilishwa jina %2$s.
                 </string>
                 <string name="add_repeat" >Ongeza kundi\"%s\" jipya?
                 </string>
@@ -4440,21 +4446,21 @@ https
                 </string>
                 <string name="delete_repeat_no" >Futa
                 </string>
-                <string name="imported" >Form correctly imported
-                </string>
                 <string name="form_uncompleted" >Form uncompleted
                 </string>
-                <string name="save_as_error" >Jina lililohifadhiwa haliwezi kuwa wazi!
-                </string>
-                <string name="audio_file_error" >Hakuna file la sauti lililotambulishwa.
+                <string name="imported" >Form correctly imported
                 </string>
                 <string name="one_capture" >Midia-anuai imerekodiwa.
                 </string>
-                <string name="exit_dialog_form" >Do you want to exit from the form?
+                <string name="audio_file_error" >Hakuna file la sauti lililotambulishwa.
+                </string>
+                <string name="save_as_error" >Jina lililohifadhiwa haliwezi kuwa wazi!
+                </string>
+                <string name="accept_location" >Andika Mahali
                 </string>
                 <string name="file_deleted_error" >Samahani, %1$s ya %2$s fomu zilizochaguliwa i(zi)meshindwa kufutika!
                 </string>
-                <string name="accept_location" >Andika Mahali
+                <string name="exit_dialog_form" >Do you want to exit from the form?
                 </string>
                 <string name="saving_form" >Fomu inahifadhiwa
                 </string>
@@ -4681,6 +4687,17 @@ Relleno, no Enviado
 2
                     </item>
                 </string-array>
+                <string-array name="entryvalues_list_preference" >
+                    <item>
+guardado
+                    </item>
+                    <item>
+terminado
+                    </item>
+                    <item>
+presentado
+                    </item>
+                </string-array>
                 <string-array name="textcolor_mandatory_foreground_entry_values" >
                     <item>
 #000066
@@ -4698,25 +4715,6 @@ Relleno, no Enviado
 #000000
                     </item>
                 </string-array>
-                <string-array name="entryvalues_list_preference" >
-                    <item>
-guardado
-                    </item>
-                    <item>
-terminado
-                    </item>
-                    <item>
-presentado
-                    </item>
-                </string-array>
-                <string-array name="entryvalues_saved_preference" >
-                    <item>
-guardado
-                    </item>
-                    <item>
-terminado
-                    </item>
-                </string-array>
                 <string-array name="protocol_entries" >
                     <item>
 ODK Aggregate
@@ -4727,6 +4725,31 @@ Google Forms
                     <item>
 OpenRosa 1.0
                     </item>
+                </string-array>
+                <string-array name="entryvalues_saved_preference" >
+                    <item>
+guardado
+                    </item>
+                    <item>
+terminado
+                    </item>
+                </string-array>
+                <string-array name="protocol_choices_entries" >
+                    <item>
+http
+                    </item>
+                    <item>
+https
+                    </item>
+                </string-array>
+                <string-array name="protocol_entry_values" >
+                    <item>
+odk_default
+                    </item>
+                    <item>
+google
+                    </item>
+                    <item/>
                 </string-array>
                 <string-array name="textcolor_foreground_entry_values" >
                     <item>
@@ -4743,23 +4766,6 @@ OpenRosa 1.0
                     </item>
                     <item>
 #000000
-                    </item>
-                </string-array>
-                <string-array name="protocol_entry_values" >
-                    <item>
-odk_default
-                    </item>
-                    <item>
-google
-                    </item>
-                    <item/>
-                </string-array>
-                <string-array name="protocol_choices_entries" >
-                    <item>
-http
-                    </item>
-                    <item>
-https
                     </item>
                 </string-array>
                 <string-array name="connection_type_values" >
@@ -4886,23 +4892,23 @@ Negro
                 </color>
                 <color name="fg_readonly_inv" >#000000
                 </color>
-                <color name="fg_err" >#FF0000
-                </color>
                 <color name="bg_readonly_inv" >#000000
                 </color>
-                <color name="fg_std" >#FFFFFF
-                </color>
-                <color name="bg_std" >#000000
+                <color name="fg_err" >#FF0000
                 </color>
                 <color name="bg_readonly_err" >#FF0000
                 </color>
-                <color name="white" >#FFFFFF
+                <color name="bg_std" >#000000
+                </color>
+                <color name="fg_std" >#FFFFFF
                 </color>
                 <color name="fg_readonly" >#666666
                 </color>
-                <color name="bg_mand" >#FFFFB5
+                <color name="white" >#FFFFFF
                 </color>
                 <color name="fg_readonly_err" >#000000
+                </color>
+                <color name="bg_mand" >#FFFFB5
                 </color>
                 <color name="blue" >#0000FF
                 </color>
@@ -4950,13 +4956,13 @@ Negro
                 </string>
                 <string name="audio_file_error" >No se especificó un archivo de audio.
                 </string>
-                <string name="change_splash_path" >Cambiar imagen
-                </string>
                 <string name="username" >Nombre de Usuario
                 </string>
-                <string name="data_saved_ok" >¡Formulario almacenado correctamente!
+                <string name="change_splash_path" >Cambiar imagen
                 </string>
                 <string name="positive_choise" >Ok
+                </string>
+                <string name="data_saved_ok" >¡Formulario almacenado correctamente!
                 </string>
                 <string name="protocol" >Protocolo
                 </string>
@@ -5011,9 +5017,9 @@ Negro
                 </string>
                 <string name="audio_capture" >Captura de audio
                 </string>
-                <string name="portocol_choice" >Protocol
-                </string>
                 <string name="form_name" >Nombre de Formulario:
+                </string>
+                <string name="portocol_choice" >Protocol
                 </string>
                 <string name="grasp" >GRASP - Geo Referential realtime Acquisition Statistic Platform
                 </string>
@@ -5023,17 +5029,17 @@ Negro
                 </string>
                 <string name="no_connection" >No hay conexión de red disponible
                 </string>
-                <string name="select_answer" >Respuesta Seleccionada
-                </string>
                 <string name="quit_entry" >Guardar Formulario como Completado
+                </string>
+                <string name="select_answer" >Respuesta Seleccionada
                 </string>
                 <string name="textcolor_background" >Background color text
                 </string>
-                <string name="no_forms_uploaded" >Lo Sentimos, El Formulario no fue cargado.
+                <string name="uploading_data" >Enviando Formulario
                 </string>
                 <string name="add_repeat" >¿Agregar nueva entrada?
                 </string>
-                <string name="uploading_data" >Enviando Formulario
+                <string name="no_forms_uploaded" >Lo Sentimos, El Formulario no fue cargado.
                 </string>
                 <string name="client" >Cliente
                 </string>
@@ -5057,21 +5063,21 @@ Negro
                 </string>
                 <string name="review" >Continuar
                 </string>
-                <string name="contDesc" >Descripción
-                </string>
                 <string name="form_renamed" >%1$s ha sido renombrado %2$s.
                 </string>
-                <string name="textcolor_foreground" >Foreground color text
+                <string name="contDesc" >Descripción
                 </string>
                 <string name="please_wait" >Espere unos minutos por favor.
+                </string>
+                <string name="textcolor_foreground" >Foreground color text
                 </string>
                 <string name="change_server_telephone" >Teléfono Servidor
                 </string>
                 <string name="bad_uri" >Mala URI: 
                 </string>
-                <string name="fetching_manifest" >%s. Obteniendo  el archivo manifiesto.
-                </string>
                 <string name="font_size" >Tamaño de la fuente de texto
+                </string>
+                <string name="fetching_manifest" >%s. Obteniendo  el archivo manifiesto.
                 </string>
                 <string name="delete_file" >Eliminar Seleccionados
                 </string>
@@ -5083,9 +5089,9 @@ Negro
                 </string>
                 <string name="digit_server_directory" >Digit virtual directory
                 </string>
-                <string name="gps" >Red
-                </string>
                 <string name="location_accuracy" >La Precisión es %1$s m
+                </string>
+                <string name="gps" >Red
                 </string>
                 <string name="backup" >Volver a\nmensaje\nanterior
                 </string>
@@ -5298,29 +5304,29 @@ Negro
                 </string>
                 <string name="submitted_on" >Enviada:
                 </string>
-                <string name="formlist_url" >Ruta de listado del formulario
-                </string>
                 <string name="password" >Contraseña
+                </string>
+                <string name="formlist_url" >Ruta de listado del formulario
                 </string>
                 <string name="file_delete_in_progress" >Lo sentimos, la Eliminacion de un formulario esta en progreso.
                 </string>
                 <string name="save_data_message" >Por favor guarde el formulario si mantiene sus respuestas.
                 </string>
-                <string name="choose_image" >Elegir Imagen
-                </string>
                 <string name="splash_path" >Selecione Imagen de Inicio
+                </string>
+                <string name="choose_image" >Elegir Imagen
                 </string>
                 <string name="saving_form" >Guardando Formulario
                 </string>
-                <string name="server_IP" >IP
-                </string>
                 <string name="delete_repeat_ask" >¿Quitar este Grupo?
                 </string>
-                <string name="default_splash_path" >ODK Default
+                <string name="server_IP" >IP
+                </string>
+                <string name="leaving_repeat_ask" >Agregar una nueva Entrada
                 </string>
                 <string name="parent_form_not_exist" >Forma Padres no existe 
                 </string>
-                <string name="leaving_repeat_ask" >Agregar una nueva Entrada
+                <string name="default_splash_path" >ODK Default
                 </string>
                 <string name="more_form" >Más de un formulario padre posible
                 </string>
@@ -5330,9 +5336,9 @@ Negro
                 </string>
                 <string name="cancel_saving_form" >Cancelar
                 </string>
-                <string name="access_error" >Error al acceder %s:
-                </string>
                 <string name="default_completed" >Predeterminado para Finalizar
+                </string>
+                <string name="access_error" >Error al acceder %s:
                 </string>
                 <string name="number_error" >El número de teléfono del servidor no fue ingresado, por favor ingréselo
                 </string>
@@ -5340,31 +5346,31 @@ Negro
                 </string>
                 <string name="no_capture" >Nada se ha registrado todavía.
                 </string>
-                <string name="change_textcolor_background" >Choose background color text
+                <string name="jump_to_beginning" >Ir al Inicio
                 </string>
                 <string name="show_location" >Mostrar Localización
                 </string>
-                <string name="jump_to_beginning" >Ir al Inicio
-                </string>
-                <string name="suggest" >...password
+                <string name="change_textcolor_background" >Choose background color text
                 </string>
                 <string name="do_not_exit" >Cancelar
+                </string>
+                <string name="suggest" >...password
                 </string>
                 <string name="confirm" >Sí
                 </string>
                 <string name="todo" >TODO
                 </string>
-                <string name="delete_repeat" >Quitar Grupo
-                </string>
                 <string name="leave_repeat_yes" >No
+                </string>
+                <string name="delete_repeat" >Quitar Grupo
                 </string>
                 <string name="device_not_online" >Su dispositivo no se encuentra en línea
                 </string>
                 <string name="root_namespace_error" >Espacio  de Nombre de Elemento Principal es incorrecto: %s
                 </string>
-                <string name="form_download_progress" >%1$s. Obteniendo Archivos Multimedia: %2$s of %3$s
-                </string>
                 <string name="location_provider" >El uso del %1$s proveedor. Por favor espere para una mejor precisión.
+                </string>
+                <string name="form_download_progress" >%1$s. Obteniendo Archivos Multimedia: %2$s of %3$s
                 </string>
                 <string name="server_telephone" >Teléfono Servidor
                 </string>
@@ -5374,9 +5380,9 @@ Negro
                 </string>
                 <string name="manifest_server_error" >Respuesta Manifest no reporta una versión de OpenRosa -- ¿Servidor erróneo?
                 </string>
-                <string name="yes_pref" >Sí, eliminar todos
-                </string>
                 <string name="tab_submitted" >Presentado
+                </string>
+                <string name="yes_pref" >Sí, eliminar todos
                 </string>
                 <string name="send_form_by_network" >¿Desea enviar el formulario por la red?
                 </string>
@@ -5388,24 +5394,24 @@ Negro
                 </string>
                 <string name="server_url_not_inserted" >La url del servidor no se inserta, por favor entrar
                 </string>
-                <string name="designed" >Diseñado y desarrollado por Brains Engineering srl
+                <string name="save_all_answers" >Guardar Formulario
                 </string>
                 <string name="checking_server" >Comprobación del servidor...
                 </string>
-                <string name="save_all_answers" >Guardar Formulario
+                <string name="designed" >Diseñado y desarrollado por Brains Engineering srl
                 </string>
                 <string name="error_no_service" >Error: No hay servicio disponible
                 </string>
-                <string name="change_textcolor_mandatory_background" >Choose background color of mandatory text
+                <string name="server_url" >URL del Servidor
                 </string>
                 <string name="default_connection_type" ></string>
-                <string name="server_url" >URL del Servidor
+                <string name="change_textcolor_mandatory_background" >Choose background color of mandatory text
                 </string>
                 <string name="client_telephone" >Teléfono del Cliente
                 </string>
-                <string name="server_directory" >Virtual directory
-                </string>
                 <string name="file_fetch_failed" >Error: %2$s (%3$s) en %1$s
+                </string>
+                <string name="server_directory" >Virtual directory
                 </string>
                 <string name="telephone_number" >Por favor ingrese su número de teléfono
                 </string>
@@ -5415,9 +5421,9 @@ Negro
                 </string>
                 <string name="root_element_error" >Elemento principal no es &lt;manifest\> -- fue %s
                 </string>
-                <string name="date" >Sincronización:
-                </string>
                 <string name="mark_finished" >Marcar formulario como finalizado
+                </string>
+                <string name="date" >Sincronización:
                 </string>
                 <string name="open_data_kit" >Open Data Kit
                 </string>
@@ -5443,23 +5449,23 @@ Negro
                 </string>
                 <string name="textcolor_mandatory_background" >Background color of mandatory text
                 </string>
-                <string name="digit_server_ip" >Digit server IP
-                </string>
                 <string name="data" >Guardar Formulario
+                </string>
+                <string name="digit_server_ip" >Digit server IP
                 </string>
                 <string name="file_invalid" >Archivo: %s no es válido.
                 </string>
-                <string name="convert_form_to_complate" >Are you sure you want to convert all submitted forms to completed?
-                </string>
                 <string name="main_menu_message" >HERRAMIENTA MOVIL GRASP
+                </string>
+                <string name="convert_form_to_complate" >Are you sure you want to convert all submitted forms to completed?
                 </string>
                 <string name="upload_all_successful" >%s formulario(s) enviados correctamente. 
                 </string>
                 <string name="chose_audio" >Seleccionar audio
                 </string>
-                <string name="selected" >Seleccionado:
-                </string>
                 <string name="required_answer_error" >Compruebe los campos amarillos ya que son requeridos.
+                </string>
+                <string name="selected" >Seleccionado:
                 </string>
                 <string name="exit_dialog_form" >¿Quieres salir de la forma?
                 </string>
@@ -5471,45 +5477,45 @@ Negro
                 </string>
                 <string name="review_data" >Editar Formulario Guardado
                 </string>
-                <string name="cancel_location" >Cancelar
-                </string>
                 <string name="play_audio" >Reproducir Sonido
                 </string>
-                <string name="no_pref" >No, sólo actualización
-                </string>
-                <string name="use_odk_default" >Use imagen predeterminada
-                </string>
-                <string name="general_preferences" >Cambiar Configuración
+                <string name="cancel_location" >Cancelar
                 </string>
                 <string name="negative" >No
                 </string>
-                <string name="download_all_successful" >Todas los formularios han sido descargados correctamente.
+                <string name="general_preferences" >Cambiar Configuración
                 </string>
-                <string name="keep_changes" >Guardar Cambios
+                <string name="use_odk_default" >Use imagen predeterminada
+                </string>
+                <string name="no_pref" >No, sólo actualización
+                </string>
+                <string name="download_all_successful" >Todas los formularios han sido descargados correctamente.
                 </string>
                 <string name="tab_completed" >Terminado
                 </string>
-                <string name="telephone_number_country" >El número de teléfono debe ser precedido por el código de país
+                <string name="keep_changes" >Guardar Cambios
                 </string>
-                <string name="time_before" >Tiempo antes de permitir reenvío
+                <string name="telephone_number_country" >El número de teléfono debe ser precedido por el código de país
                 </string>
                 <string name="capture_image" >Tomar Foto
                 </string>
-                <string name="unrecognized_uri" >URI no reconocido:
+                <string name="time_before" >Tiempo antes de permitir reenvío
                 </string>
                 <string name="replace_location" >Reemplazar Localización
                 </string>
-                <string name="wait" >Por favor espere...
-                </string>
-                <string name="save_form_as" >Nombre de Este Formulario:
+                <string name="unrecognized_uri" >URI no reconocido:
                 </string>
                 <string name="error_occured" >Ha ocurrido un Error
                 </string>
+                <string name="save_form_as" >Nombre de Este Formulario:
+                </string>
+                <string name="wait" >Por favor espere...
+                </string>
                 <string name="no_answer_recorded" >Advertencia: No coincide con ninguna pregunta. No se ha guardado la respuesta.
                 </string>
-                <string name="select_another_image" >Seleccione Otra Imagen
-                </string>
                 <string name="toggle_selected" >Alternar Todos
+                </string>
+                <string name="select_another_image" >Seleccione Otra Imagen
                 </string>
                 <string name="sending_method" >Método de envío
                 </string>
@@ -5517,9 +5523,9 @@ Negro
                 </string>
                 <string name="get_forms" >Obtener Formulario en Blanco
                 </string>
-                <string name="default_odk_submission" >/submission
-                </string>
                 <string name="file_missing" >Archivo: %s no se encuentra.
+                </string>
+                <string name="default_odk_submission" >/submission
                 </string>
                 <string name="exit_button" >SALIDA
                 </string>
@@ -5545,9 +5551,9 @@ Negro
                 </string>
                 <string name="list_failed_with_error" >Fallo Listando Formulario. %s.
                 </string>
-                <string name="manage_files" >Eliminar formulario guardado
-                </string>
                 <string name="send" >Enviar
+                </string>
+                <string name="manage_files" >Eliminar formulario guardado
                 </string>
                 <string name="error_downloading" >Error al Obtener Formulario
                 </string>
@@ -5588,23 +5594,6 @@ Negro
             <file
                 path="C:\Projects\GRASPMobilePal\app\src\main\res\values-it\array.xml"
                 qualifiers="it" >
-                <string-array name="textcolor_mandatory_foreground_entry_values" >
-                    <item>
-#000066
-                    </item>
-                    <item>
-#FFFFFF
-                    </item>
-                    <item>
-#FFFF00
-                    </item>
-                    <item>
-#00FF00
-                    </item>
-                    <item>
-#000000
-                    </item>
-                </string-array>
                 <string-array name="textcolor_error_foreground_entry_values" >
                     <item>
 #000066
@@ -5617,6 +5606,23 @@ Negro
                     </item>
                     <item>
 #FF0000
+                    </item>
+                    <item>
+#000000
+                    </item>
+                </string-array>
+                <string-array name="textcolor_mandatory_foreground_entry_values" >
+                    <item>
+#000066
+                    </item>
+                    <item>
+#FFFFFF
+                    </item>
+                    <item>
+#FFFF00
+                    </item>
+                    <item>
+#00FF00
                     </item>
                     <item>
 #000000
@@ -5667,6 +5673,15 @@ Cada 1 minuto
 Cada 5 minutos
                     </item>
                 </string-array>
+                <string-array name="protocol_entry_values" >
+                    <item>
+odk_default
+                    </item>
+                    <item>
+google
+                    </item>
+                    <item/>
+                </string-array>
                 <string-array name="textcolor_error_background_entry_values" >
                     <item>
 #00FFFF
@@ -5683,15 +5698,6 @@ Cada 5 minutos
                     <item>
 #FFFFFF
                     </item>
-                </string-array>
-                <string-array name="protocol_entry_values" >
-                    <item>
-odk_default
-                    </item>
-                    <item>
-google
-                    </item>
-                    <item/>
                 </string-array>
                 <string-array name="textcolor_foreground_entries" >
                     <item>
@@ -5982,23 +5988,23 @@ Mas Pequeño
                 </color>
                 <color name="bg_readonly_err" >#FF0000
                 </color>
-                <color name="black_2" >#202020
-                </color>
-                <color name="fg_std" >#FFFFFF
+                <color name="fg_readonly_err" >#000000
                 </color>
                 <color name="fg_mand" >#000000
                 </color>
-                <color name="fg_readonly_err" >#000000
+                <color name="fg_std" >#FFFFFF
+                </color>
+                <color name="black_2" >#202020
                 </color>
                 <color name="dark_grey" >#333333
                 </color>
-                <color name="gray" >#808080
-                </color>
                 <color name="fg_readonly" >#666666
                 </color>
-                <color name="fg_readonly_inv" >#000000
+                <color name="gray" >#808080
                 </color>
                 <color name="bg_readonly_inv" >#000000
+                </color>
+                <color name="fg_readonly_inv" >#000000
                 </color>
                 <color name="bg_readonly" >#FFFFFF
                 </color>
@@ -6042,21 +6048,21 @@ Mas Pequeño
                 </string>
                 <string name="send_form_by_network_or_sms" >Elija cómo enviar los formularios
                 </string>
-                <string name="digit_server_directory" >Digit virtual directory
-                </string>
                 <string name="url_error" >Lo sentimos, URL invalida.
+                </string>
+                <string name="digit_server_directory" >Digit virtual directory
                 </string>
                 <string name="server_not_online" >El servidor no se encuentra en línea o la URL no es correcta
                 </string>
                 <string name="data_saved_ok" >¡Formulario almacenado correctamente!
                 </string>
-                <string name="textcolor_mandatory_background" >Background color of mandatory text
-                </string>
-                <string name="error_sms_not_delivered" >Error: El SMS no se ha enviado
+                <string name="server_url" >URL del Servidor
                 </string>
                 <string name="protocol" >Protocolo
                 </string>
-                <string name="server_url" >URL del Servidor
+                <string name="error_sms_not_delivered" >Error: El SMS no se ha enviado
+                </string>
+                <string name="textcolor_mandatory_background" >Background color of mandatory text
                 </string>
                 <string name="password_error" >La contraseña que escribió es incorrecta
                 </string>
@@ -6108,9 +6114,9 @@ Mas Pequeño
                 </string>
                 <string name="cannot_edit_completed_form" >Este formulario no se puede editar una vez que se ha marcado como completo.
                 </string>
-                <string name="sending_method" >Método de envío
-                </string>
                 <string name="submitted_on" >Enviada:
+                </string>
+                <string name="sending_method" >Método de envío
                 </string>
                 <string name="download_forms_result" >Descargar resultado
                 </string>
@@ -6122,50 +6128,50 @@ Mas Pequeño
                 </string>
                 <string name="choose_image" >Elegir Imagen
                 </string>
-                <string name="bad_uri" >Mala URI: 
-                </string>
                 <string name="server_preferences" >Servidor
                 </string>
-                <string name="telephone_number_country" >El número de teléfono debe ser precedido por el código de país
+                <string name="bad_uri" >Mala URI: 
                 </string>
                 <string name="default_client_telephone" ></string>
-                <string name="tab_submitted" >Presentado
+                <string name="telephone_number_country" >El número de teléfono debe ser precedido por el código de país
                 </string>
-                <string name="form_scan_starting" >Escaneado de formularios…
+                <string name="tab_submitted" >Presentado
                 </string>
                 <string name="fetching_file" >Obtener %1$s.\n\nFormulario %2$s of %3$s formulario(s).
                 </string>
-                <string name="change_submission_url" >Ruta de envió (Añadida al URL del servidor)
+                <string name="form_scan_starting" >Escaneado de formularios…
                 </string>
                 <string name="upload_all_successful" >%s formulario(s) enviados correctamente. 
                 </string>
+                <string name="change_submission_url" >Ruta de envió (Añadida al URL del servidor)
+                </string>
                 <string name="delete_repeat_ask" >¿Quitar este Grupo?
                 </string>
-                <string name="sms_delivered" >SMS enviado
+                <string name="parse_error" >Lo sentimos, no se puede analizar el formulario.
                 </string>
                 <string name="loading_form" >Cargando Formulario
                 </string>
-                <string name="parse_error" >Lo sentimos, no se puede analizar el formulario.
+                <string name="sms_delivered" >SMS enviado
                 </string>
                 <string name="jump_to_end" >Ir al Final
                 </string>
                 <string name="formlist_url" >Ruta de listado del formulario
                 </string>
-                <string name="file_invalid" >Archivo: %s no es válido.
-                </string>
                 <string name="leaving_repeat_ask" >Agregar una nueva Entrada
                 </string>
-                <string name="save_form_as" >Nombre de Este Formulario:
+                <string name="file_invalid" >Archivo: %s no es válido.
                 </string>
                 <string name="review_data" >Editar Formulario Guardado
+                </string>
+                <string name="save_form_as" >Nombre de Este Formulario:
                 </string>
                 <string name="file_delete_in_progress" >Lo sentimos, la Eliminacion de un formulario esta en progreso.
                 </string>
                 <string name="main_menu_message" >HERRAMIENTA MOVIL GRASP
                 </string>
-                <string name="go_to_location" >Ir a Localización
-                </string>
                 <string name="one_capture" >Registro de Multimedia.
+                </string>
+                <string name="go_to_location" >Ir a Localización
                 </string>
                 <string name="show_splash" >Mostrar Pantalla de Bienvenida
                 </string>
@@ -6179,27 +6185,27 @@ Mas Pequeño
                 </string>
                 <string name="gps" >Red
                 </string>
-                <string name="cancel_location" >Cancelar
-                </string>
                 <string name="entering_repeat" >Si
                 </string>
-                <string name="fetching_manifest" >%s. Obteniendo  el archivo manifiesto.
+                <string name="cancel_location" >Cancelar
                 </string>
                 <string name="change_server_telephone" >Teléfono Servidor
                 </string>
-                <string name="general_preferences" >Cambiar Configuración
+                <string name="fetching_manifest" >%s. Obteniendo  el archivo manifiesto.
                 </string>
                 <string name="checking_server" >Comprobación del servidor...
                 </string>
-                <string name="change_textcolor_mandatory_foreground" >Choose foreground color of mandatory text
+                <string name="general_preferences" >Cambiar Configuración
                 </string>
                 <string name="do_not_save" >Ignorar Cambios
                 </string>
+                <string name="change_textcolor_mandatory_foreground" >Choose foreground color of mandatory text
+                </string>
                 <string name="no_answer_recorded" >Advertencia: No coincide con ninguna pregunta. No se ha guardado la respuesta.
                 </string>
-                <string name="capture_video" >Grabar Video
-                </string>
                 <string name="mark_finished" >Marcar formulario como finalizado
+                </string>
+                <string name="capture_video" >Grabar Video
                 </string>
                 <string name="download_failed_with_error" >Formulario \"%1$s\" ha fallado. %2$s.
                 </string>
@@ -6393,13 +6399,13 @@ Mas Pequeño
                 </string>
                 <string name="tab_saved" >Guardado
                 </string>
-                <string name="todo" >TODO
-                </string>
                 <string name="save_enter_data_description" >Estas en el final del Formulario.
                 </string>
-                <string name="portocol_choice" >Protocollo
+                <string name="todo" >TODO
                 </string>
                 <string name="completed_data" >Completado (%s)
+                </string>
+                <string name="portocol_choice" >Protocollo
                 </string>
                 <string name="change_splash_path" >Cambiar imagen
                 </string>
@@ -6413,31 +6419,31 @@ Mas Pequeño
                 </string>
                 <string name="form_uncompleted" >Formulario incompleto
                 </string>
-                <string name="exit_dialog" >¿Quieres dejar de salir?
+                <string name="select_another_image" >Seleccione Otra Imagen
                 </string>
                 <string name="save_as_error" >Nombre no debe de estar en blanco.
                 </string>
-                <string name="select_another_image" >Seleccione Otra Imagen
+                <string name="exit_dialog" >¿Quieres dejar de salir?
                 </string>
                 <string name="time_before" >Tiempo antes de permitir reenvío
                 </string>
                 <string name="xform_parse_error" >Error de lectura de XForm. %1$s No se encuentra elemento %2$s
                 </string>
-                <string name="choose_sound" >Elegir Sonido
-                </string>
                 <string name="send_selected_data" >Enviar Selección
                 </string>
-                <string name="wait" >Por favor espere...
+                <string name="choose_sound" >Elegir Sonido
                 </string>
                 <string name="server_auth_credentials" >Por favor introduzca nombre de Usuario y Contraseña para  servidor:\n%s
                 </string>
+                <string name="wait" >Por favor espere...
+                </string>
                 <string name="capture_image" >Tomar Foto
+                </string>
+                <string name="default_connection_type" ></string>
+                <string name="access_error" >Error al acceder %s:
                 </string>
                 <string name="confirm" >Sí
                 </string>
-                <string name="access_error" >Error al acceder %s:
-                </string>
-                <string name="default_connection_type" ></string>
                 <string name="do_not_exit" >Cancelar
                 </string>
                 <string name="play_video" >Reproducir Video
@@ -6450,9 +6456,9 @@ Mas Pequeño
                 </string>
                 <string name="server_port" >Porta
                 </string>
-                <string name="show_location" >Mostrar Localización
-                </string>
                 <string name="quit_application" >Salir de %s
+                </string>
+                <string name="show_location" >Mostrar Localización
                 </string>
                 <string name="tab_finalized" >Pendiente
                 </string>
@@ -6466,9 +6472,9 @@ Mas Pequeño
                 </string>
                 <string name="send_all" >Envíe toda form
                 </string>
-                <string name="file_deleted_error" >Lo Sentimos, %1$s of %2$s formulario seleccionado(s) no pudo eliminarse.
-                </string>
                 <string name="no" >No
+                </string>
+                <string name="file_deleted_error" >Lo Sentimos, %1$s of %2$s formulario seleccionado(s) no pudo eliminarse.
                 </string>
                 <string name="discard_group" >Quitar grupo
                 </string>
@@ -6480,9 +6486,9 @@ Mas Pequeño
                 </string>
                 <string name="password" >Contraseña
                 </string>
-                <string name="manifest_server_error" >Respuesta Manifest no reporta una versión de OpenRosa -- ¿Servidor erróneo?
-                </string>
                 <string name="default_splash_path" >ODK Default
+                </string>
+                <string name="manifest_server_error" >Respuesta Manifest no reporta una versión de OpenRosa -- ¿Servidor erróneo?
                 </string>
                 <string name="done" >Hecho
                 </string>
@@ -6494,32 +6500,32 @@ Mas Pequeño
                 </string>
                 <string name="choose_protocol" >Scegli il protocollo
                 </string>
-                <string name="no_forms_to_download" >No hay cuestionarios para descargar
-                </string>
                 <string name="success" >Finalizado
                 </string>
-                <string name="file_deleted_ok" >¡%s Formulario(s) Eliminado Correctamente!
+                <string name="no_forms_to_download" >No hay cuestionarios para descargar
                 </string>
                 <string name="toggle_selected" >Alternar Todos
                 </string>
-                <string name="telephone_number" >Por favor ingrese su número de teléfono
-                </string>
-                <string name="delete_no" >No Eliminar
+                <string name="file_deleted_ok" >¡%s Formulario(s) Eliminado Correctamente!
                 </string>
                 <string name="saved_data" >Incompleto (%s)
                 </string>
+                <string name="delete_no" >No Eliminar
+                </string>
+                <string name="telephone_number" >Por favor ingrese su número de teléfono
+                </string>
                 <string name="google_account" >Seleccione Cuenta de Google
+                </string>
+                <string name="default_server_telephone" ></string>
+                <string name="username" >Nombre de Usuario
                 </string>
                 <string name="change_protocol" >Protocolo
                 </string>
-                <string name="username" >Nombre de Usuario
-                </string>
-                <string name="default_server_telephone" ></string>
                 <string name="no_forms_uploaded" >Lo Sentimos, El Formulario no fue cargado.
                 </string>
-                <string name="suggest" >...password
-                </string>
                 <string name="jump_to_beginning" >Ir al Inicio
+                </string>
+                <string name="suggest" >...password
                 </string>
                 <string name="clear_answer_no" >Cancelar
                 </string>
@@ -6531,9 +6537,9 @@ Mas Pequeño
                 </string>
                 <string name="change_textcolor_mandatory_background" >Choose background color of mandatory text
                 </string>
-                <string name="main_menu_details" >Esto es recolección de datos GRASP
-                </string>
                 <string name="provider_disabled_error" >Por favor activar GPS y/o ubicación por WIFI
+                </string>
+                <string name="main_menu_details" >Esto es recolección de datos GRASP
                 </string>
                 <string name="error" >Error
                 </string>
@@ -6561,9 +6567,9 @@ Mas Pequeño
                 </string>
                 <string name="submission_url" >Ruta de envió
                 </string>
-                <string name="clear_answer" >Quitar respuesta
-                </string>
                 <string name="ok" >Ok
+                </string>
+                <string name="clear_answer" >Quitar respuesta
                 </string>
                 <string name="root_element_error" >Elemento principal no es &lt;manifest\> -- fue %s
                 </string>
@@ -6579,39 +6585,39 @@ Mas Pequeño
                 </string>
                 <string name="audio_capture" >Captura de audio
                 </string>
-                <string name="latitude" >Latitud
-                </string>
                 <string name="upload_some_failed" >Lo sentimos, %s formulario(s)no pudo enviarse.
                 </string>
-                <string name="error_network" >Error: Red deshabilitada
+                <string name="latitude" >Latitud
                 </string>
                 <string name="first_run" >Ejecute el Reinicio
                 </string>
-                <string name="delete_repeat" >Quitar Grupo
+                <string name="error_network" >Error: Red deshabilitada
                 </string>
                 <string name="by" >Por:
                 </string>
-                <string name="send_form" >Do you want to send the form?
+                <string name="delete_repeat" >Quitar Grupo
                 </string>
                 <string name="show_splash_summary" >Aparece cuando inicia la aplicación
                 </string>
-                <string name="textcolor_foreground" >Foreground color text
+                <string name="send_form" >Do you want to send the form?
                 </string>
-                <string name="list_failed_with_error" >Fallo Listando Formulario. %s.
+                <string name="textcolor_foreground" >Foreground color text
                 </string>
                 <string name="sending_items" >Enviando %1$s de %2$s formulario(s)
                 </string>
-                <string name="menu" >MENU
+                <string name="list_failed_with_error" >Fallo Listando Formulario. %s.
                 </string>
                 <string name="tab_new" >Nuevo
                 </string>
-                <string name="change_server_url" >URL del Servidor
+                <string name="menu" >MENU
                 </string>
                 <string name="save_data_message" >Por favor guarde el formulario si mantiene sus respuestas.
                 </string>
-                <string name="delete_file" >Eliminar Seleccionados
+                <string name="change_server_url" >URL del Servidor
                 </string>
                 <string name="negative" >No
+                </string>
+                <string name="delete_file" >Eliminar Seleccionados
                 </string>
                 <string name="file_fetch_failed" >Error: %2$s (%3$s) en %1$s
                 </string>
@@ -6619,36 +6625,36 @@ Mas Pequeño
                 </string>
                 <string name="please_wait_long" >Por favor espere. Esto puede tardar unos minutos.
                 </string>
-                <string name="no_items_error" >Nada disponible a %s
-                </string>
                 <string name="replace_video" >Reemplazar Video
+                </string>
+                <string name="no_items_error" >Nada disponible a %s
                 </string>
                 <string name="enter" >Iniciar
                 </string>
                 <string name="noselect_error" >Lo sentimos, no ha seleccionado formularios.
                 </string>
-                <string name="date" >Sincronización:
-                </string>
                 <string name="quit_entry" >Guardar Formulario como Completado
+                </string>
+                <string name="date" >Sincronización:
                 </string>
                 <string name="enter_data_message" >Para Navegar. Deslice el dedo horizontalmente en la pantalla, como si pasara las páginas de un libro. Pulse el botón MENU para más opciones.
                 </string>
                 <string name="data" >Guardar Formulario
                 </string>
-                <string name="please_insert_your_phone_number" >Por favor, introduzca su número de teléfono precedido por el código de país
-                </string>
                 <string name="negative_choise" >No
                 </string>
-                <string name="default_server_url" ></string>
-                <string name="change_textcolor_error_background" >Choose background color text on error
+                <string name="please_insert_your_phone_number" >Por favor, introduzca su número de teléfono precedido por el código de país
                 </string>
+                <string name="default_server_url" ></string>
                 <string name="location_accuracy" >La Precisión es %1$s m
+                </string>
+                <string name="change_textcolor_error_background" >Choose background color text on error
                 </string>
                 <string name="discard_answer" >Quitar respuesta
                 </string>
-                <string name="image_directory_creation_faild" >Failed to create image directory
-                </string>
                 <string name="required_answer_error" >Compruebe los campos amarillos ya que son requeridos.
+                </string>
+                <string name="image_directory_creation_faild" >Failed to create image directory
                 </string>
                 <string name="new_form" >BUZON DE ENTRADA
                 </string>

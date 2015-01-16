@@ -1,29 +1,12 @@
 package it.fabaris.wfp.task;
 
-import it.fabaris.wfp.activities.FormListCompletedActivity;
-import it.fabaris.wfp.activities.PreferencesActivity;
-import it.fabaris.wfp.activities.R;
-import it.fabaris.wfp.listener.MyCallback;
-import it.fabaris.wfp.utility.ConstantUtility;
-
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.Condition;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathExpression;
-import javax.xml.xpath.XPathExpressionException;
-import javax.xml.xpath.XPathFactory;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.AsyncTask;
+import android.util.Log;
+import android.widget.Toast;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -34,18 +17,17 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpParams;
 import org.apache.http.util.EntityUtils;
-import org.w3c.dom.Document;
-import org.xml.sax.SAXException;
 
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.os.AsyncTask;
-import android.os.Looper;
-import android.telephony.TelephonyManager;
-import android.util.Log;
-import android.widget.Toast;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+import it.fabaris.wfp.activities.FormListCompletedActivity;
+import it.fabaris.wfp.activities.PreferencesActivity;
+import it.fabaris.wfp.activities.R;
+import it.fabaris.wfp.listener.MyCallback;
 
 /**
  * This class is called when the user wants to send a completed
@@ -64,7 +46,7 @@ public class HttpCheckAndSendPostTask extends AsyncTask<String, Void, String> {
     String phone;
     String data;//the form to send
     boolean isSendAllForms;
-
+    String formId;
     Context context;
     MyCallback callback;
     Lock lock;
@@ -72,7 +54,7 @@ public class HttpCheckAndSendPostTask extends AsyncTask<String, Void, String> {
     private String result = "";
 
     public HttpCheckAndSendPostTask(Context context, String http, String phone,
-                                    String data, MyCallback callback, boolean isSendAllForms) {
+                                    String data, MyCallback callback, boolean isSendAllForms,String formId) {
         this.context = context;
         this.http = http;
         this.isSendAllForms = isSendAllForms;
@@ -92,6 +74,7 @@ public class HttpCheckAndSendPostTask extends AsyncTask<String, Void, String> {
         this.data = data;
         this.callback = callback;
         this.lock = new ReentrantLock();
+        this.formId=formId;
         result = "";
     }
 
@@ -119,7 +102,10 @@ public class HttpCheckAndSendPostTask extends AsyncTask<String, Void, String> {
     @Override
     protected String doInBackground(String... params)
     {
-        result = ControlConnection(http1, phone, data);
+          if(data == null){
+              return "empty";
+          }
+        result = ControlConnection(http1, phone, data,formId);
         Log.i("result in doInBackground", result);
         return result;
     }
@@ -149,7 +135,7 @@ public class HttpCheckAndSendPostTask extends AsyncTask<String, Void, String> {
                     synchronized (lock)
                     {
                         //send the form to the server
-                        HttpSendPostTask asyncTask = new HttpSendPostTask(context, http2, phone, data, callback, lock, isSendAllForms);
+                        HttpSendPostTask asyncTask = new HttpSendPostTask(context, http2, phone, data, callback, lock, isSendAllForms,formId);
                         //Log.i("FUNZIONE HttpSendPostTask", "thread: "+ data);
                         Log.i("FUNZIONE HttpSendPostTask", "thread: ");
                         asyncTask.execute();
@@ -191,6 +177,12 @@ public class HttpCheckAndSendPostTask extends AsyncTask<String, Void, String> {
                 Toast.makeText(context, R.string.phone_not_in_server,
                         Toast.LENGTH_SHORT).show();
                 PreferencesActivity.SERVER_ONLINE = "NO";
+            }
+            else if (result.equalsIgnoreCase("empty"))
+            {
+                Toast.makeText(context, "file does not exist!",
+                        Toast.LENGTH_SHORT).show();
+
             }
             else
             {
@@ -242,7 +234,8 @@ public class HttpCheckAndSendPostTask extends AsyncTask<String, Void, String> {
             if (result.equalsIgnoreCase("\r\n")) {
                 return result = "formnotonserver";
             } else {
-                return result = "ok-" + result;
+                //return result = "ok-" + result;
+                return result;
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -259,13 +252,13 @@ public class HttpCheckAndSendPostTask extends AsyncTask<String, Void, String> {
      * @param data xml form
      * @return a feedback for the user
      */
-    private String ControlConnection(String http1, String phone, String data)
+    private String ControlConnection(String http1, String phone, String data,String formId)
     {
         String result = "";
         if (http1.startsWith("http://") || (http1.startsWith("Http://")) && http1.length() > 7)
         {
             if (isOnline())
-                result = postControlConnection(http1, phone, data);
+                result = postControlConnection(http1, phone, data,formId);
             else
                 result = "Offline";
         }
@@ -295,7 +288,7 @@ public class HttpCheckAndSendPostTask extends AsyncTask<String, Void, String> {
      * @param data xml form
      * @return
      */
-    private String postControlConnection(String http, String phone, String data) {
+    private String postControlConnection(String http, String phone, String data,String formId) {
         /**
          *  set parameter
          */
@@ -305,9 +298,10 @@ public class HttpCheckAndSendPostTask extends AsyncTask<String, Void, String> {
         // HttpConnectionParams.setConnectionTimeout(httpParameters, 10000);
         // HttpConnectionParams.setSoTimeout(httpParameters, 10000);
         DefaultHttpClient httpClient = new DefaultHttpClient(httpParameters);
-        List<NameValuePair> nameValuePair = new ArrayList<NameValuePair>(2);
+        List<NameValuePair> nameValuePair = new ArrayList<NameValuePair>(3);
         nameValuePair.add(new BasicNameValuePair("phoneNumber", phone));
         nameValuePair.add(new BasicNameValuePair("data", data));
+        nameValuePair.add(new BasicNameValuePair("formName", formId));
         /**
          *  Url Encoding the POST parameters
          */

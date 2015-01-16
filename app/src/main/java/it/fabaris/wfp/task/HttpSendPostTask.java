@@ -1,26 +1,14 @@
 package it.fabaris.wfp.task;
 
-import it.fabaris.wfp.activities.FormListCompletedActivity;
-import it.fabaris.wfp.activities.PreferencesActivity;
-import it.fabaris.wfp.activities.R;
-import it.fabaris.wfp.listener.MyCallback;
-
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.locks.Condition;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathExpression;
-import javax.xml.xpath.XPathExpressionException;
-import javax.xml.xpath.XPathFactory;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.AsyncTask;
+import android.provider.Settings;
+import android.telephony.TelephonyManager;
+import android.util.Log;
+import android.widget.Toast;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -32,18 +20,27 @@ import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpParams;
 import org.apache.http.util.EntityUtils;
 import org.w3c.dom.Document;
-import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.os.AsyncTask;
-import android.provider.Settings;
-import android.telephony.TelephonyManager;
-import android.util.Log;
-import android.widget.Toast;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.locks.Lock;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathExpression;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
+
+import it.fabaris.wfp.activities.FormListCompletedActivity;
+import it.fabaris.wfp.activities.PreferencesActivity;
+import it.fabaris.wfp.activities.R;
+import it.fabaris.wfp.listener.MyCallback;
 
 /**
  * Class that defines the task that send the xform to the server
@@ -61,6 +58,7 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
     private Lock condCheck;
     private String IMEI = "";
     private TelephonyManager mTelephonyManager;
+    private String formName;
 
     /**
      * set the data needed to send the form
@@ -73,7 +71,7 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
      * @param isSendAllForms
      */
     public HttpSendPostTask(Context context, String http, String phone,
-                            String data, MyCallback callback, Lock cond, boolean isSendAllForms) {
+                            String data, MyCallback callback, Lock cond, boolean isSendAllForms,String formName) {
 		
 		/*
 		 * set the url format depending from the server
@@ -95,7 +93,7 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
         this.callback = callback;
         this.condCheck = cond;
         this.isSendAllForms = isSendAllForms;
-
+        this.formName=formName;
 
         mTelephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         this.IMEI = mTelephonyManager.getDeviceId();
@@ -132,7 +130,7 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
         } else if (PreferencesActivity.SERVER_ONLINE == "NO") {
             result = "server error";
         } else {
-            result = postCall(http, phone, data);
+            result = postCall(http, phone, data,formName);
         }
         return result;
     }
@@ -241,7 +239,7 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
      * @param data xform
      * @return the call response as a string
      */
-    private String postCall(String url, String phone, String data) {
+    private String postCall(String url, String phone, String data,String formName) {
         /**
          *  set parameter
          */
@@ -253,9 +251,10 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
         // HttpConnectionParams.setConnectionTimeout(httpParameters, 10000);
         // HttpConnectionParams.setSoTimeout(httpParameters, 10000);
         DefaultHttpClient httpClient = new DefaultHttpClient(httpParameters);
-        List<NameValuePair> nameValuePair = new ArrayList<NameValuePair>(2);
+        List<NameValuePair> nameValuePair = new ArrayList<NameValuePair>(3);
         nameValuePair.add(new BasicNameValuePair("phoneNumber", phone));
         nameValuePair.add(new BasicNameValuePair("data", data));
+        nameValuePair.add(new BasicNameValuePair("formName", formName));
 
         if(http.contains(".aspx")){
             nameValuePair.add(new BasicNameValuePair("imei", IMEI));//solo se stiamo spedendo la form al server web inviamo anche l'IMEI
@@ -279,7 +278,8 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
             if (result.equalsIgnoreCase("\r\n")) {
                 return result = "formnotonserver";
             } else {
-                return result = "ok-" + result;
+               // return result = "ok-" + result;
+                return result;
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="date">Date:</string>
-    <string name="last_saved_date">Last saved:</string>
-    <string name="by">By:</string>
+    <string name="last_saved_date">First opened:</string>
+    <string name="by">Title:</string>
     <string name="submitted_on">Submitted on:</string>
     
     <string name="update_toast">Can\'\t download updates: SD not present</string>
@@ -10,7 +10,7 @@
     <string name="form_present">This form already exist in saved list, do you want continue?</string>
     <string name="delete_form">Do you want to delete the selected form?</string>
     
-    
+    <string name="empty">The form you are trying to send does not exist!</string>
     <string name="send_all">Send all form</string>
     <string name="grasp">GRASP - Geo Referential realtime Acquisition Statistic Platform</string>
     <string name="designed">Designed and Developed by Brains Engineering srl</string>
@@ -329,6 +329,7 @@
 	<string name="no_pref">No, only update</string>
 	
 	<string name="send_form_by_network_or_sms">Choose how to send the forms</string>
+    <string name="Network_unavailable">No Networks available, send by SMS?</string>
 	<string name="gps">Network</string>
 	<string name="sms">Sms</string>
 	
