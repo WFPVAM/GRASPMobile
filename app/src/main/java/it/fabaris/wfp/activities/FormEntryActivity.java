@@ -7,77 +7,15 @@
  ******************************************************************************/
 package it.fabaris.wfp.activities;
 
-import it.fabaris.wfp.application.Collect;
-import it.fabaris.wfp.listener.AdvanceToNextListener;
-import it.fabaris.wfp.listener.FormLoaderListener;
-import it.fabaris.wfp.listener.FormSavedListener;
-import it.fabaris.wfp.logic.FormController;
-import it.fabaris.wfp.logic.PropertyManager;
-import it.fabaris.wfp.provider.FormProviderAPI;
-import it.fabaris.wfp.provider.FormProvider.DatabaseHelper;
-import it.fabaris.wfp.provider.FormProviderAPI.FormsColumns;
-import it.fabaris.wfp.provider.InstanceProviderAPI.InstanceColumns;
-import it.fabaris.wfp.task.FormLoaderTask;
-import it.fabaris.wfp.task.SaveToDiskTask;
-import it.fabaris.wfp.utility.ColorHelper;
-import it.fabaris.wfp.utility.ConstantUtility;
-import it.fabaris.wfp.utility.FileUtils;
-import it.fabaris.wfp.view.ODKView;
-import it.fabaris.wfp.widget.DecimalWidget;
-import it.fabaris.wfp.widget.ImageWidget;
-import it.fabaris.wfp.widget.QuestionWidget;
-import it.fabaris.wfp.widget.SelectOneWidget;
-import it.fabaris.wfp.widget.SpinnerWidget;
-import it.fabaris.wfp.widget.StringWidget;
-
-import java.io.BufferedWriter;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathConstants;
-import javax.xml.xpath.XPathExpression;
-import javax.xml.xpath.XPathExpressionException;
-import javax.xml.xpath.XPathFactory;
-
-import org.javarosa.core.model.FormIndex;
-import org.javarosa.core.model.data.IAnswerData;
-import org.javarosa.form.api.FormEntryCaption;
-import org.javarosa.form.api.FormEntryController;
-import org.javarosa.form.api.FormEntryPrompt;
-import org.javarosa.model.xform.XFormsModule;
-import org.javarosa.xpath.XPathTypeMismatchException;
-import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -87,8 +25,6 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Environment;
-import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore.Images;
 import android.text.InputFilter;
@@ -106,7 +42,6 @@ import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.view.Window;
 import android.view.WindowManager;
@@ -120,6 +55,56 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.javarosa.core.model.FormIndex;
+import org.javarosa.core.model.data.IAnswerData;
+import org.javarosa.form.api.FormEntryController;
+import org.javarosa.form.api.FormEntryPrompt;
+import org.javarosa.model.xform.XFormsModule;
+import org.javarosa.xpath.XPathTypeMismatchException;
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.HashMap;
+import java.util.Set;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpression;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
+
+import it.fabaris.wfp.application.Collect;
+import it.fabaris.wfp.listener.AdvanceToNextListener;
+import it.fabaris.wfp.listener.FormLoaderListener;
+import it.fabaris.wfp.listener.FormSavedListener;
+import it.fabaris.wfp.logic.FormController;
+import it.fabaris.wfp.logic.PropertyManager;
+import it.fabaris.wfp.provider.FormProvider.DatabaseHelper;
+import it.fabaris.wfp.provider.FormProviderAPI;
+import it.fabaris.wfp.provider.FormProviderAPI.FormsColumns;
+import it.fabaris.wfp.provider.InstanceProviderAPI.InstanceColumns;
+import it.fabaris.wfp.task.FormLoaderTask;
+import it.fabaris.wfp.task.SaveToDiskTask;
+import it.fabaris.wfp.utility.ColorHelper;
+import it.fabaris.wfp.utility.ConstantUtility;
+import it.fabaris.wfp.utility.FileUtils;
+import it.fabaris.wfp.view.ODKView;
+import it.fabaris.wfp.widget.ImageWidget;
+import it.fabaris.wfp.widget.QuestionWidget;
+import it.fabaris.wfp.widget.SelectOneWidget;
 
 /**
  * This class is responsible for displaying questions, animating
@@ -146,7 +131,15 @@ public class FormEntryActivity extends Activity implements AnimationListener,
     public static final int IMAGE_CHOOSER = 7;
     public static final int AUDIO_CHOOSER = 8;
     public static final int VIDEO_CHOOSER = 9;
+//////////////////////////////////////////////////////////////////////////////////
+//
+//    private final static String CAPTURED_PHOTO_PATH_KEY = "mCurrentPhotoPath";
+    private final static String CAPTURED_PHOTO_URI_KEY = "mCapturedImageURI";
+//
+//    private String CurrentPhotoPath = null;
+//    private Uri mCapturedImageURI = null;
 
+////////////////////////////////////////////////////////////////////////////////
     // Extra returned from gp activity
     public static final String LOCATION_RESULT = "LOCATION_RESULT";
 
@@ -221,7 +214,7 @@ public class FormEntryActivity extends Activity implements AnimationListener,
     //Added by Mureed  22-8-2014
     String mCurrentPhotoPath;
 
-
+    Uri imageURI;
     // private static final List<ColorHelper> colorHelper = new
     // ArrayList<ColorHelper>();
 
@@ -419,6 +412,7 @@ public class FormEntryActivity extends Activity implements AnimationListener,
                 }
             }
         }
+
     }
 
     /**
@@ -428,6 +422,24 @@ public class FormEntryActivity extends Activity implements AnimationListener,
         outState.putString(KEY_FORMPATH, mFormPath);
         outState.putBoolean(NEWFORM, false);
         outState.putString(KEY_ERROR, mErrorMessage);
+
+//        outState.putParcelable("imageURI", (android.os.Parcelable) mCurrentView);
+
+        if (imageURI != null) {
+            outState.putString(CAPTURED_PHOTO_URI_KEY, imageURI.toString());
+        }
+        super.onSaveInstanceState(outState);
+    }
+
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+
+
+        if (savedInstanceState.containsKey(CAPTURED_PHOTO_URI_KEY)) {
+           imageURI = Uri.parse(savedInstanceState.getString(CAPTURED_PHOTO_URI_KEY));
+        }
+        super.onRestoreInstanceState(savedInstanceState);
     }
 
 
@@ -458,9 +470,9 @@ public class FormEntryActivity extends Activity implements AnimationListener,
      *
      * @param requestCode The integer request code, allowing you to identify who this result came from
      * @param resultCode  The integer result code returned by the child activity through its setResult()
-     * @param Intent      which can returns result data to the caller
+     * @param intent      which can returns result data to the caller
      */
-    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
 
         super.onActivityResult(requestCode, resultCode, intent);
 
@@ -469,8 +481,10 @@ public class FormEntryActivity extends Activity implements AnimationListener,
             return;
         }
 
+
+
         ContentValues values;
-        Uri imageURI;
+    //   Uri imageURI;
 
         switch (requestCode) {
             case BARCODE_CAPTURE:
@@ -489,7 +503,66 @@ public class FormEntryActivity extends Activity implements AnimationListener,
                  *
                  * The intent is empty, but we know we saved the image to the temp file
                  */
-                File fi = new File(Collect.TMPFILE_PATH);
+
+
+//--------------------------------------------------------------------------------
+//
+//                String[] projection = {
+//                        MediaStore.Images.Thumbnails._ID,  // The columns we want
+//                        MediaStore.Images.Thumbnails.IMAGE_ID,
+//                        MediaStore.Images.Thumbnails.KIND,
+//                        MediaStore.Images.Thumbnails.DATA};
+//                String selection = MediaStore.Images.Thumbnails.KIND + "=" + // Select only mini's
+//                        MediaStore.Images.Thumbnails.MINI_KIND;
+//
+//                String sort = MediaStore.Images.Thumbnails._ID + " DESC";
+//
+////At the moment, this is a bit of a hack, as I'm returning ALL images, and just taking the latest one. There is a better way to narrow this down I think with a WHERE clause which is currently the selection variable
+//                Cursor myCursor = this.managedQuery(MediaStore.Images.Thumbnails.EXTERNAL_CONTENT_URI, projection, selection, null, sort);
+//
+//                long imageId = 0l;
+//                long thumbnailImageId = 0l;
+//                String thumbnailPath = "";
+//
+//                try {
+//                    myCursor.moveToFirst();
+//                    imageId = myCursor.getLong(myCursor.getColumnIndexOrThrow(MediaStore.Images.Thumbnails.IMAGE_ID));
+//                    thumbnailImageId = myCursor.getLong(myCursor.getColumnIndexOrThrow(MediaStore.Images.Thumbnails._ID));
+//                    thumbnailPath = myCursor.getString(myCursor.getColumnIndexOrThrow(MediaStore.Images.Thumbnails.DATA));
+//                } finally {
+//                    myCursor.close();
+//                }
+//
+//                //Create new Cursor to obtain the file Path for the large image
+//
+//                String[] largeFileProjection = {
+//                        MediaStore.Images.ImageColumns._ID,
+//                        MediaStore.Images.ImageColumns.DATA
+//                };
+//
+//                String largeFileSort = MediaStore.Images.ImageColumns._ID + " DESC";
+//                myCursor = this.managedQuery(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, largeFileProjection, null, null, largeFileSort);
+//                String largeImagePath = "";
+//
+//                try {
+//                    myCursor.moveToFirst();
+//
+////This will actually give yo uthe file path location of the image.
+//                    largeImagePath = myCursor.getString(myCursor.getColumnIndexOrThrow(MediaStore.Images.ImageColumns.DATA));
+//                } finally {
+//                    myCursor.close();
+//                }
+//                // These are the two URI's you'll be interested in. They give you a handle to the actual images
+//                Uri uriLargeImage = Uri.withAppendedPath(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, String.valueOf(imageId));
+//                Uri uriThumbnailImage = Uri.withAppendedPath(MediaStore.Images.Thumbnails.EXTERNAL_CONTENT_URI, String.valueOf(thumbnailImageId));
+//
+//
+//
+
+//-----------------------------------------------------------------------------------
+
+
+           File fi = new File(Collect.TMPFILE_PATH);
 
                 mInstanceFolder = mInstancePath.substring(0, mInstancePath.lastIndexOf("/") + 1);
 
@@ -519,22 +592,31 @@ public class FormEntryActivity extends Activity implements AnimationListener,
                 imageURI = getContentResolver().insert(
                         Images.Media.EXTERNAL_CONTENT_URI, values);
 
+//                Bundle newExtras = new Bundle();
+//
+//                newExtras.putParcelable(MediaStore.EXTRA_OUTPUT, imageURI);
+//
+////                intent.putExtra(MediaStore.EXTRA_OUTPUT, imageURI);
 // /*
 //                 * Compress image
 //                 */
 //                compressImage(s, 400, 400, 100, 0);
 
                 if (mCurrentView != null) {
-                    ImageWidget.previewPhoto(s, FormEntryActivity.this);
+                    ImageWidget.previewPhoto(s , FormEntryActivity.this);
                     ((ODKView) mCurrentView).setBinaryData(imageURI);
                     saveAnswersForCurrentScreen(DO_NOT_EVALUATE_CONSTRAINTS);
                     refreshCurrentView(null);
                 } else {
-                    System.out.println("Sorry, your image compressed and saved but can't able to view it, Please choose it from the gallery");
-//                    createErrorDialog("Sorry, your image compressed and saved but can't able to view it, Please choose it from the gallery", false);
-                }
+                   // System.out.println("Sorry, your image compressed and saved but can't able to view it, Please choose it from the gallery");
+                    createErrorDialog("Sorry, your image is saved but can't be viewed, Please choose it from the gallery", false);
 
+               // Toast.makeText(getApplicationContext(),"Sorry, your image is saved but can't be viewed, Please choose it from the gallery",Toast.LENGTH_SHORT).show();
+                    refreshCurrentView(null);
+                }
+               // refreshCurrentView(null);
                 break;
+
             case IMAGE_CHOOSER:
 
                 /**
@@ -546,19 +628,20 @@ public class FormEntryActivity extends Activity implements AnimationListener,
                  */
                 String sourceImagePath = null;
                 Uri selectedImage = intent.getData();
-
+                String si = Collect.TMPFILE_PATH.toString();
                 if (selectedImage.toString().startsWith("file")) {
                     sourceImagePath = selectedImage.toString().substring(6);
-                } else {
-                    String[] projection = {Images.Media.DATA};
-                    Cursor cursor = managedQuery(selectedImage, projection, null,
-                            null, null);
-                    startManagingCursor(cursor);
-                    int column_index = cursor
-                            .getColumnIndexOrThrow(Images.Media.DATA);
-                    cursor.moveToFirst();
-                    sourceImagePath = cursor.getString(column_index);
                 }
+                else {
+                String[] projection = {Images.Media.DATA};
+                Cursor cursor = managedQuery(selectedImage, projection, null,
+                        null, null);
+                startManagingCursor(cursor);
+                int column_index = cursor
+                        .getColumnIndexOrThrow(Images.Media.DATA);
+                cursor.moveToFirst();
+                sourceImagePath = cursor.getString(column_index);
+            }
 
                 /**
                  *  Copy file to sdcard
@@ -603,6 +686,32 @@ public class FormEntryActivity extends Activity implements AnimationListener,
                 break;
             case AUDIO_CAPTURE:
             case VIDEO_CAPTURE:
+////            // get the file path and create a copy in the instance folder
+//            //    String binaryPath = VideoWidget.getPathFromUri((Uri)Collect.TMPFILE_PATH);
+//                String extension = binaryPath.substring(binaryPath.lastIndexOf("."));
+//                String destVideoPath = mInstanceFolder + File.separator + System.currentTimeMillis() + extension;
+//                File fi = new File(Collect.TMPFILE_PATH);
+//                File Vsource = new File(binaryPath);
+//                File newVideo = new File(destVideoPath);
+//                FileUtils.copyFile(Vsource, newVideo);
+//
+//                if (newVideo.exists()) {
+//                    // Add the copy to the content provider
+//                    ContentValues Vvalues = new ContentValues(6);
+//                    Vvalues.put(MediaStore.Video.Media.TITLE, newVideo.getName());
+//                    Vvalues.put(MediaStore.Video.Media.DISPLAY_NAME, newVideo.getName());
+//                    Vvalues.put(MediaStore.Video.Media.DATE_ADDED, System.currentTimeMillis());
+//                    Vvalues.put(MediaStore.Video.Media.DATA, newVideo.getAbsolutePath());
+//
+//                    Uri VideoURI =
+//                            getContentResolver().insert(MediaStore.Video.Media.EXTERNAL_CONTENT_URI, Vvalues);
+//                    Log.i(t, "Inserting VIDEO returned uri = " + VideoURI.toString());
+//                } else {
+//                    Log.e(t, "Inserting Video file FAILED");
+//                }
+
+
+
             case AUDIO_CHOOSER:
             case VIDEO_CHOOSER:
 
@@ -612,7 +721,7 @@ public class FormEntryActivity extends Activity implements AnimationListener,
                  * then the widget copies the file and makes a new entry in the
                  * content provider.
                  */
-
+//handle it the same way it
                 Uri media = intent.getData();
                 ((ODKView) mCurrentView).setBinaryData(media);
                 saveAnswersForCurrentScreen(DO_NOT_EVALUATE_CONSTRAINTS);
@@ -631,6 +740,8 @@ public class FormEntryActivity extends Activity implements AnimationListener,
                 refreshCurrentView(null);
                 break;
         }
+
+   //    refreshCurrentView(null);
     }
 
 
@@ -1904,6 +2015,7 @@ public class FormEntryActivity extends Activity implements AnimationListener,
     protected void onResume() {
         super.onResume();
 
+
         Log.e("- onResume() -", "effettuato onResume() da FormEntryActivity");
         if (mFormLoaderTask != null) {
             mFormLoaderTask.setFormLoaderListener(this);
@@ -1914,6 +2026,9 @@ public class FormEntryActivity extends Activity implements AnimationListener,
                 refreshCurrentView(null);
             }
         }
+
+
+
         if (mSaveToDiskTask != null) {
             mSaveToDiskTask.setFormSavedListener(this);
         }
@@ -1922,6 +2037,9 @@ public class FormEntryActivity extends Activity implements AnimationListener,
             createErrorDialog(mErrorMessage, EXIT);
             return;
         }
+
+
+
     }
 
 
@@ -2101,7 +2219,7 @@ public class FormEntryActivity extends Activity implements AnimationListener,
      * called by the FormLoaderTask if something goes wrong
      * during the form Loading from the disk.
      *
-     * @param erroMsg the string to show as message
+     * @param errorMsg the string to show as message
      */
     @Override
     public void loadingError(String errorMsg) {
@@ -2289,6 +2407,7 @@ public class FormEntryActivity extends Activity implements AnimationListener,
                 return true;
             }
         }
+
         return false;
     }
 

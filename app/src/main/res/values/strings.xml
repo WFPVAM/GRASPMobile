@@ -2,8 +2,10 @@
 <resources>
     <string name="date">Date:</string>
     <string name="last_saved_date">First opened:</string>
+    <string name="completed_date">Completed on:</string>
     <string name="by">Title:</string>
     <string name="submitted_on">Submitted on:</string>
+    <string name="image_submitted">Images:</string>
     
     <string name="update_toast">Can\'\t download updates: SD not present</string>
     
@@ -18,8 +20,11 @@
     <string name="tab_saved">Saved</string>
     <string name="tab_completed">Completed</string>
     <string name="tab_submitted">Submitted</string>
-    <string name="tab_finalized">Pending</string>
-    
+    <string name="tab_finalized">Submit Images</string>
+    <string name="send_img">Send all images</string>
+    <string name="send_images">Do you want to send images?</string>
+    <string name="img_sent">Images were sent successfully</string>
+
     <string name="bad_uri">Bad URI: </string>
     <string name="parent_form_not_exist">Parent form does not exist </string>
     <string name="more_form">More than one possible parent form</string>

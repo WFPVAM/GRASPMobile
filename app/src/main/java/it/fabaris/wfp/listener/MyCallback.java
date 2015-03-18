@@ -9,4 +9,6 @@ package it.fabaris.wfp.listener;
 public interface MyCallback {
 	void callbackCall();
 	void finishFormListCompleted();
+
+    void finishFormListFinalized();
 }

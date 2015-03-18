@@ -125,6 +125,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
     private String httpServer;
     private String encodeXml;
     private static boolean isSendAllForms = false;
+    public boolean formHasImages =false;
     ///////////////////////////////////////////////
     private String formId;
 
@@ -142,7 +143,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tabcompleted);
-
+//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         istance = new ArrayList<String>();
         final Builder builder = new AlertDialog.Builder(this);
@@ -154,7 +155,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
 		 *  quanteComplete);
 		*/
         /**
-         *  SEND AL FORM
+         *  SEND All FORM
          */
         Button buttonSendAll = (Button) findViewById(R.id.sendAll);
         /**
@@ -279,9 +280,12 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
 
                                         idFormNameInstance = mycompleted.get(position).getFormName();
                                         ///////////////////////////////////////////////////////////////c
-                                       String str = mycompleted.get(position).getStrPathInstance();
-                                        String str1[] = str.replace("/storage/emulated/0/GRASP/instances/","").split("/");
-                                        String formId = str1[0];
+                                        String str = mycompleted.get(position).getStrPathInstance();
+//                                        String str1[] = str.replace("/storage/emulated/0/GRASP/instances/", "").split("/");
+//                                        String formId = str1[0];
+                                        String str1[] = str.substring(str.lastIndexOf("instances")).split("/");
+//                                        String formName = str1[1];
+                                        String formId= str1[1];
 
                                         /////////////////////////////////////////////////////////////
                                         //int positioncomplete = getPositionCompletedToSubmit(position); //LL 14-05-2014 db grasp dismesso non ci sono piu' problemi di disallineamento
@@ -310,7 +314,10 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
 										
 										if(!endOfForm.equalsIgnoreCase("test")){//se il nome della form NON finisce per _test non bisogna spedire la form
 										*/
+                                        if (!(readSubmittedImages(str).size() == 0)) {
 
+                                            formHasImages = true;
+                                        }
 
                                         if (isNetworkConnected()) {
                                             try {
@@ -329,7 +336,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
                                                             httpServer,
                                                             numClient,
                                                             encodeXml,
-                                                            FormListCompletedActivity.this,formId);
+                                                            FormListCompletedActivity.this, formId, formHasImages);
                                                     adapter.notifyDataSetInvalidated();
                                                     adapter.notifyDataSetChanged();
                                                 } else if (connectionType
@@ -342,7 +349,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
                                                                 httpServer,
                                                                 numClient,
                                                                 encodeXml,
-                                                                FormListCompletedActivity.this,formId);
+                                                                FormListCompletedActivity.this, formId, formHasImages);
                                                     } catch (InterruptedException e) {
                                                         // TODO
                                                         // Auto-generated
@@ -576,7 +583,21 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
             dbh.close();
         }
     }
-	
+    public static void updateFormToFinalized() {
+        for (int k = 0; k < istance.size(); k++) {
+
+            DatabaseHelper dbh = new DatabaseHelper("forms.db");
+            String updatequery = "UPDATE forms SET status='finalized'  WHERE displayNameInstance = '"
+                    + istance.get(k) + "'";
+
+            Log.i("FUNZIONE updateFormToSubmitted per la form: ",
+                    istance.get(k));
+
+            dbh.getReadableDatabase().execSQL(updatequery);
+
+            dbh.close();
+        }
+    }
 	/*
 	///passo alla dialog gli oggetti parcellizzati
 	private ArrayList<FormInnerListProxy> getCompleteParceableList(){
@@ -625,13 +646,13 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
      * refreshs in the forms db the form's state, from completed to finalized.
      * Called when a form is pending, means sent but waiting for to be accepted by the server.
      */
-    public static void updateFormToFinalized() {
-        DatabaseHelper dbh = new DatabaseHelper("forms.db");
-        String updatequery = "UPDATE forms SET status='finalized' WHERE displayNameInstance = '"
-                + istance + "' AND status='completed'";
-        dbh.getReadableDatabase().execSQL(updatequery);
-        dbh.close();
-    }
+//    public static void updateFormToFinalized() {
+//        DatabaseHelper dbh = new DatabaseHelper("forms.db");
+//        String updatequery = "UPDATE forms SET status='finalized' WHERE displayNameInstance = '"
+//                + istance + "' AND status='completed'";
+//        dbh.getReadableDatabase().execSQL(updatequery);
+//        dbh.close();
+//    }
 
 
     public void sendSmsNetWorkOn(final String numero, final String testo,
@@ -1145,10 +1166,11 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
      * @param number
      * @param form
      * @param callback
+     * @param formHasImages
      * @throws InterruptedException
      */
     private void sendWithNetwork(Context context, String url, String number,
-                                 String form, MyCallback callback,String formId) throws InterruptedException {
+                                 String form, MyCallback callback, String formId, boolean formHasImages) throws InterruptedException {
 
         if (httpServer.equalsIgnoreCase("") || httpServer == null) {
             Toast toast = Toast.makeText(getApplicationContext(),
@@ -1158,7 +1180,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
             toast.show();
         } else {
 
-            HttpCheckAndSendPostTask asyncTask = new HttpCheckAndSendPostTask(context, url, number, form, callback, isSendAllForms,formId);
+            HttpCheckAndSendPostTask asyncTask = new HttpCheckAndSendPostTask(context, url, number, form, callback, isSendAllForms,formId,formHasImages);
 //            Log.i("url HttpCheckAndSendPostTask FormListCompletedActivity ", "thread: " + url);
 //            Log.i("FUNZIONE HttpCheckAndSendPostTask FormListCompletedActivity ", "thread: " + form);
             asyncTask.execute();
@@ -1370,6 +1392,10 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
 
             return null;
         }
+    }
+    public void finishFormListFinalized() {
+        // TODO Auto-generated method stub
+
     }
 
 

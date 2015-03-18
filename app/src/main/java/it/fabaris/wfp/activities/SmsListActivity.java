@@ -6,12 +6,27 @@
  ******************************************************************************/
 package it.fabaris.wfp.activities;
 
-import it.fabaris.wfp.application.Collect;
-import it.fabaris.wfp.listener.MyCallback;
-import it.fabaris.wfp.provider.MessageProvider.DatabaseHelper;
-import it.fabaris.wfp.task.DownloadSmsTask;
-import it.fabaris.wfp.task.HttpXmlCheckAndSyncTask;
-import it.fabaris.wfp.utility.XmlParser;
+import android.app.ListActivity;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.Base64;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -28,28 +43,12 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-
-import android.app.ListActivity;
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.database.Cursor;
-import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.telephony.TelephonyManager;
-import android.util.Base64;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
+import it.fabaris.wfp.application.Collect;
+import it.fabaris.wfp.listener.MyCallback;
+import it.fabaris.wfp.provider.MessageProvider.DatabaseHelper;
+import it.fabaris.wfp.task.DownloadSmsTask;
+import it.fabaris.wfp.task.HttpXmlCheckAndSyncTask;
+import it.fabaris.wfp.utility.XmlParser;
 
 /**
  * Class is responsible for displaying SMS arrived containing forms
@@ -356,5 +355,9 @@ public class SmsListActivity extends ListActivity implements MyCallback{
         // TODO Auto-generated method stub
 
     }
+    @Override
+    public void finishFormListFinalized() {
+        // TODO Auto-generated method stub
 
+    }
 }

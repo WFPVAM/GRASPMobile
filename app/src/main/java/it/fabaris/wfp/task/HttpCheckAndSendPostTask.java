@@ -39,6 +39,7 @@ import it.fabaris.wfp.listener.MyCallback;
  */
 
 public class HttpCheckAndSendPostTask extends AsyncTask<String, Void, String> {
+    boolean formHasImages;
     ProgressDialog pd;
     String http;
     String http1;//test url
@@ -54,7 +55,7 @@ public class HttpCheckAndSendPostTask extends AsyncTask<String, Void, String> {
     private String result = "";
 
     public HttpCheckAndSendPostTask(Context context, String http, String phone,
-                                    String data, MyCallback callback, boolean isSendAllForms,String formId) {
+                                    String data, MyCallback callback, boolean isSendAllForms, String formId, boolean formHasImages) {
         this.context = context;
         this.http = http;
         this.isSendAllForms = isSendAllForms;
@@ -75,6 +76,7 @@ public class HttpCheckAndSendPostTask extends AsyncTask<String, Void, String> {
         this.callback = callback;
         this.lock = new ReentrantLock();
         this.formId=formId;
+        this.formHasImages= formHasImages;
         result = "";
     }
 
@@ -102,9 +104,13 @@ public class HttpCheckAndSendPostTask extends AsyncTask<String, Void, String> {
     @Override
     protected String doInBackground(String... params)
     {
+
           if(data == null){
               return "empty";
           }
+//        if(formId.contains("_img")){
+//
+//        }
         result = ControlConnection(http1, phone, data,formId);
         Log.i("result in doInBackground", result);
         return result;
@@ -135,7 +141,7 @@ public class HttpCheckAndSendPostTask extends AsyncTask<String, Void, String> {
                     synchronized (lock)
                     {
                         //send the form to the server
-                        HttpSendPostTask asyncTask = new HttpSendPostTask(context, http2, phone, data, callback, lock, isSendAllForms,formId);
+                        HttpSendPostTask asyncTask = new HttpSendPostTask(context, http2, phone, data, callback, lock, isSendAllForms,formId,formHasImages);
                         //Log.i("FUNZIONE HttpSendPostTask", "thread: "+ data);
                         Log.i("FUNZIONE HttpSendPostTask", "thread: ");
                         asyncTask.execute();
@@ -190,6 +196,7 @@ public class HttpCheckAndSendPostTask extends AsyncTask<String, Void, String> {
                 PreferencesActivity.SERVER_ONLINE = "NO";
             }
         }
+
 
     }
 

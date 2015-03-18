@@ -87,6 +87,7 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
     private TelephonyManager mTelephonyManager;
     ////////////////////////////////////////
     String formResult="";
+    String ImageResult="";
 
     //parcelable object that contains useful info about the form
     ArrayList<FormInnerListProxy> completedformslistfirst; //fabaris parcelable object
@@ -163,18 +164,16 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
             for (FormInnerListProxy mydata : completedformslistfirst) {//loop on "the form to send" list
                 data = decodeForm(mydata);//the form to send, encoded
                     String str =mydata.getStrPathInstance();
-                String str1[] = str.replace("/storage/emulated/0/GRASP/instances/","").split("/");
-                String formName = str1[0];
-///////////////////////This is to check whether the file is 0kb////////////////
+//                String str1[] = str.replace("/storage/emulated/0/GRASP/instances/","").split("/");
+                String str1[] = str.substring(str.lastIndexOf("instances")).split("/");
+                String formName = str1[1];
+///////////////////////This is to check whether the file is 0kb/////////////////////////////////
                 if (data == null) {
-
-
                    // int i = completedformslistfirst.indexOf(mydata);
                    // String s = mydata.getStrPathInstance();
                     completedformslistfirst.iterator().next();
 //                    DatabaseHelper dbh = new DatabaseHelper("forms.db");
 //                   String query = "UPDATE forms SET status='cancelled' WHERE instanceFilePath='"+mydata.getStrPathInstance()+"'";
-//
 //                    dbh.getWritableDatabase().execSQL(query);
 //                    dbh.close();
                     //  Log.i("0 kb",data);
@@ -182,9 +181,9 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
                 } else {
 //                Log.i("data  in httpSendPostTaskOnPostEx ", data);
 
+
                     result = sendFormCall(http, phone, data, formName);
 
-//
 //                Log.i("===================================", "");
 //                Log.i("httpSendPostTaskOnPostEx", result);
 //                Log.i("===================================", "");
@@ -220,7 +219,18 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
                     /**
                      * REFRESH THE FORM STATE IN THE FORMS DB
                      */
-                    updateFormToSubmitted(mydata);//update forms.db
+                //check if the form has images
+                   // int size = readSubmittedImages(mydata.getStrPathInstance()).size();
+                   if(readSubmittedImages(mydata.getStrPathInstance()).size()== 0){
+                       //if no : update the status to submitted
+                       updateFormToSubmitted(mydata);//update forms.db
+                   }
+                   //if yes : update the status to pending
+                    else{
+                         updateFormToFinalized(mydata);
+                   }
+
+                   // updateFormToSubmitted(mydata);//update forms.db
                     //UpdateDBAfterSendAllForms(mydata);//update GRASP.DB //LL 14-05-2014 dismissione db grasp
 
 
@@ -260,6 +270,39 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
         } else {
             return "ok";
         }
+    }
+
+    private void updateFormToFinalized(FormInnerListProxy form) {
+
+        Calendar rightNow = Calendar.getInstance();
+        java.text.SimpleDateFormat month = new java.text.SimpleDateFormat(
+                "MM");
+        // ----------------------------------------------------------------------------------------
+        /**
+         *  sending date
+         */
+        GregorianCalendar gc = new GregorianCalendar();
+        String day = Integer.toString(gc.get(Calendar.DAY_OF_MONTH));
+
+        String year = Integer.toString(gc.get(Calendar.YEAR));
+
+        date = day + "/" + month.format(rightNow.getTime()) + "/" + year;
+
+        String time = getCurrentTimeStamp();
+        date = date + "  " + time;
+        // -----------------------------------------------------
+
+        String displayNameInstance = form.getFormNameInstance();
+        DatabaseHelper dbh = new DatabaseHelper("forms.db");
+        String updatequery = "UPDATE forms SET status='finalized', submissionDate = '" + date + "' WHERE displayNameInstance = '" + displayNameInstance + "'";
+
+        Log.i("FUNZIONE updateFormToPending per la form: ", displayNameInstance);
+
+        dbh.getReadableDatabase().execSQL(updatequery);
+
+
+        dbh.close();
+
     }
 
 
@@ -315,9 +358,12 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
         }
         if(!(formResult=="empty")){
         if (result == "ok") {//if all the forms are been sent
-            Toast.makeText(context, "All forms have been sent succesfully", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "All forms have been sent successfully", Toast.LENGTH_LONG).show();
+            Toast.makeText(context,"Please go to 'Submit Images' tab to submit images ",Toast.LENGTH_LONG).show();
         } else {// not all the forms are been sent correctly
-            Toast.makeText(context, "There has been some problems sending one or more forms", Toast.LENGTH_SHORT).show();
+
+           Toast.makeText(context, "There has been some problems sending one or more forms", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context,"Please go to 'Submit Images' tab to submit images ",Toast.LENGTH_LONG).show();
         }}
             else {// not all the forms are been sent correctly
                 Toast.makeText(context, "One or more forms does not exist!", Toast.LENGTH_SHORT).show();

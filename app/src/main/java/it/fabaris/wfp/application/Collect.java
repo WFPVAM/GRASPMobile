@@ -7,7 +7,11 @@
 package it.fabaris.wfp.application;
 
 
-import java.io.File;
+import android.app.Application;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.os.Environment;
+import android.preference.PreferenceManager;
 
 import org.apache.http.client.CookieStore;
 import org.apache.http.client.protocol.ClientContext;
@@ -16,12 +20,9 @@ import org.apache.http.protocol.BasicHttpContext;
 import org.apache.http.protocol.HttpContext;
 import org.apache.http.protocol.SyncBasicHttpContext;
 
+import java.io.File;
+
 import it.fabaris.wfp.activities.R;
-import android.app.Application;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager.NameNotFoundException;
-import android.os.Environment;
-import android.preference.PreferenceManager;
 
 /**
  * Class that defines folder and some options
@@ -47,7 +48,16 @@ public class Collect extends Application {
     public static final String DEFAULT_TEXT_MANDATORY_BACKGROUNDCOLOR = "#00FFFF";
     public static final String DEFAULT_TEXT_ERROR_FORECOLOR = "#660000";
     public static final String DEFAULT_TEXT_ERROR_BACKGROUNDCOLOR = "#00FFFF";
+/******************************External SDCard*****************************************
+    public static final String FABARISODK_ROOT_Ext = System.getenv("SECONDARY_STORAGE") + "/GRASP";
+    public static final String FORMS_PATH_Ext = FABARISODK_ROOT_Ext + "/forms";//cartella che contiene gli xml con i template delle form
+    public static final String INSTANCES_PATH_Ext = FABARISODK_ROOT_Ext + "/instances";//cartella che contiene gli xml con le risposte alle domande
+    public static final String IMAGES_PATH_Ext = FABARISODK_ROOT_Ext + "/GRASPImages";//cartella che contiene gli xml con le risposte alle domande
+    public static final String CACHE_PATH_Ext = FABARISODK_ROOT_Ext + "/.cache";
+    public static final String METADATA_PATH_Ext = FABARISODK_ROOT_Ext + "/metadata/";//cartella che contiene il forms.db e il message.db
+    public static final String TMPFILE_PATH_Ext = CACHE_PATH_Ext + "/tmp.jpg";
 
+/***********************************************************************************/
     private HttpContext localContext = null;
     private static Collect singleton = null;
 
@@ -75,20 +85,23 @@ public class Collect extends Application {
      */
     public static void createODKDirs() throws RuntimeException {
         String cardstatus = Environment.getExternalStorageState();
+
         if (cardstatus.equals(Environment.MEDIA_REMOVED)
                 || cardstatus.equals(Environment.MEDIA_UNMOUNTABLE)
                 || cardstatus.equals(Environment.MEDIA_UNMOUNTED)
                 || cardstatus.equals(Environment.MEDIA_MOUNTED_READ_ONLY)
                 || cardstatus.equals(Environment.MEDIA_SHARED)) {
             RuntimeException e =
-                    new RuntimeException("ODK reports :: SDCard error: "+ Environment.getExternalStorageState());
+                    new RuntimeException("ODK reports :: SDCard error: " + Environment.getExternalStorageState());
             throw e;
         }
 
         String[] dirs = {FABARISODK_ROOT, FORMS_PATH, INSTANCES_PATH, CACHE_PATH, METADATA_PATH};
+//        String[] dirs_Ext = {FABARISODK_ROOT_Ext, FORMS_PATH_Ext, INSTANCES_PATH_Ext, CACHE_PATH_Ext, METADATA_PATH_Ext};
 
         for (String dirName : dirs) {
             File dir = new File(dirName);
+
             if (!dir.exists()) {
                 if (!dir.mkdirs()) {
                     RuntimeException e =
@@ -105,6 +118,7 @@ public class Collect extends Application {
             }
         }
     }
+
 
     /**
      * Shared HttpContext so a user doesn't have to re-enter login information

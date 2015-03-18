@@ -1,10 +1,5 @@
 package content;
 
-import it.fabaris.wfp.activities.R;
-
-import java.util.ArrayList;
-
-import object.FormInnerListProxy;
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,6 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+
+import it.fabaris.wfp.activities.R;
+import object.FormInnerListProxy;
 
 /**
  * classe FormCompletedAdapter per la gestione del layout della lista form complete

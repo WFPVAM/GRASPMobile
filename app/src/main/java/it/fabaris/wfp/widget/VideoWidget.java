@@ -24,16 +24,6 @@
 
 package it.fabaris.wfp.widget;
 
-import it.fabaris.wfp.activities.FormEntryActivity;
-import it.fabaris.wfp.activities.R;
-import it.fabaris.wfp.utility.FileUtils;
-
-import java.io.File;
-
-import org.javarosa.core.model.data.IAnswerData;
-import org.javarosa.core.model.data.StringData;
-import org.javarosa.form.api.FormEntryPrompt;
-
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.ContentValues;
@@ -50,6 +40,17 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.Toast;
+
+import org.javarosa.core.model.data.IAnswerData;
+import org.javarosa.core.model.data.StringData;
+import org.javarosa.form.api.FormEntryPrompt;
+
+import java.io.File;
+
+import it.fabaris.wfp.activities.FormEntryActivity;
+import it.fabaris.wfp.activities.R;
+import it.fabaris.wfp.application.Collect;
+import it.fabaris.wfp.utility.FileUtils;
 
 /**
  * Widget that allows user to take pictures, sounds or video and add them to the form.
@@ -128,6 +129,7 @@ public class VideoWidget extends QuestionWidget implements IBinaryWidget {
                 // Intent i =
                 // new Intent(Intent.ACTION_PICK,
                 // android.provider.MediaStore.Video.Media.EXTERNAL_CONTENT_URI);
+                i.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(Collect.TMPFILE_PATH)));
                 mWaitingForData = true;
                 try {
                     ((Activity) getContext()).startActivityForResult(i,
@@ -281,7 +283,6 @@ public class VideoWidget extends QuestionWidget implements IBinaryWidget {
         mBinaryName = newVideo.getName();
         mWaitingForData = false;
     }
-
 
     /**
      * Hide the soft keyboard if it is showing

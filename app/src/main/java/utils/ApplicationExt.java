@@ -1,8 +1,14 @@
 package utils;
 
-import it.fabaris.wfp.activities.FormListActivity;
-import it.fabaris.wfp.activities.R;
-import it.fabaris.wfp.activities.SplashScreenActivity;
+import android.app.Application;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.res.AssetManager;
+import android.os.AsyncTask;
+import android.os.Environment;
+import android.os.Looper;
+import android.util.Log;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -11,17 +17,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 import database.DbAdapterGrasp;
-
-import android.app.Application;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.AssetManager;
-import android.os.AsyncTask;
-import android.os.Environment;
-import android.os.Looper;
-import android.util.Log;
-import android.widget.Toast;
+import it.fabaris.wfp.activities.R;
 
 public class ApplicationExt extends Application
 {
@@ -60,26 +56,26 @@ public class ApplicationExt extends Application
 
             if (externalStorageDir != null)
             {
-                // {SD_PATH}/GRASP 
+                // {SD_PATH}/GRASP
                 extStorageAppBasePath = new File(externalStorageDir.getAbsolutePath() + File.separator + "GRASP");
             }
 
             if (extStorageAppBasePath != null)
             {
-                // {SD_PATH}/GRASP/database 
+                // {SD_PATH}/GRASP/database
                 extStorageAppCachePath = new File(extStorageAppBasePath.getAbsolutePath() + File.separator + "database");
 
                 boolean isCachePathAvailable = true;
 
                 if (!extStorageAppCachePath.exists())
                 {
-                    // Create the cache path on the external storage 
+                    // Create the cache path on the external storage
                     isCachePathAvailable = extStorageAppCachePath.mkdirs();
                 }
 
                 if (!isCachePathAvailable)
                 {
-                    // Unable to create the cache path 
+                    // Unable to create the cache path
                     extStorageAppCachePath = null;
                 }
             }
@@ -88,18 +84,18 @@ public class ApplicationExt extends Application
         //--------------------------
 
         //TASK ASINCRONO DI COPIA DEI CONTENUTI DEL DATABASE
-        //new CopyTask().execute(); 
+        //new CopyTask().execute();
 
         //--------------------------
 
 
-        //VERIFICA SE L'APPLICAZIONE STA FACENDO IL PRIMO AVVIO 
+        //VERIFICA SE L'APPLICAZIONE STA FACENDO IL PRIMO AVVIO
         try
         {
             FirstRun();
         }
         catch (IOException e) {
-            // TODO Auto-generated catch block 
+            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }

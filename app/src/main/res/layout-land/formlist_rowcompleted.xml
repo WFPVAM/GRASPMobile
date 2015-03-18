@@ -36,7 +36,7 @@
         android:layout_alignLeft="@+id/label"
         android:layout_below="@+id/label"
         android:layout_marginTop="16dp"
-        android:text="@string/last_saved_date"
+        android:text="@string/completed_date"
         android:layout_marginLeft="10dp"
         android:textColor="#fff"
         android:textSize="20sp" />

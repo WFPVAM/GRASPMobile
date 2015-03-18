@@ -140,7 +140,7 @@ public class SaveToDiskTask extends AsyncTask<Void, String, Integer> {
          * MAGE DATE 
          * manage month
          */
-        //--------------------------------------------------------------------------------------
+        //---------------------------------------------------------------------------------------
         Calendar rightNow = Calendar.getInstance();
         java.text.SimpleDateFormat month = new java.text.SimpleDateFormat("MM");
         //----------------------------------------------------------------------------------------

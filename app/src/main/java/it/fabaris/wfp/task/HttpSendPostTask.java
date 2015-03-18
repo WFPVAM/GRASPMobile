@@ -38,6 +38,7 @@ import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
 import it.fabaris.wfp.activities.FormListCompletedActivity;
+import it.fabaris.wfp.activities.FormListFinalizedActivity;
 import it.fabaris.wfp.activities.PreferencesActivity;
 import it.fabaris.wfp.activities.R;
 import it.fabaris.wfp.listener.MyCallback;
@@ -59,7 +60,8 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
     private String IMEI = "";
     private TelephonyManager mTelephonyManager;
     private String formName;
-
+    boolean isImage= false;
+   boolean formHasImages;
     /**
      * set the data needed to send the form
      * @param context
@@ -69,9 +71,10 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
      * @param callback
      * @param cond if we are sending all the form together
      * @param isSendAllForms
+     * @param formHasImages
      */
     public HttpSendPostTask(Context context, String http, String phone,
-                            String data, MyCallback callback, Lock cond, boolean isSendAllForms,String formName) {
+                            String data, MyCallback callback, Lock cond, boolean isSendAllForms, String formName, boolean formHasImages) {
 		
 		/*
 		 * set the url format depending from the server
@@ -94,6 +97,7 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
         this.condCheck = cond;
         this.isSendAllForms = isSendAllForms;
         this.formName=formName;
+        this.formHasImages=formHasImages;
 
         mTelephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         this.IMEI = mTelephonyManager.getDeviceId();
@@ -130,6 +134,9 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
         } else if (PreferencesActivity.SERVER_ONLINE == "NO") {
             result = "server error";
         } else {
+            if(formName.contains("_image")){
+                isImage=true;
+            }
             result = postCall(http, phone, data,formName);
         }
         return result;
@@ -148,7 +155,7 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
 
             if (result.equalsIgnoreCase("Offline"))
             {
-                FormListCompletedActivity.updateFormToFinalized();
+              //  FormListCompletedActivity.updateFormToFinalized();
                 Toast.makeText(context, R.string.device_not_online,	Toast.LENGTH_SHORT).show();
                 if (callback != null)
                 {
@@ -157,7 +164,7 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
             }
             else if (result.trim().equalsIgnoreCase("server error"))
             {
-                FormListCompletedActivity.updateFormToFinalized();
+               // FormListCompletedActivity.updateFormToFinalized();
                 Toast.makeText(context, R.string.check_connection, Toast.LENGTH_SHORT).show();
                 if (callback != null)
                 {
@@ -166,7 +173,7 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
             }
             else if (result.trim().equalsIgnoreCase("formnotonserver"))
             {
-                FormListCompletedActivity.updateFormToFinalized();
+            //    FormListCompletedActivity.updateFormToFinalized();
                 Toast.makeText(context, R.string.form_not_available, Toast.LENGTH_SHORT).show();
             }
             else if (result.trim().equalsIgnoreCase("Error"))
@@ -214,10 +221,26 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
                 /**
                  * UPDATE THE FORM STATE IN FORMS DB
                  */
-                FormListCompletedActivity.updateFormToSubmitted();
+                if(!isImage) {
+                   if(!formHasImages)
+                   {
+                       FormListCompletedActivity.updateFormToSubmitted();
+                   }
+                    else {
+                       FormListCompletedActivity.updateFormToFinalized();
+                   }
+                }
+                else{
+                    FormListFinalizedActivity.updateFormToSubmitted();
+                }
                 if(!isSendAllForms)//se non si stanno inviando piu' form insieme
-                    Toast.makeText(context, R.string.forms_sent, Toast.LENGTH_LONG).show();
-
+                {
+                    if(!isImage) {
+                        Toast.makeText(context, R.string.forms_sent, Toast.LENGTH_LONG).show();
+                        Toast.makeText(context, "Please go to 'submit Images' tab to submit images", Toast.LENGTH_LONG).show();
+                    }  else
+                        Toast.makeText(context, R.string.img_sent, Toast.LENGTH_LONG).show();
+                }
                 if (callback != null)
                 {
                     callback.callbackCall();
@@ -225,7 +248,10 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
                     {
                         condCheck.notify();
                     }
+                  callback.finishFormListFinalized();
                 }
+
+
             }
         }
     }

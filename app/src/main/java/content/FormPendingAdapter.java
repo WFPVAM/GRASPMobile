@@ -1,9 +1,4 @@
 package content;
-import it.fabaris.wfp.activities.*;
-
-import java.util.ArrayList;
-
-import object.FormInnerListProxy;
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,6 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+
+import it.fabaris.wfp.activities.R;
+import object.FormInnerListProxy;
 
 /**
  * classe FormPendingAdapter per la gestione del layout della lista delle form pending
@@ -54,17 +54,17 @@ public class FormPendingAdapter extends BaseAdapter
         if(convertView==null)
             vi = inflater.inflate(R.layout.formlist_rowpending, null);
 
-        //relativeBG = (RelativeLayout) vi.findViewById(R.id.prodottiBackground); 
+        //relativeBG = (RelativeLayout) vi.findViewById(R.id.prodottiBackground);
 
         TextView text = (TextView)vi.findViewById(R.id.label);
         text.setText(item.get(position).getFormName());
 
         TextView textLastSaveDate = (TextView) vi.findViewById(R.id.textLastSaveDate);
-        textLastSaveDate.setText(item.get(position).getDataDownload());
+        textLastSaveDate.setText(item.get(position).getDataDiCompletamento());
 
         TextView textBy = (TextView) vi.findViewById(R.id.textBy);
-        textBy.setText(item.get(position).getDataDownload());
-
+//        textBy.setText(item.get(position).getDataDownload());
+        textBy.setText(item.get(position).getFormEnumeratorId());
         return vi;
     }
 }

@@ -3,10 +3,13 @@ package it.fabaris.wfp.activities;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.StrictMode;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -19,7 +22,9 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
+import java.net.InetAddress;
 import java.net.URL;
+import java.net.UnknownHostException;
 import java.util.Locale;
 
 /**
@@ -41,6 +46,20 @@ public class ControlActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.password_setting);
 
+
+            StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
+                    .detectDiskReads()
+                    .detectDiskWrites()
+                    .detectNetwork()   // or .detectAll() for all detectable problems
+                    .penaltyLog()
+                    .build());
+            StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
+                    .detectLeakedSqlLiteObjects()
+                    .penaltyLog()
+                    .penaltyDeath()
+                    .build());
+
+
         language = Locale.getDefault().toString();
 
         password = (EditText) findViewById(R.id.password_edit);
@@ -59,6 +78,8 @@ public class ControlActivity extends Activity
         /**
          * on Click we check if the psw inserted is correct
          */
+
+        final SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         login.setOnClickListener(new OnClickListener()
         {
             public void onClick(View v)
@@ -85,7 +106,7 @@ public class ControlActivity extends Activity
 
 
 /**Added By Claudia
- * this method updates the app too the latest version on the server
+ * this method updates the app to the latest version on the server
  **/
 
         updateAppBtn.setOnClickListener(new OnClickListener(){
@@ -109,10 +130,27 @@ public class ControlActivity extends Activity
                 DownloadFile downloadFile = new DownloadFile();
 //                downloadFile.execute(getString(R.string.new_app_url));
                 String apkURL= new String();
+                InetAddress actualIP;
+                String address="";
                 //TODO Change the IP address to the IP address of the server
                 //TODO Change the apk file name
-                apkURL ="http://grasp.wfppal.org:80/graspreporting/Public/GraspMobile.apk";
+                String ip = settings.getString(PreferencesActivity.KEY_IP,null);
+//                apkURL =ip +":80/graspreporting/Public/GraspMobile.apk";
+//                apkURL ="http://grasp.wfppal.org:80/graspreporting/Public/GraspMobile.apk";
+                try {
+                    actualIP = InetAddress.getByName("grasp.wfppal.org");
+                    address = actualIP.getHostAddress();
+                } catch (UnknownHostException e) {
+                    e.printStackTrace();
+                }
+            if(ip.equalsIgnoreCase(address)){
+                apkURL ="http://"+ ip +":80/graspreporting/Public/GraspMobile.apk";
                 downloadFile.execute(apkURL);
+            }
+               else{
+                Toast.makeText(getBaseContext(),"Server Unavailable!",Toast.LENGTH_LONG).show();
+            }
+               // downloadFile.execute(apkURL);
 
 
 
@@ -172,10 +210,21 @@ public class ControlActivity extends Activity
                 fileOutput.flush();
                 fileOutput.close();
                 input.close();
+                mProgressDialog.dismiss();
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
             return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... progress) {
+            super.onProgressUpdate(progress);
+            // if we get here, length is known, now set indeterminate to false
+            mProgressDialog.setIndeterminate(false);
+            mProgressDialog.setMax(100);
+            mProgressDialog.setProgress(progress[0]);
         }
 }
 

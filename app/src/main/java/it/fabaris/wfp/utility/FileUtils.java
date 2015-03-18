@@ -10,6 +10,10 @@
  ******************************************************************************/
 package it.fabaris.wfp.utility;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Log;
+
 import org.javarosa.xform.parse.XFormParser;
 import org.kxml2.kdom.Document;
 import org.kxml2.kdom.Element;
@@ -29,10 +33,6 @@ import java.nio.channels.FileChannel;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
-
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.util.Log;
 
 /**
  * Class not used in GRASP solution
@@ -61,6 +61,7 @@ public class FileUtils {
         }
         return made;
     }
+
 
 
     public static byte[] getFileAsBytes(File file) {
@@ -342,5 +343,68 @@ public class FileUtils {
             }
         }
         return e;
+    }
+//****************************** added for the photo upload *********************************//
+public static byte[] compressImage(String imagePath, int newWidth, int newHeight, int quality) {
+    //parameter float rotateDegree;
+    byte[] compresedImageBytes = null;
+    ByteArrayOutputStream baos = null;
+    try {
+//            BitmapFactory.Options options = new BitmapFactory.Options();
+//            options.inScaled = false;
+        Bitmap imageFile = decodeFile(imagePath, newWidth, newHeight);
+
+        //Compress Image with the given quality
+        baos = new ByteArrayOutputStream();
+        imageFile.compress(Bitmap.CompressFormat.JPEG, quality, baos);
+        compresedImageBytes = baos.toByteArray();
+    } catch (Exception e) {
+        e.printStackTrace();
+    }finally
+    {
+        try
+        {
+            if (baos != null)
+            {
+                baos.flush();
+                baos.close();
+            }
+        }catch(IOException e)
+        {
+
+        }
+    }
+    return compresedImageBytes;
+}
+
+    private static Bitmap decodeFile(String fileName, int newWidth, int newHeight){
+        try {
+            //Decode image size
+            BitmapFactory.Options justDecodeBoundsOption = new BitmapFactory.Options();
+            justDecodeBoundsOption.inJustDecodeBounds = true;
+            BitmapFactory.decodeStream(new FileInputStream(fileName),null,justDecodeBoundsOption);
+
+            BitmapFactory.Options scaleOption = new BitmapFactory.Options();
+
+            //The new size we want to scale to
+            //final int REQUIRED_SIZE=80;
+            if((newWidth != 0 && newHeight != 0)
+                    && (justDecodeBoundsOption.outWidth > newWidth && justDecodeBoundsOption.outHeight > newHeight))
+            {
+                //Find the correct scale value. It should be the power of 2.
+                int scale=1;
+
+                //while(o.outWidth/scale/2>=REQUIRED_SIZE && o.outHeight/scale/2>=REQUIRED_SIZE)
+                while(justDecodeBoundsOption.outWidth/scale/2>=newWidth && justDecodeBoundsOption.outHeight/scale/2>=newHeight)
+                    scale*=2;
+
+                //Decode with inSampleSize
+                scaleOption.inSampleSize=scale;
+            }
+
+            //o2.inScaled = false;
+            return BitmapFactory.decodeStream(new FileInputStream(fileName), null, scaleOption);
+        } catch (FileNotFoundException e) {}
+        return null;
     }
 }

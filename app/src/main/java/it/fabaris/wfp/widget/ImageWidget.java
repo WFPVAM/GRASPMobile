@@ -63,6 +63,8 @@ public class ImageWidget extends QuestionWidget implements IBinaryWidget {
 
     private Button mCaptureButton;
     private Button mChooseButton;
+    
+
     private static ImageView mImageView;
 
     private String mBinaryName;
@@ -76,7 +78,7 @@ public class ImageWidget extends QuestionWidget implements IBinaryWidget {
     private static int RESULT_CANCELED = 8;
 
 
-    public ImageWidget(Context context, final FormEntryPrompt prompt) {
+    public ImageWidget(final Context context, final FormEntryPrompt prompt) {
         super(context, prompt);
 
         mWaitingForData = false;
@@ -105,6 +107,7 @@ public class ImageWidget extends QuestionWidget implements IBinaryWidget {
         mCaptureButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) 
             {
+
                 mErrorTextView.setVisibility(View.GONE);
                 Intent i = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
                 // We give the camera an absolute filename/path where to put the
@@ -116,12 +119,17 @@ public class ImageWidget extends QuestionWidget implements IBinaryWidget {
                 // the size. boo.
 
                 // if this gets modified, the onActivityResult in
-                // FormEntyActivity will also need to be updated.
-                i.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(Collect.TMPFILE_PATH)));
-                try 
+//                 FormEntyActivity will also need to be updated.
+                //////////**********************************????////////////////////
+         i.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(Collect.TMPFILE_PATH)));
+                try
                 {
-                    ((Activity) getContext()).startActivityForResult(i, FormEntryActivity.IMAGE_CAPTURE);
-                    mWaitingForData = true;
+                 //   if (i.resolveActivity(context.getPackageManager()) != null) {
+
+
+                   ((Activity) getContext()).startActivityForResult(i, FormEntryActivity.IMAGE_CAPTURE);
+                        mWaitingForData = true;
+                 //   }
                     //********************
                     //mBinaryName = 
                     //********************
@@ -131,9 +139,10 @@ public class ImageWidget extends QuestionWidget implements IBinaryWidget {
                         getContext().getString(R.string.activity_not_found, "image capture"),
                         Toast.LENGTH_SHORT);
                 }
-                //*((FormEntryActivity)getContext()).refreshCurrentView(prompt.getIndex()); 
+                //*((FormEntryActivity)getContext()).refreshCurrentView(prompt.getIndex());
                 //mBinaryName = prompt.getAnswerText();
                 //previewPhoto();
+
             }
         });
 
@@ -155,7 +164,7 @@ public class ImageWidget extends QuestionWidget implements IBinaryWidget {
                 mErrorTextView.setVisibility(View.GONE);
                 Intent i = new Intent(Intent.ACTION_GET_CONTENT);
                 i.addCategory(Intent.CATEGORY_OPENABLE);
-                i.setType("image/*");
+                i.setType("image/* ");
 
                 try {
                     ((Activity) getContext()).startActivityForResult(i, FormEntryActivity.IMAGE_CHOOSER);

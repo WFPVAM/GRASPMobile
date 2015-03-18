@@ -259,6 +259,7 @@
     <string name="client_telephone">Client Telephone</string>
     <string name="colors">Colors</string>
     <string name="completed_data">Complete (%s)</string>
+    <string name="completed_date">Completed on:</string>
     <string name="confirm">Yes</string>
     <string name="contDesc">Description</string>
     <string name="convert_form_to_complate">Are you sure you want to convert all submitted forms to completed?</string>
@@ -362,6 +363,8 @@
     <string name="help">HELP</string>
     <string name="home">HOME</string>
     <string name="image_directory_creation_faild">Failed to create image directory</string>
+    <string name="image_submitted">Images:</string>
+    <string name="img_sent">Images were sent successfully</string>
     <string name="imported">Form correctly imported</string>
     <string name="invalid_answer_error">Check for red fields they are invalid!</string>
     <string name="jump_to_beginning">Go To Start</string>
@@ -466,6 +469,8 @@
     <string name="send_data_button">Send Finalized Form</string>
     <string name="send_form">Do you want to send the form?</string>
     <string name="send_form_by_network_or_sms">Choose how to send the forms</string>
+    <string name="send_images">Do you want to send images?</string>
+    <string name="send_img">Send all images</string>
     <string name="send_selected_data">Send Selected</string>
     <string name="sending_data">Sending data to server...</string>
     <string name="sending_items">Sending %1$s of %2$s form(s)</string>
@@ -495,7 +500,7 @@
     <string name="suggest">...password</string>
     <string name="syncronyze">Syncronyze forms...</string>
     <string name="tab_completed">Completed</string>
-    <string name="tab_finalized">Pending</string>
+    <string name="tab_finalized">Submit Images</string>
     <string name="tab_new">New</string>
     <string name="tab_saved">Saved</string>
     <string name="tab_submitted">Submitted</string>
