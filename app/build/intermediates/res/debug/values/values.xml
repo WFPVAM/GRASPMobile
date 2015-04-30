@@ -14,6 +14,14 @@
         <item name="gprsumts">gprs/umts only</item>
         <item name="gprsumtspref">gprs/umts preferred</item>
     </string-array>
+    <string-array name="editing_completed">
+        <item name="enabled">Enabled</item>
+        <item name="disabled">Disabled</item>
+    </string-array>
+    <string-array name="editing_completed_values">
+        <item name="enabled">Enabled</item>
+        <item name="disabled">Disabled</item>
+    </string-array>
     <string-array name="entries_list_preference">
         <item>Saved, Not Completed</item>
         <item>Completed, Not Submitted</item>
@@ -258,6 +266,8 @@
     <string name="client">Client</string>
     <string name="client_telephone">Client Telephone</string>
     <string name="colors">Colors</string>
+    <string name="complete_Editing">Enable Editing completed forms</string>
+    <string name="complete_Editing_disable">Disable Editing completed forms</string>
     <string name="completed_data">Complete (%s)</string>
     <string name="completed_date">Completed on:</string>
     <string name="confirm">Yes</string>

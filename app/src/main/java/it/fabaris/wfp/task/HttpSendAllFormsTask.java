@@ -320,7 +320,7 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
         TreeElement dataElements = XFormParser.restoreDataModel(fileBytes, null).getRoot();
         String imageName = "";
         for (int j = 0; j < dataElements.getNumChildren(); j++) {
-            if (dataElements.getChildAt(j) != null && dataElements.getChildAt(j).getValue() != null && dataElements.getChildAt(j).getValue().getDisplayText().indexOf("jpg") > 0) {
+            if (dataElements.getChildAt(j) != null && dataElements.getChildAt(j).getValue() != null && dataElements.getChildAt(j).getValue().getDisplayText().indexOf("jpg")  > 0) {
                 imageName = dataElements.getChildAt(j).getValue().getDisplayText();
                 if(imageName.contains("/instances")){
                     imageName= imageName.substring(imageName.lastIndexOf("/") + 1);

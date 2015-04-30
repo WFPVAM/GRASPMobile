@@ -10,26 +10,8 @@
  ******************************************************************************/
 package it.fabaris.wfp.activities;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-
-import content.FormSavedAdapter;
-import database.DbAdapterGrasp;
-
-import object.FormInnerListProxy;
-import utils.ApplicationExt;
-import utils.FormComparator;
-
-
-import it.fabaris.wfp.provider.FormProvider.DatabaseHelper;
-import it.fabaris.wfp.provider.FormProviderAPI;
-import it.fabaris.wfp.provider.InstanceProviderAPI;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.ListActivity;
 import android.app.AlertDialog.Builder;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -40,15 +22,20 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
 import android.view.View;
-import android.view.View.OnLongClickListener;
 import android.webkit.MimeTypeMap;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
-import android.widget.AdapterView.OnItemClickListener;
+
+import java.io.File;
+import java.util.ArrayList;
+
+import content.FormSavedAdapter;
+import it.fabaris.wfp.provider.FormProvider.DatabaseHelper;
+import it.fabaris.wfp.provider.InstanceProviderAPI;
+import object.FormInnerListProxy;
 
 /**
  * Class that defines the tab for the list of the saved forms
@@ -120,7 +107,7 @@ public class FormListSavedActivity extends Activity
                 //int positionSalvati = getRightCompletedParcelableObject(saved.get(position).getFormName());//LL per visualizzare la form corretta //LL 14-05-2014 eliminato per dismissione del db grasp
 
                 String pkgName = getPackageName();
-				
+				String formID= saved.get(position).getFormId();
 				/* LL 14-05-2014 modificati per dismissione del db grasp
 				intent.putExtra(pkgName+keyIdentifer, salvati.get(positionSalvati).getPathForm()); 			//formPathSalvate[position]);
 				intent.putExtra(pkgName+keyIdentifer1, salvati.get(positionSalvati).getFormName());			//formNameSalvate[position]);
@@ -129,7 +116,7 @@ public class FormListSavedActivity extends Activity
 				*/
 
                 //LL 14-05-2014 modificati per dismissione del db grasp
-                intent.putExtra(pkgName+keyIdentifer, saved.get(position).getPathForm()); 			//formPathSalvate[position]);
+                intent.putExtra(pkgName+keyIdentifer,  saved.get(position).getPathForm()); 			//formPathSalvate[position]);
                 intent.putExtra(pkgName+keyIdentifer1, saved.get(position).getFormName());			//formNameSalvate[position]);
                 intent.putExtra(pkgName+keyIdentifer2, saved.get(position).getFormNameInstance());	//formNameInstanceSalvate[position]);
                 intent.putExtra(pkgName+keyIdentifer3, saved.get(position).getFormId()); 				//formIdSalvate[position]);
@@ -212,7 +199,7 @@ public class FormListSavedActivity extends Activity
                                         deleteDirectory(f);
 
                                         if(deleted)
-                                            Toast.makeText(FormListSavedActivity.this, getString(R.string.cancelform) + " " +saved.get(position).getFormName(), Toast.LENGTH_LONG).show();
+                                        Toast.makeText(FormListSavedActivity.this, getString(R.string.cancelform) + " " +saved.get(position).getFormName(), Toast.LENGTH_LONG).show();
                                         finish();
 
                                         //FormInnerListProxy filp1 = saved.remove(3);   //LL

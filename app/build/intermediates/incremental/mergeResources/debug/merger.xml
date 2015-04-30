@@ -1206,6 +1206,160 @@
             <file
                 path="C:\Projects\GRASPMobilePal\app\src\main\res\values\array.xml"
                 qualifiers="" >
+                <string-array name="protocol_choices_values" >
+                    <item>
+1
+                    </item>
+                    <item>
+2
+                    </item>
+                </string-array>
+                <string-array name="textcolor_mandatory_foreground_entries" >
+                    <item>
+Blue
+                    </item>
+                    <item>
+White
+                    </item>
+                    <item>
+Yellow
+                    </item>
+                    <item>
+Green
+                    </item>
+                    <item>
+Black
+                    </item>
+                </string-array>
+                <string-array name="editing_completed" >
+                    <item name="enabled">
+Enabled
+                    </item>
+                    <item name="disabled">
+Disabled
+                    </item>
+                </string-array>
+                <string-array name="textcolor_background_entries" >
+                    <item>
+Cyan
+                    </item>
+                    <item>
+Black
+                    </item>
+                    <item>
+Green
+                    </item>
+                    <item>
+Yellow
+                    </item>
+                    <item>
+White
+                    </item>
+                </string-array>
+                <string-array name="connection_type" >
+                    <item name="sms">
+SMS only
+                    </item>
+                    <item name="gprsumts">
+GPRS/UMTS only
+                    </item>
+                    <item name="gprsumtspref">
+GPRS/UMTS preferred
+                    </item>
+                </string-array>
+                <string-array name="protocol_entry_values" >
+                    <item>
+odk_default
+                    </item>
+                    <item>
+google
+                    </item>
+                    <item/>
+                </string-array>
+                <string-array name="textcolor_mandatory_background_entry_values" >
+                    <item>
+#00FFFF
+                    </item>
+                    <item>
+#000000
+                    </item>
+                    <item>
+#00FF00
+                    </item>
+                    <item>
+#FFFF00
+                    </item>
+                    <item>
+#FFFFFF
+                    </item>
+                </string-array>
+                <string-array name="font_size_entry_values" >
+                    <item>
+29
+                    </item>
+                    <item>
+25
+                    </item>
+                    <item>
+21
+                    </item>
+                    <item>
+17
+                    </item>
+                    <item>
+13
+                    </item>
+                </string-array>
+                <string-array name="updateIntervalValues" >
+                    <item name="1000">
+1000
+                    </item>
+                    <item name="5000">
+5000
+                    </item>
+                    <item name="30000">
+30000
+                    </item>
+                    <item name="60000">
+60000
+                    </item>
+                    <item name="300000">
+300000
+                    </item>
+                </string-array>
+                <string-array name="editing_completed_values" >
+                    <item name="enabled">
+Enabled
+                    </item>
+                    <item name="disabled">
+Disabled
+                    </item>
+                </string-array>
+                <string-array name="textcolor_error_background_entries" >
+                    <item>
+Cyan
+                    </item>
+                    <item>
+Black
+                    </item>
+                    <item>
+Green
+                    </item>
+                    <item>
+Yellow
+                    </item>
+                    <item>
+White
+                    </item>
+                </string-array>
+                <string-array name="entries_saved_preference" >
+                    <item>
+Saved, Not Completed
+                    </item>
+                    <item>
+Completed, Not Submitted
+                    </item>
+                </string-array>
                 <string-array name="entries_list_preference" >
                     <item>
 Saved, Not Completed
@@ -1234,6 +1388,14 @@ Every 1 minute
 Every 5 minutes
                     </item>
                 </string-array>
+                <string-array name="protocol_choices_entries" >
+                    <item>
+http
+                    </item>
+                    <item>
+https
+                    </item>
+                </string-array>
                 <string-array name="protocol_entries" >
                     <item>
 ODK Aggregate
@@ -1243,22 +1405,6 @@ Google Forms
                     </item>
                     <item>
 OpenRosa 1.0
-                    </item>
-                </string-array>
-                <string-array name="protocol_choices_values" >
-                    <item>
-1
-                    </item>
-                    <item>
-2
-                    </item>
-                </string-array>
-                <string-array name="protocol_choices_entries" >
-                    <item>
-http
-                    </item>
-                    <item>
-https
                     </item>
                 </string-array>
                 <string-array name="textcolor_error_foreground_entries" >
@@ -1273,23 +1419,6 @@ Orange
                     </item>
                     <item>
 Red
-                    </item>
-                    <item>
-Black
-                    </item>
-                </string-array>
-                <string-array name="textcolor_mandatory_foreground_entries" >
-                    <item>
-Blue
-                    </item>
-                    <item>
-White
-                    </item>
-                    <item>
-Yellow
-                    </item>
-                    <item>
-Green
                     </item>
                     <item>
 Black
@@ -1327,34 +1456,6 @@ Black
                     </item>
                     <item>
 #FFFFFF
-                    </item>
-                </string-array>
-                <string-array name="textcolor_background_entries" >
-                    <item>
-Cyan
-                    </item>
-                    <item>
-Black
-                    </item>
-                    <item>
-Green
-                    </item>
-                    <item>
-Yellow
-                    </item>
-                    <item>
-White
-                    </item>
-                </string-array>
-                <string-array name="connection_type" >
-                    <item name="sms">
-SMS only
-                    </item>
-                    <item name="gprsumts">
-GPRS/UMTS only
-                    </item>
-                    <item name="gprsumtspref">
-GPRS/UMTS preferred
                     </item>
                 </string-array>
                 <string-array name="font_size_entries" >
@@ -1408,23 +1509,6 @@ Extra Small
 #FFFFFF
                     </item>
                 </string-array>
-                <string-array name="textcolor_mandatory_background_entry_values" >
-                    <item>
-#00FFFF
-                    </item>
-                    <item>
-#000000
-                    </item>
-                    <item>
-#00FF00
-                    </item>
-                    <item>
-#FFFF00
-                    </item>
-                    <item>
-#FFFFFF
-                    </item>
-                </string-array>
                 <string-array name="textcolor_foreground_entries" >
                     <item>
 Blue
@@ -1453,15 +1537,6 @@ done
 submitted
                     </item>
                 </string-array>
-                <string-array name="protocol_entry_values" >
-                    <item>
-odk_default
-                    </item>
-                    <item>
-google
-                    </item>
-                    <item/>
-                </string-array>
                 <string-array name="connection_type_values" >
                     <item name="sms">
 sms only
@@ -1481,23 +1556,6 @@ saved
 done
                     </item>
                 </string-array>
-                <string-array name="textcolor_mandatory_background_entries" >
-                    <item>
-Cyan
-                    </item>
-                    <item>
-Black
-                    </item>
-                    <item>
-Green
-                    </item>
-                    <item>
-Yellow
-                    </item>
-                    <item>
-White
-                    </item>
-                </string-array>
                 <string-array name="textcolor_mandatory_foreground_entry_values" >
                     <item>
 #000066
@@ -1515,41 +1573,7 @@ White
 #000000
                     </item>
                 </string-array>
-                <string-array name="font_size_entry_values" >
-                    <item>
-29
-                    </item>
-                    <item>
-25
-                    </item>
-                    <item>
-21
-                    </item>
-                    <item>
-17
-                    </item>
-                    <item>
-13
-                    </item>
-                </string-array>
-                <string-array name="updateIntervalValues" >
-                    <item name="1000">
-1000
-                    </item>
-                    <item name="5000">
-5000
-                    </item>
-                    <item name="30000">
-30000
-                    </item>
-                    <item name="60000">
-60000
-                    </item>
-                    <item name="300000">
-300000
-                    </item>
-                </string-array>
-                <string-array name="textcolor_error_background_entries" >
+                <string-array name="textcolor_mandatory_background_entries" >
                     <item>
 Cyan
                     </item>
@@ -1564,14 +1588,6 @@ Yellow
                     </item>
                     <item>
 White
-                    </item>
-                </string-array>
-                <string-array name="entries_saved_preference" >
-                    <item>
-Saved, Not Completed
-                    </item>
-                    <item>
-Completed, Not Submitted
                     </item>
                 </string-array>
             </file>
@@ -1980,6 +1996,8 @@ Completed, Not Submitted
                 </string>
                 <string name="discard_answer" >Remove response
                 </string>
+                <string name="complete_Editing_disable" >Disable Editing completed forms
+                </string>
                 <string name="password" >Password
                 </string>
                 <string name="take_signature" >Take Signature
@@ -1994,6 +2012,8 @@ Completed, Not Submitted
                 </string>
                 <string name="change_username" >ODK Username
                 </string>
+                <string name="complete_Editing" >Enable Editing completed forms
+                </string>
                 <string name="clear_answer_no" >Cancel
                 </string>
                 <string name="hard_reset" >Do you want to make a cancellation of forms previously completed and sync, and restore the application as a new installation?
@@ -2006,11 +2026,11 @@ Completed, Not Submitted
                 </string>
                 <string name="invalid_answer_error" >Check for red fields they are invalid!
                 </string>
-                <string name="please_insert_your_phone_number" >Please insert your phone number preceded by country code
-                </string>
                 <string name="check_connection" >Check Server Connection
                 </string>
                 <string name="barcode_scanner_error" >Sorry, Barcode Scanner is not installed!
+                </string>
+                <string name="please_insert_your_phone_number" >Please insert your phone number preceded by country code
                 </string>
                 <string name="error" >Error
                 </string>
@@ -3428,52 +3448,7 @@ GPRS/UMTS solamente
 GPRS/UMTS favorito
                     </item>
                 </string-array>
-                <string-array name="font_size_entries" >
-                    <item>
-Extra Grande
-                    </item>
-                    <item>
-Grande
-                    </item>
-                    <item>
-Medio
-                    </item>
-                    <item>
-Pequeño
-                    </item>
-                    <item>
-Mas Pequeño
-                    </item>
-                </string-array>
-                <string-array name="connection_type_values" >
-                    <item name="sms">
-sms only
-                    </item>
-                    <item name="gprsumts">
-gprs/umts only
-                    </item>
-                    <item name="gprsumtspref">
-gprs/umts preferred
-                    </item>
-                </string-array>
                 <string-array name="textcolor_mandatory_background_entries" >
-                    <item>
-Cian
-                    </item>
-                    <item>
-Negro
-                    </item>
-                    <item>
-Verde
-                    </item>
-                    <item>
-Amarillo
-                    </item>
-                    <item>
-Blanco
-                    </item>
-                </string-array>
-                <string-array name="textcolor_background_entries" >
                     <item>
 Cian
                     </item>
@@ -3535,63 +3510,12 @@ presentado
 #000000
                     </item>
                 </string-array>
-                <string-array name="updateIntervalValues" >
-                    <item name="1000">
-1000
-                    </item>
-                    <item name="5000">
-5000
-                    </item>
-                    <item name="30000">
-30000
-                    </item>
-                    <item name="60000">
-60000
-                    </item>
-                    <item name="300000">
-300000
-                    </item>
-                </string-array>
-                <string-array name="textcolor_error_background_entry_values" >
-                    <item>
-#00FFFF
-                    </item>
-                    <item>
-#000000
-                    </item>
-                    <item>
-#00FF00
-                    </item>
-                    <item>
-#FFFF00
-                    </item>
-                    <item>
-#FFFFFF
-                    </item>
-                </string-array>
                 <string-array name="entries_saved_preference" >
                     <item>
 Guardado, Desconocido
                     </item>
                     <item>
 Relleno, no Enviado
-                    </item>
-                </string-array>
-                <string-array name="updateInterval" >
-                    <item name="1000">
-Cada 1 segundo
-                    </item>
-                    <item name="5000">
-Cada 5 segundos
-                    </item>
-                    <item name="30000">
-Cada 30 segundos
-                    </item>
-                    <item name="60000">
-Cada 1 minuto
-                    </item>
-                    <item name="300000">
-Cada 5 minutos
                     </item>
                 </string-array>
                 <string-array name="textcolor_error_background_entries" >
@@ -3628,14 +3552,6 @@ Blanco
 13
                     </item>
                 </string-array>
-                <string-array name="entryvalues_saved_preference" >
-                    <item>
-guardado
-                    </item>
-                    <item>
-terminado
-                    </item>
-                </string-array>
                 <string-array name="protocol_choices_values" >
                     <item>
 1
@@ -3644,21 +3560,12 @@ terminado
 2
                     </item>
                 </string-array>
-                <string-array name="textcolor_foreground_entries" >
+                <string-array name="entryvalues_saved_preference" >
                     <item>
-Azul
+guardado
                     </item>
                     <item>
-Blanco
-                    </item>
-                    <item>
-Amarillo
-                    </item>
-                    <item>
-Verde
-                    </item>
-                    <item>
-Negro
+terminado
                     </item>
                 </string-array>
                 <string-array name="entries_list_preference" >
@@ -3689,23 +3596,6 @@ Enviado
 #FFFFFF
                     </item>
                 </string-array>
-                <string-array name="textcolor_foreground_entry_values" >
-                    <item>
-#000066
-                    </item>
-                    <item>
-#FFFFFF
-                    </item>
-                    <item>
-#FFFF00
-                    </item>
-                    <item>
-#00FF00
-                    </item>
-                    <item>
-#000000
-                    </item>
-                </string-array>
                 <string-array name="textcolor_mandatory_background_entry_values" >
                     <item>
 #00FFFF
@@ -3721,17 +3611,6 @@ Enviado
                     </item>
                     <item>
 #FFFFFF
-                    </item>
-                </string-array>
-                <string-array name="protocol_entries" >
-                    <item>
-ODK Aggregate
-                    </item>
-                    <item>
-Google Forms
-                    </item>
-                    <item>
-OpenRosa 1.0
                     </item>
                 </string-array>
                 <string-array name="textcolor_error_foreground_entries" >
@@ -3766,6 +3645,147 @@ Verde
                     </item>
                     <item>
 Negro
+                    </item>
+                </string-array>
+                <string-array name="font_size_entries" >
+                    <item>
+Extra Grande
+                    </item>
+                    <item>
+Grande
+                    </item>
+                    <item>
+Medio
+                    </item>
+                    <item>
+Pequeño
+                    </item>
+                    <item>
+Mas Pequeño
+                    </item>
+                </string-array>
+                <string-array name="connection_type_values" >
+                    <item name="sms">
+sms only
+                    </item>
+                    <item name="gprsumts">
+gprs/umts only
+                    </item>
+                    <item name="gprsumtspref">
+gprs/umts preferred
+                    </item>
+                </string-array>
+                <string-array name="textcolor_background_entries" >
+                    <item>
+Cian
+                    </item>
+                    <item>
+Negro
+                    </item>
+                    <item>
+Verde
+                    </item>
+                    <item>
+Amarillo
+                    </item>
+                    <item>
+Blanco
+                    </item>
+                </string-array>
+                <string-array name="updateIntervalValues" >
+                    <item name="1000">
+1000
+                    </item>
+                    <item name="5000">
+5000
+                    </item>
+                    <item name="30000">
+30000
+                    </item>
+                    <item name="60000">
+60000
+                    </item>
+                    <item name="300000">
+300000
+                    </item>
+                </string-array>
+                <string-array name="textcolor_error_background_entry_values" >
+                    <item>
+#00FFFF
+                    </item>
+                    <item>
+#000000
+                    </item>
+                    <item>
+#00FF00
+                    </item>
+                    <item>
+#FFFF00
+                    </item>
+                    <item>
+#FFFFFF
+                    </item>
+                </string-array>
+                <string-array name="updateInterval" >
+                    <item name="1000">
+Cada 1 segundo
+                    </item>
+                    <item name="5000">
+Cada 5 segundos
+                    </item>
+                    <item name="30000">
+Cada 30 segundos
+                    </item>
+                    <item name="60000">
+Cada 1 minuto
+                    </item>
+                    <item name="300000">
+Cada 5 minutos
+                    </item>
+                </string-array>
+                <string-array name="textcolor_foreground_entries" >
+                    <item>
+Azul
+                    </item>
+                    <item>
+Blanco
+                    </item>
+                    <item>
+Amarillo
+                    </item>
+                    <item>
+Verde
+                    </item>
+                    <item>
+Negro
+                    </item>
+                </string-array>
+                <string-array name="textcolor_foreground_entry_values" >
+                    <item>
+#000066
+                    </item>
+                    <item>
+#FFFFFF
+                    </item>
+                    <item>
+#FFFF00
+                    </item>
+                    <item>
+#00FF00
+                    </item>
+                    <item>
+#000000
+                    </item>
+                </string-array>
+                <string-array name="protocol_entries" >
+                    <item>
+ODK Aggregate
+                    </item>
+                    <item>
+Google Forms
+                    </item>
+                    <item>
+OpenRosa 1.0
                     </item>
                 </string-array>
                 <string-array name="protocol_choices_entries" >

@@ -10,51 +10,43 @@
  ******************************************************************************/
 package it.fabaris.wfp.activities;
 
-import java.io.BufferedInputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import it.fabaris.wfp.application.Collect;
-import utils.ApplicationExt;
-
-import it.fabaris.wfp.provider.FormProvider.DatabaseHelper;
-import it.fabaris.wfp.task.HttpCheckPostTask;
-import it.fabaris.wfp.utility.ConstantUtility;
-
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
-import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.Looper;
 import android.preference.EditTextPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.PreferenceManager;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceActivity;
-import android.telephony.TelephonyManager;
+import android.preference.PreferenceManager;
 import android.text.InputType;
 import android.util.Log;
 import android.util.Patterns;
 import android.widget.LinearLayout;
 import android.widget.TimePicker;
-import android.widget.Toast;
+
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import it.fabaris.wfp.application.Collect;
+import it.fabaris.wfp.provider.FormProvider.DatabaseHelper;
+import it.fabaris.wfp.task.HttpCheckPostTask;
+import it.fabaris.wfp.utility.ConstantUtility;
+import utils.ApplicationExt;
 
 /**
  * Class that manage the preferences of the app
@@ -74,6 +66,8 @@ public class PreferencesActivity extends PreferenceActivity implements
     public static String KEY_BUTTON_CHECK_NEW_APPLICATION = "button_check_new_app";
     public static String KEY_BUTTON_CONVERT_SUBM_TO_COMP = "button_convert_submitted_to_complete";
     public static String KEY_BUTTON_CHECK = "button_check_conn";
+    public static String KEY_BUTTON_EDIT="button_completed_Editing";
+    public static String KEY_BUTTON_EDIT_DISABLE="button_completed_Editing_disable";
     public static String TEXT_BACKGROUND_COLOR = "textcolor_background";
     public static String TEXT_FOREGROUND_COLOR = "textcolor_foreground";
     public static String TEXT_MANDATORY_BACKGROUND_COLOR = "textcolor_mandatory_background";
@@ -103,6 +97,8 @@ public class PreferencesActivity extends PreferenceActivity implements
     ProgressDialog mProgressDialog;
 
     private String protocol = new String();
+
+    public static String editingComplete= new String();
 
 
     @Override
@@ -159,6 +155,8 @@ public class PreferencesActivity extends PreferenceActivity implements
             listprotocolo.setValueIndex(1);////show the https radio group widget
             listprotocolo.setSummary("https");
         }
+
+
 
         /**
          * set the time
@@ -233,6 +231,23 @@ public class PreferencesActivity extends PreferenceActivity implements
             }
         });
 
+
+//        Preference buttonEditCompleted = (Preference) findPreference(KEY_BUTTON_EDIT);
+//        buttonEditCompleted.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+//            public boolean onPreferenceClick(Preference pref) {
+////
+//                FormListCompletedActivity.editingEnabled =true;
+//              return true;
+//            }
+//        });
+//        Preference buttonEditCompletedDiasable = (Preference) findPreference(KEY_BUTTON_EDIT_DISABLE);
+//        buttonEditCompletedDiasable.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+//            public boolean onPreferenceClick(Preference pref) {
+////
+//                FormListCompletedActivity.editingEnabled =false;
+//                return true;
+//            }
+//        });
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         /**
@@ -354,6 +369,7 @@ public class PreferencesActivity extends PreferenceActivity implements
         updateClientTelephone();
         //updateServerUrl(); LL
         updateConnectType();
+        isEditingEnabled();
     }
 
     /**
@@ -382,7 +398,16 @@ public class PreferencesActivity extends PreferenceActivity implements
         } else if (key.equals(KEY_DIRECTORY)) {
             updateServerDirectory();
         }
+         else if (key.equals(KEY_BUTTON_EDIT)) {
+        isEditingEnabled();
+        }
     }
+
+    private void isEditingEnabled() {
+        ListPreference lp = (ListPreference) findPreference(KEY_BUTTON_EDIT);
+        lp.setSummary(lp.getEntry());
+    }
+
 
     /**
      * @param sceltaradio the choice took from the protocol radio button

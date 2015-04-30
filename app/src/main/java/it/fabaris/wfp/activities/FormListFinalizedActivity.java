@@ -39,6 +39,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.Locale;
 
 import content.FormPendingAdapter;
 import it.fabaris.wfp.listener.MyCallback;
@@ -395,7 +396,7 @@ public class FormListFinalizedActivity extends Activity implements MyCallback
 
             Calendar rightNow = Calendar.getInstance();
             java.text.SimpleDateFormat month = new java.text.SimpleDateFormat(
-                    "MM");
+                    "MM", Locale.ENGLISH);
             // ----------------------------------------------------------------------------------------
             /**
              *  data di importazione
@@ -433,7 +434,7 @@ public class FormListFinalizedActivity extends Activity implements MyCallback
     public static String getCurrentTimeStamp() {
         try {
 
-            SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+            SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss",Locale.ENGLISH);
             String currentTimeStamp = dateFormat.format(new Date()); // Find todays date
 
             return currentTimeStamp;

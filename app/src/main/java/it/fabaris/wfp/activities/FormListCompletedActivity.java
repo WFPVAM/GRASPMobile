@@ -64,6 +64,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Hashtable;
+import java.util.Locale;
 import java.util.Set;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
@@ -94,6 +95,8 @@ import utils.ApplicationExt;
  * Class that defines the tab for the list of the completed forms
  */
 public class FormListCompletedActivity extends Activity implements MyCallback {
+
+
     public interface FormListHandlerCompleted {
         public ArrayList<FormInnerListProxy> getCompletedForm();
 
@@ -112,6 +115,8 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
     private int positioncomplete = 0;
     private static String idFormNameInstance = null;
 
+    public static String editingEnabled =null;
+
     private static Notification notification;
     private NotificationManager nm;
     private ListView listview;
@@ -126,8 +131,10 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
     private String encodeXml;
     private static boolean isSendAllForms = false;
     public boolean formHasImages =false;
+    public boolean formHasVideos =false;
+    public String VideoURI;
     ///////////////////////////////////////////////
-    private String formId;
+    public static String formId;
 
     public static String idForm;
 
@@ -169,6 +176,9 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
                  */
                 istance.clear();
                 isSendAllForms = true;
+                settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+                connectionType = settings.getString(PreferencesActivity.KEY_CONNECTION_TYPE, getString(R.string.default_connection_type));
+
                 sendFormInList(complete);
             }
         });
@@ -184,6 +194,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
         senderPhone = settings.getString(PreferencesActivity.KEY_CLIENT_TELEPHONE, getString(R.string.default_client_telephone));
         numModem = settings.getString(PreferencesActivity.KEY_SERVER_TELEPHONE, getString(R.string.default_server_telephone));
         httpServer = settings.getString(PreferencesActivity.KEY_SERVER_URL,getString(R.string.default_server_url));
+        editingEnabled= settings.getString((PreferencesActivity.KEY_BUTTON_EDIT),"");
 
         Button sendAll = (Button) findViewById(R.id.sendAll);
 
@@ -205,55 +216,87 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
         adapter = new FormCompletedAdapter(this, complete); //LL 14-05-2014 modificato per dismissione del db grasp
         listview.setAdapter(adapter);
 
+
+
+    ///////////////////////////////// For the Video //////////////////////////////////////
+
+//        VideoURI = FormEntryActivity.getVideoPath();
+//         if (VideoURI != null){
+//             formHasVideos =true;
+//         }
+
+
+
         /**
          * When the user click on an item of the list displayed, the relative form is shown, ready for the compilation
          */
         listview.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, final int position, long id) {
-                Log.e("Posizione premuta nella lista delle form complete:", String.valueOf(position));
 
-                Context context = getApplicationContext();
-                Intent intent = new Intent(context, FormEntryActivity.class);
-                String keyIdentifer = "ciao";
-                String keyIdentifer1 = "ciao1";
-                String keyIdentifer2 = "ciao2";
-                String keyIdentifer3 = "ciao3";
+                    Context context = getApplicationContext();
+                    Intent intent = new Intent (context, FormEntryActivity.class);
+                    String keyIdentifer  = "ciao";
+                    String keyIdentifer1  = "ciao1";
+                    String keyIdentifer2  = "ciao2";
+                    String keyIdentifer3  = "ciao3";
+                    String keyIdentifer4  = "ciao4";
 
-                //LL 14-05-2014 eliminata per dismissione del grasp db e automatica risoluzione del problema del disallineamento degli oggetti parcellizati
-                //positioncomplete = getRightCompletedParcelableObject(completed.get(position).getFormName());//LL 12-02-14 passo l'id che identifica l'istanza della form cui fa riferimento l'elemento selezionato
-                //nella lista degli elementi completi
 
-                String pkgName = getPackageName();
+                    String pkgName = getPackageName();
 
-                intent.putExtra(pkgName + keyIdentifer, complete.get(position).getPathForm());
-                intent.putExtra(pkgName + keyIdentifer1, complete.get(position).getFormName());
-                intent.putExtra(pkgName + keyIdentifer2, complete.get(position).getFormNameInstance());
-                intent.putExtra(pkgName + keyIdentifer3, complete.get(position).getFormId());
-				
-				/*LL 14-05-2014 eliminazione per dismissione db grasp
-				//LL aggiunto per prendere l'identificativo della form in base all'oggetto parcellizato GRASP scelto nella ListView delle complete
-				intent.putExtra(pkgName+keyIdentifer, complete.get(positioncomplete).getPathForm()); 			
-				intent.putExtra(pkgName+keyIdentifer1, complete.get(positioncomplete).getFormName());			
-				intent.putExtra(pkgName+keyIdentifer2, complete.get(positioncomplete).getFormNameInstance());	
-				intent.putExtra(pkgName+keyIdentifer3, complete.get(positioncomplete).getFormId());
-				*/
+                    //we can't get the formId for the completed forms, so this is a work around to get it
+                   String str =complete.get(position).getFormNameAndXmlFormid();
+                   String str1[]= str.split("&");
+                   formId= str1[1];
+
+                    //LL 14-05-2014 modificati per dismissione del db grasp
+                    intent.putExtra(pkgName+keyIdentifer,  complete.get(position).getPathForm()); 			//formPathSalvate[position]);
+                    intent.putExtra(pkgName+keyIdentifer1, complete.get(position).getFormName());			//formNameSalvate[position]);
+                    intent.putExtra(pkgName+keyIdentifer2, complete.get(position).getFormNameInstance());	//formNameInstanceSalvate[position]);
+                    intent.putExtra(pkgName+keyIdentifer3, complete.get(position).getFormId()); 				//formIdSalvate[position]);
+                    intent.putExtra(pkgName+keyIdentifer4, complete.get(position).getIdDataBase()); 			//LLaggiunto 12 perche' e' necessario inviare a form entry idDataBase per poter fare la delite sul db delle salvate per iddbform nel caso in cui si voglia salvare la forma alla fine
+                    //dentro a formEntryActivity
+
+                    Log.i("enumeratorID:"+  complete.get(position).getFormEnumeratorId(),"FormNameInstance" + complete.get(position).getFormNameInstance() );
+
+                //check if editing is enabled in settings
+                if(editingEnabled.equalsIgnoreCase("Enabled")){
+
+                    String action = getIntent().getAction();
+                    FormEntryActivity.fromHyera = true;
+
+
+                    if (Intent.ACTION_PICK.equals(action))
+                    {
+                        //setResult(RESULT_OK, new Intent().setData(Uri.parse(salvati.get(positionSalvati).getStrPathInstance()))); LL 14-05-2014 modificata per dismissione del db grasp
+                        setResult(RESULT_OK, new Intent().setData(Uri.parse(complete.get(position).getStrPathInstance()))); //LL 14-05-2014 modificata per dismissione del db grasp
+                    }
+
+                    else
+                    {
+                        intent.setAction(Intent.ACTION_EDIT);
+                        FormListSavedActivity.SAVE = true;
+                        String extension = MimeTypeMap.getFileExtensionFromUrl(complete.get(position).getStrPathInstance()).toLowerCase();
+                        String mimeType= MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
+                        intent.setDataAndType(InstanceProviderAPI.InstanceColumns.CONTENT_URI, mimeType);
+                        startActivity(intent);//chiama formEntry
+                    }
+                }
+
+                else
+                {
 
                 String action = getIntent().getAction();
                 FormEntryActivity.fromHyera = true;
-
                 intent.putExtra("submitted", true);
-
                 intent.setAction(Intent.ACTION_EDIT);
                 String extension = MimeTypeMap.getFileExtensionFromUrl(complete.get(position).getStrPathInstance()).toLowerCase(); //LL questa posizione non e' corretta//LL rimessa per dismissione db grasp
-
-                //LL 14-05-2014 dismesso db grasp non ci sono piu' problemi di allienamento!!
-                //String extension = MimeTypeMap.getFileExtensionFromUrl(complete.get(positioncomplete).getStrPathInstance()).toLowerCase();//LL questa e' la posizione giusta (presa in relazione veramente alla form selezionata sulla lista
-
-
                 String mimeType = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
                 intent.setDataAndType(InstanceProviderAPI.InstanceColumns.CONTENT_URI, mimeType);
                 startActivity(intent);
+
+                 }//end of else
             }
         });
 
@@ -318,6 +361,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
 
                                             formHasImages = true;
                                         }
+
 
                                         if (isNetworkConnected()) {
                                             try {
@@ -554,7 +598,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
 
             Calendar rightNow = Calendar.getInstance();
             java.text.SimpleDateFormat month = new java.text.SimpleDateFormat(
-                    "MM");
+                    "MM", Locale.ENGLISH);
             // ----------------------------------------------------------------------------------------
             /**
              *  data di importazione
@@ -1130,7 +1174,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
         TreeElement dataElements = XFormParser.restoreDataModel(fileBytes, null).getRoot();
         String imageName = "";
         for (int j = 0; j < dataElements.getNumChildren(); j++) {
-            if (dataElements.getChildAt(j) != null && dataElements.getChildAt(j).getValue() != null && dataElements.getChildAt(j).getValue().getDisplayText().indexOf("jpg") > 0) {
+            if (dataElements.getChildAt(j) != null && dataElements.getChildAt(j).getValue() != null && dataElements.getChildAt(j).getValue().getDisplayText().indexOf("jpg")  > 0)  {
                 imageName = dataElements.getChildAt(j).getValue().getDisplayText();
 
                 if(imageName.contains("/instances")){
@@ -1230,6 +1274,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
                 FormCompletedAdapter adapter = (FormCompletedAdapter) listview
                         .getAdapter();
                 adapter.notifyDataSetChanged();
+                cleanDBAfterEditing(complete);
             }
         });
     }
@@ -1332,7 +1377,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
             // --------------------------------------------------------------------------------------
             Calendar rightNow = Calendar.getInstance();
             java.text.SimpleDateFormat month = new java.text.SimpleDateFormat(
-                    "MM");
+                    "MM",Locale.ENGLISH);
             // ----------------------------------------------------------------------------------------
 
             /**
@@ -1383,7 +1428,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
     public static String getCurrentTimeStamp() {
         try {
 
-            SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+            SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss",Locale.ENGLISH);
             String currentTimeStamp = dateFormat.format(new Date()); // Find todays date
 
             return currentTimeStamp;
@@ -1399,4 +1444,42 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
     }
 
 
+
+    //clean the database from the copies generated from the editing
+    //the problem is that if we press back another copy will be saved under saved tab
+    //and if we press save as completed 2 copies will be under completed tab
+
+
+public void cleanDBAfterEditing(ArrayList<FormInnerListProxy> formList) {
+    String filePath = null;
+    for (int i = 0; i < formList.size(); i++) {
+        //In case it went to saved
+        DatabaseHelper dbh = new DatabaseHelper("forms.db");
+        String updatequery = "DELETE FROM forms WHERE instanceFilePath='" + formList.get(i).getStrPathInstance() + "' AND status='saved'";
+        dbh.getReadableDatabase().execSQL(updatequery);
+        //In case it went to completed
+        String selectQuery = "SELECT formFilePath FROM forms WHERE instanceFilePath='" + formList.get(i).getStrPathInstance() + "' AND status='completed'";
+        Cursor c = dbh.getReadableDatabase().rawQuery(selectQuery, null);
+        try {
+
+            if (c.moveToFirst()) {
+                do {
+            filePath= c.getString(0);
+                } while (c.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (c != null) {
+                c.close();
+                dbh.close();
+                ApplicationExt.getDatabaseAdapter().close();
+            }
+        }
+
+        if (!filePath.contains("/forms")) {
+            String updatequery1 = "DELETE FROM forms WHERE formFilePath='" + filePath + "' AND status='completed'";
+            dbh.getReadableDatabase().execSQL(updatequery1);
+        }
+}}
 }

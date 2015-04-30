@@ -30,7 +30,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.media.ThumbnailUtils;
 import android.net.Uri;
+import android.provider.MediaStore;
 import android.provider.MediaStore.Images;
 import android.util.Log;
 import android.util.TypedValue;
@@ -43,6 +45,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import org.javarosa.core.model.data.IAnswerData;
 import org.javarosa.core.model.data.StringData;
@@ -63,9 +66,10 @@ public class ImageWidget extends QuestionWidget implements IBinaryWidget {
 
     private Button mCaptureButton;
     private Button mChooseButton;
-    
+    private Button videoCaptureButton;
 
     private static ImageView mImageView;
+    private static VideoView vImageView;
 
     private String mBinaryName;
 
@@ -125,8 +129,6 @@ public class ImageWidget extends QuestionWidget implements IBinaryWidget {
                 try
                 {
                  //   if (i.resolveActivity(context.getPackageManager()) != null) {
-
-
                    ((Activity) getContext()).startActivityForResult(i, FormEntryActivity.IMAGE_CAPTURE);
                         mWaitingForData = true;
                  //   }
@@ -145,6 +147,66 @@ public class ImageWidget extends QuestionWidget implements IBinaryWidget {
 
             }
         });
+        ////////////////////////////////////////////////////////////////////
+        // setup video capture button
+        videoCaptureButton = new Button(getContext());
+        videoCaptureButton.setText(getContext().getString(R.string.capture_video));
+        videoCaptureButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, mAnswerFontsize);
+        videoCaptureButton.setPadding(20, 20, 20, 20);
+        videoCaptureButton.setEnabled(!prompt.isReadOnly());
+        if(prompt.isRequired()){
+            mCaptureButton.setBackgroundColor(colorHelper.getMandatoryBackgroundColor());
+            //   mChooseButton.setBackgroundColor(colorHelper.getMandatoryBackgroundColor());
+        }
+        /**
+         * launch capture intent on click
+         */
+        videoCaptureButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v)
+            {
+
+                mErrorTextView.setVisibility(View.GONE);
+                Intent i = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
+                // We give the camera an absolute filename/path where to put the
+                // picture because of bug:
+                // http://code.google.com/p/android/issues/detail?id=1480
+                // The bug appears to be fixed in Android 2.0+, but as of feb 2,
+                // 2010, G1 phones only run 1.6. Without specifying the path the
+                // images returned by the camera in 1.6 (and earlier) are ~1/4
+                // the size. boo.
+
+                // if this gets modified, the onActivityResult in
+//                 FormEntyActivity will also need to be updated.
+                //////////**********************************????////////////////////
+                i.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(Collect.TMPFILE_PATH)));
+                try
+                {
+                    //   if (i.resolveActivity(context.getPackageManager()) != null) {
+
+
+                    ((Activity) getContext()).startActivityForResult(i, FormEntryActivity.VIDEO_CAPTURE);
+                    mWaitingForData = true;
+                    //   }
+                    //********************
+                    //mBinaryName =
+                    //********************
+
+                } catch (ActivityNotFoundException e) {
+                    Toast.makeText(getContext(),
+                            getContext().getString(R.string.activity_not_found, "video capture"),
+                            Toast.LENGTH_SHORT);
+                }
+                //*((FormEntryActivity)getContext()).refreshCurrentView(prompt.getIndex());
+                //mBinaryName = prompt.getAnswerText();
+                //previewPhoto();
+
+            }
+        });
+
+
+
+
+        //////////////////////////////////////////////////////////////////////
 
         // setup chooser button
         mChooseButton = new Button(getContext());
@@ -164,7 +226,7 @@ public class ImageWidget extends QuestionWidget implements IBinaryWidget {
                 mErrorTextView.setVisibility(View.GONE);
                 Intent i = new Intent(Intent.ACTION_GET_CONTENT);
                 i.addCategory(Intent.CATEGORY_OPENABLE);
-                i.setType("image/* ");
+                i.setType("image/* video/* ");
 
                 try {
                     ((Activity) getContext()).startActivityForResult(i, FormEntryActivity.IMAGE_CHOOSER);
@@ -191,7 +253,7 @@ public class ImageWidget extends QuestionWidget implements IBinaryWidget {
         mImageView = new ImageView(context);
         addView(mImageView);
         //*********
-        
+
         mErrorTextView.setVisibility(View.GONE);
 
         // retrieve answer from data model and update ui
@@ -471,4 +533,12 @@ public class ImageWidget extends QuestionWidget implements IBinaryWidget {
         });
         */
 	}
+
+    public static void previewVideo(String sourceVideoPath) {
+        Bitmap thumbnail = ThumbnailUtils.createVideoThumbnail(sourceVideoPath,
+                MediaStore.Images.Thumbnails.MINI_KIND);
+   mImageView.setImageBitmap(thumbnail);
+
+    }
+
 }

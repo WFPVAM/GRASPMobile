@@ -342,7 +342,7 @@
     <string name="tab_saved">Saved</string>
     <string name="tab_completed">Completed</string>
     <string name="tab_submitted">Submitted</string>
-    <string name="tab_finalized">Pending</string>
+    <string name="tab_finalized">Submit Images</string>
 
     <string name="exit_button">EXIT</string>
 

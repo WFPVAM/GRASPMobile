@@ -11,6 +11,7 @@ import android.os.Environment;
 import android.os.StrictMode;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -22,9 +23,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
-import java.net.InetAddress;
 import java.net.URL;
-import java.net.UnknownHostException;
 import java.util.Locale;
 
 /**
@@ -130,27 +129,24 @@ public class ControlActivity extends Activity
                 DownloadFile downloadFile = new DownloadFile();
 //                downloadFile.execute(getString(R.string.new_app_url));
                 String apkURL= new String();
-                InetAddress actualIP;
-                String address="";
-                //TODO Change the IP address to the IP address of the server
-                //TODO Change the apk file name
+//                InetAddress actualIP,actualIP1;
+//                String address="";
+//                String address1="";
+
                 String ip = settings.getString(PreferencesActivity.KEY_IP,null);
 //                apkURL =ip +":80/graspreporting/Public/GraspMobile.apk";
-//                apkURL ="http://grasp.wfppal.org:80/graspreporting/Public/GraspMobile.apk";
-                try {
-                    actualIP = InetAddress.getByName("grasp.wfppal.org");
-                    address = actualIP.getHostAddress();
-                } catch (UnknownHostException e) {
-                    e.printStackTrace();
-                }
-            if(ip.equalsIgnoreCase(address)){
+
+
+            if(Patterns.WEB_URL.matcher(ip).matches()){
+
+
                 apkURL ="http://"+ ip +":80/graspreporting/Public/GraspMobile.apk";
                 downloadFile.execute(apkURL);
             }
                else{
                 Toast.makeText(getBaseContext(),"Server Unavailable!",Toast.LENGTH_LONG).show();
             }
-               // downloadFile.execute(apkURL);
+
 
 
 

@@ -75,6 +75,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Set;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -132,7 +133,8 @@ public class FormEntryActivity extends Activity implements AnimationListener,
     public static final int AUDIO_CHOOSER = 8;
     public static final int VIDEO_CHOOSER = 9;
 //////////////////////////////////////////////////////////////////////////////////
-//
+public static String  videoPath;
+public boolean formHasVideos;
 //    private final static String CAPTURED_PHOTO_PATH_KEY = "mCurrentPhotoPath";
     private final static String CAPTURED_PHOTO_URI_KEY = "mCapturedImageURI";
 //
@@ -189,7 +191,7 @@ public class FormEntryActivity extends Activity implements AnimationListener,
     private SaveToDiskTask mSaveToDiskTask;
 
     public static String formName;
-    static String formNameInstance;
+    public static String formNameInstance;
     public static String formId;
     public static String formEnumeratorId;
     public static String formIdDataBase;
@@ -481,11 +483,8 @@ public class FormEntryActivity extends Activity implements AnimationListener,
             return;
         }
 
-
-
         ContentValues values;
     //   Uri imageURI;
-
         switch (requestCode) {
             case BARCODE_CAPTURE:
                 String sb = intent.getStringExtra("SCAN_RESULT");
@@ -504,60 +503,7 @@ public class FormEntryActivity extends Activity implements AnimationListener,
                  * The intent is empty, but we know we saved the image to the temp file
                  */
 
-
 //--------------------------------------------------------------------------------
-//
-//                String[] projection = {
-//                        MediaStore.Images.Thumbnails._ID,  // The columns we want
-//                        MediaStore.Images.Thumbnails.IMAGE_ID,
-//                        MediaStore.Images.Thumbnails.KIND,
-//                        MediaStore.Images.Thumbnails.DATA};
-//                String selection = MediaStore.Images.Thumbnails.KIND + "=" + // Select only mini's
-//                        MediaStore.Images.Thumbnails.MINI_KIND;
-//
-//                String sort = MediaStore.Images.Thumbnails._ID + " DESC";
-//
-////At the moment, this is a bit of a hack, as I'm returning ALL images, and just taking the latest one. There is a better way to narrow this down I think with a WHERE clause which is currently the selection variable
-//                Cursor myCursor = this.managedQuery(MediaStore.Images.Thumbnails.EXTERNAL_CONTENT_URI, projection, selection, null, sort);
-//
-//                long imageId = 0l;
-//                long thumbnailImageId = 0l;
-//                String thumbnailPath = "";
-//
-//                try {
-//                    myCursor.moveToFirst();
-//                    imageId = myCursor.getLong(myCursor.getColumnIndexOrThrow(MediaStore.Images.Thumbnails.IMAGE_ID));
-//                    thumbnailImageId = myCursor.getLong(myCursor.getColumnIndexOrThrow(MediaStore.Images.Thumbnails._ID));
-//                    thumbnailPath = myCursor.getString(myCursor.getColumnIndexOrThrow(MediaStore.Images.Thumbnails.DATA));
-//                } finally {
-//                    myCursor.close();
-//                }
-//
-//                //Create new Cursor to obtain the file Path for the large image
-//
-//                String[] largeFileProjection = {
-//                        MediaStore.Images.ImageColumns._ID,
-//                        MediaStore.Images.ImageColumns.DATA
-//                };
-//
-//                String largeFileSort = MediaStore.Images.ImageColumns._ID + " DESC";
-//                myCursor = this.managedQuery(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, largeFileProjection, null, null, largeFileSort);
-//                String largeImagePath = "";
-//
-//                try {
-//                    myCursor.moveToFirst();
-//
-////This will actually give yo uthe file path location of the image.
-//                    largeImagePath = myCursor.getString(myCursor.getColumnIndexOrThrow(MediaStore.Images.ImageColumns.DATA));
-//                } finally {
-//                    myCursor.close();
-//                }
-//                // These are the two URI's you'll be interested in. They give you a handle to the actual images
-//                Uri uriLargeImage = Uri.withAppendedPath(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, String.valueOf(imageId));
-//                Uri uriThumbnailImage = Uri.withAppendedPath(MediaStore.Images.Thumbnails.EXTERNAL_CONTENT_URI, String.valueOf(thumbnailImageId));
-//
-//
-//
 
 //-----------------------------------------------------------------------------------
 
@@ -643,54 +589,68 @@ public class FormEntryActivity extends Activity implements AnimationListener,
                 sourceImagePath = cursor.getString(column_index);
             }
 
-                /**
-                 *  Copy file to sdcard
-                 */
-                String mInstanceFolder1 = mInstancePath.substring(0,  mInstancePath.lastIndexOf("/") + 1);
-                String destImagePath = mInstanceFolder1 + "/"+ System.currentTimeMillis() + ".jpg";
 
-                File source = new File(sourceImagePath);
-                File newImage = new File(destImagePath);
-                FileUtils.copyFile(source, newImage);
+                if(sourceImagePath.contains("mp4")){
+                    String mInstanceFolder1 = mInstancePath.substring(0, mInstancePath.lastIndexOf("/") + 1);
+                   videoPath = mInstanceFolder1 + "/" + System.currentTimeMillis() + ".mp4";
+
+                    File source = new File(sourceImagePath);
+                    File newImage = new File(videoPath);
+                    FileUtils.copyFile(source, newImage);
+                    ImageWidget.previewVideo(videoPath);
 
 
-                if (newImage.exists()) {
+                }
+                else {
                     /**
-                     *  Add the new image to the Media content provider so that the
-                     *  viewing is fast in Android 2.0+
+                     *  Copy file to sdcard
                      */
+                    String mInstanceFolder1 = mInstancePath.substring(0, mInstancePath.lastIndexOf("/") + 1);
+                    String destImagePath = mInstanceFolder1 + "/" + System.currentTimeMillis() + ".jpg";
 
-                    values = new ContentValues(6);
-                    values.put(Images.Media.TITLE, newImage.getName());
-                    values.put(Images.Media.DISPLAY_NAME, newImage.getName());
-                    values.put(Images.Media.DATE_TAKEN, System.currentTimeMillis());
-                    values.put(Images.Media.MIME_TYPE, "image/jpeg");
-                    values.put(Images.Media.DATA, newImage.getAbsolutePath());
+                    File source = new File(sourceImagePath);
+                    File newImage = new File(destImagePath);
+                    FileUtils.copyFile(source, newImage);
 
-                    imageURI = getContentResolver().insert(
-                            Images.Media.EXTERNAL_CONTENT_URI, values);
-                    Log.i(t, "Inserting image returned uri = " + imageURI.toString());
+
+                    if (newImage.exists()) {
+                        /**
+                         *  Add the new image to the Media content provider so that the
+                         *  viewing is fast in Android 2.0+
+                         */
+
+                        values = new ContentValues(6);
+                        values.put(Images.Media.TITLE, newImage.getName());
+                        values.put(Images.Media.DISPLAY_NAME, newImage.getName());
+                        values.put(Images.Media.DATE_TAKEN, System.currentTimeMillis());
+                        values.put(Images.Media.MIME_TYPE, "image/jpeg");
+                        values.put(Images.Media.DATA, newImage.getAbsolutePath());
+
+                        imageURI = getContentResolver().insert(
+                                Images.Media.EXTERNAL_CONTENT_URI, values);
+                        Log.i(t, "Inserting image returned uri = " + imageURI.toString());
 
 //                      /*
 //                 * Compress image
 //                 */
 //                    compressImage(destImagePath, 400, 400, 100, 0);
 
-                    ((ODKView) mCurrentView).setBinaryData(imageURI);
-                    ImageWidget.previewPhoto(destImagePath, FormEntryActivity.this);
-                    saveAnswersForCurrentScreen(DO_NOT_EVALUATE_CONSTRAINTS);
-                } else {
-                    Log.e(t, "NO IMAGE EXISTS at: " + source.getAbsolutePath());
+                        ((ODKView) mCurrentView).setBinaryData(imageURI);
+                        ImageWidget.previewPhoto(destImagePath, FormEntryActivity.this);
+                        saveAnswersForCurrentScreen(DO_NOT_EVALUATE_CONSTRAINTS);
+                    } else {
+                        Log.e(t, "NO IMAGE EXISTS at: " + source.getAbsolutePath());
+                    }
+                    refreshCurrentView(null);
                 }
-                refreshCurrentView(null);
                 break;
             case AUDIO_CAPTURE:
             case VIDEO_CAPTURE:
 ////            // get the file path and create a copy in the instance folder
-//            //    String binaryPath = VideoWidget.getPathFromUri((Uri)Collect.TMPFILE_PATH);
+//               String binaryPath = VideoWidget.getPathFromUri((Uri) Collect.TMPFILE_PATH);
 //                String extension = binaryPath.substring(binaryPath.lastIndexOf("."));
 //                String destVideoPath = mInstanceFolder + File.separator + System.currentTimeMillis() + extension;
-//                File fi = new File(Collect.TMPFILE_PATH);
+//                File fil = new File(Collect.TMPFILE_PATH);
 //                File Vsource = new File(binaryPath);
 //                File newVideo = new File(destVideoPath);
 //                FileUtils.copyFile(Vsource, newVideo);
@@ -743,6 +703,8 @@ public class FormEntryActivity extends Activity implements AnimationListener,
 
    //    refreshCurrentView(null);
     }
+
+
 
 
     private void compressImage(String imagePath, int newWidth, int newHeight, int quality, float rotateDegree) {
@@ -1172,7 +1134,7 @@ public class FormEntryActivity extends Activity implements AnimationListener,
                                     // --------------------------------------------------------------------------------------
                                     Calendar rightNow = Calendar.getInstance();
                                     java.text.SimpleDateFormat month = new java.text.SimpleDateFormat(
-                                            "MM");
+                                            "MM",Locale.ENGLISH);
                                     // ----------------------------------------------------------------------------------------
 
                                     /**
@@ -2175,7 +2137,7 @@ public class FormEntryActivity extends Activity implements AnimationListener,
         // Set saved answer path
         if (mInstancePath == null) {
             // Create new answer folder.
-            String time = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss")
+            String time = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss",Locale.ENGLISH)
                     .format(Calendar.getInstance().getTime());
             String file = mFormPath.substring(mFormPath.lastIndexOf('/') + 1,mFormPath.lastIndexOf('.'));
             String path = Collect.INSTANCES_PATH + "/" + file + "_" + time;
@@ -2496,7 +2458,7 @@ public class FormEntryActivity extends Activity implements AnimationListener,
     public static String getCurrentTimeStamp() {
         try {
 
-            SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+            SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss", Locale.ENGLISH);
             String currentTimeStamp = dateFormat.format(new Date()); // Find todays date
 
             return currentTimeStamp;
@@ -2506,5 +2468,14 @@ public class FormEntryActivity extends Activity implements AnimationListener,
             return null;
         }
     }
-
+//    public static boolean isFormHasVideos(String videoURI){
+//        if(videoURI != null)
+//
+//            return true;
+//        else
+//            return false;
+//    }
+//    public static String getVideoPath() {
+//        return  videoPath;
+//    }
 }

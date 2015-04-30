@@ -81,6 +81,23 @@
         <Preference
             android:key="button_convert_submitted_to_complete"
             android:title="@string/convert_submitted_to_complete" />
+
+
+        <ListPreference
+            android:defaultValue="Disabled"
+            android:dialogTitle="Edit Completed forms"
+            android:entries="@array/editing_completed"
+            android:entryValues="@array/editing_completed_values"
+            android:key="button_completed_Editing"
+            android:title="@string/complete_Editing" />
+
+        <!--<Preference-->
+            <!--android:key="button_completed_Editing"-->
+            <!--android:title="@string/complete_Editing" />-->
+        <!--<Preference-->
+            <!--android:key="button_completed_Editing_disable"-->
+            <!--android:title="@string/complete_Editing_disable" />-->
+
     </PreferenceCategory>
     <!-- PreferenceCategory android:title="@string/colors"  >
         <ListPreference
