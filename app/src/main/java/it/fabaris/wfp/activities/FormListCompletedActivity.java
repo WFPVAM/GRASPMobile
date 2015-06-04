@@ -122,7 +122,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
     private ListView listview;
 
     private SharedPreferences settings;
-    private String connectionType;
+    private String connectionType ;
 
     private String numClient;
     private String senderPhone;
@@ -131,7 +131,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
     private String encodeXml;
     private static boolean isSendAllForms = false;
     public boolean formHasImages =false;
-    public boolean formHasVideos =false;
+    public boolean formHasVideos =true;
     public String VideoURI;
     ///////////////////////////////////////////////
     public static String formId;
@@ -177,7 +177,11 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
                 istance.clear();
                 isSendAllForms = true;
                 settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-                connectionType = settings.getString(PreferencesActivity.KEY_CONNECTION_TYPE, getString(R.string.default_connection_type));
+
+                //connectionType = settings.getString(PreferencesActivity.KEY_CONNECTION_TYPE, getString(R.string.default_connection_type));
+                if (connectionType.equalsIgnoreCase("")) {
+                    connectionType = "GPRS/UMTS preferred";
+                }
 
                 sendFormInList(complete);
             }
@@ -323,7 +327,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
 
                                         idFormNameInstance = mycompleted.get(position).getFormName();
                                         ///////////////////////////////////////////////////////////////c
-                                        String str = mycompleted.get(position).getStrPathInstance();
+                                         String str = mycompleted.get(position).getStrPathInstance();
 //                                        String str1[] = str.replace("/storage/emulated/0/GRASP/instances/", "").split("/");
 //                                        String formId = str1[0];
                                         String str1[] = str.substring(str.lastIndexOf("instances")).split("/");
@@ -502,7 +506,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
 														 */    //LL
                                                 } else if (connectionType.equalsIgnoreCase("gprs/umts only")) { // gprs/umts only
                                                     //it is not possible to send the form wait for the connection
-                                                    CharSequence[] items = {"There isn't a connection it isn't possible send the form"};
+                                                    CharSequence[] items = {"There isn't a connection. It's not possible to send the form"};
                                                     new AlertDialog.Builder(
                                                             FormListCompletedActivity.this)
                                                             .setSingleChoiceItems(
@@ -638,8 +642,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
                     istance.get(k));
 
             dbh.getReadableDatabase().execSQL(updatequery);
-
-            dbh.close();
+             dbh.close();
         }
     }
 	/*
@@ -1174,7 +1177,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
         TreeElement dataElements = XFormParser.restoreDataModel(fileBytes, null).getRoot();
         String imageName = "";
         for (int j = 0; j < dataElements.getNumChildren(); j++) {
-            if (dataElements.getChildAt(j) != null && dataElements.getChildAt(j).getValue() != null && dataElements.getChildAt(j).getValue().getDisplayText().indexOf("jpg")  > 0)  {
+            if (dataElements.getChildAt(j) != null && dataElements.getChildAt(j).getValue() != null && dataElements.getChildAt(j).getValue().getDisplayText().indexOf("jpg")  > 0 || dataElements.getChildAt(j) != null && dataElements.getChildAt(j).getValue() != null && dataElements.getChildAt(j).getValue().getDisplayText().indexOf("mp4")  > 0)  {
                 imageName = dataElements.getChildAt(j).getValue().getDisplayText();
 
                 if(imageName.contains("/instances")){

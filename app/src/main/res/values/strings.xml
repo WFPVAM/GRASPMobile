@@ -114,6 +114,7 @@
 	<string name="do_not_change">Cancel</string>
 	<string name="do_not_exit">Cancel</string>
 	<string name="do_not_save">Ignore Changes</string>
+    <string name="done_location">Done!</string>
 	<string name="enter">start</string>
 	<string name="entering_repeat">Yes</string>
 	<string name="entering_repeat_ask">Add New Group?</string>
@@ -171,7 +172,7 @@
 	<string name="play_audio">Play Sound</string>
 	<string name="play_video">Play Video</string>
 	<string name="please_wait">Please wait a few moments.</string>
-	<string name="please_wait_long">Please wait. This could take a few minutes.</string>
+	<string name="please_wait_long">Please wait for accuracy to appear. This could take a few minutes.</string>
 	<string name="quit_application">Exit %s</string>
 	<string name="quit_entry">Save Form as Completed</string>
 	<string name="refresh">SYNCHRONIZE</string>
@@ -333,7 +334,9 @@
 	<string name="hard_reset">Do you want to make a cancellation of forms previously completed and sync, and restore the application as a new installation?</string>
 	<string name="yes_pref">Yes, delete all</string>
 	<string name="no_pref">No, only update</string>
-	
+    <string name="yes">Yes</string>
+    <string name="update">Are you sure you want to update the application with newer version?</string>
+
 	<string name="send_form_by_network_or_sms">Choose how to send the forms</string>
     <string name="Network_unavailable">No Networks available, send by SMS?</string>
 	<string name="gps">Network</string>
@@ -343,11 +346,11 @@
 	<string name="portocol_choice">Protocol</string>
 	<string name="choose_protocol">Choose the protocol</string>
 	<string name="digit_server_ip">Digit server IP</string>
-	<string name="server_IP">IP</string>
+	<string name="server_IP">Server Address</string>
 	<string name="digit_server_port">Digit server port</string>
 	<string name="server_port">Port</string>
     <string name="digit_server_directory">Digit virtual directory</string>
-    <string name="server_directory">Virtual directory</string>
+    <string name="server_directory">Directory</string>
 
     <string name="take_signature">Take Signature</string>
 

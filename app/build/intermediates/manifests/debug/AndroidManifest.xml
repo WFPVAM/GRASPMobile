@@ -12,7 +12,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="it.fabaris.wfp.activities"
     android:versionCode="1"
-    android:versionName="0.1.59" >
+    android:versionName="0.1.62" >
 
     <uses-sdk
         android:minSdkVersion="8"

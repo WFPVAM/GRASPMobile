@@ -1,10 +1,13 @@
 package it.fabaris.wfp.activities;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
@@ -221,6 +224,37 @@ public class ControlActivity extends Activity
             mProgressDialog.setIndeterminate(false);
             mProgressDialog.setMax(100);
             mProgressDialog.setProgress(progress[0]);
+        }
+        protected void onPostExecute(String sResponse) {
+            mProgressDialog.dismiss();
+            if (sResponse == null) {
+                DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which) {
+                            case DialogInterface.BUTTON_POSITIVE:
+                                //Yes button clicked
+                                Intent updateApp = new Intent(Intent.ACTION_VIEW);
+                                updateApp.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                updateApp.setDataAndType(Uri.fromFile(new File(Environment.getExternalStorageDirectory() + "/temporary/" + "grasp.apk")), "application/vnd.android.package-archive");
+                                startActivity(updateApp);
+                                break;
+
+                            case DialogInterface.BUTTON_NEGATIVE:
+                                //No button clicked
+
+                                finish();
+
+                                break;
+                        }
+                    }
+                };
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(ControlActivity.this);
+                builder.setMessage(getString(R.string.update))
+                        .setPositiveButton(getString(R.string.yes), dialogClickListener)
+                        .setNegativeButton(getString(R.string.no), dialogClickListener).show();
+            }
         }
 }
 

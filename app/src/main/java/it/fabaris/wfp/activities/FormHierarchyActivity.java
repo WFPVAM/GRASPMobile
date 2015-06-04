@@ -8,13 +8,13 @@
  ******************************************************************************/
 package it.fabaris.wfp.activities;
 
-import it.fabaris.wfp.adapters.HierarchyListAdapter;
-import it.fabaris.wfp.logic.FormController;
-import it.fabaris.wfp.logic.HierarchyElement;
-import it.fabaris.wfp.utility.ColorHelper;
-
-import java.util.ArrayList;
-import java.util.List;
+import android.app.ListActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.View;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import org.javarosa.core.model.Constants;
 import org.javarosa.core.model.FormIndex;
@@ -22,14 +22,13 @@ import org.javarosa.form.api.FormEntryCaption;
 import org.javarosa.form.api.FormEntryController;
 import org.javarosa.form.api.FormEntryPrompt;
 
-import android.app.ListActivity;
-import android.os.Bundle;
-import android.os.Looper;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.view.View;
-import android.widget.ListView;
-import android.widget.TextView;
+import java.util.ArrayList;
+import java.util.List;
+
+import it.fabaris.wfp.adapters.HierarchyListAdapter;
+import it.fabaris.wfp.logic.FormController;
+import it.fabaris.wfp.logic.HierarchyElement;
+import it.fabaris.wfp.utility.ColorHelper;
 
 /**
  * Class is responsible for displaying the index of the form

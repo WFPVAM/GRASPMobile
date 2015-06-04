@@ -24,49 +24,31 @@
 
 package it.fabaris.wfp.widget;
 
-import it.fabaris.wfp.activities.FormEntryActivity;
-import it.fabaris.wfp.activities.PreferencesActivity;
-import it.fabaris.wfp.utility.ConstantUtility;
-import it.fabaris.wfp.view.ODKView;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
-import java.text.NumberFormat;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Set;
-import java.util.StringTokenizer;
-
-import org.javarosa.core.model.FormIndex;
-import org.javarosa.core.model.SelectChoice;
-import org.javarosa.core.model.data.DecimalData;
-import org.javarosa.core.model.data.IAnswerData;
-import org.javarosa.core.model.data.IntegerData;
-import org.javarosa.core.model.data.SelectOneData;
-import org.javarosa.core.model.data.StringData;
-import org.javarosa.core.model.data.helper.Selection;
-import org.javarosa.form.api.FormEntryController;
-import org.javarosa.form.api.FormEntryPrompt;
-import org.joda.time.DateTime;
-
 import android.content.Context;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.InputType;
 import android.text.TextWatcher;
 import android.text.method.DigitsKeyListener;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
-import android.view.View.OnFocusChangeListener;
 import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
+
+import org.javarosa.core.model.FormIndex;
+import org.javarosa.core.model.data.DecimalData;
+import org.javarosa.core.model.data.IAnswerData;
+import org.javarosa.form.api.FormEntryController;
+import org.javarosa.form.api.FormEntryPrompt;
+
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Set;
+
+import it.fabaris.wfp.activities.FormEntryActivity;
+import it.fabaris.wfp.utility.ConstantUtility;
+import it.fabaris.wfp.view.ODKView;
 
 /**
  * A widget that restricts values to floating point numbers.
@@ -75,7 +57,7 @@ import android.widget.EditText;
  * @author Fabaris Srl: Leonardo Luciani www.fabaris.it
  */
 public class DecimalWidget extends StringWidget    //QuestionAndStringAswerWidget
-{//StringWidget { //QuestionWidget {
+{  //StringWidget { //QuestionWidget {
 	
 	//String s = null;
 	
@@ -135,15 +117,18 @@ public class DecimalWidget extends StringWidget    //QuestionAndStringAswerWidge
 			@Override
 			public void afterTextChanged(Editable s) {
 
+
 //				if(before==count)return;
 				try{
-					HashMap<FormIndex, IAnswerData> answers = ((ODKView) ((FormEntryActivity) context).mCurrentView).getAnswers();
+					HashMap<FormIndex,IAnswerData> answers = ((ODKView) ((FormEntryActivity) context).mCurrentView).getAnswers();
 					Set<FormIndex> indexKeys = answers.keySet();
 						
 						final FormIndex index = DecimalWidget.this.getPrompt().getIndex();
-						
+
 						int saveStatus = ((FormEntryActivity) context).saveAnswer(answers.get(index), index, true);
-						switch (saveStatus) {
+                         ////******Change*****/////
+                         QuestionAndStringAswerWidget.err = false;
+                         switch (saveStatus) {
 						//to assign the right color to the widget that represent the question
 						case FormEntryController.ANSWER_OK:
 							assignStandardColors();
@@ -161,19 +146,20 @@ public class DecimalWidget extends StringWidget    //QuestionAndStringAswerWidge
 							}
 							//costanti violate
 						case FormEntryController.ANSWER_CONSTRAINT_VIOLATED:
-							/*
-							if(mReadOnly)
-							{
-								changeColor();
-								//break;
-							}
-							*/
+						////////////////
+//							if(mReadOnly)
+//							{
+//								changeColor();
+//								break;
+//							}
+//						////////////////
 							QuestionAndStringAswerWidget.err = true;
 							assignErrorColors();
 							break;
 							
 						default:
-							((FormEntryActivity) context).refreshCurrentView(index);	
+							((FormEntryActivity) context).refreshCurrentView(index);
+
 							break;
 						}
 				}catch(Exception e){

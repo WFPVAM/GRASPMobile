@@ -114,7 +114,6 @@ public class FormListSavedActivity extends Activity
 				intent.putExtra(pkgName+keyIdentifer2, salvati.get(positionSalvati).getFormNameInstance());	//formNameInstanceSalvate[position]);
 				intent.putExtra(pkgName+keyIdentifer3, salvati.get(positionSalvati).getFormId()); 				//formIdSalvate[position]);
 				*/
-
                 //LL 14-05-2014 modificati per dismissione del db grasp
                 intent.putExtra(pkgName+keyIdentifer,  saved.get(position).getPathForm()); 			//formPathSalvate[position]);
                 intent.putExtra(pkgName+keyIdentifer1, saved.get(position).getFormName());			//formNameSalvate[position]);

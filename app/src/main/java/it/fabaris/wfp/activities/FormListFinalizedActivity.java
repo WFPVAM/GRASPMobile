@@ -12,6 +12,7 @@ package it.fabaris.wfp.activities;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
@@ -33,7 +34,12 @@ import android.widget.Toast;
 import org.javarosa.core.model.instance.TreeElement;
 import org.javarosa.xform.parse.XFormParser;
 
+import java.io.BufferedInputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -54,13 +60,13 @@ import utils.ApplicationExt;
  * Class that defines the tab for the list of the finalized forms
  *
  */
-public class FormListFinalizedActivity extends Activity implements MyCallback
-{
-    public interface FormListHandlerFinalized
-    {
+public class FormListFinalizedActivity extends Activity implements MyCallback {
+    public interface FormListHandlerFinalized {
         public ArrayList<FormInnerListProxy> getFinalizedForm();
+
         public void catchCallBackFinalized(String[] finalized);
     }
+
     public FormListHandlerFinalized formListHandler;
 
 
@@ -75,15 +81,16 @@ public class FormListFinalizedActivity extends Activity implements MyCallback
     private String encodedImage;
     private String httpServer;
     private String senderPhone;
-    public  String nomeform;
-    public  String autore;
-    boolean formHasImages=true;
-   // public String idFormNameInstance;
+    public String nomeform;
+    public String autore;
+    boolean formHasImages = true;
+    boolean video = true;
+    // public String idFormNameInstance;
     public static ArrayList<String> istance;
+    static ContentResolver CR;
 
 
-
-    public void onCreate(Bundle savedInstanceState){
+    public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tabpending);
@@ -93,45 +100,41 @@ public class FormListFinalizedActivity extends Activity implements MyCallback
         finalizzate = getIntent().getExtras().getParcelableArrayList("finalized");
         istance = new ArrayList<String>();
 
-        listview = (ListView)findViewById(R.id.listViewPending);
+        listview = (ListView) findViewById(R.id.listViewPending);
         listview.setCacheColorHint(00000000);
         listview.setClickable(true);
 
         adapter = new FormPendingAdapter(this, finalizzate);
         listview.setAdapter(adapter);
 
-         /****   Settings    ****/
+        /****   Settings    ****/
         settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         numClient = settings.getString(PreferencesActivity.KEY_CLIENT_TELEPHONE, getString(R.string.default_client_telephone));
         senderPhone = settings.getString(PreferencesActivity.KEY_CLIENT_TELEPHONE, getString(R.string.default_client_telephone));
         numModem = settings.getString(PreferencesActivity.KEY_SERVER_TELEPHONE, getString(R.string.default_server_telephone));
-        httpServer = settings.getString(PreferencesActivity.KEY_SERVER_URL,getString(R.string.default_server_url));
+        httpServer = settings.getString(PreferencesActivity.KEY_SERVER_URL, getString(R.string.default_server_url));
 
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-        Button  sendImages =(Button) findViewById(R.id.send_img);
+        Button sendImages = (Button) findViewById(R.id.send_img);
         sendImages.setClickable(true);
-
         sendImages.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (!isNetworkConnected()) {
 
                     Toast.makeText(getApplicationContext(), "Connection not prestent!", Toast.LENGTH_LONG).show();
+                } else {
+                    sendImagesInList(finalizzate);
+                    adapter.notifyDataSetInvalidated();
+                    adapter.notifyDataSetChanged();
                 }
-                else{
-                sendImagesInList(finalizzate);
-                adapter.notifyDataSetInvalidated();
-                adapter.notifyDataSetChanged();
-            }}
+            }
 
         });
 
-        listview.setOnItemClickListener(new OnItemClickListener()
-        {
-            public void onItemClick(AdapterView<?> parent, View v, int position, long id)
-            {
-
+        listview.setOnItemClickListener(new OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
 
 
             }
@@ -173,23 +176,22 @@ public class FormListFinalizedActivity extends Activity implements MyCallback
 //                                                Bitmap originalImage = BitmapFactory.decodeFile(imagePath);
 //                                                ByteArrayOutputStream baos = new ByteArrayOutputStream();
 //                                                originalImage.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-////                                                byte[] imageBytes = baos.toByteArray();
-////                                                encodedImage = Base64.encodeToString(imageBytes, Base64.DEFAULT);
+////                                              byte[] imageBytes = baos.toByteArray();
+////                                              encodedImage = Base64.encodeToString(imageBytes, Base64.DEFAULT);
 //                                                byte[] compresedImageBytes = FileUtils.compressImage(imagePath,0,0,80);
-//                                                 encodedImage = Base64.encodeToString(compresedImageBytes, Base64.DEFAULT);
-                                                byte[] compresedImageBytes = FileUtils.compressImage(imagePath,1600,1200,80);
-                                                 encodedImage = Base64.encodeToString(compresedImageBytes, Base64.DEFAULT);
-
+//                                                encodedImage = Base64.encodeToString(compresedImageBytes, Base64.DEFAULT);
+                                                byte[] compresedImageBytes = FileUtils.compressImage(imagePath, 1600, 1200, 80);
+                                                encodedImage = Base64.encodeToString(compresedImageBytes, Base64.DEFAULT);
 
 
                                                 ///////////////////////////////////////////////////////////////c
 
 //                                                String str1[] = str.replace("/storage/emulated/0/GRASP/instances/", "").split("/");
 //                                                String formId = str1[0] + "_img"+ "_" + imageName ;
-                                                  String str1[] = str.substring(str.lastIndexOf("instances")).split("/");
-                                                  String formId = str1[1] + "_" + imageName + "_image" ;
+                                                String str1[] = str.substring(str.lastIndexOf("instances")).split("/");
+                                                String formId = str1[1] + "_" + imageName + "_image";
 
-                                                 istance.clear();
+                                                istance.clear();
 
                                                 if (isNetworkConnected()) {
                                                     try {
@@ -227,17 +229,76 @@ public class FormListFinalizedActivity extends Activity implements MyCallback
                                                 }
                                                 //}	LL per form di test
                                             }
-                                            //check if it has videos
-                                            /*********************************************/
+//***********************************************************check if it has videos*********************************//
 
-                                             if (dataElements.getChildAt(j) != null && dataElements.getChildAt(j).getValue() != null && dataElements.getChildAt(j).getValue().getDisplayText().indexOf("mp4") > 0) {
+                                            if (dataElements.getChildAt(j) != null && dataElements.getChildAt(j).getValue() != null && dataElements.getChildAt(j).getValue().getDisplayText().indexOf("mp4") > 0) {
+                                                String videoName = dataElements.getChildAt(j).getValue().getDisplayText();
+                                                String chunkedVideo;
+                                                imageNameCount++;
+                                                String formId = null;
+
+                                                if (videoName.contains("/instances")) {
+                                                    videoName = videoName.substring(videoName.lastIndexOf("/") + 1);
+                                                }
+                                                String str1[] = str.substring(str.lastIndexOf("instances")).split("/");
+//                                                String formId = str1[1] + "_" + videoName + "_video";
+                                                String videoPath = str.substring(0, str.lastIndexOf("/") + 1) + videoName;
+
+                                                int partIndex = splitFile(videoPath);
+                                                for (int i = 0; i < partIndex; i++) {
+                                                    File videoFile = new File(videoPath + "." + i);
+                                                    long fileSize = videoFile.length();
+                                                    String chunkedName = videoFile.getName();
+                                                    byte[] partFile = new byte[(int) fileSize];
+                                                    chunkedVideo = Base64.encodeToString(partFile, Base64.DEFAULT);
+                                                    if (i == partIndex - 1) {
+                                                        formId = str1[1] + "_" + chunkedName +"_lastPart"+ "_video";
+                                                    }
+                                                else {
+                                                         formId = str1[1] + "_" + chunkedName + "_video";
+                                                    }
+                                                if (isNetworkConnected()) {
+                                                    try {
+
+                                                        istance.add(myFinalized.get(position).getFormNameInstance());
+                                                        sendWithNetwork(
+                                                                FormListFinalizedActivity.this,
+                                                                httpServer,
+                                                                numClient,
+                                                                chunkedVideo,
+                                                                FormListFinalizedActivity.this, formId);
+                                                    } catch (InterruptedException e) {
+                                                        // TODO
+                                                        // Auto-generated
+                                                        // catch
+                                                        // block
+                                                        e.printStackTrace();
+                                                    }
+                                                    adapter.notifyDataSetInvalidated();
+                                                    adapter.notifyDataSetChanged();
 
 
-                                             }
-                                          /***************************************************/
+                                                } else if (!isNetworkConnected()) {
+//                                                    try {
+//
+//                                                        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(FormListFinalizedActivity.this);
+//
+//                                                        alertDialogBuilder.setMessage("Connection not present!");
+//                                                        alertDialogBuilder.show();
+//
+//                                                    } catch (Exception e) {
+//                                                        e.printStackTrace();
+//                                                    }
+                                                    Toast.makeText(getApplicationContext(), "Connection not prestent!", Toast.LENGTH_LONG).show();
+                                                }
+                                            }
+                                            //clean the partitions of the video
+                                            cleanChunkedFiles(videoPath, partIndex);
                                         }
+//*********************************************************************************************************************/
                                     }
                                 }
+            }
                         )
                         .setNegativeButton(getString(R.string.negative_choise),
                                 new DialogInterface.OnClickListener() {
@@ -254,8 +315,6 @@ public class FormListFinalizedActivity extends Activity implements MyCallback
             }
 
         });
-
-
 
 
 //****************************************************************************************************************
@@ -299,7 +358,7 @@ public class FormListFinalizedActivity extends Activity implements MyCallback
             toast.setGravity(Gravity.CENTER, 40, 40);
             toast.show();
         } else {
-           HttpSendAllImages asyncTask = new HttpSendAllImages(FormListFinalizedActivity.this ,httpServer, numClient, finalizzate, FormListFinalizedActivity.this);//chiamo l'async task con la lista di tutte le form da inviare
+            HttpSendAllImages asyncTask = new HttpSendAllImages(FormListFinalizedActivity.this, httpServer, numClient, finalizzate, FormListFinalizedActivity.this);//chiamo l'async task con la lista di tutte le form da inviare
 
             asyncTask.execute();
         }
@@ -308,21 +367,18 @@ public class FormListFinalizedActivity extends Activity implements MyCallback
 
 
     /**
-     *
      * @return
      */
-    private ArrayList<FormInnerListProxy> queryFinalizedForm()
-    {
+    private ArrayList<FormInnerListProxy> queryFinalizedForm() {
         formListHandler = new FormListActivity();
         ArrayList<FormInnerListProxy> finalizzate = formListHandler.getFinalizedForm();
 
         return finalizzate;
     }
 
-    public void onResume()
-    {
+    public void onResume() {
         super.onResume();
-       getFormsDataFinalized();
+        getFormsDataFinalized();
         runOnUiThread(new Runnable() {
             public void run() {
                 FormPendingAdapter adapter = (FormPendingAdapter) listview
@@ -332,9 +388,9 @@ public class FormListFinalizedActivity extends Activity implements MyCallback
             }
         });
     }
-        @Override
-    public void callbackCall()
-    {
+
+    @Override
+    public void callbackCall() {
 		/*
 		formNameAutoGenFinalizzata = formListHandler.getFinalizedForm().get(5);
 		formListHandler.catchCallBackFinalized(formNameAutoGenFinalizzate);
@@ -344,16 +400,17 @@ public class FormListFinalizedActivity extends Activity implements MyCallback
 		*/
     }
 
-    public void onDestroy()
-    {
+    public void onDestroy() {
         listview.setAdapter(null);
         super.onDestroy();
     }
+
     @Override
     public void finishFormListCompleted() {
         // TODO Auto-generated method stub
 
     }
+
     private boolean isNetworkConnected() {
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo ni = cm.getActiveNetworkInfo();
@@ -367,7 +424,7 @@ public class FormListFinalizedActivity extends Activity implements MyCallback
     }
 
     private void sendWithNetwork(Context context, String url, String number,
-                                 String form, MyCallback callback,String formId) throws InterruptedException {
+                                 String form, MyCallback callback, String formId) throws InterruptedException {
 
         if (httpServer.equalsIgnoreCase("") || httpServer == null) {
             Toast toast = Toast.makeText(getApplicationContext(),
@@ -377,7 +434,7 @@ public class FormListFinalizedActivity extends Activity implements MyCallback
             toast.show();
         } else {
 
-            HttpCheckAndSendPostTask asyncTask = new HttpCheckAndSendPostTask(context, url, number, form, callback, false,formId, formHasImages);
+            HttpCheckAndSendPostTask asyncTask = new HttpCheckAndSendPostTask(context, url, number, form, callback, false, formId, formHasImages);
             asyncTask.execute();
             if (asyncTask.getStatus() != HttpCheckAndSendPostTask.Status.FINISHED) {
 
@@ -390,8 +447,9 @@ public class FormListFinalizedActivity extends Activity implements MyCallback
         return myFinalized;
 
     }
+
     public static void updateFormToSubmitted() {
-    for (int k = 0; k < istance.size(); k++){
+        for (int k = 0; k < istance.size(); k++) {
 //
 
             Calendar rightNow = Calendar.getInstance();
@@ -408,7 +466,7 @@ public class FormListFinalizedActivity extends Activity implements MyCallback
 
             String time = getCurrentTimeStamp();//LL
 
-           String  data = day + "/" + month.format(rightNow.getTime()) + "/" + year;
+            String data = day + "/" + month.format(rightNow.getTime()) + "/" + year;
 
             data = data + "  " + time;//LL
             // -----------------------------------------------------
@@ -427,14 +485,16 @@ public class FormListFinalizedActivity extends Activity implements MyCallback
         }
 
     }
+
     public void finishFormListFinalized() {
         finish();
 
     }
+
     public static String getCurrentTimeStamp() {
         try {
 
-            SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss",Locale.ENGLISH);
+            SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss", Locale.ENGLISH);
             String currentTimeStamp = dateFormat.format(new Date()); // Find todays date
 
             return currentTimeStamp;
@@ -444,11 +504,10 @@ public class FormListFinalizedActivity extends Activity implements MyCallback
             return null;
         }
     }
+
     public void getFormsDataFinalized() {
         finalizzate.clear();
         // dbAdapter.open();
-
-
         FormProvider.DatabaseHelper dbh = new FormProvider.DatabaseHelper("forms.db");
         String query = "SELECT formFilePath,displayName,instanceFilePath,displayNameInstance,displaySubtext,completedDate,formNameAndXmlFormid,enumeratorID" +
                 " FROM forms WHERE status = 'finalized' ORDER BY _id DESC";
@@ -488,5 +547,52 @@ public class FormListFinalizedActivity extends Activity implements MyCallback
         }
 
     }
+//*********************Split the video into parts and return number of parts*********************//
+
+    public int splitFile(String videoPath) {
+
+        File videoFile = new File(videoPath);
+        long fileSize = videoFile.length();
+        int partCounter = 0;
+        int maxBufferSize =  1024*1024 ;
+
+
+        byte[] buffer = new byte[(int) maxBufferSize];
+        try {
+            BufferedInputStream bis = new BufferedInputStream(new FileInputStream(videoFile));
+            String name = videoFile.getName();
+            int tmp = 0;
+            try {
+                while ((tmp = bis.read(buffer)) > 0) {
+                    File newFile = new File(videoFile.getParent(), name + "."
+                            + String.format("%d", partCounter++));
+
+                    FileOutputStream out = new FileOutputStream(newFile);
+                    try {
+                        out.write(buffer, 0, tmp);//tmp is chunk size
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return partCounter;
+    }
+
+public void cleanChunkedFiles(String filePath, int numberOfParts) {
+    for (int i = 0; i < numberOfParts; i++) {
+        File f = new File(filePath+"."+i);
+        f.delete();
+    }
 
 }
+}
+

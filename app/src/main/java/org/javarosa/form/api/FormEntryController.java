@@ -90,6 +90,7 @@ public class FormEntryController {
         } else if (!complexQuestion && !model.getForm().evaluateConstraint(index.getReference(), data)) {
             commitAnswer(element, index, data);
         	output= ANSWER_CONSTRAINT_VIOLATED;
+
         } else if (!complexQuestion) {
             commitAnswer(element, index, data);
             output= ANSWER_OK; 
@@ -135,7 +136,7 @@ public class FormEntryController {
      * you're doing. For normal form filling you should always use
      * answerQuestion().
      * 
-     * @param index
+     *
      * @param data
      * @return true if saved successfully, false otherwise.
      */

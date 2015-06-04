@@ -53,6 +53,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -69,6 +70,7 @@ import org.xml.sax.SAXException;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.Normalizer;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -102,6 +104,7 @@ import it.fabaris.wfp.task.SaveToDiskTask;
 import it.fabaris.wfp.utility.ColorHelper;
 import it.fabaris.wfp.utility.ConstantUtility;
 import it.fabaris.wfp.utility.FileUtils;
+import it.fabaris.wfp.view.HierarchyElementView;
 import it.fabaris.wfp.view.ODKView;
 import it.fabaris.wfp.widget.ImageWidget;
 import it.fabaris.wfp.widget.QuestionWidget;
@@ -134,6 +137,7 @@ public class FormEntryActivity extends Activity implements AnimationListener,
     public static final int VIDEO_CHOOSER = 9;
 //////////////////////////////////////////////////////////////////////////////////
 public static String  videoPath;
+    public boolean roasterRepeatCount=false;
 public boolean formHasVideos;
 //    private final static String CAPTURED_PHOTO_PATH_KEY = "mCurrentPhotoPath";
     private final static String CAPTURED_PHOTO_URI_KEY = "mCapturedImageURI";
@@ -688,6 +692,7 @@ public boolean formHasVideos;
                 refreshCurrentView(null);
                 break;
             case LOCATION_CAPTURE:
+
                 String sl = intent.getStringExtra(LOCATION_RESULT);
                 ((ODKView) mCurrentView).setBinaryData(sl);
                 saveAnswersForCurrentScreen(DO_NOT_EVALUATE_CONSTRAINTS);
@@ -992,10 +997,10 @@ public boolean formHasVideos;
      * @param toBeRecreated
      * @return newly created View
      */
-    public View createView(int event, FormIndex index, boolean toBeRecreated) {
+    public View createView(int event, final FormIndex index, boolean toBeRecreated) {
         // setTitle(getString(R.string.app_name) + " > " +
         // mFormController.getFormTitle());
-        Context context = FormEntryActivity.this;
+        final Context context = FormEntryActivity.this;
 
         switch (event) {
             case FormEntryController.EVENT_BEGINNING_OF_FORM:
@@ -1293,7 +1298,9 @@ public boolean formHasVideos;
         // TODO: tolto per provare
         verifica = true;
         radioFirstCheck = true;
-
+        if(!roasterRepeatCount) {
+            refreshCurrentView(null);
+        }
         if (currentPromptIsQuestion()) {
             if (!saveAnswersForCurrentScreen(EVALUATE_CONSTRAINTS)) {
                 // A constraint was violated so a dialog should be showing.
@@ -1383,13 +1390,13 @@ public boolean formHasVideos;
 
         // TODO: tolto per provare
         // verifica = false;
-
-        if (!saveAnswersForCurrentScreen(EVALUATE_CONSTRAINTS)) {
-            /**
-             *  A constraint was violated so a dialog should be showing.
-             */
-            return;
-        }
+//****disabled to allow the user to go back to the previous page even if the current fields are required*******************//
+//        if (!saveAnswersForCurrentScreen(EVALUATE_CONSTRAINTS)) {
+//            /**
+//             *  A constraint was violated so a dialog should be showing.
+//             */
+//            return;
+//        }
         if (mFormController.getEvent() != FormEntryController.EVENT_BEGINNING_OF_FORM) {
             int event = mFormController.stepToPreviousEvent();
 
@@ -1504,6 +1511,7 @@ public boolean formHasVideos;
                 if (constraintText == null) {
                     constraintText = getString(R.string.invalid_answer_error);
                 }
+
                 break;
             case FormEntryController.ANSWER_REQUIRED_BUT_EMPTY:
                 constraintText = getString(R.string.required_answer_error);
@@ -1555,6 +1563,7 @@ public boolean formHasVideos;
                         break;
                     case DialogInterface.BUTTON2:
                         // no, no repeat
+                        roasterRepeatCount=true;
                         showNextView();
                         break;
                 }

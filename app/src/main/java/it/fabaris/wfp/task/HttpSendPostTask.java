@@ -134,7 +134,7 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
         } else if (PreferencesActivity.SERVER_ONLINE == "NO") {
             result = "server error";
         } else {
-            if(formName.contains("_image")){
+            if(formName.contains("_image")||formName.contains("_video")){
                 isImage=true;
             }
             result = postCall(http, phone, data,formName);

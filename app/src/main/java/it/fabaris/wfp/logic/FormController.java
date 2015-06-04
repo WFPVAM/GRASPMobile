@@ -7,6 +7,8 @@
  ******************************************************************************/
 package it.fabaris.wfp.logic;
 
+import android.util.Log;
+
 import org.javarosa.core.model.FormDef;
 import org.javarosa.core.model.FormIndex;
 import org.javarosa.core.model.GroupDef;
@@ -23,14 +25,11 @@ import org.javarosa.form.api.FormEntryPrompt;
 import org.javarosa.model.xform.XFormSerializingVisitor;
 import org.javarosa.model.xform.XPathReference;
 
-import android.util.Log;
-
-
-import it.fabaris.wfp.view.ODKView;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Vector;
+
+import it.fabaris.wfp.view.ODKView;
 
 /**
  * This class is a wrapper for Javarosa's FormEntryController. In theory, if you wanted to replace
@@ -603,6 +602,7 @@ public class FormController {
         return -1;
 
     }
+
 
 
     /**

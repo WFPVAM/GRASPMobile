@@ -7,34 +7,11 @@
  ******************************************************************************/
 package it.fabaris.wfp.task;
 
-import it.fabaris.wfp.activities.FormEntryActivity;
-import it.fabaris.wfp.application.Collect;
-import it.fabaris.wfp.listener.FormLoaderListener;
-import it.fabaris.wfp.logic.FileReferenceFactory;
-import it.fabaris.wfp.logic.FormController;
-import it.fabaris.wfp.utility.FileUtils;
-import it.fabaris.wfp.widget.QuestionWidget;
+import android.os.AsyncTask;
+import android.util.Log;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.text.BreakIterator;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-
-import org.javarosa.core.model.Constants;
 import org.javarosa.core.model.FormDef;
-import org.javarosa.core.model.GroupDef;
 import org.javarosa.core.model.condition.EvaluationContext;
-import org.javarosa.core.model.data.IAnswerData;
-import org.javarosa.core.model.data.SelectOneData;
-import org.javarosa.core.model.data.StringData;
-import org.javarosa.core.model.data.helper.Selection;
 import org.javarosa.core.model.instance.TreeElement;
 import org.javarosa.core.model.instance.TreeReference;
 import org.javarosa.core.reference.ReferenceManager;
@@ -48,12 +25,21 @@ import org.javarosa.xform.parse.XFormParseException;
 import org.javarosa.xform.parse.XFormParser;
 import org.javarosa.xform.util.XFormUtils;
 
-import utils.Queue;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
 
-import android.os.AsyncTask;
-import android.os.Environment;
-import android.util.Base64;
-import android.util.Log;
+import it.fabaris.wfp.activities.FormEntryActivity;
+import it.fabaris.wfp.application.Collect;
+import it.fabaris.wfp.listener.FormLoaderListener;
+import it.fabaris.wfp.logic.FileReferenceFactory;
+import it.fabaris.wfp.logic.FormController;
+import it.fabaris.wfp.utility.FileUtils;
 
 /**
  * Background task for loading a form. 
@@ -324,16 +310,18 @@ public class FormLoaderTask extends AsyncTask<String, String, FormLoaderTask.FEC
             //in the treeMod
             setImageDataType(templateRoot); //Add the DataType (7 for radio, 3 for decimal)
 
+
+            //remove it so that the image will not be displayed in the view
             /**
              * Match the answers to the model
              */
-            for(int j=0; j < str.size(); j++)
-            {
-                if (treeMod.get(j) != null && treeMod.get(j).dataType == Constants.DATATYPE_BINARY && treeMod.get(j).getValue() != null && treeMod.get(j).getValue().getDisplayText().indexOf("jpg") > 0) {
-                   String x= filePath.substring(0, filePath.lastIndexOf("/") + 1) + str.get(j);
-                   treeMod.get(j).getValue().setValue(x);
-                }
-                }
+//            for(int j=0; j < str.size(); j++)
+//            {
+//                if (treeMod.get(j) != null && treeMod.get(j).dataType == Constants.DATATYPE_BINARY && treeMod.get(j).getValue() != null && treeMod.get(j).getValue().getDisplayText().indexOf("jpg") > 0) {
+//                   String x= filePath.substring(0, filePath.lastIndexOf("/") + 1) + str.get(j);
+//                   treeMod.get(j).getValue().setValue(x);
+//                }
+//                }
 
             //*************************************************
 

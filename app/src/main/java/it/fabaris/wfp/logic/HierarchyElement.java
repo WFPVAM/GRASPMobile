@@ -6,15 +6,15 @@
  ******************************************************************************/
 package it.fabaris.wfp.logic;
 
-import it.fabaris.wfp.utility.ColorHelper;
-
-import java.util.ArrayList;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 
 import org.javarosa.core.model.Constants;
 import org.javarosa.core.model.FormIndex;
 
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
+import java.util.ArrayList;
+
+import it.fabaris.wfp.utility.ColorHelper;
 
 /**
  *
@@ -39,17 +39,17 @@ public class HierarchyElement {
     FormIndex mFormIndex;
     ArrayList<HierarchyElement> mChildren;
 
-	public HierarchyElement(String text1, String text2, Drawable bullet,
-			ColorHelper colorHelper, int type,int dataType, FormIndex f) {
-		mIcon = bullet;
-		mPrimaryText = text1;
-		mSecondaryText = text2;
-		this.colorHelper = colorHelper;
-		mFormIndex = f;
-		mType = type;
-		this.dataType = dataType;
-		mChildren = new ArrayList<HierarchyElement>();
-	}
+    public HierarchyElement(String text1, String text2, Drawable bullet,
+                            ColorHelper colorHelper, int type,int dataType, FormIndex f) {
+        mIcon = bullet;
+        mPrimaryText = text1;
+        mSecondaryText = text2;
+        this.colorHelper = colorHelper;
+        mFormIndex = f;
+        mType = type;
+        this.dataType = dataType;
+        mChildren = new ArrayList<HierarchyElement>();
+    }
 
     public String getPrimaryText() {
         return mPrimaryText;
@@ -148,14 +148,14 @@ public class HierarchyElement {
     public void setDataType(int dataType) { this.dataType = dataType; }
 
     public int getTextColor() {
-		if (!this.toggleHit) {
-			return Color.WHITE;
-		}
-		if (isInError()) {
-			return getErrorForeColor();
-		}
-		return getDefaultForeColor();
-	}
+        if (!this.toggleHit) {
+            return Color.WHITE;
+        }
+        if (isInError()) {
+            return getErrorForeColor();
+        }
+        return getDefaultForeColor();
+    }
 
     public int getBackColor() {
         if (!this.toggleHit) {

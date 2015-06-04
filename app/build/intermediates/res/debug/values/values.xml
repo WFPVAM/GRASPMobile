@@ -309,6 +309,7 @@
     <string name="do_not_exit">Cancel</string>
     <string name="do_not_save">Ignore Changes</string>
     <string name="done">Done</string>
+    <string name="done_location">Done!</string>
     <string name="double_back">Please click BACK again to exit</string>
     <string name="download">Get Selected</string>
     <string name="download_all_successful">All forms downloaded successfully.</string>
@@ -443,7 +444,7 @@
     <string name="play_video">Play Video</string>
     <string name="please_insert_your_phone_number">Please insert your phone number preceded by country code</string>
     <string name="please_wait">Please wait a few moments.</string>
-    <string name="please_wait_long">Please wait. This could take a few minutes.</string>
+    <string name="please_wait_long">Please wait for accuracy to appear. This could take a few minutes.</string>
     <string name="portocol_choice">Protocol</string>
     <string name="positive_choise">Ok</string>
     <string name="powered_by_odk">v1.1.7 - Powered by Open Data Kit</string>
@@ -486,9 +487,9 @@
     <string name="sending_items">Sending %1$s of %2$s form(s)</string>
     <string name="sending_method">Sending Method</string>
     <string name="sending_sms">Sending data to server, please wait</string>
-    <string name="server_IP">IP</string>
+    <string name="server_IP">Server Address</string>
     <string name="server_auth_credentials">Please enter username and password for server:\n%s</string>
-    <string name="server_directory">Virtual directory</string>
+    <string name="server_directory">Directory</string>
     <string name="server_not_online">The server is not online or the URL address is not correct</string>
     <string name="server_on_line">Server Online</string>
     <string name="server_port">Port</string>
@@ -528,6 +529,7 @@
     <string name="toggle_selected">Toggle All</string>
     <string name="trigger">OK. Please continue.</string>
     <string name="unrecognized_uri">unrecognized URI:</string>
+    <string name="update">Are you sure you want to update the application with newer version?</string>
     <string name="update_toast">Can\'\t download updates: SD not present</string>
     <string name="upload_all_successful">%s form(s) sent successfully.</string>
     <string name="upload_results">Upload Results</string>
@@ -539,6 +541,7 @@
     <string name="view_hierarchy">Go To Prompt</string>
     <string name="wait">Please wait...</string>
     <string name="xform_parse_error">XForm parse error. %1$s is missing element %2$s</string>
+    <string name="yes">Yes</string>
     <string name="yes_pref">Yes, delete all</string>
     <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/style.xml -->
     <eat-comment />

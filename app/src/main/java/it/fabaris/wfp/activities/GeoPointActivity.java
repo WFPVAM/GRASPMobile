@@ -31,7 +31,7 @@ import java.util.List;
  */
 public class GeoPointActivity extends Activity implements LocationListener {
 
-    private ProgressDialog mLocationDialog;
+    public static ProgressDialog mLocationDialog;
     private LocationManager mLocationManager;
     private Location mLocation;
     private boolean mGPSOn = false;
@@ -47,6 +47,7 @@ public class GeoPointActivity extends Activity implements LocationListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mLocationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
         /**
          *  make sure we have a good location provider before continuing
          */
@@ -55,11 +56,16 @@ public class GeoPointActivity extends Activity implements LocationListener {
             if (provider.equalsIgnoreCase(LocationManager.GPS_PROVIDER)) {
                 mGPSOn = true;
             }
+            if (provider.equalsIgnoreCase(LocationManager.NETWORK_PROVIDER)) {
+
+                mNetworkOn = true;
+            }
         }
         if (!mGPSOn && !mNetworkOn) {
             Toast.makeText(getBaseContext(), getString(R.string.provider_disabled_error),Toast.LENGTH_SHORT).show();
             finish();
         }
+
         setupLocationDialog();
 
     }
@@ -95,7 +101,9 @@ public class GeoPointActivity extends Activity implements LocationListener {
         if (mNetworkOn) {
             mLocationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, this);
         }
+
         mLocationDialog.show();
+
     }
 
 
@@ -107,18 +115,20 @@ public class GeoPointActivity extends Activity implements LocationListener {
          *  dialog displayed while fetching gps location
          */
         mLocationDialog = new ProgressDialog(this);
+
+
         DialogInterface.OnClickListener geopointButtonListener =
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         switch (which) {
-                            case DialogInterface.BUTTON1:
+                            case DialogInterface.BUTTON2:
                                 returnLocation();
                                 break;
-                            case DialogInterface.BUTTON2:
-                                mLocation = null;
-                                finish();
-                                break;
+//                            case DialogInterface.BUTTON2:
+//                                mLocation = null;
+//                                finish();
+//                                break;
                         }
                     }
                 };
@@ -131,10 +141,12 @@ public class GeoPointActivity extends Activity implements LocationListener {
         mLocationDialog.setIcon(android.R.drawable.ic_dialog_info);
         mLocationDialog.setTitle(getString(R.string.getting_location));
         mLocationDialog.setMessage(getString(R.string.please_wait_long));
-        mLocationDialog.setButton(DialogInterface.BUTTON1, getString(R.string.accept_location),
+//        mLocationDialog.setButton(DialogInterface.BUTTON1, getString(R.string.accept_location),
+//                geopointButtonListener);
+        mLocationDialog.setButton(DialogInterface.BUTTON2, getString(R.string.done_location),
                 geopointButtonListener);
-        mLocationDialog.setButton(DialogInterface.BUTTON2, getString(R.string.cancel_location),
-                geopointButtonListener);
+
+
     }
 
 
@@ -149,11 +161,13 @@ public class GeoPointActivity extends Activity implements LocationListener {
                     mLocation.getLongitude() + " " + mLocation.getLatitude() /*+ " "+ mLocation.getAltitude() + " " + mLocation.getAccuracy()*/);
             setResult(RESULT_OK, i);
         }else{
-            Intent i = new Intent();
-            i.putExtra(
-                    FormEntryActivity.LOCATION_RESULT,
-                    35.215851+ " " + 31.88778 );
-            setResult(RESULT_OK, i);
+
+//            Intent i = new Intent();
+//            i.putExtra(
+//                    FormEntryActivity.LOCATION_RESULT,000000+ " " + 000000 );
+//
+//            setResult(RESULT_OK, i);
+           Toast.makeText(getBaseContext(), "Couldn't detect location.You have to wait for accuracy to appear!",Toast.LENGTH_LONG).show();
         }
         finish();
     }
@@ -163,16 +177,37 @@ public class GeoPointActivity extends Activity implements LocationListener {
      */
     @Override
     public void onLocationChanged(Location location) {
+
         mLocation = location;
         if (mLocation != null) {
-//        if (mLocation == null) {
-            mLocationDialog.setMessage(getString(R.string.location_provider_accuracy,
-                    mLocation.getProvider(), truncateDouble(mLocation.getAccuracy())));
 
+//        if (mLocation == null) {
+//            mLocationDialog.setMessage(getString(R.string.location_provider_accuracy,
+//                    mLocation.getProvider(), truncateDouble(mLocation.getAccuracy())));
+
+            if (mLocation.getAccuracy() >= 50) {
+                mLocationDialog.setMessage(getString(R.string.location_provider_accuracy,
+                        mLocation.getProvider(), truncateDouble(mLocation.getAccuracy()))+"\n"+"Suitable for identifying the Village only!");
+            }
+            if (mLocation.getAccuracy()< 50 && mLocation.getAccuracy() >=20) {
+                mLocationDialog.setMessage(getString(R.string.location_provider_accuracy,
+                        mLocation.getProvider(), truncateDouble(mLocation.getAccuracy()))+"\n"+"Suitable for identifying the Neighbourhood only!");
+            }
+            if (mLocation.getAccuracy() < 20 && mLocation.getAccuracy() >= 10 ) {
+                mLocationDialog.setMessage(getString(R.string.location_provider_accuracy,
+                        mLocation.getProvider(), truncateDouble(mLocation.getAccuracy()))+"\n"+"Suitable for identifying the Block!");
+            }
+            if (mLocation.getAccuracy() < 10 ) {
+                mLocationDialog.setMessage(getString(R.string.location_provider_accuracy,
+                        mLocation.getProvider(), truncateDouble(mLocation.getAccuracy()))+"\n"+"Suitable for identifying the Housing unit!");
+            }
             if (mLocation.getAccuracy() <= LOCATION_ACCURACY) {
+
                 returnLocation();
             }
+
         }
+
     }
 
     private String truncateDouble(float number) {

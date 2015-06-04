@@ -407,4 +407,6 @@ public static byte[] compressImage(String imagePath, int newWidth, int newHeight
         } catch (FileNotFoundException e) {}
         return null;
     }
+//************************************** added for video upload ***************************************//
+
 }
