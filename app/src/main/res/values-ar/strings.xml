@@ -353,4 +353,5 @@
     <string name="convert_submitted_to_complete">تحويل الاستمارات المرسلة الى تامة </string>
     <string name="convert_form_to_complate">هل انت متأكد انك تريد تحويل جميع الاستمارات المرسلة الى تامة؟</string>
     <string name="complete_Editing">تفعيل امكانية تعديل النماذج التامة</string>
+    <string name="portrait">إبقاء الشاشة عمودي</string>
 </resources>

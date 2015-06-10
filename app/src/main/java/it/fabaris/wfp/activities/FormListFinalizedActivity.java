@@ -254,31 +254,31 @@ public class FormListFinalizedActivity extends Activity implements MyCallback {
                                                     if (i == partIndex - 1) {
                                                         formId = str1[1] + "_" + chunkedName +"_lastPart"+ "_video";
                                                     }
-                                                else {
-                                                         formId = str1[1] + "_" + chunkedName + "_video";
+                                                    else {
+                                                        formId = str1[1] + "_" + chunkedName + "_video";
                                                     }
-                                                if (isNetworkConnected()) {
-                                                    try {
+                                                    if (isNetworkConnected()) {
+                                                        try {
 
-                                                        istance.add(myFinalized.get(position).getFormNameInstance());
-                                                        sendWithNetwork(
-                                                                FormListFinalizedActivity.this,
-                                                                httpServer,
-                                                                numClient,
-                                                                chunkedVideo,
-                                                                FormListFinalizedActivity.this, formId);
-                                                    } catch (InterruptedException e) {
-                                                        // TODO
-                                                        // Auto-generated
-                                                        // catch
-                                                        // block
-                                                        e.printStackTrace();
-                                                    }
-                                                    adapter.notifyDataSetInvalidated();
-                                                    adapter.notifyDataSetChanged();
+                                                            istance.add(myFinalized.get(position).getFormNameInstance());
+                                                            sendWithNetwork(
+                                                                    FormListFinalizedActivity.this,
+                                                                    httpServer,
+                                                                    numClient,
+                                                                    chunkedVideo,
+                                                                    FormListFinalizedActivity.this, formId);
+                                                        } catch (InterruptedException e) {
+                                                            // TODO
+                                                            // Auto-generated
+                                                            // catch
+                                                            // block
+                                                            e.printStackTrace();
+                                                        }
+                                                        adapter.notifyDataSetInvalidated();
+                                                        adapter.notifyDataSetChanged();
 
 
-                                                } else if (!isNetworkConnected()) {
+                                                    } else if (!isNetworkConnected()) {
 //                                                    try {
 //
 //                                                        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(FormListFinalizedActivity.this);
@@ -289,16 +289,16 @@ public class FormListFinalizedActivity extends Activity implements MyCallback {
 //                                                    } catch (Exception e) {
 //                                                        e.printStackTrace();
 //                                                    }
-                                                    Toast.makeText(getApplicationContext(), "Connection not prestent!", Toast.LENGTH_LONG).show();
+                                                        Toast.makeText(getApplicationContext(), "Connection not prestent!", Toast.LENGTH_LONG).show();
+                                                    }
                                                 }
+                                                //clean the partitions of the video
+                                                cleanChunkedFiles(videoPath, partIndex);
                                             }
-                                            //clean the partitions of the video
-                                            cleanChunkedFiles(videoPath, partIndex);
-                                        }
 //*********************************************************************************************************************/
+                                        }
                                     }
                                 }
-            }
                         )
                         .setNegativeButton(getString(R.string.negative_choise),
                                 new DialogInterface.OnClickListener() {
@@ -587,12 +587,11 @@ public class FormListFinalizedActivity extends Activity implements MyCallback {
         return partCounter;
     }
 
-public void cleanChunkedFiles(String filePath, int numberOfParts) {
-    for (int i = 0; i < numberOfParts; i++) {
-        File f = new File(filePath+"."+i);
-        f.delete();
+    public void cleanChunkedFiles(String filePath, int numberOfParts) {
+        for (int i = 0; i < numberOfParts; i++) {
+            File f = new File(filePath+"."+i);
+            f.delete();
+        }
+
     }
-
 }
-}
-

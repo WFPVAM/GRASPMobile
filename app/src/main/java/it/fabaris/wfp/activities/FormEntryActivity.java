@@ -53,7 +53,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -70,7 +69,6 @@ import org.xml.sax.SAXException;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.text.Normalizer;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -104,7 +102,6 @@ import it.fabaris.wfp.task.SaveToDiskTask;
 import it.fabaris.wfp.utility.ColorHelper;
 import it.fabaris.wfp.utility.ConstantUtility;
 import it.fabaris.wfp.utility.FileUtils;
-import it.fabaris.wfp.view.HierarchyElementView;
 import it.fabaris.wfp.view.ODKView;
 import it.fabaris.wfp.widget.ImageWidget;
 import it.fabaris.wfp.widget.QuestionWidget;
@@ -118,13 +115,13 @@ public class FormEntryActivity extends Activity implements AnimationListener,
         FormLoaderListener, FormSavedListener, AdvanceToNextListener,
         OnGestureListener {
     private static final String t = "FormEntryActivity";
-
+    private SharedPreferences settings ;
     // Defines for FormEntryActivity
     private static final boolean EXIT = true;
     private static final boolean DO_NOT_EXIT = false;
     public static final boolean EVALUATE_CONSTRAINTS = true;
     public static final boolean DO_NOT_EVALUATE_CONSTRAINTS = false;
-
+    public static String portrait;
     // Request codes for returning data from specified intent.
     public static final int IMAGE_CAPTURE = 1;
     public static final int BARCODE_CAPTURE = 2;
@@ -240,7 +237,18 @@ public boolean formHasVideos;
         // ********************************** 12/11/2013
         readOnlyInRoster = new HashMap<String, IAnswerData>();
         // **********************************
+        settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        portrait=settings.getString(PreferencesActivity.KEY_BUTTON_PORTRAIT,"");
 
+/**************************************************************
+//****this is for keeping only portrait screen
+//****if need this line of code can be implemented in each activity
+
+//        if(portrait.equalsIgnoreCase("enabled")){
+//            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+//        }
+
+ ***************************************************************/
         // -- 11/10/2013 -- DO NOT CHANGE -- IT IS CORRECT
         // -----------------------------------------------------------
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);

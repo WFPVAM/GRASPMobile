@@ -91,6 +91,13 @@
             android:key="button_completed_Editing"
             android:title="@string/complete_Editing" />
 
+        <ListPreference
+            android:defaultValue="Disabled"
+            android:dialogTitle="Keep Portrait screen only"
+            android:entries="@array/editing_completed"
+            android:entryValues="@array/editing_completed_values"
+            android:key="button_Portrait"
+            android:title="@string/portrait" />
         <!--<Preference-->
             <!--android:key="button_completed_Editing"-->
             <!--android:title="@string/complete_Editing" />-->

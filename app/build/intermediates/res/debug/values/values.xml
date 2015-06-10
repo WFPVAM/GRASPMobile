@@ -446,6 +446,7 @@
     <string name="please_wait">Please wait a few moments.</string>
     <string name="please_wait_long">Please wait for accuracy to appear. This could take a few minutes.</string>
     <string name="portocol_choice">Protocol</string>
+    <string name="portrait">Keep screen portrait</string>
     <string name="positive_choise">Ok</string>
     <string name="powered_by_odk">v1.1.7 - Powered by Open Data Kit</string>
     <string name="protocol">Protocol</string>

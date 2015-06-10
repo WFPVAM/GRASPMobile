@@ -68,6 +68,7 @@ public class PreferencesActivity extends PreferenceActivity implements
     public static String KEY_BUTTON_CHECK = "button_check_conn";
     public static String KEY_BUTTON_EDIT="button_completed_Editing";
     public static String KEY_BUTTON_EDIT_DISABLE="button_completed_Editing_disable";
+    public static String KEY_BUTTON_PORTRAIT="button_Portrait";
     public static String TEXT_BACKGROUND_COLOR = "textcolor_background";
     public static String TEXT_FOREGROUND_COLOR = "textcolor_foreground";
     public static String TEXT_MANDATORY_BACKGROUND_COLOR = "textcolor_mandatory_background";
@@ -401,6 +402,14 @@ public class PreferencesActivity extends PreferenceActivity implements
          else if (key.equals(KEY_BUTTON_EDIT)) {
         isEditingEnabled();
         }
+        else if (key.equals(KEY_BUTTON_PORTRAIT)){
+            keepPortrait();
+        }
+    }
+
+    private void keepPortrait() {
+        ListPreference lp =(ListPreference) findPreference(KEY_BUTTON_PORTRAIT);
+        lp.setSummary(lp.getEntry());
     }
 
     private void isEditingEnabled() {
