@@ -183,7 +183,7 @@ public class ControlActivity extends Activity
                 temporaryDirectory.mkdirs();
 
 
-                File output = new File(Environment.getExternalStorageDirectory().getPath() + "/temporary/grasp.apk");
+                File output = new File(Environment.getExternalStorageDirectory().getPath() + "/GRASPMobile.apk");
                 //File output = new File(Environment.getExternalStorageDirectory().getPath() + "/GRASP/grasp.apk");
                 //File output = new File(PreferencesActivity.this.getCacheDir() + "/GRASP/grasp.apk");
 

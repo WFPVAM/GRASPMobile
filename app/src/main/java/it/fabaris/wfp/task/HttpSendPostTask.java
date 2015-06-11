@@ -18,6 +18,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpParams;
+import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
@@ -289,7 +290,7 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
 
         // Url Encoding the POST parameters
         try {
-            httpPost.setEntity(new UrlEncodedFormEntity(nameValuePair));
+            httpPost.setEntity(new UrlEncodedFormEntity(nameValuePair, HTTP.UTF_8));
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
             return result = "error";
