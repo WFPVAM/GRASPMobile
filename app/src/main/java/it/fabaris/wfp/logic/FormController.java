@@ -483,7 +483,9 @@ public class FormController {
         return questions;
     }
 
-
+    public boolean isQuestion(FormIndex index){
+        return mFormEntryController.getModel().isQuestion(index);
+    }
     public FormEntryPrompt getQuestionPrompt(FormIndex index) {
         if(index!=null)
             return mFormEntryController.getModel().getQuestionPrompt(index);

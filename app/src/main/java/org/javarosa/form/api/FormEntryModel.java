@@ -769,4 +769,11 @@ public class FormEntryModel {
     	return false;
 	}
 
+    public boolean isQuestion(FormIndex index) {
+        if (form.getChild(index) instanceof QuestionDef) {
+            return true;
+        }
+        else
+            return false;
+    }
 }

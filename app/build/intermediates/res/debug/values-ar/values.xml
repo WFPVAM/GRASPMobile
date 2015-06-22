@@ -263,7 +263,7 @@
     <string name="contDesc">التفصيل	</string>
     <string name="convert_form_to_complate">هل انت متأكد انك تريد تحويل جميع الاستمارات المرسلة الى تامة؟</string>
     <string name="convert_submitted_to_complete">تحويل الاستمارات المرسلة الى تامة </string>
-    <string name="credits">حول	</string>
+    <string name="credits">عن	</string>
     <string name="data">	النماذج المحفوظة	</string>
     <string name="data_saved_error">	لطفا، لم يتم حفظ النموذج!	</string>
     <string name="data_saved_ok">	تم حفظ النموذج بنجاح!	</string>
@@ -514,6 +514,7 @@
     <string name="toggle_selected">	تبديل  	</string>
     <string name="trigger">	موافقة. الرجاء الاستمرار.	</string>
     <string name="unrecognized_uri">مجهول URI:</string>
+    <string name="update">هل انت متأكد انك تريد تحديث التطبيق؟</string>
     <string name="update_toast">Can\'\t download updates: SD not present</string>
     <string name="upload_all_successful">	تم إرسال النموذج بنجاح %s.	</string>
     <string name="upload_results">	تحميل النتائج	</string>
@@ -525,6 +526,7 @@
     <string name="view_hierarchy">	 الذهاب الى شاشة الأوامر	</string>
     <string name="wait">الرجاء الانتظار...</string>
     <string name="xform_parse_error">	ظهر خطأ فى تحليل ملف %1$s عرض البيانات %2$s	</string>
+    <string name="yes">نعم</string>
     <string name="yes_pref">نعم، حذف الجميع</string>
     <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-ar/style.xml -->
     <eat-comment />

@@ -6,12 +6,13 @@
     <string name="new_form">صندوق الوارد</string>
     <string name="list_form">قوائم النماذج</string>
     <string name="settings">الإعدادات	</string>
-    <string name="credits">حول	</string>
+    <string name="credits">عن	</string>
     <string name="help">المساعدة	</string>
     <string name="home">الرئيسيه	</string>
     <string name="contDesc">التفصيل	</string>
     <string name="accept_location">	موقع التسجيل	</string>
     <string name="accuracy">دقة	</string>
+    <string name="yes">نعم</string>
     <string name="activity_not_found">	لم يتم العثور على  أى نشاط للتعامل معه:  %s	</string>
     <string name="add_another">	نعم	</string>
     <string name="add_another_repeat">	إضافة إدخال \"%s\"  آخر	</string>
@@ -349,7 +350,7 @@
     <string name="exit_button">خروج</string>
     <string name="on_request">على الطلب</string>
 
-
+<string name="update">هل انت متأكد انك تريد تحديث التطبيق؟</string>
     <string name="convert_submitted_to_complete">تحويل الاستمارات المرسلة الى تامة </string>
     <string name="convert_form_to_complate">هل انت متأكد انك تريد تحويل جميع الاستمارات المرسلة الى تامة؟</string>
     <string name="complete_Editing">تفعيل امكانية تعديل النماذج التامة</string>

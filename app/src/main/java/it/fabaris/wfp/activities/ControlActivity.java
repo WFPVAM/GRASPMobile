@@ -236,7 +236,7 @@ public class ControlActivity extends Activity
                                 //Yes button clicked
                                 Intent updateApp = new Intent(Intent.ACTION_VIEW);
                                 updateApp.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                                updateApp.setDataAndType(Uri.fromFile(new File(Environment.getExternalStorageDirectory() + "/temporary/" + "grasp.apk")), "application/vnd.android.package-archive");
+                                updateApp.setDataAndType(Uri.fromFile(new File(Environment.getExternalStorageDirectory() + "/" + "GRASPMobile.apk")), "application/vnd.android.package-archive");
                                 startActivity(updateApp);
                                 break;
 

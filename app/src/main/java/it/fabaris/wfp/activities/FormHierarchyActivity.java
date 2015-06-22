@@ -39,7 +39,7 @@ public class FormHierarchyActivity extends ListActivity
     private static final String t = "FormHierarchyActivity";
     int state;
 
-
+    public static ArrayList<FormEntryPrompt> requiredButEmpty;
     private final String mIndent = "     ";
     public static List<HierarchyElement> formList;
     private ColorHelper colorHelper;
@@ -290,6 +290,12 @@ public class FormHierarchyActivity extends ListActivity
                     }
                     FormEntryPrompt fp = FormEntryActivity.mFormController.getQuestionPrompt();
                     if(fp != null)
+//                        if (fp.isRequired() && fp.getAnswerText()==null){
+//                            Log.i("whooo","mmm");
+//                            for(int i=0;i< ODKView.getWidget().size();i++){
+//                                requiredButEmpty.add(fp);
+//                            }
+//                        }
                     {
                         try
                         {

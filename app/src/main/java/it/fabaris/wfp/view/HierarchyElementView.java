@@ -10,9 +10,6 @@
  ******************************************************************************/
 package it.fabaris.wfp.view;
 
-import it.fabaris.wfp.activities.R;
-import it.fabaris.wfp.logic.HierarchyElement;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -20,13 +17,18 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.view.Gravity;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import org.javarosa.core.api.Constants;
-
 import java.io.File;
+
+import it.fabaris.wfp.activities.R;
+import it.fabaris.wfp.logic.HierarchyElement;
 
 /**
  * Implement the view that hold a hyerarchy element
@@ -70,6 +72,10 @@ public class HierarchyElementView extends RelativeLayout {
         mSecondaryTextView.setGravity(Gravity.CENTER_VERTICAL);
         mSecondaryTextView.setPadding(4, 4, 4, 4);
         mSecondaryTextView.setTextColor(Color.parseColor("#ffffff"));//mSecondaryTextView.setTextColor(it.getTextColor());
+
+
+
+
 
         LayoutParams lp = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
         lp.addRule(RelativeLayout.BELOW, mPrimaryTextView.getId());

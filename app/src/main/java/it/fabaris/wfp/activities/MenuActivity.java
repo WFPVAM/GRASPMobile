@@ -10,31 +10,19 @@
  ******************************************************************************/
 package it.fabaris.wfp.activities;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.text.NumberFormat;
-import java.text.ParseException;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import it.fabaris.wfp.application.Collect;
-import it.fabaris.wfp.utility.ConstantUtility;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
-import android.telephony.TelephonyManager;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.util.Patterns;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
@@ -48,6 +36,11 @@ import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import it.fabaris.wfp.application.Collect;
 
 /**
  * Class that defines the base activity for the visualization of the menu
@@ -263,12 +256,12 @@ public class MenuActivity extends Activity
 
             text1.setText("Server Telephone");
             text1.setTextSize(17);
-            TVserverulr.setText("Server URL");
+            TVserverulr.setText("Server address");
             TVserverulr.setTextSize(17);
             TVprotocol.setText("Protocol");
             TVip.setText("IP or URL");
             TVport.setText("Port");
-            TVdirectory.setText("Virtual directory");
+            TVdirectory.setText("Directory");
 
             ETport.setText("80");
             ETdirectory.setText("graspreporting");

@@ -7,18 +7,20 @@
  ******************************************************************************/
 package it.fabaris.wfp.adapters;
 
-import it.fabaris.wfp.logic.HierarchyElement;
-import it.fabaris.wfp.view.HierarchyElementView;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
+import android.graphics.Color;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import org.javarosa.core.model.Constants;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import it.fabaris.wfp.activities.FormEntryActivity;
+import it.fabaris.wfp.logic.HierarchyElement;
+import it.fabaris.wfp.view.HierarchyElementView;
 
 /**
  * Class that defines the single object in the index of the form
@@ -63,7 +65,16 @@ public class HierarchyListAdapter extends BaseAdapter {
             hev.setPrimaryText(mItems.get(position).getPrimaryText());
             hev.setSecondaryText(mItems.get(position).getSecondaryText());
             hev.setIcon(mItems.get(position).getIcon());
-            hev.setBackColor(mItems.get(position).getBackColor());
+            if(FormEntryActivity.mFormController.isQuestion(mItems.get(position).getFormIndex())) {
+                if (FormEntryActivity.mFormController.getQuestionPrompt(mItems.get(position).getFormIndex()).isRequired() && mItems.get(position).getSecondaryText() == null) {
+                    hev.setBackColor(Color.parseColor("#ff0000"));
+                } else {
+                    hev.setBackColor(mItems.get(position).getBackColor());
+                }
+            }
+            else {
+                hev.setBackColor(mItems.get(position).getBackColor());
+            }
         }
 
         if (mItems.get(position).getSecondaryText() == null

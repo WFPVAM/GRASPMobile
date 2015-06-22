@@ -16,6 +16,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -240,15 +241,15 @@ public boolean formHasVideos;
         settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         portrait=settings.getString(PreferencesActivity.KEY_BUTTON_PORTRAIT,"");
 
-/**************************************************************
+///**************************************************************
 //****this is for keeping only portrait screen
 //****if need this line of code can be implemented in each activity
 
-//        if(portrait.equalsIgnoreCase("enabled")){
-//            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-//        }
+        if(portrait.equalsIgnoreCase("enabled")){
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
 
- ***************************************************************/
+//***************************************************************/
         // -- 11/10/2013 -- DO NOT CHANGE -- IT IS CORRECT
         // -----------------------------------------------------------
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -275,6 +276,8 @@ public boolean formHasVideos;
         mInAnimation = null;
         mOutAnimation = null;
         mGestureDetector = new GestureDetector(this);
+
+
 
         try {
             // Load JavaRosa modules. needed to restore forms.
@@ -1097,6 +1100,7 @@ public boolean formHasVideos;
                                         // iHiera.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                                         // startActivity(iHiera);
 
+
                                         AlertDialog.Builder builder = new AlertDialog.Builder(
                                                 v.getContext());
                                         builder.setTitle(
@@ -1306,9 +1310,9 @@ public boolean formHasVideos;
         // TODO: tolto per provare
         verifica = true;
         radioFirstCheck = true;
-        if(!roasterRepeatCount) {
-            refreshCurrentView(null);
-        }
+//        if(!roasterRepeatCount) {
+//            refreshCurrentView(null);
+//        }
         if (currentPromptIsQuestion()) {
             if (!saveAnswersForCurrentScreen(EVALUATE_CONSTRAINTS)) {
                 // A constraint was violated so a dialog should be showing.
@@ -2036,6 +2040,7 @@ public boolean formHasVideos;
         switch (keyCode) {
             case KeyEvent.KEYCODE_BACK:
                 // createQuitDialog();
+
                 if (PreferencesActivity.TO_SAVE_FORM) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(
                             FormEntryActivity.this);
@@ -2416,8 +2421,12 @@ public boolean formHasVideos;
         // The onFling() captures the 'up' event so our view thinks it gets long
         // pressed.
         // We don't wnat that, so cancel it.
-        if (mCurrentView != null)
+        if (mCurrentView != null){
             mCurrentView.cancelLongPress();
+           // mCurrentView.clearFocus();
+        }
+
+
         return false;
     }
 
@@ -2427,6 +2436,9 @@ public boolean formHasVideos;
 
     @Override
     public boolean onSingleTapUp(MotionEvent e) {
+        //to clear the focus from the textView*****
+        mCurrentView.clearFocus();
+        //***********************
         return false;
     }
 
