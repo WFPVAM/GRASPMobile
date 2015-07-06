@@ -199,7 +199,13 @@
     <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
+    <string name="AllForms_sent">All forms have been sent successfully</string>
+    <string name="AllImgsSent">All images have been sent successfully</string>
     <string name="Network_unavailable">No Networks available, send by SMS?</string>
+    <string name="Suitable_B">Suitable for identifying the Block!</string>
+    <string name="Suitable_HU">Suitable for identifying the Housing unit!</string>
+    <string name="Suitable_N">Suitable for identifying the Neighbourhood only!</string>
+    <string name="Suitable_V">Suitable for identifying the Village only!</string>
     <string name="accept_location">Get GPS coordinates</string>
     <string name="access_error">Error while accessing %s: </string>
     <string name="accuracy">Accuracy</string>
@@ -360,6 +366,7 @@
     <string name="formlist_url">Form List Path</string>
     <string name="forms_downloaded">Forms correctly downloaded</string>
     <string name="forms_sent">Forms correctly sent</string>
+    <string name="fromDNE">One or more forms does not exist!</string>
     <string name="general_preferences">Change Settings</string>
     <string name="generic_error">Generic error</string>
     <string name="get_barcode">Get Barcode</string>
@@ -368,6 +375,7 @@
     <string name="getting_location">Loading Location</string>
     <string name="go_to_location">Go to Location</string>
     <string name="google_account">Select Google Account</string>
+    <string name="gotToSubmitImg">Please go to "Submit Images" tab to submit images</string>
     <string name="gps">Network</string>
     <string name="grasp">GRASP - Geo Referential realtime Acquisition Statistic Platform</string>
     <string name="hard_reset">Do you want to make a cancellation of forms previously completed and sync, and restore the application as a new installation?</string>
@@ -375,6 +383,7 @@
     <string name="home">HOME</string>
     <string name="image_directory_creation_faild">Failed to create image directory</string>
     <string name="image_submitted">Images:</string>
+    <string name="imgDNE">One or more image does not exist!</string>
     <string name="img_sent">Images were sent successfully</string>
     <string name="imported">Form correctly imported</string>
     <string name="invalid_answer_error">Check for red fields they are invalid!</string>
@@ -426,6 +435,7 @@
     <string name="no_pref">No, only update</string>
     <string name="no_sd_error">Sorry, your memory card is not working!</string>
     <string name="noselect_error">Sorry, you have not selected any forms!</string>
+    <string name="notConnected">There is no connection to the WIFI. It is not possible to send the form</string>
     <string name="number_error">The server telephone number is not inserted, please enter it</string>
     <string name="offline">Offline</string>
     <string name="ok">OK</string>
@@ -449,6 +459,8 @@
     <string name="portrait">Keep screen portrait</string>
     <string name="positive_choise">Ok</string>
     <string name="powered_by_odk">v1.1.7 - Powered by Open Data Kit</string>
+    <string name="problemSending">There has been some problems sending one or more forms</string>
+    <string name="problemSendingImg">There has been some problems sending one or more images</string>
     <string name="protocol">Protocol</string>
     <string name="provider_disabled_error">Please activate GPS and/or WIFI location</string>
     <string name="quit_application">Exit %s</string>

@@ -238,9 +238,9 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
                 {
                     if(!isImage) {
                         Toast.makeText(context, R.string.forms_sent, Toast.LENGTH_LONG).show();
-                        Toast.makeText(context, "Please go to 'submit Images' tab to submit images", Toast.LENGTH_LONG).show();
+                        Toast.makeText(context, R.string.gotToSubmitImg, Toast.LENGTH_LONG).show();
                     }  else
-                        Toast.makeText(context, R.string.img_sent, Toast.LENGTH_LONG).show();
+                        Toast.makeText(context, R.string.AllImgsSent, Toast.LENGTH_LONG).show();
                 }
                 if (callback != null)
                 {

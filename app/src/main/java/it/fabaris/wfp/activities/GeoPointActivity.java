@@ -187,19 +187,19 @@ public class GeoPointActivity extends Activity implements LocationListener {
 
             if (mLocation.getAccuracy() >= 50) {
                 mLocationDialog.setMessage(getString(R.string.location_provider_accuracy,
-                        mLocation.getProvider(), truncateDouble(mLocation.getAccuracy()))+"\n"+"Suitable for identifying the Village only!");
+                        mLocation.getProvider(), truncateDouble(mLocation.getAccuracy()))+"\n"+getString(R.string.Suitable_V));
             }
             if (mLocation.getAccuracy()< 50 && mLocation.getAccuracy() >=20) {
                 mLocationDialog.setMessage(getString(R.string.location_provider_accuracy,
-                        mLocation.getProvider(), truncateDouble(mLocation.getAccuracy()))+"\n"+"Suitable for identifying the Neighbourhood only!");
+                        mLocation.getProvider(), truncateDouble(mLocation.getAccuracy()))+"\n"+getString(R.string.Suitable_N));
             }
             if (mLocation.getAccuracy() < 20 && mLocation.getAccuracy() >= 10 ) {
                 mLocationDialog.setMessage(getString(R.string.location_provider_accuracy,
-                        mLocation.getProvider(), truncateDouble(mLocation.getAccuracy()))+"\n"+"Suitable for identifying the Block!");
+                        mLocation.getProvider(), truncateDouble(mLocation.getAccuracy()))+"\n"+getString(R.string.Suitable_B));
             }
             if (mLocation.getAccuracy() < 10 ) {
                 mLocationDialog.setMessage(getString(R.string.location_provider_accuracy,
-                        mLocation.getProvider(), truncateDouble(mLocation.getAccuracy()))+"\n"+"Suitable for identifying the Housing unit!");
+                        mLocation.getProvider(), truncateDouble(mLocation.getAccuracy()))+"\n"+getString(R.string.Suitable_HU));
             }
             if (mLocation.getAccuracy() <= LOCATION_ACCURACY) {
 

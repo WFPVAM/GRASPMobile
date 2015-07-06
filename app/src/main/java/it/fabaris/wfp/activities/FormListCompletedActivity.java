@@ -25,6 +25,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -107,7 +108,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
 
     private Lock lock;
     private Condition cond;
-
+    public static String portrait;
     public static String data;
     public String nomeform;
     public String autore;
@@ -151,7 +152,12 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tabcompleted);
 //        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        portrait=settings.getString(PreferencesActivity.KEY_BUTTON_PORTRAIT,"");
 
+        if(portrait.equalsIgnoreCase("enabled")){
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
         istance = new ArrayList<String>();
         final Builder builder = new AlertDialog.Builder(this);
 
@@ -506,12 +512,13 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
 														 */    //LL
                                                 } else if (connectionType.equalsIgnoreCase("gprs/umts only")) { // gprs/umts only
                                                     //it is not possible to send the form wait for the connection
-                                                    CharSequence[] items = {"There isn't a connection. It's not possible to send the form"};
+                                                  //  CharSequence[] items = {"There isn't a connection. It's not possible to send the form"};
                                                     new AlertDialog.Builder(
                                                             FormListCompletedActivity.this)
-                                                            .setSingleChoiceItems(
-                                                                    items, 0,
-                                                                    null)
+//                                                            .setSingleChoiceItems(
+//                                                                    items, 0,
+//                                                                    null)
+                                                            .setMessage(R.string.notConnected)
                                                             .setPositiveButton(
                                                                     R.string.positive_choise,
                                                                     new DialogInterface.OnClickListener() {
@@ -988,12 +995,13 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
                     }
                 } else if (connectionType.equalsIgnoreCase("gprs/umts only")) { // gprs/umts only
                     //it is not possible to send the form wait for the connection
-                    CharSequence[] items = {"There isn't a connection it isn't possible send the form"};
+                  //  CharSequence[] items = {"There isn't a connection it isn't possible send the form"};
                     new AlertDialog.Builder(
                             FormListCompletedActivity.this)
-                            .setSingleChoiceItems(
-                                    items, 0,
-                                    null)
+//                            .setSingleChoiceItems(
+//                                    items, 0,
+//                                    null)
+                            .setMessage(R.string.notConnected)
                             .setPositiveButton(
                                     R.string.positive_choise,
                                     new DialogInterface.OnClickListener() {
@@ -1154,8 +1162,8 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
     private void sendSMS(String numModem, String encodeXml, MyCallback callback) {
         if (numModem.equalsIgnoreCase("") || numModem == null) {
             Toast toast = Toast.makeText(getApplicationContext(),
-                    R.string.number_error, Toast.LENGTH_LONG);
-            toast.setGravity(Gravity.CENTER, 40, 40);
+                    R.string.number_error, Toast.LENGTH_SHORT);
+            //toast.setGravity(Gravity.CENTER, 40, 40);
             toast.show();
         } else {
             sendSmsNetWorkOn(numModem, encodeXml, callback);
@@ -1485,4 +1493,5 @@ public void cleanDBAfterEditing(ArrayList<FormInnerListProxy> formList) {
             dbh.getReadableDatabase().execSQL(updatequery1);
         }
 }}
+
 }

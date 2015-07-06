@@ -1310,9 +1310,9 @@ public boolean formHasVideos;
         // TODO: tolto per provare
         verifica = true;
         radioFirstCheck = true;
-//        if(!roasterRepeatCount) {
-//            refreshCurrentView(null);
-//        }
+        if(!roasterRepeatCount) {
+            refreshCurrentView(null);
+        }
         if (currentPromptIsQuestion()) {
             if (!saveAnswersForCurrentScreen(EVALUATE_CONSTRAINTS)) {
                 // A constraint was violated so a dialog should be showing.
@@ -1399,7 +1399,7 @@ public boolean formHasVideos;
          */
         verifica = true;
         radioFirstCheck = true; // controllo sui radioButton
-
+        ImageWidget.prevView=true;
         // TODO: tolto per provare
         // verifica = false;
 //****disabled to allow the user to go back to the previous page even if the current fields are required*******************//

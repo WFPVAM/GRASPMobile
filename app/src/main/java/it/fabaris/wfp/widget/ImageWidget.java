@@ -77,7 +77,7 @@ public class ImageWidget extends QuestionWidget implements IBinaryWidget {
     private boolean mWaitingForData;
 
     private static TextView mErrorTextView;
-    
+    public static boolean prevView= false;
     private static int RESULT_OK = 5;
     private static int RESULT_CANCELED = 8;
 
@@ -101,10 +101,10 @@ public class ImageWidget extends QuestionWidget implements IBinaryWidget {
         mCaptureButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, mAnswerFontsize);
         mCaptureButton.setPadding(20, 20, 20, 20);
         mCaptureButton.setEnabled(!prompt.isReadOnly());
-        if(prompt.isRequired()){
-            mCaptureButton.setBackgroundColor(colorHelper.getMandatoryBackgroundColor());
-         //   mChooseButton.setBackgroundColor(colorHelper.getMandatoryBackgroundColor());
-        }
+//        if(prompt.isRequired()){
+//            mCaptureButton.setBackgroundColor(colorHelper.getMandatoryBackgroundColor());
+//         //   mChooseButton.setBackgroundColor(colorHelper.getMandatoryBackgroundColor());
+//        }
         /**
          * launch capture intent on click
          */
@@ -154,9 +154,12 @@ public class ImageWidget extends QuestionWidget implements IBinaryWidget {
         videoCaptureButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, mAnswerFontsize);
         videoCaptureButton.setPadding(20, 20, 20, 20);
         videoCaptureButton.setEnabled(!prompt.isReadOnly());
-        if(prompt.isRequired()){
+        if(prompt.isRequired() && !prevView){
             mCaptureButton.setBackgroundColor(colorHelper.getMandatoryBackgroundColor());
             //   mChooseButton.setBackgroundColor(colorHelper.getMandatoryBackgroundColor());
+        }
+        else if(prompt.isRequired() && prevView){
+            mCaptureButton.setBackgroundColor(colorHelper.getReadOnlyBackgroundColor());
         }
         /**
          * launch capture intent on click
@@ -214,8 +217,11 @@ public class ImageWidget extends QuestionWidget implements IBinaryWidget {
         mChooseButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, mAnswerFontsize);
         mChooseButton.setPadding(20, 20, 20, 20);
         mChooseButton.setEnabled(!prompt.isReadOnly());
-        if(prompt.isRequired()){
+        if(prompt.isRequired() && !prevView){
               mChooseButton.setBackgroundColor(colorHelper.getMandatoryBackgroundColor());
+        }
+        else if (prompt.isRequired() && prevView){
+            mChooseButton.setBackgroundColor(colorHelper.getReadOnlyBackgroundColor());
         }
         /**
          *  launch capture intent on click

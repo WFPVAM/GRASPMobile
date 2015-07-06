@@ -355,4 +355,16 @@
     <string name="convert_form_to_complate">هل انت متأكد انك تريد تحويل جميع الاستمارات المرسلة الى تامة؟</string>
     <string name="complete_Editing">تفعيل امكانية تعديل النماذج التامة</string>
     <string name="portrait">إبقاء الشاشة عمودي</string>
+    <string name="Suitable_N">مناسب   لتحديد الحي فقط!</string>
+    <string name="Suitable_V">مناسب لتحديد القرية فقط!</string>
+    <string name="Suitable_B">مناسب لتحديد المبنى فقط!</string>
+    <string name="Suitable_HU">مناسب لحديد الوحدة السكنية!</string>
+    <string name="AllImgsSent">تم ارسال جميع الصور بنجاح!</string>
+    <string name="problemSendingImg">هناك مشكلة في ارسال بعض الصور!</string>
+    <string name="imgDNE">لا يمكن ايجاد بعض الصور التي تحاول ارسالها!</string>
+    <string name="AllForms_sent">تم ارسال جميع النماذج بنجاح</string>
+    <string name="gotToSubmitImg">الرجاء ارسال الصور من خلال الذهاب الى نافذة "ارسال الصور"</string>
+    <string name="problemSending">هناك مشكلة في ارسال بعض النماذج</string>
+    <string name="formDNE">لا يمكن ايجاد النموذج الذي تحاول ارساله!</string>
+    <string name="notConnected">لا يوجد اتصال بشبكة الانترنت - لا يمكن ارسال النماذج</string>
 </resources>

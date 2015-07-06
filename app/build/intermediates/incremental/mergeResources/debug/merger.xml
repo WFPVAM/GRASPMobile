@@ -1690,11 +1690,15 @@ White
                 </string>
                 <string name="save_enter_data_description" >You are at the end of the form.
                 </string>
+                <string name="Suitable_V" >Suitable for identifying the Village only!
+                </string>
                 <string name="telephone_number" >Please enter you telephone number
                 </string>
                 <string name="do_not_exit" >Cancel
                 </string>
                 <string name="client" >Client
+                </string>
+                <string name="Suitable_N" >Suitable for identifying the Neighbourhood only!
                 </string>
                 <string name="mark_finished" >Mark form as finalized
                 </string>
@@ -1703,6 +1707,8 @@ White
                 <string name="save_data_message" >Please save form to keep your responses.
                 </string>
                 <string name="replace_location" >Replace Location
+                </string>
+                <string name="Suitable_B" >Suitable for identifying the Block!
                 </string>
                 <string name="leaving_repeat" >Add entry
                 </string>
@@ -1717,6 +1723,8 @@ White
                 <string name="positive_choise" >Ok
                 </string>
                 <string name="send" >send
+                </string>
+                <string name="notConnected" >There is no connection to the WIFI. It is not possible to send the form
                 </string>
                 <string name="textcolor_mandatory_background" >Background color of mandatory text
                 </string>
@@ -1733,6 +1741,8 @@ White
                 <string name="delete_repeat_no" >Cancel
                 </string>
                 <string name="change_server_url" >Server URL
+                </string>
+                <string name="AllForms_sent" >All forms have been sent successfully
                 </string>
                 <string name="credits" >ABOUT
                 </string>
@@ -1810,6 +1820,8 @@ White
                 </string>
                 <string name="clear_answer" >Remove response
                 </string>
+                <string name="fromDNE" >One or more forms does not exist!
+                </string>
                 <string name="username" >Username
                 </string>
                 <string name="check_new_app" >Update the Application
@@ -1818,11 +1830,13 @@ White
                 </string>
                 <string name="enter_data" >Fill Blank Form
                 </string>
-                <string name="server_not_online" >The server is not online or the URL address is not correct
+                <string name="problemSending" >There has been some problems sending one or more forms
                 </string>
                 <string name="send_form" >Do you want to send the form?
                 </string>
                 <string name="help" >HELP
+                </string>
+                <string name="server_not_online" >The server is not online or the URL address is not correct
                 </string>
                 <string name="required_answer_error" >Check for yellow fields they are required!
                 </string>
@@ -1894,6 +1908,8 @@ White
                 </string>
                 <string name="location_provider_accuracy" >Using %1$s. Accuracy is %2$s m.
                 </string>
+                <string name="imgDNE" >One or more image does not exist!
+                </string>
                 <string name="general_preferences" >Change Settings
                 </string>
                 <string name="server_IP" >Server Address
@@ -1957,6 +1973,8 @@ White
                 </string>
                 <string name="image_submitted" >Images:
                 </string>
+                <string name="problemSendingImg" >There has been some problems sending one or more images
+                </string>
                 <string name="data" >Saved Forms
                 </string>
                 <string name="discard_group" >Remove group
@@ -1987,6 +2005,8 @@ White
                 <string name="download_all_successful" >All forms downloaded successfully.
                 </string>
                 <string name="confirm" >Yes
+                </string>
+                <string name="AllImgsSent" >All images have been sent successfully
                 </string>
                 <string name="change_textcolor_mandatory_background" >Choose background color of mandatory text
                 </string>
@@ -2020,6 +2040,8 @@ White
                 </string>
                 <string name="hard_reset" >Do you want to make a cancellation of forms previously completed and sync, and restore the application as a new installation?
                 </string>
+                <string name="Suitable_HU" >Suitable for identifying the Housing unit!
+                </string>
                 <string name="play_video" >Play Video
                 </string>
                 <string name="change_language" >Change Language
@@ -2039,6 +2061,8 @@ White
                 <string name="access_error" >Error while accessing %s: 
                 </string>
                 <string name="no" >No
+                </string>
+                <string name="gotToSubmitImg" >Please go to "Submit Images" tab to submit images
                 </string>
                 <string name="choose_video" >Choose Video
                 </string>
@@ -2840,6 +2864,8 @@ done
                 </string>
                 <string name="accept_location" >	موقع التسجيل	
                 </string>
+                <string name="notConnected" >لا يوجد اتصال بشبكة الانترنت - لا يمكن ارسال النماذج
+                </string>
                 <string name="telephone_number_country" >يجب أن يسبق رقم الهاتف رمز البلد
                 </string>
                 <string name="data_saved_ok" >	تم حفظ النموذج بنجاح!	
@@ -3015,6 +3041,8 @@ done
                 </string>
                 <string name="default_splash_path" >	ODK قياسات	
                 </string>
+                <string name="AllForms_sent" >تم ارسال جميع النماذج بنجاح
+                </string>
                 <string name="update_toast" >Can\'\t download updates: SD not present
                 </string>
                 <string name="positive_choise" >نعم
@@ -3034,6 +3062,8 @@ done
                 <string name="quit_entry" >	حفظ النموذج كمكتمل	
                 </string>
                 <string name="select_answer" >	اختر الاجابة	
+                </string>
+                <string name="Suitable_B" >مناسب لتحديد المبنى فقط!
                 </string>
                 <string name="location_provider_accuracy" >	استخدام %1$s. الدقه هى %2$s  m.	
                 </string>
@@ -3059,9 +3089,13 @@ done
                 </string>
                 <string name="replace_barcode" >	استبدال الباركود	
                 </string>
+                <string name="Suitable_N" >مناسب   لتحديد الحي فقط!
+                </string>
                 <string name="download_complete" >	 تم تحميل النموذج  بنجاح.	
                 </string>
                 <string name="completed_data" >	اكمال (%s)	
+                </string>
+                <string name="AllImgsSent" >تم ارسال جميع الصور بنجاح!
                 </string>
                 <string name="textcolor_error_foreground" >لون المقدمة للنص عند الخطأ
                 </string>
@@ -3084,6 +3118,8 @@ done
                 <string name="hard_reset" >هل تريد إلغاء النماذج التامة سابقا، واستعادة التطبيق كتثبيت جديد؟
                 </string>
                 <string name="yes" >نعم
+                </string>
+                <string name="problemSending" >هناك مشكلة في ارسال بعض النماذج
                 </string>
                 <string name="sending_data" >إرسال البيانات إلى الخادم ...
                 </string>
@@ -3134,6 +3170,8 @@ done
                 <string name="please_wait" >	يرجى الانتظار بضع لحظات	
                 </string>
                 <string name="longitude" >	خط الطول	
+                </string>
+                <string name="imgDNE" >لا يمكن ايجاد بعض الصور التي تحاول ارسالها!
                 </string>
                 <string name="barcode_scanner_error" >	عذرا، لم يتم تثبيت الماسح الضوئى للباركود!	
                 </string>
@@ -3199,6 +3237,8 @@ done
                 </string>
                 <string name="server_auth_credentials" >	الرجاء إدخال اسم المستخدم وكلمة المرور للخادم: \ N٪ S	
                 </string>
+                <string name="problemSendingImg" >هناك مشكلة في ارسال بعض الصور!
+                </string>
                 <string name="enter_data_description" >	 أنت فى بداية النموذج. حرك الشاشه كما يظهر لك!	
                 </string>
                 <string name="change_textcolor_mandatory_background" >اختيار لون الخلفية للنص الإلزامي
@@ -3260,6 +3300,8 @@ done
                 </string>
                 <string name="send_form" >هل تريد إرسال النموذج؟
                 </string>
+                <string name="gotToSubmitImg" >الرجاء ارسال الصور من خلال الذهاب الى نافذة "ارسال الصور"
+                </string>
                 <string name="discard_group" >	حذف المجموعة	
                 </string>
                 <string name="telephone_number" >يرجى إدخال رقم الهاتف الخاص بك
@@ -3319,6 +3361,8 @@ done
                 </string>
                 <string name="check_url" >لا يمكن الاتصال بالخادم، الرجاء التحقق من العنوان أو محاولة التحقق من الاتصال في منطقة الإعدادات
                 </string>
+                <string name="Suitable_HU" >مناسب لحديد الوحدة السكنية!
+                </string>
                 <string name="form_renamed" >	أعادة تسمية	
                 </string>
                 <string name="contDesc" >التفصيل	
@@ -3345,6 +3389,8 @@ done
                 </string>
                 <string name="error_no_pdu" >Errore no PDU found
                 </string>
+                <string name="formDNE" >لا يمكن ايجاد النموذج الذي تحاول ارساله!
+                </string>
                 <string name="exit_button" >خروج
                 </string>
                 <string name="keep_changes" >	حفظ التغييرات	
@@ -3354,6 +3400,8 @@ done
                 <string name="default_connection_type" ></string>
                 <string name="powered_by_odk" ></string>
                 <string name="default_server_url" ></string>
+                <string name="Suitable_V" >مناسب لتحديد القرية فقط!
+                </string>
                 <string name="success" >	نجاح	
                 </string>
                 <string name="portocol_choice" >البروتوكول
@@ -3960,11 +4008,11 @@ https
                 </string>
                 <string name="date" >Date:
                 </string>
+                <string name="form_download_progress" >%1$s. Inapata mafaili ya midia: %2$s of %3$s
+                </string>
                 <string name="entering_repeat_ask" >Ongeza Kundi Jipya?
                 </string>
                 <string name="quit_entry" >Hifadhi Fomu Kama Imekamilika
-                </string>
-                <string name="form_download_progress" >%1$s. Inapata mafaili ya midia: %2$s of %3$s
                 </string>
                 <string name="do_not_change" >Futa
                 </string>

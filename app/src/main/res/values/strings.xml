@@ -359,4 +359,17 @@
 	<string name="complete_Editing">Enable Editing completed forms</string>
 	<string name="complete_Editing_disable">Disable Editing completed forms</string>
     <string name="portrait">Keep screen portrait</string>
+    <string name="Suitable_N">Suitable for identifying the Neighbourhood only!</string>
+    <string name="Suitable_V">Suitable for identifying the Village only!</string>
+    <string name="Suitable_B">Suitable for identifying the Block!</string>
+    <string name="Suitable_HU">Suitable for identifying the Housing unit!</string>
+    <string name="AllImgsSent">All images have been sent successfully</string>
+    <string name="problemSendingImg">There has been some problems sending one or more images</string>
+    <string name="imgDNE">One or more image does not exist!</string>
+    <string name="AllForms_sent">All forms have been sent successfully</string>
+    <string name="gotToSubmitImg">Please go to "Submit Images" tab to submit images</string>
+    <string name="problemSending">There has been some problems sending one or more forms</string>
+    <string name="fromDNE">One or more forms does not exist!</string>
+    <string name="notConnected">There is no connection to the WIFI. It is not possible to send the form</string>
+
 </resources>

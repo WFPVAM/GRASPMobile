@@ -99,7 +99,7 @@ public class PreferencesActivity extends PreferenceActivity implements
 
     private String protocol = new String();
 
-    public static String editingComplete= new String();
+    public static String editingComplete = new String();
 
 
     @Override

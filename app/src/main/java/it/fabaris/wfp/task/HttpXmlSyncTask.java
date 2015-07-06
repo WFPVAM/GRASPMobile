@@ -1,28 +1,12 @@
 package it.fabaris.wfp.task;
 
-import it.fabaris.wfp.activities.FormListActivity;
-import it.fabaris.wfp.activities.FormListCompletedActivity;
-import it.fabaris.wfp.activities.R;
-import it.fabaris.wfp.application.Collect;
-import it.fabaris.wfp.listener.MyCallback;
-import it.fabaris.wfp.provider.FormProvider.DatabaseHelper;
-
-import java.io.File;
-import java.io.IOException;
-import java.io.StringReader;
-import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.List;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPathExpressionException;
-import javax.xml.xpath.XPathFactory;
-
-import object.FormInnerListProxy;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.AsyncTask;
+import android.util.Log;
+import android.widget.Toast;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -36,19 +20,21 @@ import org.apache.http.util.EntityUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
 
-import utils.ApplicationExt;
+import java.io.StringReader;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.List;
 
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.database.Cursor;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.os.AsyncTask;
-import android.os.Environment;
-import android.util.Log;
-import android.widget.Toast;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.xpath.XPathFactory;
+
+import it.fabaris.wfp.activities.FormListCompletedActivity;
+import it.fabaris.wfp.activities.R;
+import it.fabaris.wfp.listener.MyCallback;
 
 /**
  * Class that defines the task that downloads the xform from the server
@@ -176,9 +162,19 @@ public class HttpXmlSyncTask extends AsyncTask<String, Void, String>{
                         "VALUES" +
                         "('"+xmlId+"','"+xmlName+"','no','"+xmlBody+"','','"+data+"')";
                 dbh.getWritableDatabase().execSQL(insertquery);
-			
-				
-				/*
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//                String duplicateName;
+//                FormProvider.DatabaseHelper dbh1 = new FormProvider.DatabaseHelper("forms.db");
+//                String query = "SELECT instanceFilePath FROM forms WHERE displayName ='"+xmlName+"'";
+//                Cursor c = dbh1.getReadableDatabase().rawQuery(query, null);;
+//                 if (c.moveToFirst()){
+//                     duplicateName = c.getString(c.getColumnIndex("instanceFilePath"));
+//                 }
+//                     c.close();
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+			/*
 				//LL 19-03-2014 MODIFICA IMPLEMENTATA PER LE FORM DI TEST (e commentare l'insert sopra)
 				String[] splittedFormName = xmlName.split("_");
 				String endOfFormName = splittedFormName[splittedFormName.length-1];//prendo l'ultima occorrenza del nome
@@ -190,7 +186,7 @@ public class HttpXmlSyncTask extends AsyncTask<String, Void, String>{
 					if(c.getCount()!=0){//se nome form esiste
 						if (c.moveToFirst()){
 							//fai un update del record inserendo il nuovo contenuto (non posso fare una delete e poi una insert perche' cambierebbe l'ordine delle form nel DB e questo potrebbe  
-							//far rompere la logica nell'uso degli oggetti parcellizzati usati come sorgente dall' adapter nella visualizzazione delle info delle form nella lista delle form "nuove"
+							//far rompere la logica nell'uso  degli oggetti parcellizzati usati come sorgente dall' adapter nella visualizzazione delle info delle form nella lista delle form "nuove"
 							String updatequery = "UPDATE message SET formId = '"+xmlId+"',formName ='" +xmlName+ "',formImported = 'no', formEncodedText = '"+ xmlBody +"', formText = '', date = '"+ data +"' WHERE formId = '" + c.getString(0) + "'";
 							dbh.getWritableDatabase().execSQL(updatequery);
 						}
@@ -224,16 +220,6 @@ public class HttpXmlSyncTask extends AsyncTask<String, Void, String>{
 				dbh.getWritableDatabase().execSQL(insertquery);
 				}
 				*/
-
-
-
-
-
-
-
-
-
-
 
                 dbh.close();
             }catch(Exception e){

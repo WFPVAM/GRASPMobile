@@ -295,13 +295,13 @@ public class HttpSendAllImages extends AsyncTask<String, Void, String> {
             }
 
             if (result == "ok") {//if all the forms are been sent
-                Toast.makeText(context, "All images have been sent successfully", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context,R.string.AllImgsSent , Toast.LENGTH_SHORT).show();
 
             } else {// not all the forms are been sent correctly
-                Toast.makeText(context, "There has been some problems sending one or more images", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, R.string.problemSendingImg, Toast.LENGTH_SHORT).show();
             }}
         else {// not all the forms are been sent correctly
-            Toast.makeText(context, "One or more image does not exist!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, R.string.imgDNE, Toast.LENGTH_SHORT).show();
 
         }
 

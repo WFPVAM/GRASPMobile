@@ -191,6 +191,12 @@
     <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-ar/strings.xml -->
     <eat-comment />
 
+    <string name="AllForms_sent">تم ارسال جميع النماذج بنجاح</string>
+    <string name="AllImgsSent">تم ارسال جميع الصور بنجاح!</string>
+    <string name="Suitable_B">مناسب لتحديد المبنى فقط!</string>
+    <string name="Suitable_HU">مناسب لحديد الوحدة السكنية!</string>
+    <string name="Suitable_N">مناسب   لتحديد الحي فقط!</string>
+    <string name="Suitable_V">مناسب لتحديد القرية فقط!</string>
     <string name="accept_location">	موقع التسجيل	</string>
     <string name="access_error">	خطأ أثناء محاولة الوصول %s	</string>
     <string name="accuracy">دقة	</string>
@@ -336,6 +342,7 @@
     <string name="finished_disk_scan">	تم الانتهاء من المسح الضوئي. جميع النماذج تم تحميلها.	</string>
     <string name="first_run"></string>
     <string name="font_size">	حجم خط النص	</string>
+    <string name="formDNE">لا يمكن ايجاد النموذج الذي تحاول ارساله!</string>
     <string name="form_download_progress">	الحصول على ملفات الوسائط	</string>
     <string name="form_name">	اسم النموذج	</string>
     <string name="form_not_available">المنوذج غير مناح حلى الخادم</string>
@@ -355,12 +362,14 @@
     <string name="getting_location">	تحميل الموقع	</string>
     <string name="go_to_location">	اذهب إلى الموقع	</string>
     <string name="google_account">	حدد حساب جوجل	</string>
+    <string name="gotToSubmitImg">الرجاء ارسال الصور من خلال الذهاب الى نافذة "ارسال الصور"</string>
     <string name="gps">شبكة الانترنت</string>
     <string name="grasp">GRASP - Geo Referential realtime Acquisition Statistic Platform</string>
     <string name="hard_reset">هل تريد إلغاء النماذج التامة سابقا، واستعادة التطبيق كتثبيت جديد؟</string>
     <string name="help">المساعدة	</string>
     <string name="home">الرئيسيه	</string>
     <string name="image_directory_creation_faild">Failed to create image directory</string>
+    <string name="imgDNE">لا يمكن ايجاد بعض الصور التي تحاول ارسالها!</string>
     <string name="imported">تم استلام النموذج بشكل صحيح </string>
     <string name="invalid_answer_error">	تحقق من المدخلات باللون الاحمر	</string>
     <string name="jump_to_beginning">	انتقل إلى البدايه	</string>
@@ -411,6 +420,7 @@
     <string name="no_pref">لا، تحديث فقط</string>
     <string name="no_sd_error">	لطفا، بطاقة الذاكرة الخاصة بك لا يعمل!	</string>
     <string name="noselect_error">	عذرا, لم يتم اختيار أى نموذج	</string>
+    <string name="notConnected">لا يوجد اتصال بشبكة الانترنت - لا يمكن ارسال النماذج</string>
     <string name="number_error">لم يتم إدخال رقم هاتف الخادم، يرجى ادخاله</string>
     <string name="offline">غير متاح</string>
     <string name="ok">	موافق	</string>
@@ -434,6 +444,8 @@
     <string name="portrait">إبقاء الشاشة عمودي</string>
     <string name="positive_choise">نعم</string>
     <string name="powered_by_odk"></string>
+    <string name="problemSending">هناك مشكلة في ارسال بعض النماذج</string>
+    <string name="problemSendingImg">هناك مشكلة في ارسال بعض الصور!</string>
     <string name="protocol">	بروتوكول	</string>
     <string name="provider_disabled_error">	عذرا، تحديد المواقع لا يعمل!	</string>
     <string name="quit_application">	خروج %s	</string>

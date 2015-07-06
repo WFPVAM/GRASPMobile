@@ -150,6 +150,7 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
         this.pd = ProgressDialog.show(context,
                 context.getString(R.string.checking_server),
                 context.getString(R.string.wait));
+
     }
 
     /**
@@ -359,15 +360,15 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
         }
         if(!(formResult=="empty")){
         if (result == "ok") {//if all the forms are been sent
-            Toast.makeText(context, "All forms have been sent successfully", Toast.LENGTH_LONG).show();
-            Toast.makeText(context,"Please go to 'Submit Images' tab to submit images ",Toast.LENGTH_LONG).show();
+            Toast.makeText(context, R.string.AllForms_sent, Toast.LENGTH_LONG).show();
+            Toast.makeText(context,R.string.gotToSubmitImg,Toast.LENGTH_LONG).show();
         } else {// not all the forms are been sent correctly
 
-           Toast.makeText(context, "There has been some problems sending one or more forms", Toast.LENGTH_SHORT).show();
-            Toast.makeText(context,"Please go to 'Submit Images' tab to submit images ",Toast.LENGTH_LONG).show();
+           Toast.makeText(context, R.string.problemSending, Toast.LENGTH_SHORT).show();
+            Toast.makeText(context,R.string.gotToSubmitImg,Toast.LENGTH_LONG).show();
         }}
             else {// not all the forms are been sent correctly
-                Toast.makeText(context, "One or more forms does not exist!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context,R.string.formDNE, Toast.LENGTH_SHORT).show();
             //////metto il salvataggio di quelle che stanno qui nelle finalizzate?
 			/*
 			if (result.trim().toLowerCase().startsWith("ok"))
@@ -719,5 +720,7 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
             return null;
         }
     }
-
+public static void cancel(){
+    HttpSendAllFormsTask.cancel();
+}
 }

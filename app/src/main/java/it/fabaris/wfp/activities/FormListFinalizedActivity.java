@@ -16,6 +16,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -69,6 +70,8 @@ public class FormListFinalizedActivity extends Activity implements MyCallback {
 
     public FormListHandlerFinalized formListHandler;
 
+    public static String portrait;
+
 
     private FormPendingAdapter adapter;
 
@@ -95,6 +98,14 @@ public class FormListFinalizedActivity extends Activity implements MyCallback {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tabpending);
 //        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+        settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        portrait=settings.getString(PreferencesActivity.KEY_BUTTON_PORTRAIT,"");
+
+        if(portrait.equalsIgnoreCase("enabled")){
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
+
 
         finalizzate = new ArrayList<FormInnerListProxy>();
         finalizzate = getIntent().getExtras().getParcelableArrayList("finalized");

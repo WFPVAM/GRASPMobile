@@ -6,6 +6,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -42,12 +43,22 @@ public class ControlActivity extends Activity
     private String language;
     private Button updateAppBtn;
 
+    private SharedPreferences settings;
+    private String portrait ;
+
    ProgressDialog mProgressDialog;
 
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.password_setting);
 
+
+        settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        portrait=settings.getString(PreferencesActivity.KEY_BUTTON_PORTRAIT,"");
+
+        if(portrait.equalsIgnoreCase("enabled")){
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
 
             StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
                     .detectDiskReads()
@@ -76,6 +87,8 @@ public class ControlActivity extends Activity
         mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         //added to check the last version of the app and install it
         updateAppBtn= (Button) findViewById(R.id.button_check);
+
+
 
         /**
          * on Click we check if the psw inserted is correct

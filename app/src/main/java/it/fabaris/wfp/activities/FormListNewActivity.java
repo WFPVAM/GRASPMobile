@@ -10,34 +10,28 @@
  ******************************************************************************/
 package it.fabaris.wfp.activities;
 
-import java.util.ArrayList;
-
-import content.FormNewAdapter;
-
-import object.FormInnerListProxy;
-
-import it.fabaris.wfp.provider.FormProvider.DatabaseHelper;
-import it.fabaris.wfp.provider.FormProviderAPI;
-import it.fabaris.wfp.utility.BadgeView;
 import android.app.Activity;
-import android.app.ListActivity;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
+import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+
+import content.FormNewAdapter;
+import it.fabaris.wfp.provider.FormProviderAPI;
+import object.FormInnerListProxy;
 
 /**
  * Class that defines the tab for the list of the new forms
@@ -59,6 +53,8 @@ public class FormListNewActivity extends Activity
 
     private ArrayList<FormInnerListProxy> nuove;
 
+    public static String portrait;
+    private SharedPreferences settings;
 
     private static Notification notification;
     private NotificationManager nm;
@@ -67,6 +63,14 @@ public class FormListNewActivity extends Activity
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tabnew);
+
+        settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        portrait=settings.getString(PreferencesActivity.KEY_BUTTON_PORTRAIT,"");
+
+        if(portrait.equalsIgnoreCase("enabled")){
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
+
 
         Log.i("inFormListNewActivity","1");
 
