@@ -57,7 +57,7 @@ public class HttpXmlSyncTask extends AsyncTask<String, Void, String>{
         this.data = data;//the string "sync"
         this.callback = callback;
     }
-
+boolean xmlError =false;
     /**
      * show dialog
      */
@@ -108,7 +108,10 @@ public class HttpXmlSyncTask extends AsyncTask<String, Void, String>{
                 Toast.makeText(context, R.string.error, Toast.LENGTH_LONG).show();
             }else if(result.trim().equalsIgnoreCase("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><forms/>")){
                 Toast.makeText(context, R.string.no_forms_to_download, Toast.LENGTH_LONG).show();
-            }else{
+            }else if(xmlError){
+                Toast.makeText(context,"Some forms were not imported, please contact your adminstrator",Toast.LENGTH_SHORT).show();
+            }
+            else{
                 Toast.makeText(context, R.string.forms_downloaded, Toast.LENGTH_LONG).show();
             }
 
@@ -131,10 +134,17 @@ public class HttpXmlSyncTask extends AsyncTask<String, Void, String>{
     private void xmlToDB(Document doc) {
         Node root = doc.getFirstChild();
         for (int i = 0; i < root.getChildNodes().getLength(); i++) {
-            try{
+            try {
                 Node form = root.getChildNodes().item(i);
                 String xmlBody = form.getTextContent();
                 Document xml = stringToDoc(form.getTextContent());
+                if (xml == null) {
+                    xmlError=true;
+
+                    RuntimeException e =
+                     new RuntimeException("XML error " );
+
+                } else {
 
                 System.out.println();
 
@@ -146,7 +156,7 @@ public class HttpXmlSyncTask extends AsyncTask<String, Void, String>{
                 String day = Integer.toString(gc.get(Calendar.DAY_OF_MONTH));
                 String month = Integer.toString(gc.get(Calendar.MONTH));
                 String year = Integer.toString(gc.get(Calendar.YEAR));
-                String data = day+"-"+month+"-"+year;
+                String data = day + "-" + month + "-" + year;
                 xmlBody = FormListCompletedActivity.encodeSms(xmlBody);
                 it.fabaris.wfp.provider.MessageProvider.DatabaseHelper dbh =
                         new it.fabaris.wfp.provider.MessageProvider.DatabaseHelper("message.db");
@@ -160,7 +170,7 @@ public class HttpXmlSyncTask extends AsyncTask<String, Void, String>{
                         "formText," +
                         "date)" +
                         "VALUES" +
-                        "('"+xmlId+"','"+xmlName+"','no','"+xmlBody+"','','"+data+"')";
+                        "('" + xmlId + "','" + xmlName + "','no','" + xmlBody + "','','" + data + "')";
                 dbh.getWritableDatabase().execSQL(insertquery);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -222,6 +232,7 @@ public class HttpXmlSyncTask extends AsyncTask<String, Void, String>{
 				*/
 
                 dbh.close();
+            }
             }catch(Exception e){
                 e.printStackTrace();
                 continue;

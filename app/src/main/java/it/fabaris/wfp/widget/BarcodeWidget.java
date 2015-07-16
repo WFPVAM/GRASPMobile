@@ -47,6 +47,8 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.zxing.integration.android.IntentIntegrator;
+
 /**
  * Widget that allows user to scan barcodes and add them to the form.
  * 
@@ -80,7 +82,8 @@ public class BarcodeWidget extends QuestionWidget implements IQuestionWidget, IB
         mGetBarcodeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent("com.google.zxing.client.android.SCAN");
+                //Intent i = new Intent("com.google.zxing.client.android.SCAN");
+                Intent i = IntentIntegrator.createScanIntent(getContext());
                 mWaitingForData = true;
                 try {
                     ((Activity) getContext()).startActivityForResult(i,
