@@ -49,6 +49,7 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
+import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -103,6 +104,7 @@ import it.fabaris.wfp.task.SaveToDiskTask;
 import it.fabaris.wfp.utility.ColorHelper;
 import it.fabaris.wfp.utility.ConstantUtility;
 import it.fabaris.wfp.utility.FileUtils;
+import it.fabaris.wfp.view.HierarchyElementView;
 import it.fabaris.wfp.view.ODKView;
 import it.fabaris.wfp.widget.ImageWidget;
 import it.fabaris.wfp.widget.QuestionWidget;
@@ -2036,8 +2038,10 @@ public boolean formHasVideos;
      * @param keyCode A key code that represents the button pressed, from KeyEvent
      * @param event   The KeyEvent object that defines the button action
      */
+
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         switch (keyCode) {
+
             case KeyEvent.KEYCODE_BACK:
                 // createQuitDialog();
 
@@ -2092,6 +2096,7 @@ public boolean formHasVideos;
 			 */
         }
         return super.onKeyDown(keyCode, event);
+
     }
 
     /**
@@ -2507,4 +2512,21 @@ public boolean formHasVideos;
 //    public static String getVideoPath() {
 //        return  videoPath;
 //    }
+
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        switch (keyCode) {
+
+            case KeyEvent.KEYCODE_ENTER:
+
+             /* This is a sample for handling the Enter button */
+                HierarchyElementView.newLine=true;
+                return true;
+
+
+            default:
+                return super.onKeyUp(keyCode, event);
+        }
+    }
+
 }

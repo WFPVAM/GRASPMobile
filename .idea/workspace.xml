@@ -24,126 +24,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d74532b9-762a-4879-927b-fdb7595c3ce7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/core_3_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/zxing_android_minimal_1_2_1.xml" />
+      <change type="DELETED" beforePath="C:\Projects\GRASPMobilePal\app\build\intermediates\libs\app-debug.ap_" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\GRASPMobilePal\app\build\intermediates\manifests\debug\AndroidManifest.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Projects\GRASPMobilePal\app\build\intermediates\res\debug\values-ar\values.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Projects\GRASPMobilePal\app\build\intermediates\res\debug\values-en-rZA\values.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Projects\GRASPMobilePal\app\build\intermediates\res\debug\values-es\values.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Projects\GRASPMobilePal\app\build\intermediates\res\debug\values-it\values.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/ast/ASTNode.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/ast/ASTNode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/ast/ASTNodeAbstractExpr$Partition.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/ast/ASTNodeAbstractExpr$Partition.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/ast/ASTNodeAbstractExpr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/ast/ASTNodeAbstractExpr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/ast/ASTNodeBinaryOp.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/ast/ASTNodeBinaryOp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/ast/ASTNodeFilterExpr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/ast/ASTNodeFilterExpr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/ast/ASTNodeFunctionCall.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/ast/ASTNodeFunctionCall.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/ast/ASTNodeLocPath.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/ast/ASTNodeLocPath.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/ast/ASTNodePathStep.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/ast/ASTNodePathStep.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/ast/ASTNodePredicate.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/ast/ASTNodePredicate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/ast/ASTNodeUnaryOp.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/ast/ASTNodeUnaryOp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/listener/AdvanceToNextListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/listener/AdvanceToNextListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/utils/ApplicationExt$CopyTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/utils/ApplicationExt$CopyTask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/utils/ApplicationExt.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/utils/ApplicationExt.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/ArrayUtilities.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/ArrayUtilities.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/view/ArrowAnimationView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/view/ArrowAnimationView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/view/AudioButton$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/view/AudioButton$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/view/AudioButton.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/view/AudioButton.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/AudioWidget$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/AudioWidget$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/AudioWidget$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/AudioWidget$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/AudioWidget$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/AudioWidget$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/AudioWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/AudioWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/AutoCompleteWidget$AutoCompleteAdapter$ItemsFilter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/AutoCompleteWidget$AutoCompleteAdapter$ItemsFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/AutoCompleteWidget$AutoCompleteAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/AutoCompleteWidget$AutoCompleteAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/AutoCompleteWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/AutoCompleteWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/BadgeView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/BadgeView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/BarcodeWidget$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/BarcodeWidget$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/BarcodeWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/BarcodeWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/Base64Wrapper.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/Base64Wrapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/helper/BasicDataPointer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/helper/BasicDataPointer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/BooleanData.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/BooleanData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/content/BrainsAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/content/BrainsAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/BuildConfig.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/BuildConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/transport/payload/ByteArrayPayload.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/transport/payload/ByteArrayPayload.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/instance/utils/CachingInstanceTemplateManager.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/instance/utils/CachingInstanceTemplateManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/CannotCreateObjectException.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/CannotCreateObjectException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/ChildProcessingRule.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/ChildProcessingRule.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/pivot/CmpPivot.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/pivot/CmpPivot.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/application/Collect.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/application/Collect.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/ColorHelper.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/ColorHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/instance/utils/CompactInstanceWrapper$ExtWrapAnswerData.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/instance/utils/CompactInstanceWrapper$ExtWrapAnswerData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/instance/utils/CompactInstanceWrapper.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/instance/utils/CompactInstanceWrapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/Condition.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/Condition.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/ConstantUtility.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/ConstantUtility.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/api/Constants.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/api/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/Constants.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/Constraint.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/Constraint.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/pivot/ConstraintHint.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/pivot/ConstraintHint.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/ControlActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/ControlActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/ControlActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/ControlActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/ControlActivity$DownloadFile$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/ControlActivity$DownloadFile$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/ControlActivity$DownloadFile.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/ControlActivity$DownloadFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/ControlActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/ControlActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/CoreModelModule.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/CoreModelModule.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/CreditsActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/CreditsActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/DataBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/DataBinding.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/transport/payload/DataPointerPayload.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/transport/payload/DataPointerPayload.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/database/DatabaseHelper.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/database/DatabaseHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/DateData.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/DateData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/pivot/DateRangeHint.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/pivot/DateRangeHint.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/DateTimeData.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/DateTimeData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/DateTimeWidget$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/DateTimeWidget$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/DateTimeWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/DateTimeWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/utils/DateUtils$DateFields.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/utils/DateUtils$DateFields.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/utils/DateUtils.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/utils/DateUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/DateWidget$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/DateWidget$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/DateWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/DateWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/database/DbAdapterGrasp.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/database/DbAdapterGrasp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/DecimalData.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/DecimalData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/pivot/DecimalRangeHint.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/pivot/DecimalRangeHint.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/DecimalWidget$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/DecimalWidget$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/DecimalWidget$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/DecimalWidget$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/DecimalWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/DecimalWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/listener/DeleteFormsListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/listener/DeleteFormsListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/listener/DeleteInstancesListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/listener/DeleteInstancesListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/DeserializationException.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/DeserializationException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/listener/DiskSyncListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/listener/DiskSyncListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/DocumentFetchResult.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/DocumentFetchResult.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/DownloadSmsTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/DownloadSmsTask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/EncryptionUtils$EncryptedFormInformation.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/EncryptionUtils$EncryptedFormInformation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/EncryptionUtils.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/EncryptionUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/EnhancedDigestSchemeFactory.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/EnhancedDigestSchemeFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/EnhancedHttpClient.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/EnhancedHttpClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/EntityFilter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/EntityFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/EvaluationContext.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/EvaluationContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/ExtUtil.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/ExtUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/ExtWrapBase.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/ExtWrapBase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/ExtWrapIntEncoding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/ExtWrapIntEncoding.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/ExtWrapIntEncodingSmall.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/ExtWrapIntEncodingSmall.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/ExtWrapIntEncodingUniform.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/ExtWrapIntEncodingUniform.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/ExtWrapList.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/ExtWrapList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/ExtWrapListPoly.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/ExtWrapListPoly.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/ExtWrapMap.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/ExtWrapMap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/ExtWrapMapPoly.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/ExtWrapMapPoly.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/ExtWrapNullable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/ExtWrapNullable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/ExtWrapTagged.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/ExtWrapTagged.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/Externalizable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/Externalizable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/ExternalizableWrapper.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/ExternalizableWrapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/log/FatalException.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/log/FatalException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/FauxIndexedPersistable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/FauxIndexedPersistable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/logic/FileReference.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/logic/FileReference.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/logic/FileReferenceFactory.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/logic/FileReferenceFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/FileUtils.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/FileUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/log/FlatLogSerializer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/log/FlatLogSerializer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/utils/FormComparator.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/utils/FormComparator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/content/FormCompletedAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/content/FormCompletedAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/FormCompletedDataDBUpdate.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/FormCompletedDataDBUpdate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/logic/FormController$InstanceMetadata.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/logic/FormController$InstanceMetadata.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/logic/FormController.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/logic/FormController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/FormDef$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/FormDef$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/FormDef$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/FormDef$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/FormDef.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/FormDef.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/logic/FormDetails.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/logic/FormDetails.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/listener/FormDownloaderListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/listener/FormDownloaderListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/FormElementStateListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/FormElementStateListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$10.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$11.class" />
@@ -163,432 +49,35 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$AnimationType.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$AnimationType.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/form/api/FormEntryCaption$RepeatOptions.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/form/api/FormEntryCaption$RepeatOptions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/form/api/FormEntryCaption.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/form/api/FormEntryCaption.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/form/api/FormEntryController.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/form/api/FormEntryController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/form/api/FormEntryModel.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/form/api/FormEntryModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/form/api/FormEntryPrompt.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/form/api/FormEntryPrompt.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormHierarchyActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormHierarchyActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormHierarchyActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormHierarchyActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/FormIndex.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/FormIndex.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/object/FormInnerListProxy.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/object/FormInnerListProxy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/instance/FormInstance.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/instance/FormInstance.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$3$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$3$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$3$2$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$3$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$3$2$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$3$2$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$3$2$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$3$2$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$3$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$3$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$FormListHandlerCompleted.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$FormListHandlerCompleted.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/listener/FormListDownloaderListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/listener/FormListDownloaderListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$3$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$3$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$3$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$3$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$FormListHandlerFinalized.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$FormListHandlerFinalized.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListNewActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListNewActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListNewActivity$FormListHandlerNew.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListNewActivity$FormListHandlerNew.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListNewActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListNewActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSavedActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSavedActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSavedActivity$2$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSavedActivity$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSavedActivity$2$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSavedActivity$2$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSavedActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSavedActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSavedActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSavedActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSavedActivity$FormListHandlerSaved.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSavedActivity$FormListHandlerSaved.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSavedActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSavedActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSubmittedActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSubmittedActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSubmittedActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSubmittedActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSubmittedActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSubmittedActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSubmittedActivity$FormListHandlerSubmitted.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSubmittedActivity$FormListHandlerSubmitted.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSubmittedActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSubmittedActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/listener/FormLoaderListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/listener/FormLoaderListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/FormLoaderTask$FECWrapper.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/FormLoaderTask$FECWrapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/FormLoaderTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/FormLoaderTask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/formmanager/FormModule.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/formmanager/FormModule.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/content/FormNewAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/content/FormNewAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/content/FormPendingAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/content/FormPendingAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/FormProvider$DatabaseHelper.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/FormProvider$DatabaseHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/FormProvider.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/FormProvider.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/FormProviderAPI$FormsColumns.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/FormProviderAPI$FormsColumns.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/FormProviderAPI.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/FormProviderAPI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/content/FormSavedAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/content/FormSavedAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/listener/FormSavedListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/listener/FormSavedListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/content/FormSubmittedAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/content/FormSubmittedAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/GeoPointActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/GeoPointActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/GeoPointActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/GeoPointActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/GeoPointData.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/GeoPointData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/GeoPointWidget$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/GeoPointWidget$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/GeoPointWidget$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/GeoPointWidget$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/GeoPointWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/GeoPointWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/GridMultiWidget$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/GridMultiWidget$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/GridMultiWidget$ImageAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/GridMultiWidget$ImageAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/GridMultiWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/GridMultiWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/GridWidget$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/GridWidget$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/GridWidget$ImageAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/GridWidget$ImageAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/GridWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/GridWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/GroupDef.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/GroupDef.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/HelpActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/HelpActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/logic/HierarchyElement.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/logic/HierarchyElement.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/view/HierarchyElementView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/view/HierarchyElementView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/adapters/HierarchyListAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/adapters/HierarchyListAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpCheckAndSendPostTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpCheckAndSendPostTask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpCheckPostTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpCheckPostTask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpSendAllFormsTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpSendAllFormsTask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpSendAllImages.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpSendAllImages.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpSendPostTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpSendPostTask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpXmlCheckAndSyncTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpXmlCheckAndSyncTask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpXmlSyncTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpXmlSyncTask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/IAnswerData.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/IAnswerData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/IAnswerDataSerializer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/IAnswerDataSerializer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/IBinaryWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/IBinaryWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/IConditionExpr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/IConditionExpr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/transport/payload/IDataPayload.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/transport/payload/IDataPayload.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/transport/payload/IDataPayloadVisitor.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/transport/payload/IDataPayloadVisitor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/data/IDataPointer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/data/IDataPointer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/IDataReference.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/IDataReference.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/IElementHandler.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/IElementHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/IExprDataType.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/IExprDataType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/IFormElement.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/IFormElement.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/log/IFullLogSerializer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/log/IFullLogSerializer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/IFunctionHandler.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/IFunctionHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/utils/IInstanceProcessor.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/utils/IInstanceProcessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/utils/IInstanceSerializingVisitor.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/utils/IInstanceSerializingVisitor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/utils/IInstanceVisitor.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/utils/IInstanceVisitor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/api/ILogger.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/api/ILogger.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/IMetaData.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/IMetaData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/api/IModule.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/api/IModule.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/utils/IPreloadHandler.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/utils/IPreloadHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/IPropertyManager.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/IPropertyManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/properties/IPropertyRules.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/properties/IPropertyRules.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/formmanager/view/IQuestionWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/formmanager/view/IQuestionWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/util/restorable/IRecordFilter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/util/restorable/IRecordFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/IStorageFactory.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/IStorageFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/IStorageIterator.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/IStorageIterator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/IStorageUtility.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/IStorageUtility.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/IStorageUtilityIndexed.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/IStorageUtilityIndexed.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/instance/utils/ITreeVisitor.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/instance/utils/ITreeVisitor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/IXFormParserFactory.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/IXFormParserFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/util/restorable/IXFormyFactory.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/util/restorable/IXFormyFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/ImageWidget$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/ImageWidget$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/ImageWidget$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/ImageWidget$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/ImageWidget$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/ImageWidget$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/ImageWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/ImageWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/InstanceProvider$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/InstanceProvider$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/InstanceProvider$DatabaseHelper.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/InstanceProvider$DatabaseHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/InstanceProvider.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/InstanceProvider.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/InstanceProviderAPI$InstanceColumns.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/InstanceProviderAPI$InstanceColumns.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/InstanceProviderAPI.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/InstanceProviderAPI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/instance/utils/InstanceTemplateManager.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/instance/utils/InstanceTemplateManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/listener/InstanceUploaderListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/listener/InstanceUploaderListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/IntegerData.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/IntegerData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/pivot/IntegerRangeHint.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/pivot/IntegerRangeHint.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/IntegerWidget$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/IntegerWidget$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/IntegerWidget$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/IntegerWidget$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/IntegerWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/IntegerWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/InvalidIndexException.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/InvalidIndexException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/instance/InvalidReferenceException.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/instance/InvalidReferenceException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/reference/InvalidReferenceException.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/reference/InvalidReferenceException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/utils/ItemNode.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/utils/ItemNode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/ItemsetBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/ItemsetBinding.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/JavaRosaCoreModule.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/JavaRosaCoreModule.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/properties/JavaRosaPropertyRules.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/properties/JavaRosaPropertyRules.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/LabelWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/LabelWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/Lexer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/Lexer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/ListMultiWidget$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/ListMultiWidget$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/ListMultiWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/ListMultiWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/ListWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/ListWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/locale/LocaleDataSource.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/locale/LocaleDataSource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/locale/LocaleTextException.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/locale/LocaleTextException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/locale/Localizable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/locale/Localizable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/locale/Localization.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/locale/Localization.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/locale/LocalizationUtils.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/locale/LocalizationUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/locale/Localizer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/locale/Localizer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/log/LogEntry.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/log/LogEntry.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/Logger$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/Logger$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/Logger.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/Logger.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/LongData.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/LongData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/MD5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/MD5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/MD5InputStream.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/MD5InputStream.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/MD5State.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/MD5State.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/Map.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/Map.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/MathUtils.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/MathUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/view/MediaLayout$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/view/MediaLayout$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/view/MediaLayout$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/view/MediaLayout$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/view/MediaLayout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/view/MediaLayout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$13$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$13$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$13$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$13$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$13.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$14.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$14.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/MessageProvider$DatabaseHelper.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/MessageProvider$DatabaseHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/MessageProvider.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/MessageProvider.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/MessageProviderAPI$MessageColumns.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/MessageProviderAPI$MessageColumns.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/MessageProviderAPI.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/provider/MessageProviderAPI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/instance/utils/ModelReferencePayload.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/instance/utils/ModelReferencePayload.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/MultiInputStream.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/MultiInputStream.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/transport/payload/MultiMessagePayload.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/transport/payload/MultiMessagePayload.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/MultiPointerAnswerData.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/MultiPointerAnswerData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/listener/MyCallback.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/listener/MyCallback.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/NewFileUtils.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/NewFileUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/NoLocalizedTextException.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/NoLocalizedTextException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/NodeProcessingRule.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/NodeProcessingRule.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/database/ODKSQLiteOpenHelper.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/database/ODKSQLiteOpenHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/view/ODKView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/view/ODKView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/OrderedHashtable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/OrderedHashtable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/Parser$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/Parser$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/Parser$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/Parser$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/Parser$SubNodeFactory.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/Parser$SubNodeFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/Parser.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/Parser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/Persistable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/Persistable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/pivot/Pivot.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/pivot/Pivot.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/PointerAnswerData.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/PointerAnswerData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$4$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$4$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$4$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$4$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$DownloadFile$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$DownloadFile$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$DownloadFile.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$DownloadFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/PrefixTree.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/PrefixTree.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/PrefixTreeNode.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/PrefixTreeNode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/reference/PrefixedRootFactory.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/reference/PrefixedRootFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/utils/PreloadUtils.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/utils/PreloadUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/properties/Property.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/properties/Property.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/logic/PropertyManager.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/logic/PropertyManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/PropertyManager.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/PropertyManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/PropertyUtils.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/PropertyUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/PrototypeFactory.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/PrototypeFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/PrototypeFactoryDeprecated.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/externalizable/PrototypeFactoryDeprecated.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/PrototypeManager.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/PrototypeManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/QuestionAndStringAswerWidget$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/QuestionAndStringAswerWidget$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/QuestionAndStringAswerWidget$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/QuestionAndStringAswerWidget$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/QuestionAndStringAswerWidget$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/QuestionAndStringAswerWidget$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/QuestionAndStringAswerWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/QuestionAndStringAswerWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/QuestionDef.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/QuestionDef.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/utils/QuestionPreloader$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/utils/QuestionPreloader$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/utils/QuestionPreloader$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/utils/QuestionPreloader$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/utils/QuestionPreloader$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/utils/QuestionPreloader$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/utils/QuestionPreloader$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/utils/QuestionPreloader$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/utils/QuestionPreloader.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/utils/QuestionPreloader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/QuestionWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/QuestionWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/utils/Queue.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/utils/Queue.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$anim.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$anim.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$array.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$array.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$xml.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$xml.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/pivot/RangeHint.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/pivot/RangeHint.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/Recalculate.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/Recalculate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/reference/Reference.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/reference/Reference.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/reference/ReferenceDataSource.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/reference/ReferenceDataSource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/reference/ReferenceFactory.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/reference/ReferenceFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/reference/ReferenceManager.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/reference/ReferenceManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/locale/ResourceFileDataSource.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/locale/ResourceFileDataSource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/reference/ResourceReference.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/reference/ResourceReference.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/reference/ResourceReferenceFactory.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/reference/ResourceReferenceFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/util/restorable/Restorable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/util/restorable/Restorable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/util/restorable/RestoreUtils.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/util/restorable/RestoreUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/reference/RootTranslator.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/reference/RootTranslator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/SHA1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/SHA1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/model/xform/SMSSerializingVisitor.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/model/xform/SMSSerializingVisitor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/SaveToDiskTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/SaveToDiskTask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/SelectChoice.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/SelectChoice.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/SelectMultiData.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/SelectMultiData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SelectMultiWidget$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SelectMultiWidget$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SelectMultiWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SelectMultiWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SelectOneAutoAdvanceWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SelectOneAutoAdvanceWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/SelectOneData.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/SelectOneData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SelectOneWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SelectOneWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/helper/Selection.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/helper/Selection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/SetHiddenWidgetValueTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/SetHiddenWidgetValueTask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SignatureWidget$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SignatureWidget$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SignatureWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SignatureWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/SmsListActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/SmsListActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/SmsListActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/SmsListActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/SmsListActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/SmsListActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/broadcast/SmsReceiverBroadcast.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/broadcast/SmsReceiverBroadcast.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/SortedIntSet.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/SortedIntSet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SpinnerMultiWidget$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SpinnerMultiWidget$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SpinnerMultiWidget$1$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SpinnerMultiWidget$1$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SpinnerMultiWidget$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SpinnerMultiWidget$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SpinnerMultiWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SpinnerMultiWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SpinnerWidget$SpinnerAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SpinnerWidget$SpinnerAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SpinnerWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SpinnerWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/SplashScreenActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/SplashScreenActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/SplashScreenActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/SplashScreenActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/SplashScreenActivity$CopyTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/SplashScreenActivity$CopyTask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/SplashScreenActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/SplashScreenActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/api/State.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/api/State.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/api/StateMachine.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/api/StateMachine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/StorageFullException.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/StorageFullException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/StorageManager.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/StorageManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/StorageModifiedException.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/StorageModifiedException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/log/StreamLogSerializer$Purger.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/log/StreamLogSerializer$Purger.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/log/StreamLogSerializer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/log/StreamLogSerializer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/StreamsUtil.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/StreamsUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/StringData.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/StringData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/pivot/StringLengthRangeHint.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/pivot/StringLengthRangeHint.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/StringMultiLineWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/StringMultiLineWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/StringNumberWidget$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/StringNumberWidget$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/StringNumberWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/StringNumberWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/StringWidget$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/StringWidget$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/StringWidget$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/StringWidget$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/StringWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/StringWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/SubmissionParser.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/SubmissionParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/SubmissionProfile.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/SubmissionProfile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SyncViewWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SyncViewWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/locale/TableLocaleSource.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/locale/TableLocaleSource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/TaggedSerializationWrapper.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/TaggedSerializationWrapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/TimeData.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/TimeData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/TimePreference.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/TimePreference.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/TimeWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/TimeWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/Token.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/Token.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/instance/TreeElement.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/instance/TreeElement.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/utils/TreeElement.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/utils/TreeElement.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/instance/TreeReference.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/instance/TreeReference.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/TriggerWidget$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/TriggerWidget$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/TriggerWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/TriggerWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/Triggerable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/Triggerable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/TrivialTransitions.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/TrivialTransitions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/TrivialTransitionsWithErrors.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/TrivialTransitionsWithErrors.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/UnavailableServiceException.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/UnavailableServiceException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/UncastData.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/data/UncastData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/pivot/UnpivotableExpressionException.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/model/condition/pivot/UnpivotableExpressionException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/UnregisteredLocaleException.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/util/UnregisteredLocaleException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/UrlUtils.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/UrlUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/VideoWidget$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/VideoWidget$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/VideoWidget$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/VideoWidget$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/VideoWidget$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/VideoWidget$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/VideoWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/VideoWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/WebUtils.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/WebUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/WidgetFactory.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/WidgetFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/log/WrappedException.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/log/WrappedException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/WrappingStorageUtility$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/WrappingStorageUtility$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/WrappingStorageUtility$SerializationWrapper.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/WrappingStorageUtility$SerializationWrapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/WrappingStorageUtility.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/core/services/storage/WrappingStorageUtility.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/util/XFormAnswerDataParser.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/util/XFormAnswerDataParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/util/XFormAnswerDataSerializer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/util/XFormAnswerDataSerializer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParseException.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParseException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$13.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParserFactory.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/parse/XFormParserFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/util/XFormSerializer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/util/XFormSerializer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/model/xform/XFormSerializingVisitor.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/model/xform/XFormSerializingVisitor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/util/XFormUtils.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xform/util/XFormUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/model/xform/XFormsModule$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/model/xform/XFormsModule$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/model/xform/XFormsModule.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/model/xform/XFormsModule.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathArithExpr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathArithExpr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathBinaryOpExpr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathBinaryOpExpr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathBoolExpr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathBoolExpr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathCmpExpr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathCmpExpr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/XPathConditional.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/XPathConditional.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathEqExpr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathEqExpr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/XPathException.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/XPathException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathExpression.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathExpression.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathFilterExpr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathFilterExpr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathFuncExpr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathFuncExpr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/XPathNodeset.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/XPathNodeset.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathNumNegExpr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathNumNegExpr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathNumericLiteral.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathNumericLiteral.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathOpExpr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathOpExpr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/XPathParseTool.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/XPathParseTool.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathPathExpr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathPathExpr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathQName.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathQName.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/model/xform/XPathReference.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/model/xform/XPathReference.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathStep.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathStep.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathStringLiteral.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathStringLiteral.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/XPathSyntaxException.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/parser/XPathSyntaxException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/XPathTypeMismatchException.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/XPathTypeMismatchException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathUnaryOpExpr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathUnaryOpExpr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/XPathUnhandledException.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/XPathUnhandledException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathUnionExpr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathUnionExpr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/XPathUnsupportedException.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/XPathUnsupportedException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathVariableReference.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/org/javarosa/xpath/expr/XPathVariableReference.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/Xform.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/Xform.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/XmlParser.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/utility/XmlParser.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/1.12/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/1.12/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-23e8e8cea3199e0e646e56441a11d430e36b9b29.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-23e8e8cea3199e0e646e56441a11d430e36b9b29.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/1.12/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/1.12/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/1.12/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/1.12/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/core-3.2.0-0468317e48db82061ebedf5d6ccada239edae65d.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/core-3.2.0-0468317e48db82061ebedf5d6ccada239edae65d.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/joda-time-2.0-2cf3c0fd813eeb12246632a7f6873e378839ca8d.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/joda-time-2.0-2cf3c0fd813eeb12246632a7f6873e378839ca8d.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/kxml2-2.2.3-c36fc58c247b8f1931d38d7c867d9ccbad619a04.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/kxml2-2.2.3-c36fc58c247b8f1931d38d7c867d9ccbad619a04.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/model_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/model_data.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/regexp-me-4cecfd2d22eae45f1117c4036b8fdf7b33b96e5c.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/regexp-me-4cecfd2d22eae45f1117c4036b8fdf7b33b96e5c.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/1.12/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/1.12/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug-androidTest.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/w3c-dom-fbb10ceb71b51d7fe9bb90927dd57e129a3794e3.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/w3c-dom-fbb10ceb71b51d7fe9bb90927dd57e129a3794e3.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/xercesImpl-b0d00df5e4dc644816a5bceb49468de82c41a447.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/xercesImpl-b0d00df5e4dc644816a5bceb49468de82c41a447.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/BarcodeWidget.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/BarcodeWidget.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/it/fabaris/wfp/activities/BuildConfig.java" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/it/fabaris/wfp/activities/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GRASPMobilePal.iml" afterPath="$PROJECT_DIR$/GRASPMobilePal.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/task/HttpXmlSyncTask.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/task/HttpXmlSyncTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/it/fabaris/wfp/activities/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/it/fabaris/wfp/activities/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormEntryActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormEntryActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/view/HierarchyElementView.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/view/HierarchyElementView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/QuestionAndStringAswerWidget.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/QuestionAndStringAswerWidget.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeAssets/debug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeAssets/debug/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/debug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/debug/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GRASPMobile.iws" />
@@ -626,19 +115,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HttpXmlSyncTask.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/task/HttpXmlSyncTask.java">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44444445">
-              <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="66" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PreferencesActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/PreferencesActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="633" column="13" selection-start-line="633" selection-start-column="13" selection-end-line="633" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControlActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/ControlActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.6687117">
+              <caret line="84" column="34" selection-start-line="84" selection-start-column="34" selection-end-line="84" selection-end-column="34" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#3550#3584#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="resourceFile" />
+      </list>
+    </option>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -1691,7 +1207,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4307049719429" />
+        <entry key="$PROJECT_DIR$" value="4307740744659" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1991,11 +1507,27 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormEntryActivity.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/BarcodeWidget.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/task/HttpXmlSyncTask.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/xml/user_prefernces.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/userSettingsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_user_settings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_test.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/PreferencesActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings_activity_user_settings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/password_setting.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/GeoPointActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/GeoPointWidget.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/ControlActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/userPreferencesActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/view/HierarchyElementView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormEntryActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/StringWidget.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/MenuActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/QuestionAndStringAswerWidget.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -2065,7 +1597,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2202,7 +1734,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
+              <option name="myItemId" value="layout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2360,49 +1892,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="logic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GRASPMobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GRASPMobilePal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wfp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="activities" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2434,6 +1932,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="it.fabaris.wfp.activities" />
       <recent name="it.fabaris.wfp.widget" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -2441,6 +1940,12 @@
       <recent name="C:\Users\mureed\AndroidstudioProjects\GRASPMobile\app\src\main\res\values-es" />
       <recent name="C:\Users\mureed\AndroidstudioProjects\GRASPMobile\app\src\main\res\values-en-rZA" />
       <recent name="C:\Users\mureed\AndroidstudioProjects\GRASPMobile\app\src\main\res\values-ar" />
+    </key>
+    <key name="android.template.packageName">
+      <recent name="it.fabaris.wfp.activities" />
+    </key>
+    <key name="android.template.parentActivityClass">
+      <recent name="" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.app">
@@ -2736,29 +2241,29 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7185315" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28741497" sideWeight="0.81639004" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.457483" sideWeight="0.81639004" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39685315" sideWeight="0.18049793" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27210885" sideWeight="0.17857143" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959184" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0867347" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4319728" sideWeight="0.81950206" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33673468" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39795917" sideWeight="0.81950206" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45578232" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32883817" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2489796" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959184" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21938775" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30612245" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39285713" sideWeight="0.54253113" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282313" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20560747" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4125874" sideWeight="0.67634857" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.327551" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41156462" sideWeight="0.67634857" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -2767,11 +2272,11 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282313" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39685315" sideWeight="0.18049793" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27210885" sideWeight="0.17857143" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959184" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45578232" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27210885" sideWeight="0.17857143" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959184" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45578232" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20435685" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39335665" sideWeight="0.54253113" order="2" side_tool="false" content_ui="tabs" />
@@ -2788,8 +2293,8 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.78496504" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29545453" sideWeight="0.81950206" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2489796" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959184" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959184" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -2903,6 +2408,12 @@
           <properties />
           <option name="timeStamp" value="814" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormEntryActivity.java</url>
+          <line>708</line>
+          <properties />
+          <option name="timeStamp" value="816" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/PreferencesActivity.java</url>
           <line>410</line>
@@ -2919,7 +2430,7 @@
           </selected-grouping-rules>
         </breakpoints-dialog>
       </breakpoints-dialog>
-      <option name="time" value="815" />
+      <option name="time" value="827" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="app">
@@ -2928,12 +2439,171 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormEntryActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2270" column="35" selection-start-line="2270" selection-start-column="35" selection-end-line="2270" selection-end-column="35" />
+          <folding>
+            <element signature="e#41033#41034#0" expanded="true" />
+            <element signature="e#41065#41066#0" expanded="true" />
+            <element signature="e#41318#41319#0" expanded="true" />
+            <element signature="e#41349#41350#0" expanded="true" />
+            <element signature="e#93636#93637#0" expanded="true" />
+            <element signature="e#93671#93672#0" expanded="true" />
+            <element signature="e#102240#102241#0" expanded="true" />
+            <element signature="e#102268#102269#0" expanded="true" />
+            <element signature="e#105300#105301#0" expanded="true" />
+            <element signature="e#105322#105323#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/ControlActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="105" column="35" selection-start-line="105" selection-start-column="35" selection-end-line="105" selection-end-column="35" />
+          <folding>
+            <element signature="e#3550#3584#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormEntryActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1295" column="0" selection-start-line="1295" selection-start-column="0" selection-end-line="1295" selection-end-column="0" />
+          <folding>
+            <element signature="e#41033#41034#0" expanded="true" />
+            <element signature="e#41065#41066#0" expanded="true" />
+            <element signature="e#41318#41319#0" expanded="true" />
+            <element signature="e#41349#41350#0" expanded="true" />
+            <element signature="e#93636#93637#0" expanded="true" />
+            <element signature="e#93671#93672#0" expanded="true" />
+            <element signature="e#102240#102241#0" expanded="true" />
+            <element signature="e#102268#102269#0" expanded="true" />
+            <element signature="e#105300#105301#0" expanded="true" />
+            <element signature="e#105322#105323#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/view/HierarchyElementView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/PreferencesActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="598" column="5" selection-start-line="595" selection-start-column="2" selection-end-line="598" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/ControlActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="117" column="35" selection-start-line="117" selection-start-column="35" selection-end-line="117" selection-end-column="35" />
+          <folding>
+            <element signature="e#3550#3584#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormEntryActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1295" column="0" selection-start-line="1295" selection-start-column="0" selection-end-line="1295" selection-end-column="0" />
+          <folding>
+            <element signature="e#41033#41034#0" expanded="true" />
+            <element signature="e#41065#41066#0" expanded="true" />
+            <element signature="e#41318#41319#0" expanded="true" />
+            <element signature="e#41349#41350#0" expanded="true" />
+            <element signature="e#93636#93637#0" expanded="true" />
+            <element signature="e#93671#93672#0" expanded="true" />
+            <element signature="e#102240#102241#0" expanded="true" />
+            <element signature="e#102268#102269#0" expanded="true" />
+            <element signature="e#105300#105301#0" expanded="true" />
+            <element signature="e#105322#105323#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/view/HierarchyElementView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/PreferencesActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="597" column="5" selection-start-line="594" selection-start-column="2" selection-end-line="597" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/ControlActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+          <folding>
+            <element signature="e#3550#3584#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/PreferencesActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/MenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="101" column="11" selection-start-line="101" selection-start-column="11" selection-end-line="101" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/password_setting.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="287" column="32" selection-start-line="287" selection-start-column="32" selection-end-line="287" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/task/HttpXmlSyncTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="111" column="131" selection-start-line="111" selection-start-column="131" selection-end-line="111" selection-end-column="131" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2945,12 +2615,32 @@
           <caret line="139" column="19" selection-start-line="139" selection-start-column="19" selection-end-line="139" selection-end-column="19" />
           <caret line="140" column="19" selection-start-line="140" selection-start-column="19" selection-end-line="140" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/task/HttpXmlSyncTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/preferences.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.2222223">
+          <caret line="49" column="6" selection-start-line="49" selection-start-column="6" selection-end-line="55" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/settings_screen.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2958,12 +2648,253 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/task/HttpXmlSyncTask.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/preference_test_button.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44444445">
-          <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/basicmenu.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="287" column="32" selection-start-line="287" selection-start-column="32" selection-end-line="287" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/password_setting.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.206897">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/GeoPointActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="160" column="104" selection-start-line="160" selection-start-column="104" selection-end-line="160" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/view/accessibility/AccessibilityManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26334518">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/os/Parcel.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.88">
+          <caret line="145" column="28" selection-start-line="145" selection-start-column="28" selection-end-line="145" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/os/Bundle.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.52">
+          <caret line="130" column="28" selection-start-line="130" selection-start-column="28" selection-end-line="130" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/WidgetFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5555556">
+          <caret line="272" column="0" selection-start-line="272" selection-start-column="0" selection-end-line="272" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/widget/TextView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31316727">
+          <caret line="184" column="22" selection-start-line="184" selection-start-column="22" selection-end-line="184" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/text/TextUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31316727">
+          <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/content/Intent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31316727">
+          <caret line="242" column="28" selection-start-line="242" selection-start-column="28" selection-end-line="242" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormHierarchyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2478874">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/adapters/HierarchyListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43098593">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/logic/HierarchyElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9661971">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/GeoPointWidget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39175257">
+          <caret line="270" column="0" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/form_entry.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.49324325">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/view/View.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36">
+          <caret line="676" column="16" selection-start-line="676" selection-start-column="16" selection-end-line="676" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/app/Activity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36466166">
+          <caret line="129" column="19" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/view/KeyEvent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36466166">
+          <caret line="225" column="25" selection-start-line="225" selection-start-column="25" selection-end-line="225" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/view/MediaLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/view/ODKView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3310811">
+          <caret line="273" column="85" selection-start-line="273" selection-start-column="77" selection-end-line="273" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/view/HierarchyElementView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7323077">
+          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/MenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15878378">
+          <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/StringWidget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3321033">
+          <caret line="385" column="18" selection-start-line="385" selection-start-column="16" selection-end-line="385" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/QuestionAndStringAswerWidget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24723247">
+          <caret line="287" column="44" selection-start-line="287" selection-start-column="44" selection-end-line="287" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/StringMultiLineWidget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5292308">
+          <caret line="154" column="45" selection-start-line="154" selection-start-column="45" selection-end-line="154" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormEntryActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2270" column="35" selection-start-line="2270" selection-start-column="35" selection-end-line="2270" selection-end-column="35" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#41033#41034#0" expanded="true" />
+            <element signature="e#41065#41066#0" expanded="true" />
+            <element signature="e#41318#41319#0" expanded="true" />
+            <element signature="e#41349#41350#0" expanded="true" />
+            <element signature="e#93636#93637#0" expanded="true" />
+            <element signature="e#93671#93672#0" expanded="true" />
+            <element signature="e#102240#102241#0" expanded="true" />
+            <element signature="e#102268#102269#0" expanded="true" />
+            <element signature="e#105300#105301#0" expanded="true" />
+            <element signature="e#105322#105323#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="66" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/PreferencesActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="633" column="13" selection-start-line="633" selection-start-column="13" selection-end-line="633" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/ControlActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.6687117">
+          <caret line="84" column="34" selection-start-line="84" selection-start-column="34" selection-end-line="84" selection-end-column="34" />
+          <folding>
+            <element signature="e#3550#3584#0" expanded="true" />
           </folding>
         </state>
       </provider>

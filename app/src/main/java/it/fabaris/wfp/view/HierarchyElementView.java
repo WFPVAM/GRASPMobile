@@ -16,9 +16,11 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+import android.text.InputType;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -33,13 +35,14 @@ import it.fabaris.wfp.logic.HierarchyElement;
 /**
  * Implement the view that hold a hyerarchy element
  */
-public class HierarchyElementView extends RelativeLayout {
 
+public class HierarchyElementView extends RelativeLayout {
+public static boolean newLine;
     private TextView mPrimaryTextView;
     private TextView mSecondaryTextView;
     private ImageView mIcon;
     private ImageView imageView;
-
+//    public static final int IME_FLAG_NAVIGATE_NEXT=0x08000000;
     public HierarchyElementView(Context context, HierarchyElement it) {
         super(context);
 
@@ -67,14 +70,12 @@ public class HierarchyElementView extends RelativeLayout {
 
         mSecondaryTextView = new TextView(context);
         mSecondaryTextView.setText(it.getSecondaryText());
+
         mSecondaryTextView.setTextAppearance(context, R.style.large);
         mSecondaryTextView.setId(3);
         mSecondaryTextView.setGravity(Gravity.CENTER_VERTICAL);
         mSecondaryTextView.setPadding(4, 4, 4, 4);
         mSecondaryTextView.setTextColor(Color.parseColor("#ffffff"));//mSecondaryTextView.setTextColor(it.getTextColor());
-
-
-
 
 
         LayoutParams lp = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
@@ -150,5 +151,7 @@ public class HierarchyElementView extends RelativeLayout {
     public int dipToPx(int dip) {
         return (int) (dip * getResources().getDisplayMetrics().density + 0.5f);
     }
+
+
 
 }

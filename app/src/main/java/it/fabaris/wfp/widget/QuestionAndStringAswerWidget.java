@@ -88,6 +88,8 @@ public abstract class QuestionAndStringAswerWidget extends QuestionWidget implem
 				@Override
 				public void onTextChanged(CharSequence s, int start, int before, int count) 
 				{
+
+
 				}
 				@Override
 				public void beforeTextChanged(CharSequence s, int start, int count, int after) 
@@ -109,12 +111,14 @@ public abstract class QuestionAndStringAswerWidget extends QuestionWidget implem
 						checking = true;
 						if (!mAnswer.toString().equalsIgnoreCase("") && !mReadOnly)
 						{
+
 								PreferencesActivity.TO_SAVE_FORM = true;
 						}
 						//else to hide the ready only calculated fields
 						else if(!mAnswer.toString().equalsIgnoreCase("") && mReadOnly)
 						{						
 							String text = mAnswer.getText().toString();
+
 							try
 							{	
 								int num = Integer.parseInt(text);
@@ -217,10 +221,10 @@ public abstract class QuestionAndStringAswerWidget extends QuestionWidget implem
 			TextView.OnEditorActionListener exampleListener = new TextView.OnEditorActionListener()
 			{
 
-				public boolean onEditorAction(TextView exampleView, int actionId, KeyEvent event) 
+				public boolean onEditorAction(TextView exampleView, int actionId, KeyEvent event)
 				{
-					if (actionId == EditorInfo.IME_NULL && event.getAction() == KeyEvent.ACTION_DOWN ) 
-					{ 
+					if (actionId == EditorInfo.IME_NULL && event.getAction() == KeyEvent.ACTION_DOWN )
+					{
 						try
 						{
 							//mAnswer.requestFocus(View.FOCUS_FORWARD);
@@ -237,7 +241,7 @@ public abstract class QuestionAndStringAswerWidget extends QuestionWidget implem
 					return false;
 				}
 			};
-			
+
 			//-----------------------------------------------------------------------
 			
 			//-----------------------------------------------------------------------	
@@ -256,8 +260,12 @@ public abstract class QuestionAndStringAswerWidget extends QuestionWidget implem
 						{
 							//mAnswer.requestFocus(View.FOCUS_FORWARD);
 							//Toast.makeText(getContext(),	mAnswer.getText(), Toast.LENGTH_LONG).show();
-							mAnswer.clearFocus();
-							mAnswer.setSelection(View.FOCUS_FORWARD);
+
+							//--------------these 2 lineswere disabled to enable multiline--------------//
+//							mAnswer.clearFocus();
+//							mAnswer.setSelection(View.FOCUS_FORWARD);
+
+							mAnswer.append("\n");
 						}
 						catch(Exception e)
 						{
@@ -290,7 +298,7 @@ public abstract class QuestionAndStringAswerWidget extends QuestionWidget implem
 				& EditorInfo.IME_MASK_ACTION);
 		// needed to make long read only text scroll
 		mAnswer.setHorizontallyScrolling(false);
-		
+
 		//-----------------------------
 		//ONLY ONE ROW FOR THE TEXT
 		//mAnswer.setSingleLine(true);
