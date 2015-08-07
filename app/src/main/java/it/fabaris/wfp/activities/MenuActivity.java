@@ -12,9 +12,14 @@ package it.fabaris.wfp.activities;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
@@ -36,11 +41,16 @@ import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import android.app.Notification;
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
+import database.DatabaseHelper;
 import it.fabaris.wfp.application.Collect;
+import it.fabaris.wfp.provider.FormProvider;
+import object.FormInnerListProxy;
 
 /**
  * Class that defines the base activity for the visualization of the menu
@@ -49,32 +59,33 @@ import it.fabaris.wfp.application.Collect;
  * and the port used to synchronized and send forms 
  *
  */
-public class MenuActivity extends Activity
-{
+public class MenuActivity extends Activity {
     private boolean doubleBackToExitPressedOnce = false;
     private String defaultport = "";
     private String ip = "";
     boolean isUrl = false;
-
-
+    public static final int Pending_ID = 1;
+   // private ArrayList<FormInnerListProxy> pendingImages;
 
     @Override
-    public void onCreate(Bundle savedInstanceState){
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.basicmenu);
+
+
         setTitle(getString(R.string.app_name) + " > " + "Menu");
         try {
             Collect.createODKDirs();
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return;
         }
-        final SharedPreferences settings =  PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        final SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         String numModem = settings.getString(PreferencesActivity.KEY_SERVER_TELEPHONE, getString(R.string.default_server_telephone));
         String urlServer = settings.getString(PreferencesActivity.KEY_SERVER_URL, getString(R.string.default_server_url));
         //set as default the http value
 
-        if(numModem.equalsIgnoreCase("")&&urlServer.equalsIgnoreCase("")){
+        if (numModem.equalsIgnoreCase("") && urlServer.equalsIgnoreCase("")) {
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
             alert.setTitle("Server Configurations");
             alert.setMessage("The server number or url are not inserted, " +
@@ -110,22 +121,21 @@ public class MenuActivity extends Activity
              */
             final RadioGroup protocolRadioGroup = new RadioGroup(this); //create the RadioGroup
             protocolRadioGroup.setOrientation(RadioGroup.HORIZONTAL);
-            protocolRadioGroup.setOnCheckedChangeListener(new OnCheckedChangeListener()
-            {
+            protocolRadioGroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
                 public void onCheckedChanged(RadioGroup group, int checkedId) {
                     // checkedId is the RadioButton selected
-                    for(int i=0; i<protocolRadioGroup.getChildCount(); i++) {
+                    for (int i = 0; i < protocolRadioGroup.getChildCount(); i++) {
                         RadioButton btn = (RadioButton) protocolRadioGroup.getChildAt(i);
-                        if(btn.getId() == checkedId) {
+                        if (btn.getId() == checkedId) {
                             String text = (String) btn.getText();
                             SharedPreferences.Editor editor = settings.edit();
-                            if(text.equals("http")){
+                            if (text.equals("http")) {
                                 SharedPreferences.Editor meditor = settings.edit();
                                 meditor.putString(PreferencesActivity.KEY_PROTOCOL, "http");
                                 meditor.commit();
                                 //ConstantUtility.protocol = "http";
-                            }else{
-                                Log.i("https scelto","https");
+                            } else {
+                                Log.i("https scelto", "https");
                                 SharedPreferences.Editor meditor = settings.edit();
                                 meditor.putString(PreferencesActivity.KEY_PROTOCOL, "https");
                                 meditor.commit();
@@ -178,11 +188,10 @@ public class MenuActivity extends Activity
                     String ip = ETip.getEditableText().toString().trim();
 
 
+                    if (ip != null & !ip.isEmpty() & !ip.equals("")) {//if the IP field is not null
 
-                    if(ip != null & !ip.isEmpty() & !ip.equals("")){//if the IP field is not null
 
-
-                        if(isValidUrl("http://" + ip) & !isIP(ip)){
+                        if (isValidUrl("http://" + ip) & !isIP(ip)) {
                             isUrl = true;
                             //set the edittext for the ip to "mobileconnection.aspx"
                             ETport.setText("");
@@ -247,12 +256,12 @@ public class MenuActivity extends Activity
             /**
              * LAYOUT SETTINGS
              */
-            TextView text1 =  new TextView(MenuActivity.this);
-            TextView TVserverulr =  new TextView(MenuActivity.this);
-            TextView TVprotocol =  new TextView(MenuActivity.this);
-            TextView TVip =  new TextView(MenuActivity.this);
-            TextView TVport =  new TextView(MenuActivity.this);
-            TextView TVdirectory =  new TextView(MenuActivity.this);
+            TextView text1 = new TextView(MenuActivity.this);
+            TextView TVserverulr = new TextView(MenuActivity.this);
+            TextView TVprotocol = new TextView(MenuActivity.this);
+            TextView TVip = new TextView(MenuActivity.this);
+            TextView TVport = new TextView(MenuActivity.this);
+            TextView TVdirectory = new TextView(MenuActivity.this);
 
             text1.setText("Server Telephone");
             text1.setTextSize(17);
@@ -302,17 +311,16 @@ public class MenuActivity extends Activity
                     port = ETport.getEditableText().toString(); //PreferencesActivity.KEY_PORT;
                     directory = ETdirectory.getEditableText().toString(); //PreferencesActivity.KEY_DIRECTORY;
                     String serverurl = new String();
-                    String protocol = settings.getString(PreferencesActivity.KEY_PROTOCOL,null);
+                    String protocol = settings.getString(PreferencesActivity.KEY_PROTOCOL, null);
 
 
-                    if(protocol != null && ip != null && port != null){
-                        if(!isUrl){//if there is not been inserted an ip
-                            serverurl = protocol+"://"+ip+":"+port+((directory!=null && directory.trim().length()>0)?("/" + directory):"")+"/"+PreferencesActivity.serviceName;
-                        }else{//if there is been inserted a url and not an ip
-                            serverurl = protocol+"://"+ip+((directory!=null && directory.trim().length()>0)?("/" + directory):"")+"/"+PreferencesActivity.serviceName;
+                    if (protocol != null && ip != null && port != null) {
+                        if (!isUrl) {//if there is not been inserted an ip
+                            serverurl = protocol + "://" + ip + ":" + port + ((directory != null && directory.trim().length() > 0) ? ("/" + directory) : "") + "/" + PreferencesActivity.serviceName;
+                        } else {//if there is been inserted a url and not an ip
+                            serverurl = protocol + "://" + ip + ((directory != null && directory.trim().length() > 0) ? ("/" + directory) : "") + "/" + PreferencesActivity.serviceName;
                             isUrl = false;
                         }
-
 
 
                         serverurl = serverurl.trim();//LL 16-05-2014
@@ -341,11 +349,11 @@ public class MenuActivity extends Activity
         /**
          * forms button
          */
-        final Button buttonForms = (Button)findViewById(R.id.forms);
-        buttonForms.setOnClickListener(new View.OnClickListener(){
+        final Button buttonForms = (Button) findViewById(R.id.forms);
+        buttonForms.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                Intent myIntent = new Intent(v.getContext(),FormListActivity.class);
+            public void onClick(View v) {
+                Intent myIntent = new Intent(v.getContext(), FormListActivity.class);
 //				myIntent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 startActivity(myIntent);
             }
@@ -353,21 +361,21 @@ public class MenuActivity extends Activity
         /**
          * SMS button
          */
-        final Button buttonSms = (Button)findViewById(R.id.sms);
-        buttonSms.setOnClickListener(new View.OnClickListener(){
+        final Button buttonSms = (Button) findViewById(R.id.sms);
+        buttonSms.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                Intent myIntent = new Intent(v.getContext(),SmsListActivity.class);
+            public void onClick(View v) {
+                Intent myIntent = new Intent(v.getContext(), SmsListActivity.class);
                 startActivity(myIntent);
             }
         });
         /**
          * settings button
          */
-        final Button buttonSettings = (Button)findViewById(R.id.settings);
-        buttonSettings.setOnClickListener(new View.OnClickListener(){
+        final Button buttonSettings = (Button) findViewById(R.id.settings);
+        buttonSettings.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
 
                 Intent myIntent = new Intent(v.getContext(), ControlActivity.class);
                 startActivity(myIntent);
@@ -376,10 +384,10 @@ public class MenuActivity extends Activity
         /**
          * credits button
          */
-        final Button buttonCredits = (Button)findViewById(R.id.credits);
-        buttonCredits.setOnClickListener(new View.OnClickListener(){
+        final Button buttonCredits = (Button) findViewById(R.id.credits);
+        buttonCredits.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 Intent myIntent = new Intent(v.getContext(), CreditsActivity.class);
                 startActivity(myIntent);
             }
@@ -387,10 +395,10 @@ public class MenuActivity extends Activity
         /**
          * help button
          */
-        final Button buttonHelp = (Button)findViewById(R.id.help);
-        buttonHelp.setOnClickListener(new View.OnClickListener(){
+        final Button buttonHelp = (Button) findViewById(R.id.help);
+        buttonHelp.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 Intent myIntent = new Intent(v.getContext(), HelpActivity.class);
                 startActivity(myIntent);
             }
@@ -401,54 +409,46 @@ public class MenuActivity extends Activity
          * clicking on "yes" button the Activiy is finishe
          * clicking on "no" button the dialog is dismissed
          */
-        final Button buttonExit = (Button)findViewById(R.id.exit);
-        buttonExit.setOnClickListener(new OnClickListener()
-        {
-            public void onClick(View v)
-            {
+        final Button buttonExit = (Button) findViewById(R.id.exit);
+        buttonExit.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MenuActivity.this);
                 builder.setTitle(R.string.exit_dialog_title)
                         .setIcon(R.drawable.icona_app_wfp)
                         .setMessage(R.string.exit_dialog)
-                        .setPositiveButton(R.string.confirm, new DialogInterface.OnClickListener()
-                        {
-                            public void onClick(DialogInterface arg0, int arg1)
-                            {
+                        .setPositiveButton(R.string.confirm, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface arg0, int arg1) {
                                 finish();
                                 System.exit(0);
                             }
                         })
-                        .setNegativeButton(getString(R.string.negative), new DialogInterface.OnClickListener()
-                        {
-                            public void onClick(DialogInterface dialog, int id)
-                            {
+                        .setNegativeButton(getString(R.string.negative), new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
                                 dialog.dismiss();
                             }
                         });
                 builder.show();
             }
         });
+
+
     }
 
 
     /**
      * ENABLE BACK SYSTEM BUTTON TO ACCEPT 2 TOUCHES WITHIN 2 SECONDS
      */
-    public void onBackPressed()
-    {
-        if (doubleBackToExitPressedOnce)
-        {
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
             super.onBackPressed();
             return;
         }
 
         this.doubleBackToExitPressedOnce = true;
-        Toast.makeText(getBaseContext(), getString(R.string.double_back),Toast.LENGTH_SHORT).show();
+        Toast.makeText(getBaseContext(), getString(R.string.double_back), Toast.LENGTH_SHORT).show();
 
-        new Handler().postDelayed(new Runnable()
-        {
-            public void run()
-            {
+        new Handler().postDelayed(new Runnable() {
+            public void run() {
                 doubleBackToExitPressedOnce = false;
             }
         }, 2000);
@@ -456,6 +456,7 @@ public class MenuActivity extends Activity
 
     /**
      * This is used to check if the given URL is valid or not.
+     *
      * @param url an url as a string
      * @return a boolean true if is a valid url, false otherwise
      */
@@ -463,7 +464,7 @@ public class MenuActivity extends Activity
     private boolean isValidUrl(String url) {
         Pattern p = Patterns.WEB_URL;
         Matcher m = p.matcher(url);
-        if(m.matches())
+        if (m.matches())
             return true;
         else
             return false;
@@ -471,10 +472,11 @@ public class MenuActivity extends Activity
 
     /**
      * This is used to check given ip
+     *
      * @param ip an ip as a string
      * @return a boolean true if is a valid ip, false otherwise
      */
-    private boolean isIP(String ip){
+    private boolean isIP(String ip) {
         boolean isIP = false;
         final Pattern IP_ADDRESS
                 = Pattern.compile(
@@ -491,4 +493,44 @@ public class MenuActivity extends Activity
         return isIP;
     }
 
+    public boolean getItems() {
+        FormProvider.DatabaseHelper dbh = new FormProvider.DatabaseHelper("forms.db");
+        String query = "SELECT *  FROM forms WHERE status = 'finalized' ";
+        Cursor c = dbh.getReadableDatabase().rawQuery(query, null);
+        String query1 = "SELECT *  FROM forms WHERE status = 'completed' ";
+        Cursor b = dbh.getReadableDatabase().rawQuery(query1, null);
+        if ( c.moveToFirst() || b.moveToFirst())
+            return true;
+        else
+            return false;
+    }
+
+
+    public void onResume() {
+        super.onResume();
+
+    if (getItems()) {
+        String nf = Context.NOTIFICATION_SERVICE;
+        NotificationManager mNotificationManager = (NotificationManager) getSystemService(nf);
+        int icon = R.drawable.icona_app_wfp;
+        CharSequence tickerText =getString(R.string.not_list_ticker); // ticker-text
+        long when = System.currentTimeMillis();
+        Context context = getApplicationContext();
+        CharSequence contentTitle = getString(R.string.not_list_title);
+        CharSequence contentText = getString(R.string.not_list_text); ;
+        Intent notificationIntent = new Intent(getBaseContext(), FormListActivity.class);
+
+        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
+        Notification notification = new Notification(icon, tickerText, when);
+        notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);
+
+        notification.defaults |= Notification.DEFAULT_SOUND;
+        notification.defaults |= Notification.DEFAULT_VIBRATE;
+        notification.defaults |= Notification.DEFAULT_LIGHTS;
+        mNotificationManager.notify(Pending_ID, notification);
+
+    }
+
+
+    }
 }

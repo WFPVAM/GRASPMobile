@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:defaultValue="Disabled"
+        android:dialogTitle="Keep Portrait screen only"
+        android:entries="@array/editing_completed"
+        android:entryValues="@array/editing_completed_values"
+        android:key="button_Portrait"
+        android:title="@string/portrait" />
+    <ListPreference
+        android:defaultValue="21"
+        android:dialogTitle="@string/change_font_size"
+        android:entries="@array/font_size_entries"
+        android:entryValues="@array/font_size_entry_values"
+        android:key="font_size"
+        android:title="@string/font_size" />
+    <Preference
+        android:key="button_check_conn"
+        android:title="@string/check_connection" />
+
+</PreferenceScreen><!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/xml/user_settings.xml -->

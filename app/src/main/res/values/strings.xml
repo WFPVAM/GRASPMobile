@@ -285,7 +285,7 @@
 	<string name="button_in">Login</string>
 	<string name="suggest">...password</string>
 	<string name="password_error">The password you typed is incorrect</string>
-    <string name="button_check">Check for latest version of the application</string>
+    <string name="button_check">Update application</string>
 
 	<string name="imported">Form correctly imported</string>
 	<string name="number_error">The server telephone number is not inserted, please enter it</string>
@@ -317,7 +317,7 @@
 	<string name="wait">Please wait...</string>
 	<string name="time_before">Time before re-submit allowed</string>
 	<string name="sending_method">Sending Method</string>
-	<string name="syncronyze">Syncronyze forms...</string>
+	<string name="syncronyze">Synchronize forms...</string>
 	
 	<string name="exit_dialog">Do you want to quit?</string>
 	<string name="exit_dialog_title">Exit</string>
@@ -371,5 +371,15 @@
     <string name="problemSending">There has been some problems sending one or more forms</string>
     <string name="fromDNE">One or more forms does not exist!</string>
     <string name="notConnected">There is no connection to the WIFI. It is not possible to send the form</string>
+	<string name="user_setting">Edit User Settings</string>
+	<string name="not_img_text">You have images that are not submitted</string>
+	<string name="not_img_ticker">You have images that are not submitted</string>
+	<string name="not_img_title">Send images!</string>
+	<string name="not_form_text">You have forms that are not submitted</string>
+	<string name="not_form_ticker">You have forms that are not submitted</string>
+	<string name="not_form_title">Send Completed Forms!</string>
+	<string name="not_list_text">You have items that are not submitted</string>
+	<string name="not_list_ticker">Check List Forms to see pending items</string>
+	<string name="not_list_title">Pending Items!</string>
 
 </resources>

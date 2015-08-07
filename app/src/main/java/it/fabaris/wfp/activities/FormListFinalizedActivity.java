@@ -12,15 +12,21 @@ package it.fabaris.wfp.activities;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.preference.PreferenceManager;
 import android.util.Base64;
 import android.util.Log;
@@ -31,6 +37,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
+
 
 import org.javarosa.core.model.instance.TreeElement;
 import org.javarosa.xform.parse.XFormParser;
@@ -62,6 +69,7 @@ import utils.ApplicationExt;
  *
  */
 public class FormListFinalizedActivity extends Activity implements MyCallback {
+
     public interface FormListHandlerFinalized {
         public ArrayList<FormInnerListProxy> getFinalizedForm();
 
@@ -91,6 +99,7 @@ public class FormListFinalizedActivity extends Activity implements MyCallback {
     // public String idFormNameInstance;
     public static ArrayList<String> istance;
     static ContentResolver CR;
+    public static int listSize;
 
 
     public void onCreate(Bundle savedInstanceState) {
@@ -98,17 +107,22 @@ public class FormListFinalizedActivity extends Activity implements MyCallback {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tabpending);
 //        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-
+        String nf = Context.NOTIFICATION_SERVICE;
+        final NotificationManager mNotificationManager = (NotificationManager) getSystemService(nf);
         settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-        portrait=settings.getString(PreferencesActivity.KEY_BUTTON_PORTRAIT,"");
+        portrait = settings.getString(PreferencesActivity.KEY_BUTTON_PORTRAIT, "");
 
-        if(portrait.equalsIgnoreCase("enabled")){
+        if (portrait.equalsIgnoreCase("enabled")) {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
 
 
-        finalizzate = new ArrayList<FormInnerListProxy>();
-        finalizzate = getIntent().getExtras().getParcelableArrayList("finalized");
+         finalizzate = new ArrayList<FormInnerListProxy>();
+         finalizzate=FormListActivity.copyFinalized;
+       //finalizzate = getIntent().getExtras().getParcelableArrayList("finalized");
+//        if(finalizzate.size()>0){
+//            mNotificationManager.cancel(FormListActivity.sendImages_ID);
+//        }
         istance = new ArrayList<String>();
 
         listview = (ListView) findViewById(R.id.listViewPending);
@@ -139,6 +153,8 @@ public class FormListFinalizedActivity extends Activity implements MyCallback {
                     sendImagesInList(finalizzate);
                     adapter.notifyDataSetInvalidated();
                     adapter.notifyDataSetChanged();
+
+                    mNotificationManager.cancel(FormListActivity.sendImages_ID);
                 }
             }
 
@@ -263,9 +279,8 @@ public class FormListFinalizedActivity extends Activity implements MyCallback {
                                                     byte[] partFile = new byte[(int) fileSize];
                                                     chunkedVideo = Base64.encodeToString(partFile, Base64.DEFAULT);
                                                     if (i == partIndex - 1) {
-                                                        formId = str1[1] + "_" + chunkedName +"_lastPart"+ "_video";
-                                                    }
-                                                    else {
+                                                        formId = str1[1] + "_" + chunkedName + "_lastPart" + "_video";
+                                                    } else {
                                                         formId = str1[1] + "_" + chunkedName + "_video";
                                                     }
                                                     if (isNetworkConnected()) {
@@ -332,7 +347,31 @@ public class FormListFinalizedActivity extends Activity implements MyCallback {
         adapter.notifyDataSetInvalidated();
         adapter.notifyDataSetChanged();
 
+
+        listSize = finalizzate.size();
     }
+
+//    @Override
+//    protected void onSaveInstanceState(Bundle outState) {
+//        super.onSaveInstanceState(outState);
+//
+//        if(outState != null) {
+//            // Write here your data
+//            outState.putParcelableArrayList("finalized",finalizzate);
+//        }
+//    }
+
+//    }
+//    @Override
+//    public int describeContents() {
+//        return 0;
+//    }
+//
+//    @Override
+//    public void writeToParcel(Parcel parcel, int i) {
+//     parcel.writeList(finalizzate);
+//    }
+
 
 //    private String getFormImages(String formName) {
 //        byte[] fileBytes = FileUtils.getFileAsBytes(new File(formName));
@@ -486,8 +525,8 @@ public class FormListFinalizedActivity extends Activity implements MyCallback {
             String updatequery = "UPDATE forms SET status='submitted', submissionDate = '" + data + "'  WHERE displayNameInstance = '"
                     + istance.get(k) + "'";
 
-            Log.i("FUNZIONE updateFormToSubmitted per la form: ",
-                    istance.get(k));
+//            Log.i("FUNZIONE updateFormToSubmitted per la form: ",
+//                    istance.get(k));
 
             dbh.getReadableDatabase().execSQL(updatequery);
 
@@ -605,4 +644,5 @@ public class FormListFinalizedActivity extends Activity implements MyCallback {
         }
 
     }
+
 }

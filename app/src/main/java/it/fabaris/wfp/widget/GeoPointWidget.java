@@ -105,9 +105,10 @@ public class GeoPointWidget extends QuestionWidget implements IBinaryWidget {
 
                 String s = mStringAnswer.getText().toString();
                 String[] sa = s.split(" ");
-                double gp[] = new double[2];
+                double gp[] = new double[3];
                 gp[0] = Double.valueOf(sa[0]).doubleValue();
                 gp[1] = Double.valueOf(sa[1]).doubleValue();
+                gp[2] = Double.valueOf(sa[2]).doubleValue();
 //                gp[2] = Double.valueOf(sa[2]).doubleValue();
 //                gp[3] = Double.valueOf(sa[3]).doubleValue();
 //                Intent i = new Intent(getContext(), GeoPointMapActivity.class);
@@ -203,9 +204,10 @@ public class GeoPointWidget extends QuestionWidget implements IBinaryWidget {
             try {
                 // segment lat and lon
                 String[] sa = s.split(" ");
-                double gp[] = new double[2];
+                double gp[] = new double[3];
                 gp[0] = Double.valueOf(sa[0]).doubleValue();
                 gp[1] = Double.valueOf(sa[1]).doubleValue();
+                gp[2] = Double.valueOf(sa[2]).doubleValue();
 //                gp[2] = Double.valueOf(sa[2]).doubleValue();
 //                gp[3] = Double.valueOf(sa[3]).doubleValue();
                 mGetLocationButton.setBackgroundColor(colorHelper.getReadOnlyBackgroundColor());
@@ -219,39 +221,65 @@ public class GeoPointWidget extends QuestionWidget implements IBinaryWidget {
 
 
     private String truncateDouble(String s) {
-        DecimalFormat df = new DecimalFormat("#.##");
+        DecimalFormat df = new DecimalFormat("#.#######");
         return df.format(Double.valueOf(s));
     }
 
 
     private String formatGps(double coordinates, String type) {
-        String location = Double.toString(coordinates);
-        String degreeSign = "\u00B0";
-        String degree = location.substring(0, location.indexOf(".")) + degreeSign;
-        location = "0." + location.substring(location.indexOf(".") + 1);
-        double temp = Double.valueOf(location) * 60;
-        location = Double.toString(temp);
-        String mins = location.substring(0, location.indexOf(".")) + "'";
 
-        location = "0." + location.substring(location.indexOf(".") + 1);
-        temp = Double.valueOf(location) * 60;
-        location = Double.toString(temp);
-        String secs = location.substring(0, location.indexOf(".")) + '"';
+    String location = Double.toString(coordinates);
+    String degreeSign = "\u00B0";
+    String degree = location.substring(0, location.indexOf(".")) + degreeSign;
+    location = "0." + location.substring(location.indexOf(".") + 1);
+    double temp = Double.valueOf(location) * 60;
+    location = Double.toString(temp);
+    String mins = location.substring(0, location.indexOf(".")) + "'";
 
-        if (type.equalsIgnoreCase("lon")) {
-            if (degree.startsWith("-")) {
-                degree = "W " + degree.replace("-", "") + mins + secs;
-            } else
-                degree = "E " + degree.replace("-", "") + mins + secs;
-        } else {
-            if (degree.startsWith("-")) {
-                degree = "S " + degree.replace("-", "") + mins + secs;
-            } else
-                degree = "N " + degree.replace("-", "") + mins + secs;
-        }
-        return degree;
+    location = "0." + location.substring(location.indexOf(".") + 1);
+    temp = Double.valueOf(location) * 60;
+    location = Double.toString(temp);
+    String secs = location.substring(0, location.indexOf(".")) + '"';
+
+    if (type.equalsIgnoreCase("lon")) {
+        if (degree.startsWith("-")) {
+            degree = "W " + degree.replace("-", "") + mins + secs;
+        } else
+            degree = "E " + degree.replace("-", "") + mins + secs;
+    } else {
+        if (degree.startsWith("-")) {
+            degree = "S " + degree.replace("-", "") + mins + secs;
+        } else
+            degree = "N " + degree.replace("-", "") + mins + secs;
     }
-
+    return degree;
+}
+//        String location = Double.toString(coordinates);
+//        //String degreeSign = "\u00B0";
+//        String degree = location.substring(0, location.indexOf(".")) + ".";
+//        location = "0." + location.substring(location.indexOf(".") + 1);
+//       // double temp = Double.valueOf(location) * 60;
+//       // location = Double.toString(temp);
+//        String mins = location.substring(0, location.indexOf("."));
+//
+//        location = "0." + location.substring(location.indexOf(".") + 1);
+//       // temp = Double.valueOf(location) * 60;
+//       // location = Double.toString(temp);
+//        String secs = location.substring(0, location.indexOf("."));
+//
+//        if (type.equalsIgnoreCase("lon")) {
+//            if (degree.startsWith("-")) {
+//                degree = "W " + degree.replace("-", "") + mins + secs;
+//            } else
+//                degree = "E " + degree.replace("-", "") + mins + secs;
+//        } else {
+//            if (degree.startsWith("-")) {
+//                degree = "S " + degree.replace("-", "") + mins + secs;
+//            } else
+//                degree = "N " + degree.replace("-", "") + mins + secs;
+//        }
+//        return degree;
+//    }
 
     /**
      * Hide the soft keyboard if it's showing.
@@ -270,10 +298,17 @@ public class GeoPointWidget extends QuestionWidget implements IBinaryWidget {
         mStringAnswer.setText(s);
 
         String[] sa = s.split(" ");
-        mAnswerDisplay.setText(getContext().getString(R.string.latitude) + ": "
-                + formatGps(Double.parseDouble(sa[0]), "lat") + "\n"
-                + getContext().getString(R.string.longitude) + ": "
-                + formatGps(Double.parseDouble(sa[1]), "lon"));
+        //degree format
+//        mAnswerDisplay.setText(getContext().getString(R.string.latitude) + ": "
+//                + formatGps(Double.parseDouble(sa[0]), "lat") + "\n"
+//                + getContext().getString(R.string.longitude) + ": "
+//                + formatGps(Double.parseDouble(sa[1]), "lon"));
+        //decimal format
+        mAnswerDisplay.setText(getContext().getString(R.string.longitude) + ": "
+                + truncateDouble(sa[0]) + "\n"
+                + getContext().getString(R.string.latitude) + ": "
+                + truncateDouble(sa[1])+ "\n"
+                + getContext().getString(R.string.accuracy)+ ": " + sa[2] +"m");
         mWaitingForData = false;
     }
 

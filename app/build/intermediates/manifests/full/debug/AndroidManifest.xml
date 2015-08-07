@@ -12,7 +12,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="it.fabaris.wfp.activities"
     android:versionCode="1"
-    android:versionName="0.1.69" >
+    android:versionName="1.1.0" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -32,7 +32,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <supports-screens
         android:anyDensity="true"
@@ -42,6 +44,10 @@
         android:xlargeScreens="true" />
 
     <uses-feature android:name="android.hardware.camera" />
+
+    <android:uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
 
     <uses-permission android:name="android.permission.FLASHLIGHT" />
 
@@ -125,6 +131,9 @@
             android:label="@string/app_name" />
         <activity
             android:name="it.fabaris.wfp.activities.ControlActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="it.fabaris.wfp.activities.userPreferencesActivity"
             android:label="@string/app_name" />
         <activity
             android:name="it.fabaris.wfp.activities.FormEntryActivity"

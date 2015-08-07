@@ -61,10 +61,11 @@ public class GeoPointActivity extends Activity implements LocationListener {
                 mNetworkOn = true;
             }
         }
-        if (!mGPSOn && !mNetworkOn) {
+        if (!mGPSOn) {
+            if( !mNetworkOn){
             Toast.makeText(getBaseContext(), getString(R.string.provider_disabled_error),Toast.LENGTH_SHORT).show();
             finish();
-        }
+        }}
 
         setupLocationDialog();
 
@@ -158,7 +159,7 @@ public class GeoPointActivity extends Activity implements LocationListener {
             Intent i = new Intent();
             i.putExtra(
                     FormEntryActivity.LOCATION_RESULT,
-                    mLocation.getLongitude() + " " + mLocation.getLatitude() /*+ " "+ mLocation.getAltitude() + " " + mLocation.getAccuracy()*/);
+                    mLocation.getLongitude() + " " + mLocation.getLatitude()+" " +mLocation.getAccuracy() /*+ " "+ mLocation.getAltitude() + " " + mLocation.getAccuracy()*/);
             setResult(RESULT_OK, i);
         }else{
 

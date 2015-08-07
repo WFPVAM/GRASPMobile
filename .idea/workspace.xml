@@ -24,36 +24,110 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d74532b9-762a-4879-927b-fdb7595c3ce7" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/xml/user_settings.xml" />
       <change type="DELETED" beforePath="C:\Projects\GRASPMobilePal\app\build\intermediates\libs\app-debug.ap_" afterPath="" />
       <change type="DELETED" beforePath="C:\Projects\GRASPMobilePal\app\build\intermediates\manifests\debug\AndroidManifest.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Projects\GRASPMobilePal\app\build\intermediates\res\debug\values-ar\values.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Projects\GRASPMobilePal\app\build\intermediates\res\debug\values-en-rZA\values.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Projects\GRASPMobilePal\app\build\intermediates\res\debug\values-es\values.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Projects\GRASPMobilePal\app\build\intermediates\res\debug\values-it\values.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$13.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$14.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$14.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$15.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$15.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$16.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$16.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$2$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$2$1.class" />
+      <change type="DELETED" beforePath="C:\Projects\GRASPMobilePal\app\src\main\res\values-w820dp\dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\GRASPMobilePal\app\src\main\res\values\dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\GRASPMobilePal\app\src\main\res\xml\user_prefernces.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/utils/ApplicationExt.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/utils/ApplicationExt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/AudioWidget$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/AudioWidget$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/AudioWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/AudioWidget.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/BarcodeWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/BarcodeWidget.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/ControlActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/ControlActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/ControlActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/ControlActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/ControlActivity$DownloadFile$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/ControlActivity$DownloadFile$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/ControlActivity$DownloadFile.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/ControlActivity$DownloadFile.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/ControlActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/ControlActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$AnimationType.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity$AnimationType.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormEntryActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/view/HierarchyElementView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/view/HierarchyElementView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/QuestionAndStringAswerWidget$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/QuestionAndStringAswerWidget$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/QuestionAndStringAswerWidget$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/QuestionAndStringAswerWidget$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/QuestionAndStringAswerWidget$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/QuestionAndStringAswerWidget$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/QuestionAndStringAswerWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/QuestionAndStringAswerWidget.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$3$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$3$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$3$2$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$3$2$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$3$2$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$3$2$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$3$2$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$3$2$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$3$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$3$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListCompletedActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$3$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$3$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$3$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$3$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListFinalizedActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListNewActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListNewActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSavedActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSavedActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSubmittedActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/FormListSubmittedActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/GeoPointActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/GeoPointActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/GeoPointActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/GeoPointActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/GeoPointWidget$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/GeoPointWidget$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/GeoPointWidget$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/GeoPointWidget$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/GeoPointWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/GeoPointWidget.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpCheckAndSendPostTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpCheckAndSendPostTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpCheckPostTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpCheckPostTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpSendAllFormsTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpSendAllFormsTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpSendAllImages.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpSendAllImages.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpSendPostTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpSendPostTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpXmlCheckAndSyncTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpXmlCheckAndSyncTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpXmlSyncTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/task/HttpXmlSyncTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$13$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$13$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$13$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$13$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$13.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$14.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/MenuActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$DownloadFile.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity$DownloadFile.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/PreferencesActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/zxing/client/android/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/zxing/client/android/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$menu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$raw.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$raw.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/zxing/client/android/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/zxing/client/android/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$style.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/zxing/client/android/R$xml.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/zxing/client/android/R$xml.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$xml.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R$xml.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SignatureWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SignatureWidget.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/SmsListActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/SmsListActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SpinnerMultiWidget$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SpinnerMultiWidget$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SpinnerMultiWidget$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SpinnerMultiWidget$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SpinnerMultiWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/SpinnerMultiWidget.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/SplashScreenActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/SplashScreenActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/SplashScreenActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/activities/SplashScreenActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/TriggerWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/TriggerWidget.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/VideoWidget.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/it/fabaris/wfp/widget/VideoWidget.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
@@ -74,10 +148,27 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/xercesImpl-b0d00df5e4dc644816a5bceb49468de82c41a447.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/xercesImpl-b0d00df5e4dc644816a5bceb49468de82c41a447.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormEntryActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormEntryActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/view/HierarchyElementView.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/view/HierarchyElementView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/QuestionAndStringAswerWidget.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/QuestionAndStringAswerWidget.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/ControlActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/ControlActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormListActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormListActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormListCompletedActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormListCompletedActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormListFinalizedActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormListFinalizedActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/GeoPointActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/GeoPointActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/GeoPointWidget.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/GeoPointWidget.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/task/HttpSendAllImages.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/task/HttpSendAllImages.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/MenuActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/MenuActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/zxing/client/android/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/zxing/client/android/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/it/fabaris/wfp/activities/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/it/fabaris/wfp/activities/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/debug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/debug/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/password_setting.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/password_setting.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/password_setting.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/password_setting.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/userPreferencesActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/userPreferencesActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/values-ar/values-ar.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/values-ar/values-ar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GRASPMobile.iws" />
@@ -115,34 +206,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <file leaf-file-name="FormEntryActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormEntryActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="66" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.24460432">
+              <caret line="1325" column="0" selection-start-line="1325" selection-start-column="0" selection-end-line="1325" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PreferencesActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/PreferencesActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="633" column="13" selection-start-line="633" selection-start-column="13" selection-end-line="633" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControlActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/ControlActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.6687117">
-              <caret line="84" column="34" selection-start-line="84" selection-start-column="34" selection-end-line="84" selection-end-column="34" />
-              <folding>
-                <element signature="e#3550#3584#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -1207,7 +1276,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4307740744659" />
+        <entry key="$PROJECT_DIR$" value="4307824929372" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1507,7 +1576,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/BarcodeWidget.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/task/HttpXmlSyncTask.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/xml/user_prefernces.xml" />
@@ -1516,19 +1584,38 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_test.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/PreferencesActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings_activity_user_settings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/password_setting.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/GeoPointActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/GeoPointWidget.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/view/HierarchyElementView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/StringWidget.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/QuestionAndStringAswerWidget.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/user_settings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/xml/user_settings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/ControlActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/userPreferencesActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/view/HierarchyElementView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormEntryActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/StringWidget.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/MenuActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/QuestionAndStringAswerWidget.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/password_setting.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/Notify.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/database/DatabaseHelper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/formlist.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/task/HttpSendAllImages.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormListFinalizedActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormListCompletedActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/view/ODKView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/GeoPointActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/MenuActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormListActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/GeoPointWidget.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormEntryActivity.java" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
@@ -1538,10 +1625,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1040" />
-    <option name="height" value="744" />
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1022" />
+    <option name="height" value="726" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1598,6 +1685,9 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1649,36 +1739,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GRASPMobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GRASPMobilePal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xml" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1898,9 +1958,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1942,6 +1999,7 @@
       <recent name="C:\Users\mureed\AndroidstudioProjects\GRASPMobile\app\src\main\res\values-ar" />
     </key>
     <key name="android.template.packageName">
+      <recent name="it.fabaris.wfp" />
       <recent name="it.fabaris.wfp.activities" />
     </key>
     <key name="android.template.parentActivityClass">
@@ -2234,36 +2292,36 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1040" height="744" extended-state="0" />
+    <frame x="1" y="1" width="1022" height="726" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7185315" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7176871" sideWeight="0.49591836" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.457483" sideWeight="0.81639004" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39685315" sideWeight="0.18049793" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6526316" sideWeight="0.7612245" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3469388" sideWeight="0.27755103" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27210885" sideWeight="0.17857143" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959184" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33673468" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39795917" sideWeight="0.81950206" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33673468" sideWeight="0.4755102" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4631579" sideWeight="0.722449" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45578232" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32883817" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2489796" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959184" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30612245" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39285713" sideWeight="0.54253113" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32848233" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39122808" sideWeight="0.48469388" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282313" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24012475" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.327551" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41156462" sideWeight="0.67634857" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41156462" sideWeight="0.67142856" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -2272,11 +2330,11 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282313" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39685315" sideWeight="0.18049793" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959184" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27210885" sideWeight="0.17857143" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959184" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27210885" sideWeight="0.17857143" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959184" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45578232" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959184" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20435685" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39335665" sideWeight="0.54253113" order="2" side_tool="false" content_ui="tabs" />
@@ -2293,8 +2351,8 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.78496504" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29545453" sideWeight="0.81950206" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2489796" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959184" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -2326,7 +2384,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormListFinalizedActivity.java</url>
-          <line>227</line>
+          <line>243</line>
           <properties />
           <option name="timeStamp" value="569" />
         </line-breakpoint>
@@ -2350,7 +2408,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/ControlActivity.java</url>
-          <line>221</line>
+          <line>233</line>
           <properties />
           <option name="timeStamp" value="647" />
         </line-breakpoint>
@@ -2386,7 +2444,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormListCompletedActivity.java</url>
-          <line>157</line>
+          <line>159</line>
           <properties />
           <option name="timeStamp" value="801" />
         </line-breakpoint>
@@ -2409,10 +2467,40 @@
           <option name="timeStamp" value="814" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormEntryActivity.java</url>
-          <line>708</line>
+          <url>file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormListFinalizedActivity.java</url>
+          <line>131</line>
           <properties />
-          <option name="timeStamp" value="816" />
+          <option name="timeStamp" value="841" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormListFinalizedActivity.java</url>
+          <line>120</line>
+          <properties />
+          <option name="timeStamp" value="842" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/GeoPointActivity.java</url>
+          <line>161</line>
+          <properties />
+          <option name="timeStamp" value="844" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/GeoPointWidget.java</url>
+          <line>108</line>
+          <properties />
+          <option name="timeStamp" value="845" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormEntryActivity.java</url>
+          <line>709</line>
+          <properties />
+          <option name="timeStamp" value="847" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/GeoPointWidget.java</url>
+          <line>306</line>
+          <properties />
+          <option name="timeStamp" value="848" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/PreferencesActivity.java</url>
@@ -2430,7 +2518,7 @@
           </selected-grouping-rules>
         </breakpoints-dialog>
       </breakpoints-dialog>
-      <option name="time" value="827" />
+      <option name="time" value="849" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="app">
@@ -2439,463 +2527,392 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormEntryActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_maps_indicator_current_position.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/aqua_ball_red.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/content/Context.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.08">
+          <caret line="44" column="11" selection-start-line="44" selection-start-column="11" selection-end-line="44" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/content/ContextWrapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.76">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/view/ContextThemeWrapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.76">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/app/ActivityGroup.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.76">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/app/Instrumentation.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36042404">
+          <caret line="108" column="16" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/app/TabActivity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25268817">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/database/DbAdapterGrasp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.0280702">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/view/View.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.76">
+          <caret line="191" column="16" selection-start-line="191" selection-start-column="16" selection-end-line="191" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/database/DataSetObservable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.08">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/widget/BaseAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.76">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/widget/ListView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.76">
+          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/database/DatabaseHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9227941">
+          <caret line="50" column="2" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/notes.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/logo_be.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/icona_app_wfp.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/formlist.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37899545">
+          <caret line="71" column="43" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/content/FormPendingAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2270" column="35" selection-start-line="2270" selection-start-column="35" selection-end-line="2270" selection-end-column="35" />
-          <folding>
-            <element signature="e#41033#41034#0" expanded="true" />
-            <element signature="e#41065#41066#0" expanded="true" />
-            <element signature="e#41318#41319#0" expanded="true" />
-            <element signature="e#41349#41350#0" expanded="true" />
-            <element signature="e#93636#93637#0" expanded="true" />
-            <element signature="e#93671#93672#0" expanded="true" />
-            <element signature="e#102240#102241#0" expanded="true" />
-            <element signature="e#102268#102269#0" expanded="true" />
-            <element signature="e#105300#105301#0" expanded="true" />
-            <element signature="e#105322#105323#0" expanded="true" />
-          </folding>
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/task/HttpSendAllImages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="302" column="14" selection-start-line="302" selection-start-column="14" selection-end-line="302" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding />
+          <caret line="36" column="65" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/ControlActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormListCompletedActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="105" column="35" selection-start-line="105" selection-start-column="35" selection-end-line="105" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.57894737">
+          <caret line="194" column="70" selection-start-line="194" selection-start-column="70" selection-end-line="194" selection-end-column="70" />
           <folding>
-            <element signature="e#3550#3584#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormEntryActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormListFinalizedActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1295" column="0" selection-start-line="1295" selection-start-column="0" selection-end-line="1295" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.42105263">
+          <caret line="109" column="49" selection-start-line="109" selection-start-column="7" selection-end-line="109" selection-end-column="49" />
           <folding>
-            <element signature="e#41033#41034#0" expanded="true" />
-            <element signature="e#41065#41066#0" expanded="true" />
-            <element signature="e#41318#41319#0" expanded="true" />
-            <element signature="e#41349#41350#0" expanded="true" />
-            <element signature="e#93636#93637#0" expanded="true" />
-            <element signature="e#93671#93672#0" expanded="true" />
-            <element signature="e#102240#102241#0" expanded="true" />
-            <element signature="e#102268#102269#0" expanded="true" />
-            <element signature="e#105300#105301#0" expanded="true" />
-            <element signature="e#105322#105323#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/view/HierarchyElementView.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-ar/array.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/PreferencesActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="598" column="5" selection-start-line="595" selection-start-column="2" selection-end-line="598" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/ControlActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="117" column="35" selection-start-line="117" selection-start-column="35" selection-end-line="117" selection-end-column="35" />
-          <folding>
-            <element signature="e#3550#3584#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormEntryActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1295" column="0" selection-start-line="1295" selection-start-column="0" selection-end-line="1295" selection-end-column="0" />
-          <folding>
-            <element signature="e#41033#41034#0" expanded="true" />
-            <element signature="e#41065#41066#0" expanded="true" />
-            <element signature="e#41318#41319#0" expanded="true" />
-            <element signature="e#41349#41350#0" expanded="true" />
-            <element signature="e#93636#93637#0" expanded="true" />
-            <element signature="e#93671#93672#0" expanded="true" />
-            <element signature="e#102240#102241#0" expanded="true" />
-            <element signature="e#102268#102269#0" expanded="true" />
-            <element signature="e#105300#105301#0" expanded="true" />
-            <element signature="e#105322#105323#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/view/HierarchyElementView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/PreferencesActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="597" column="5" selection-start-line="594" selection-start-column="2" selection-end-line="597" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/ControlActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
-          <folding>
-            <element signature="e#3550#3584#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/PreferencesActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/MenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="101" column="11" selection-start-line="101" selection-start-column="11" selection-end-line="101" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/password_setting.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-          <folding />
+        <state vertical-scroll-proportion="-14.36">
+          <caret line="379" column="0" selection-start-line="379" selection-start-column="0" selection-end-line="379" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="287" column="32" selection-start-line="287" selection-start-column="32" selection-end-line="287" selection-end-column="32" />
-          <folding />
+        <state vertical-scroll-proportion="0.8473054">
+          <caret line="360" column="10" selection-start-line="360" selection-start-column="10" selection-end-line="360" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/CreditsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35207102">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/application/Collect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="67" column="27" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/task/HttpXmlSyncTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="111" column="131" selection-start-line="111" selection-start-column="131" selection-end-line="111" selection-end-column="131" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-5.4049296">
+          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/task/HttpXmlSyncTask.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/formlist_rowsaved.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="138" column="19" selection-start-line="138" selection-start-column="19" selection-end-line="138" selection-end-column="19" />
-          <caret line="139" column="19" selection-start-line="139" selection-start-column="19" selection-end-line="139" selection-end-column="19" />
-          <caret line="140" column="19" selection-start-line="140" selection-start-column="19" selection-end-line="140" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.2319688">
+          <caret line="55" column="22" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/task/HttpXmlSyncTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/preferences.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2222223">
-          <caret line="49" column="6" selection-start-line="49" selection-start-column="6" selection-end-line="55" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/settings_screen.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/formlist_rowsubmitted.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.4639376">
+          <caret line="59" column="26" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/preference_test_button.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/content/Intent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.96">
+          <caret line="242" column="28" selection-start-line="242" selection-start-column="28" selection-end-line="242" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/javarosa/core/model/GroupDef.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/javarosa/form/api/FormEntryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/javarosa/core/model/FormIndex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/javarosa/core/model/FormDef.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="142" column="0" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/basicmenu.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/javarosa/form/api/FormEntryModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/logic/FormController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="287" column="32" selection-start-line="287" selection-start-column="32" selection-end-line="287" selection-end-column="32" />
-          <folding />
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/password_setting.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/os/Looper.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.206897">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.7777778">
+          <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/os/Handler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38562092">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/app/Activity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11764706">
+          <caret line="273" column="28" selection-start-line="273" selection-start-column="28" selection-end-line="273" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/widget/TextView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.92">
+          <caret line="184" column="22" selection-start-line="184" selection-start-column="22" selection-end-line="184" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/GeoPointActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="160" column="104" selection-start-line="160" selection-start-column="104" selection-end-line="160" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/view/accessibility/AccessibilityManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26334518">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/os/Parcel.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.88">
-          <caret line="145" column="28" selection-start-line="145" selection-start-column="28" selection-end-line="145" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/os/Bundle.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.52">
-          <caret line="130" column="28" selection-start-line="130" selection-start-column="28" selection-end-line="130" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/WidgetFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5555556">
-          <caret line="272" column="0" selection-start-line="272" selection-start-column="0" selection-end-line="272" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/widget/TextView.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31316727">
-          <caret line="184" column="22" selection-start-line="184" selection-start-column="22" selection-end-line="184" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/text/TextUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31316727">
-          <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/content/Intent.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31316727">
-          <caret line="242" column="28" selection-start-line="242" selection-start-column="28" selection-end-line="242" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormHierarchyActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2478874">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/adapters/HierarchyListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43098593">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/logic/HierarchyElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9661971">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/GeoPointWidget.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39175257">
-          <caret line="270" column="0" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/form_entry.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.49324325">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="46" column="39" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="39" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/view/View.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36">
-          <caret line="676" column="16" selection-start-line="676" selection-start-column="16" selection-end-line="676" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/app/Activity.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36466166">
-          <caret line="129" column="19" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Programs/android-studio/sdk/platforms/android-10/android.jar!/android/view/KeyEvent.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36466166">
-          <caret line="225" column="25" selection-start-line="225" selection-start-column="25" selection-end-line="225" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/view/MediaLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/view/ODKView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3310811">
-          <caret line="273" column="85" selection-start-line="273" selection-start-column="77" selection-end-line="273" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/view/HierarchyElementView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7323077">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.15819208">
+          <caret line="599" column="0" selection-start-line="599" selection-start-column="0" selection-end-line="599" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/MenuActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15878378">
-          <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="65" column="14" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/StringWidget.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3321033">
-          <caret line="385" column="18" selection-start-line="385" selection-start-column="16" selection-end-line="385" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="635" column="19" selection-start-line="635" selection-start-column="19" selection-end-line="635" selection-end-column="19" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#7981#8685#0" expanded="false" />
+            <element signature="e#8684#8685#0" expanded="false" />
+            <element signature="e#23448#23449#0" expanded="false" />
+            <element signature="e#23480#23481#0" expanded="false" />
+            <element signature="e#23841#23842#0" expanded="false" />
+            <element signature="e#23876#23877#0" expanded="false" />
+            <element signature="e#24237#24238#0" expanded="false" />
+            <element signature="e#24271#24272#0" expanded="false" />
+            <element signature="e#24615#24616#0" expanded="false" />
+            <element signature="e#24649#24650#0" expanded="false" />
+            <element signature="e#25009#25010#0" expanded="false" />
+            <element signature="e#25047#25048#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/QuestionAndStringAswerWidget.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/GeoPointWidget.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24723247">
-          <caret line="287" column="44" selection-start-line="287" selection-start-column="44" selection-end-line="287" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="329" column="0" selection-start-line="329" selection-start-column="0" selection-end-line="329" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#12658#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/widget/StringMultiLineWidget.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/task/SaveToDiskTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5292308">
-          <caret line="154" column="45" selection-start-line="154" selection-start-column="45" selection-end-line="154" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.82102275">
+          <caret line="275" column="28" selection-start-line="275" selection-start-column="27" selection-end-line="275" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormListSubmittedActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7338129">
+          <caret line="234" column="36" selection-start-line="234" selection-start-column="36" selection-end-line="234" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/FormEntryActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2270" column="35" selection-start-line="2270" selection-start-column="35" selection-end-line="2270" selection-end-column="35" />
-          <folding>
-            <element signature="e#41033#41034#0" expanded="true" />
-            <element signature="e#41065#41066#0" expanded="true" />
-            <element signature="e#41318#41319#0" expanded="true" />
-            <element signature="e#41349#41350#0" expanded="true" />
-            <element signature="e#93636#93637#0" expanded="true" />
-            <element signature="e#93671#93672#0" expanded="true" />
-            <element signature="e#102240#102241#0" expanded="true" />
-            <element signature="e#102268#102269#0" expanded="true" />
-            <element signature="e#105300#105301#0" expanded="true" />
-            <element signature="e#105322#105323#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="66" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.24460432">
+          <caret line="1325" column="0" selection-start-line="1325" selection-start-column="0" selection-end-line="1325" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/PreferencesActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="633" column="13" selection-start-line="633" selection-start-column="13" selection-end-line="633" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/fabaris/wfp/activities/ControlActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6687117">
-          <caret line="84" column="34" selection-start-line="84" selection-start-column="34" selection-end-line="84" selection-end-column="34" />
-          <folding>
-            <element signature="e#3550#3584#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

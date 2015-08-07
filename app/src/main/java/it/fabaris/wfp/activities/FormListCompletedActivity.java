@@ -152,6 +152,8 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tabcompleted);
 //        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        String nf = Context.NOTIFICATION_SERVICE;
+        final NotificationManager mNotificationManager = (NotificationManager) getSystemService(nf);
         settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         portrait=settings.getString(PreferencesActivity.KEY_BUTTON_PORTRAIT,"");
 
@@ -190,6 +192,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
                 }
 
                 sendFormInList(complete);
+                mNotificationManager.cancel(FormListActivity.sendforms_ID);
             }
         });
 
@@ -212,8 +215,8 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
 //            sendAll.setVisibility(View.GONE);
 
         complete = new ArrayList<FormInnerListProxy>();
-        complete = getIntent().getExtras().getParcelableArrayList("completed");
-
+       // complete = getIntent().getExtras().getParcelableArrayList("completed");
+        complete = FormListActivity.copyCompleted;
 		/*LL 14-05-2014 eliminato per dismissione del db grasp
         completed = new ArrayList<FormInnerListProxy>();
 		completed = getIntent().getExtras().getParcelableArrayList("complete");

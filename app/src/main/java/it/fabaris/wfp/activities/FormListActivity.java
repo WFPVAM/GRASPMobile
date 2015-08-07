@@ -11,7 +11,11 @@
 package it.fabaris.wfp.activities;
 
 import android.app.AlertDialog;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.TabActivity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -49,7 +53,8 @@ public class FormListActivity extends TabActivity  implements 	FormListHandlerNe
     private int quanteComplete = 0;
     private int quanteFinalizzate = 0;
     private int quanteInviate = 0;
-
+    public static final int sendImages_ID = 1;
+    public static final int sendforms_ID=2;
 
     private FormInnerListProxy nuova;
     private FormInnerListProxy salvata;
@@ -61,6 +66,8 @@ public class FormListActivity extends TabActivity  implements 	FormListHandlerNe
     private ArrayList<FormInnerListProxy> listSalvate;
     private ArrayList<FormInnerListProxy> listFinalizzate;
     private ArrayList<FormInnerListProxy> listNuove;
+    public static ArrayList<FormInnerListProxy> copyFinalized;
+    public static ArrayList<FormInnerListProxy> copyCompleted;
     private ArrayList<FormInnerListProxy> listComplete;
 
     //private ArrayList<FormInnerListProxy> listSaved;//LL 14-05-2014 eliminata per dismissione db grasp
@@ -135,7 +142,7 @@ public class FormListActivity extends TabActivity  implements 	FormListHandlerNe
         completedFormIntent.putParcelableArrayListExtra("completed", listComplete);
         //completedFormIntent.putParcelableArrayListExtra("complete", listCompleted);//LL 14-05-2014 eliminato per dismissione del db grasp
         tabHost.addTab(completedFormSpec);
-
+        copyCompleted=listComplete;
 
         TabSpec finalizedFormSpec = tabHost.newTabSpec("Pending");     //INVIATI MA NON ANCORA RICEVUTI DAL SERVIZIO - PENDING -
         Intent finalizedFormIntent = new Intent(this, FormListFinalizedActivity.class);
@@ -143,6 +150,7 @@ public class FormListActivity extends TabActivity  implements 	FormListHandlerNe
                 .setContent(finalizedFormIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
         finalizedFormIntent.putParcelableArrayListExtra("finalized", listFinalizzate);
         tabHost.addTab(finalizedFormSpec);
+        copyFinalized=listFinalizzate;
 
 
         TabSpec submittedFormSpec = tabHost.newTabSpec("Submitted");
@@ -601,6 +609,48 @@ public class FormListActivity extends TabActivity  implements 	FormListHandlerNe
         textInviate = (TextView) findViewById(R.id.text5);
         textInviate.setText(Integer.toString(quanteInviate));
 
+
+        if (listFinalizzate.size()> 0) {
+            String nf = Context.NOTIFICATION_SERVICE;
+            NotificationManager mNotificationManager = (NotificationManager) getSystemService(nf);
+            int icon = R.drawable.icona_app_wfp;
+            CharSequence tickerText = getString(R.string.not_img_ticker); // ticker-text
+            long when = System.currentTimeMillis();
+            Context context = getApplicationContext();
+            CharSequence contentTitle =getString(R.string.not_img_title);
+            CharSequence contentText = getString(R.string.not_img_text); ;
+            Intent notificationIntent = new Intent(getBaseContext(), FormListFinalizedActivity.class);
+
+            PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
+            Notification notification = new Notification(icon, tickerText, when);
+            notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);
+            notification.defaults |= Notification.DEFAULT_VIBRATE;
+            notification.defaults |= Notification.DEFAULT_SOUND;
+            mNotificationManager.notify(sendImages_ID, notification);
+
+
+        }
+
+        if(listComplete.size() >0){
+            String nf = Context.NOTIFICATION_SERVICE;
+            NotificationManager mNotificationManager = (NotificationManager) getSystemService(nf);
+            int icon = R.drawable.icona_app_wfp;
+            CharSequence tickerText = getString(R.string.not_form_ticker); // ticker-text
+            long when = System.currentTimeMillis();
+            Context context = getApplicationContext();
+            CharSequence contentTitle = getString(R.string.not_form_title);
+            CharSequence contentText = getString(R.string.not_form_text); ;
+            Intent notificationIntent = new Intent(getBaseContext(), FormListCompletedActivity.class);
+
+            PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
+            Notification notification = new Notification(icon, tickerText, when);
+            notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);
+            notification.defaults |= Notification.DEFAULT_VIBRATE;
+            notification.defaults |= Notification.DEFAULT_SOUND;
+            mNotificationManager.notify(sendforms_ID, notification);
+            mNotificationManager.cancel(MenuActivity.Pending_ID);
+        }
+
     }
 ////////////////////////////////////////////////////////
 
@@ -635,6 +685,8 @@ public class FormListActivity extends TabActivity  implements 	FormListHandlerNe
     {
         super.onConfigurationChanged(newConfig);
     }
+
+
 
 
 
@@ -697,6 +749,9 @@ public class FormListActivity extends TabActivity  implements 	FormListHandlerNe
 		ApplicationExt.getDatabaseAdapter().open().insert("SUBMITTED", submitted_id, idFormDataBaseGras, submitted_data, submitted_by); 
 		ApplicationExt.getDatabaseAdapter().close(); 
 	}*/
+
+
+
 
 
 }

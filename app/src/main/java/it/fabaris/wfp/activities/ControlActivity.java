@@ -42,7 +42,7 @@ public class ControlActivity extends Activity
     private Button login;
     private String language;
     private Button updateAppBtn;
-
+    private Button userSettings;
     private SharedPreferences settings;
     private String portrait ;
 
@@ -77,7 +77,7 @@ public class ControlActivity extends Activity
 
         password = (EditText) findViewById(R.id.password_edit);
         login = (Button) findViewById(R.id.button_in);
-
+        userSettings= (Button) findViewById(R.id.button_user);
 
         //set the Progress dialog
         mProgressDialog = new ProgressDialog(ControlActivity.this);
@@ -121,8 +121,20 @@ public class ControlActivity extends Activity
 
 
 /**Added By Claudia
- * this method updates the app to the latest version on the server
+ *
  **/
+
+        userSettings.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(),userPreferencesActivity.class);
+                startActivity(intent);
+                finish();
+                System.exit(0);
+            }
+        });
+
+
 
         updateAppBtn.setOnClickListener(new OnClickListener(){
             public void onClick(View v) {

@@ -297,6 +297,7 @@ public class HttpSendAllImages extends AsyncTask<String, Void, String> {
             if (result == "ok") {//if all the forms are been sent
                 Toast.makeText(context,R.string.AllImgsSent , Toast.LENGTH_SHORT).show();
 
+
             } else {// not all the forms are been sent correctly
                 Toast.makeText(context, R.string.problemSendingImg, Toast.LENGTH_SHORT).show();
             }}

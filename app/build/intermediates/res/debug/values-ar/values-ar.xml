@@ -522,6 +522,15 @@
     <string name="no_sd_error">	لطفا، بطاقة الذاكرة الخاصة بك لا يعمل!	</string>
     <string name="noselect_error">	عذرا, لم يتم اختيار أى نموذج	</string>
     <string name="notConnected">لا يوجد اتصال بشبكة الانترنت - لا يمكن ارسال النماذج</string>
+    <string name="not_form_text">لديك نماذج  لم يتم ارسالها</string>
+    <string name="not_form_ticker">لديك نماذج  لم يتم ارسالها</string>
+    <string name="not_form_title">ارسل النماذج المكتملة!</string>
+    <string name="not_img_text">لديك صور لم يتم ارسالها </string>
+    <string name="not_img_ticker">لديك صور لم يتم ارسالها</string>
+    <string name="not_img_title">أرسل الصور!</string>
+    <string name="not_list_text">لديك عناصر لم ترسل</string>
+    <string name="not_list_ticker">تحقق من قائمة النماذج لرؤية العناصر المعلقة</string>
+    <string name="not_list_title">عناصر معلقة</string>
     <string name="number_error">لم يتم إدخال رقم هاتف الخادم، يرجى ادخاله</string>
     <string name="offline">غير متاح</string>
     <string name="ok">	موافق	</string>

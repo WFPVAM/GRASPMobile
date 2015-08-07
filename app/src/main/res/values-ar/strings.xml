@@ -367,4 +367,13 @@
     <string name="problemSending">هناك مشكلة في ارسال بعض النماذج</string>
     <string name="formDNE">لا يمكن ايجاد النموذج الذي تحاول ارساله!</string>
     <string name="notConnected">لا يوجد اتصال بشبكة الانترنت - لا يمكن ارسال النماذج</string>
+    <string name="not_img_text">لديك صور لم يتم ارسالها </string>
+    <string name="not_img_ticker">لديك صور لم يتم ارسالها</string>
+    <string name="not_img_title">أرسل الصور!</string>
+    <string name="not_form_text">لديك نماذج  لم يتم ارسالها</string>
+    <string name="not_form_ticker">لديك نماذج  لم يتم ارسالها</string>
+    <string name="not_form_title">ارسل النماذج المكتملة!</string>
+    <string name="not_list_text">لديك عناصر لم ترسل</string>
+    <string name="not_list_ticker">تحقق من قائمة النماذج لرؤية العناصر المعلقة</string>
+    <string name="not_list_title">عناصر معلقة</string>
 </resources>

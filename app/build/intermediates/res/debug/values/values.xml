@@ -328,7 +328,7 @@
     <string name="button_cancel">Cancel</string>
     <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="button_check">Check for latest version of the application</string>
+    <string name="button_check">Update application</string>
     <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
     <eat-comment/>
     <string name="button_custom_product_search">Custom search</string>
@@ -629,6 +629,15 @@
     <string name="no_sd_error">Sorry, your memory card is not working!</string>
     <string name="noselect_error">Sorry, you have not selected any forms!</string>
     <string name="notConnected">There is no connection to the WIFI. It is not possible to send the form</string>
+    <string name="not_form_text">You have forms that are not submitted</string>
+    <string name="not_form_ticker">You have forms that are not submitted</string>
+    <string name="not_form_title">Send Completed Forms!</string>
+    <string name="not_img_text">You have images that are not submitted</string>
+    <string name="not_img_ticker">You have images that are not submitted</string>
+    <string name="not_img_title">Send images!</string>
+    <string name="not_list_text">You have items that are not submitted</string>
+    <string name="not_list_ticker">Check List Forms to see pending items</string>
+    <string name="not_list_title">Pending Items!</string>
     <string name="number_error">The server telephone number is not inserted, please enter it</string>
     <string name="offline">Offline</string>
     <string name="ok">OK</string>
@@ -773,7 +782,7 @@
     <string name="submitted_on">Submitted on:</string>
     <string name="success">Success</string>
     <string name="suggest">...password</string>
-    <string name="syncronyze">Syncronyze forms...</string>
+    <string name="syncronyze">Synchronize forms...</string>
     <string name="tab_completed">Completed</string>
     <string name="tab_finalized">Submit Images</string>
     <string name="tab_new">New</string>
@@ -801,6 +810,7 @@
     <string name="uploading_data">Sending Form</string>
     <string name="url_error">Sorry, invalid URL!</string>
     <string name="use_odk_default">Use Default Image</string>
+    <string name="user_setting">Edit User Settings</string>
     <string name="username">Username</string>
     <string name="view_hierarchy">Go To Prompt</string>
     <string name="wait">Please wait...</string>
