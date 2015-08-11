@@ -2,18 +2,11 @@
 <items version="2" >
 
     <item
-        jar="C:\Projects\GRASPMobilePal\app\lib\w3c-dom.jar"
+        jar="C:\Projects\GRASPMobilePal\app\lib\xercesImpl.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="c9dbc011544bfe3790f940cde9af0986addac744">
-        <dex dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\w3c-dom-fbb10ceb71b51d7fe9bb90927dd57e129a3794e3.jar" />
-    </item>
-    <item
-        jar="C:\Projects\GRASPMobilePal\app\lib\joda-time-2.0.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="752c0fe8a5b2d6704c9d9d6f06d9abdcacf4045d">
-        <dex dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\joda-time-2.0-2cf3c0fd813eeb12246632a7f6873e378839ca8d.jar" />
+        sha1="78e8536aa8b161c13232f37a32910666f787a5af">
+        <dex dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\xercesImpl-b0d00df5e4dc644816a5bceb49468de82c41a447.jar" />
     </item>
     <item
         jar="C:\Projects\GRASPMobilePal\app\lib\kxml2-2.2.3.jar"
@@ -23,6 +16,20 @@
         <dex dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\kxml2-2.2.3-c36fc58c247b8f1931d38d7c867d9ccbad619a04.jar" />
     </item>
     <item
+        jar="C:\Projects\GRASPMobilePal\app\lib\joda-time-2.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="752c0fe8a5b2d6704c9d9d6f06d9abdcacf4045d">
+        <dex dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\joda-time-2.0-2cf3c0fd813eeb12246632a7f6873e378839ca8d.jar" />
+    </item>
+    <item
+        jar="C:\Projects\GRASPMobilePal\app\lib\w3c-dom.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="c9dbc011544bfe3790f940cde9af0986addac744">
+        <dex dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\w3c-dom-fbb10ceb71b51d7fe9bb90927dd57e129a3794e3.jar" />
+    </item>
+    <item
         jar="C:\Projects\GRASPMobilePal\app\lib\regexp-me.jar"
         jumboMode="false"
         revision="20.0.0"
@@ -30,11 +37,11 @@
         <dex dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\regexp-me-4cecfd2d22eae45f1117c4036b8fdf7b33b96e5c.jar" />
     </item>
     <item
-        jar="C:\Projects\GRASPMobilePal\app\lib\xercesImpl.jar"
+        jar="C:\Users\claudia.alawi\.gradle\caches\modules-2\files-2.1\com.google.zxing\core\3.2.0\e019d15a13a9786f881141d2df6654b8510bce8b\core-3.2.0.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="78e8536aa8b161c13232f37a32910666f787a5af">
-        <dex dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\xercesImpl-b0d00df5e4dc644816a5bceb49468de82c41a447.jar" />
+        sha1="e019d15a13a9786f881141d2df6654b8510bce8b">
+        <dex dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\core-3.2.0-0468317e48db82061ebedf5d6ccada239edae65d.jar" />
     </item>
     <item
         jar="C:\Projects\GRASPMobilePal\app\build\intermediates\exploded-aar\com.embarkmobile\zxing-android-minimal\1.2.1\jars\classes.jar"
@@ -42,13 +49,6 @@
         revision="20.0.0"
         sha1="37064eecdb827788e50302f6e1b094541a831760">
         <dex dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\classes-23e8e8cea3199e0e646e56441a11d430e36b9b29.jar" />
-    </item>
-    <item
-        jar="C:\Users\claudia.alawi\.gradle\caches\modules-2\files-2.1\com.google.zxing\core\3.2.0\e019d15a13a9786f881141d2df6654b8510bce8b\core-3.2.0.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="e019d15a13a9786f881141d2df6654b8510bce8b">
-        <dex dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\core-3.2.0-0468317e48db82061ebedf5d6ccada239edae65d.jar" />
     </item>
 
 </items>

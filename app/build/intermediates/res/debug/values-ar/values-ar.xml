@@ -12,6 +12,11 @@
         <item name="gprsumts">gprs/umts only</item>
         <item name="gprsumtspref">gprs/umts preferred</item>
     </string-array>
+    <string-array name="context_menu">
+        <item>حذف النموذج</item>
+        <item>ارسال النموذج</item>
+
+    </string-array>
     <string-array name="entries_list_preference">
         <item>Saved, Not Completed</item>
         <item>Completed, Not Submitted</item>

@@ -12,6 +12,11 @@
         <item name="gprsumts">gprs/umts only</item>
         <item name="gprsumtspref">gprs/umts preferred</item>
     </string-array>
+    <string-array name="context_menu">
+        <item>Delete Form</item>
+        <item>Send Form</item>
+
+    </string-array>
     <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
     <eat-comment/>
     <string-array name="country_codes">
@@ -60,7 +65,7 @@
 
     </string-array>
     <string-array name="entries_list_preference">
-        <item>Saved, Not Completed</item>
+        <item name="dds">Saved, Not Completed</item>
         <item>Completed, Not Submitted</item>
         <item>Submitted</item>
     </string-array>

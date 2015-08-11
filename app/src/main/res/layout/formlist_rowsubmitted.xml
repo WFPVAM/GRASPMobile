@@ -30,7 +30,7 @@
         android:text="@string/submitted_on"
         android:textColor="#fff"
         android:textSize="16sp" />
-    
+
 
 
     <TextView

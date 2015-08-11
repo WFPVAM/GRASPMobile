@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="160dp"
+    android:layout_height="140dp"
     android:background="#000000"
     android:cacheColorHint="#00000000"
     android:orientation="vertical" >
@@ -20,45 +20,52 @@
         android:textSize="20sp" />
 
     <TextView
+        android:id="@+id/submittedOnLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/label"
+        android:layout_below="@+id/label"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/submitted_on"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+
+
+    <TextView
         android:id="@+id/textSubmittedOn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/submittedOnLabel"
         android:layout_alignBottom="@+id/submittedOnLabel"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="20dp"
         android:layout_toRightOf="@+id/submittedOnLabel"
         android:textColor="#fff"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/submittedOnLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/by"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="5dp"
-        android:text="@string/submitted_on"
-        android:textColor="#fff"
-        android:textSize="20sp" />
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/by"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textBy"
+        android:layout_alignLeft="@+id/label"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="10dp"
         android:text="@string/by"
         android:textColor="#fff"
-        android:layout_marginLeft="5dp"
-        android:textSize="20sp" />
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textBy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textSubmittedOn"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/textSubmittedOn"
         android:textColor="#fff"
-        android:textSize="20sp" />
+        android:textSize="16sp" />
+
+
+
 
 </RelativeLayout>

@@ -31,11 +31,15 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.telephony.SmsManager;
 import android.util.Base64;
 import android.util.Log;
+import android.view.ContextMenu;
 import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.webkit.MimeTypeMap;
@@ -44,6 +48,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.javarosa.core.model.instance.TreeElement;
@@ -222,13 +227,17 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
 		completed = getIntent().getExtras().getParcelableArrayList("complete");
 		*/
 
+        if(complete.size() == 0){
+           mNotificationManager.cancel(FormListActivity.sendforms_ID);
+        }
+
         listview = (ListView) findViewById(R.id.listViewCompleted);
         listview.setCacheColorHint(00000000);
         listview.setClickable(true);
         //adapter = new FormCompletedAdapter(this, complete, completed); LL 14-05-2014 modificato per dismissione del db grasp
         adapter = new FormCompletedAdapter(this, complete); //LL 14-05-2014 modificato per dismissione del db grasp
         listview.setAdapter(adapter);
-
+        registerForContextMenu(listview);
 
 
     ///////////////////////////////// For the Video //////////////////////////////////////
@@ -319,275 +328,275 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
          * Its purpose is send a completed form, but before displays a Dialog in
          * order to be sure about the real intentions of the user
          */
-        listview.setOnItemLongClickListener(new OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View v, final int position, long id) {
-                //idFormNameInstance = completed.get(position).getFormName();
-                builder.setMessage(getString(R.string.send_form))
-                        .setCancelable(false)
-                        .setPositiveButton(R.string.positive_choise,
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog,
-                                                        int id) {
-                                        dialog.dismiss();
-                                        //LL 14-05-2014 db grasp dismesso non ci sono piu' problemi di allineamento
-                                        //ArrayList<FormInnerListProxy> mycomplete = getCompleteParceableList();//LL aggiunti perche' qui non avevo visibilita' sulle variabili d'istanza
-                                        ArrayList<FormInnerListProxy> mycompleted = getCompletedParceableList();//LL aggiunti perche' qui non avevo visibilita' sulle variabili d'istanza
-
-                                        idFormNameInstance = mycompleted.get(position).getFormName();
-                                        ///////////////////////////////////////////////////////////////c
-                                         String str = mycompleted.get(position).getStrPathInstance();
-//                                        String str1[] = str.replace("/storage/emulated/0/GRASP/instances/", "").split("/");
-//                                        String formId = str1[0];
-                                        String str1[] = str.substring(str.lastIndexOf("instances")).split("/");
-//                                        String formName = str1[1];
-                                        String formId= str1[1];
-
-                                        /////////////////////////////////////////////////////////////
-                                        //int positioncomplete = getPositionCompletedToSubmit(position); //LL 14-05-2014 db grasp dismesso non ci sono piu' problemi di disallineamento
-
-                                        // ****************************************************
-                                        istance.clear();
-
-                                        encodeXml = decodeForm(complete.get(position));//LL 14-05-2014 rimesso per dismissione db grasp
-                                        //encodeXml = decodeForm(mycomplete.get(positioncomplete));//LL sostituito position con positioncomplete per prendere la form giusta//LL 14-05-2014 dismissione db grasp
-                                        // ****************************************************
-                                        /**
-                                         *  CAMPI DI SALVATAGGIO INVIATO
-                                         */
-
-                                        //nomeform = mycomplete.get(positioncomplete).getFormName();
-                                        nomeform = mycompleted.get(position).getFormName();
-                                        autore = mycompleted.get(position).getFormEnumeratorId();//qui ci sta il valore dell' enumeratorID da passare quando si invia la form per poter salvare il valore nella tabella delle inviate
-
-                                        FormCompletedDataDBUpdate myFormCompletedDataDBUpdate = new FormCompletedDataDBUpdate(idFormNameInstance, nomeform, autore);
-                                        listDataToUpdateDB.add(myFormCompletedDataDBUpdate);//qui dentro metto i dati per fare l'update del DB grasp che verra' effettuato dalla chiamata di callback una volta che la form e' stata inviata al server
-										
-
-										/*LL 20-03-2014 da rimettere per form di test 
-										String[] splittedFormName = nomeform.split("_");
-										String endOfForm = splittedFormName[splittedFormName.length-1];//se l'ultima occorrenza e' test
-										
-										if(!endOfForm.equalsIgnoreCase("test")){//se il nome della form NON finisce per _test non bisogna spedire la form
-										*/
-                                        if (!(readSubmittedImages(str).size() == 0)) {
-
-                                            formHasImages = true;
-                                        }
-
-
-                                        if (isNetworkConnected()) {
-                                            try {
-                                                // invio solo tramite sms
-                                                if (connectionType
-                                                        .equalsIgnoreCase("sms only")) {
-                                                    sendSMS(numModem,
-                                                            encodeXml,
-                                                            FormListCompletedActivity.this);
-                                                }
-                                                // invio solo tramite 2g/3g
-                                                else if (connectionType
-                                                        .equalsIgnoreCase("gprs/umts only")) {
-                                                    sendWithNetwork(
-                                                            FormListCompletedActivity.this,
-                                                            httpServer,
-                                                            numClient,
-                                                            encodeXml,
-                                                            FormListCompletedActivity.this, formId, formHasImages);
-                                                    adapter.notifyDataSetInvalidated();
-                                                    adapter.notifyDataSetChanged();
-                                                } else if (connectionType
-                                                        //.equalsIgnoreCase(getString(R.string.on_request))) {   LL 14-1-14
-                                                        .equalsIgnoreCase("gprs/umts preferred")) { //LL 14-1-14
-
-                                                    try {
-                                                        sendWithNetwork(
-                                                                FormListCompletedActivity.this,
-                                                                httpServer,
-                                                                numClient,
-                                                                encodeXml,
-                                                                FormListCompletedActivity.this, formId, formHasImages);
-                                                    } catch (InterruptedException e) {
-                                                        // TODO
-                                                        // Auto-generated
-                                                        // catch
-                                                        // block
-                                                        e.printStackTrace();
-                                                    }
-                                                    adapter.notifyDataSetInvalidated();
-                                                    adapter.notifyDataSetChanged();
-														
-														
-														/* vecchia logica ora                          LL
-														CharSequence[] items = {
-																"gprs/umts", "sms" };
-														new AlertDialog.Builder(
-																FormListCompletedActivity.this)
-																.setSingleChoiceItems(
-																		items, 0,
-																		null)
-																.setPositiveButton(
-																		R.string.positive_choise,
-																		new DialogInterface.OnClickListener() {
-																			public void onClick(
-																					DialogInterface dialog,
-																					int whichButton) {
-																				dialog.dismiss();
-																				int selectedPosition = ((AlertDialog) dialog)
-																						.getListView()
-																						.getCheckedItemPosition();
-																				if (selectedPosition == 0) {
-																					// -------------------------------------------------
-																					pd = ProgressDialog
-																							.show(FormListCompletedActivity.this,
-																									FormListCompletedActivity.this
-																											.getString(R.string.checking_server),
-																									FormListCompletedActivity.this
-																											.getString(R.string.wait));
-	
-																					// -------------------------------------------------
-	
-																					try {
-																						sendWithNetwork(
-																								FormListCompletedActivity.this,
-																								httpServer,
-																								numClient,
-																								encodeXml,
-																								FormListCompletedActivity.this);
-																					} catch (InterruptedException e) {
-																						// TODO
-																						// Auto-generated
-																						// catch
-																						// block
-																						e.printStackTrace();
-																					}
-																					adapter.notifyDataSetInvalidated();
-																					adapter.notifyDataSetChanged();
-	
-	
-																				} else if (selectedPosition == 1) {
-																					sendSMS(numModem,
-																							encodeXml,
-																							FormListCompletedActivity.this);
-	
-																				}
-																			}
-																		}).show();*/ //LL
-                                                }
-                                            } catch (Exception e) {
-                                                e.printStackTrace();
-                                            }
-                                        } else if (!isNetworkConnected()) {
-                                            try {
-                                                // invio solo tramite sms
-                                                if (connectionType
-                                                        //.equalsIgnoreCase("sms") LL 14-01-14
-                                                        .equalsIgnoreCase("sms only") //LL
-                                                    //|| connectionType.equalsIgnoreCase("gprs/umts") //LL 14-01-14
-                                                    //|| connectionType.equalsIgnoreCase("gprs/umts preferred")) { //LL
-                                                        ) { //LL
-
-                                                    sendSMS(numModem,
-                                                            encodeXml,
-                                                            FormListCompletedActivity.this);
-														/* LL													
-														CharSequence[] items = { "sms" };
-														new AlertDialog.Builder(
-																FormListCompletedActivity.this)
-																.setSingleChoiceItems(
-																		items, 0,
-																		null)
-																.setPositiveButton(
-																		R.string.positive_choise,
-																		new DialogInterface.OnClickListener() {
-																			public void onClick(
-																					DialogInterface dialog,
-																					int whichButton) {
-																				dialog.dismiss();
-																				sendSMS(numModem,
-																						encodeXml,
-																						FormListCompletedActivity.this);
-	
-																				
-																			}
-																		}).show();
-														
-														 */    //LL
-                                                } else if (connectionType.equalsIgnoreCase("gprs/umts only")) { // gprs/umts only
-                                                    //it is not possible to send the form wait for the connection
-                                                  //  CharSequence[] items = {"There isn't a connection. It's not possible to send the form"};
-                                                    new AlertDialog.Builder(
-                                                            FormListCompletedActivity.this)
-//                                                            .setSingleChoiceItems(
-//                                                                    items, 0,
-//                                                                    null)
-                                                            .setMessage(R.string.notConnected)
-                                                            .setPositiveButton(
-                                                                    R.string.positive_choise,
-                                                                    new DialogInterface.OnClickListener() {
-                                                                        public void onClick(
-                                                                                DialogInterface dialog,
-                                                                                int whichButton) {
-                                                                            dialog.dismiss();
-                                                                        }
-                                                                    }
-                                                            )
-                                                            .show();
-
-                                                } else if (connectionType.equalsIgnoreCase("gprs/umts preferred")) { //here there is no data connection
-                                                    //it is not possible to send the form by network do u want to send it by sms?
-                                                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(FormListCompletedActivity.this);
-                                                    alertDialogBuilder.setTitle("Connection not present!");
-                                                    alertDialogBuilder
-                                                            .setMessage("do you want to send the form by sms?")
-                                                            .setPositiveButton(
-                                                                    R.string.positive_choise,
-                                                                    new DialogInterface.OnClickListener() {
-                                                                        public void onClick(
-                                                                                DialogInterface dialog,
-                                                                                int whichButton) {
-                                                                            dialog.dismiss();
-                                                                            sendSMS(numModem,
-                                                                                    encodeXml,
-                                                                                    FormListCompletedActivity.this);
-                                                                        }
-                                                                    }
-                                                            )
-                                                            .setNegativeButton(
-                                                                    R.string.negative_choise,
-                                                                    new DialogInterface.OnClickListener() {
-                                                                        public void onClick(
-                                                                                DialogInterface dialog,
-                                                                                int whichButton) {
-                                                                            dialog.dismiss();
-                                                                        }
-                                                                    }
-                                                            )
-
-                                                            .show();
-                                                }
-                                            } catch (Exception e) {
-                                                e.printStackTrace();
-                                            }
-                                        }
-                                        //}	LL per form di test
-                                    }
-                                }
-                        )
-                        .setNegativeButton(getString(R.string.negative_choise),
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog,
-                                                        int id) {
-                                        dialog.dismiss();
-                                    }
-                                }
-                        );
-                AlertDialog alert = builder.create();
-                alert.show();
-                //finish();
-                return false;
-            }
-        });
+//        listview.setOnItemLongClickListener(new OnItemLongClickListener() {
+//            @Override
+//            public boolean onItemLongClick(AdapterView<?> parent, View v, final int position, long id) {
+//                //idFormNameInstance = completed.get(position).getFormName();
+//                builder.setMessage(getString(R.string.send_form))
+//                        .setCancelable(false)
+//                        .setPositiveButton(R.string.positive_choise,
+//                                new DialogInterface.OnClickListener() {
+//                                    public void onClick(DialogInterface dialog,
+//                                                        int id) {
+//                                        dialog.dismiss();
+//                                        //LL 14-05-2014 db grasp dismesso non ci sono piu' problemi di allineamento
+//                                        //ArrayList<FormInnerListProxy> mycomplete = getCompleteParceableList();//LL aggiunti perche' qui non avevo visibilita' sulle variabili d'istanza
+//                                        ArrayList<FormInnerListProxy> mycompleted = getCompletedParceableList();//LL aggiunti perche' qui non avevo visibilita' sulle variabili d'istanza
+//
+//                                        idFormNameInstance = mycompleted.get(position).getFormName();
+//                                        ///////////////////////////////////////////////////////////////c
+//                                         String str = mycompleted.get(position).getStrPathInstance();
+////                                        String str1[] = str.replace("/storage/emulated/0/GRASP/instances/", "").split("/");
+////                                        String formId = str1[0];
+//                                        String str1[] = str.substring(str.lastIndexOf("instances")).split("/");
+////                                        String formName = str1[1];
+//                                        String formId= str1[1];
+//
+//                                        /////////////////////////////////////////////////////////////
+//                                        //int positioncomplete = getPositionCompletedToSubmit(position); //LL 14-05-2014 db grasp dismesso non ci sono piu' problemi di disallineamento
+//
+//                                        // ****************************************************
+//                                        istance.clear();
+//
+//                                        encodeXml = decodeForm(complete.get(position));//LL 14-05-2014 rimesso per dismissione db grasp
+//                                        //encodeXml = decodeForm(mycomplete.get(positioncomplete));//LL sostituito position con positioncomplete per prendere la form giusta//LL 14-05-2014 dismissione db grasp
+//                                        // ****************************************************
+//                                        /**
+//                                         *  CAMPI DI SALVATAGGIO INVIATO
+//                                         */
+//
+//                                        //nomeform = mycomplete.get(positioncomplete).getFormName();
+//                                        nomeform = mycompleted.get(position).getFormName();
+//                                        autore = mycompleted.get(position).getFormEnumeratorId();//qui ci sta il valore dell' enumeratorID da passare quando si invia la form per poter salvare il valore nella tabella delle inviate
+//
+//                                        FormCompletedDataDBUpdate myFormCompletedDataDBUpdate = new FormCompletedDataDBUpdate(idFormNameInstance, nomeform, autore);
+//                                        listDataToUpdateDB.add(myFormCompletedDataDBUpdate);//qui dentro metto i dati per fare l'update del DB grasp che verra' effettuato dalla chiamata di callback una volta che la form e' stata inviata al server
+//
+//
+//										/*LL 20-03-2014 da rimettere per form di test
+//										String[] splittedFormName = nomeform.split("_");
+//										String endOfForm = splittedFormName[splittedFormName.length-1];//se l'ultima occorrenza e' test
+//
+//										if(!endOfForm.equalsIgnoreCase("test")){//se il nome della form NON finisce per _test non bisogna spedire la form
+//										*/
+//                                        if (!(readSubmittedImages(str).size() == 0)) {
+//
+//                                            formHasImages = true;
+//                                        }
+//
+//
+//                                        if (isNetworkConnected()) {
+//                                            try {
+//                                                // invio solo tramite sms
+//                                                if (connectionType
+//                                                        .equalsIgnoreCase("sms only")) {
+//                                                    sendSMS(numModem,
+//                                                            encodeXml,
+//                                                            FormListCompletedActivity.this);
+//                                                }
+//                                                // invio solo tramite 2g/3g
+//                                                else if (connectionType
+//                                                        .equalsIgnoreCase("gprs/umts only")) {
+//                                                    sendWithNetwork(
+//                                                            FormListCompletedActivity.this,
+//                                                            httpServer,
+//                                                            numClient,
+//                                                            encodeXml,
+//                                                            FormListCompletedActivity.this, formId, formHasImages);
+//                                                    adapter.notifyDataSetInvalidated();
+//                                                    adapter.notifyDataSetChanged();
+//                                                } else if (connectionType
+//                                                        //.equalsIgnoreCase(getString(R.string.on_request))) {   LL 14-1-14
+//                                                        .equalsIgnoreCase("gprs/umts preferred")) { //LL 14-1-14
+//
+//                                                    try {
+//                                                        sendWithNetwork(
+//                                                                FormListCompletedActivity.this,
+//                                                                httpServer,
+//                                                                numClient,
+//                                                                encodeXml,
+//                                                                FormListCompletedActivity.this, formId, formHasImages);
+//                                                    } catch (InterruptedException e) {
+//                                                        // TODO
+//                                                        // Auto-generated
+//                                                        // catch
+//                                                        // block
+//                                                        e.printStackTrace();
+//                                                    }
+//                                                    adapter.notifyDataSetInvalidated();
+//                                                    adapter.notifyDataSetChanged();
+//
+//
+//														/* vecchia logica ora                          LL
+//														CharSequence[] items = {
+//																"gprs/umts", "sms" };
+//														new AlertDialog.Builder(
+//																FormListCompletedActivity.this)
+//																.setSingleChoiceItems(
+//																		items, 0,
+//																		null)
+//																.setPositiveButton(
+//																		R.string.positive_choise,
+//																		new DialogInterface.OnClickListener() {
+//																			public void onClick(
+//																					DialogInterface dialog,
+//																					int whichButton) {
+//																				dialog.dismiss();
+//																				int selectedPosition = ((AlertDialog) dialog)
+//																						.getListView()
+//																						.getCheckedItemPosition();
+//																				if (selectedPosition == 0) {
+//																					// -------------------------------------------------
+//																					pd = ProgressDialog
+//																							.show(FormListCompletedActivity.this,
+//																									FormListCompletedActivity.this
+//																											.getString(R.string.checking_server),
+//																									FormListCompletedActivity.this
+//																											.getString(R.string.wait));
+//
+//																					// -------------------------------------------------
+//
+//																					try {
+//																						sendWithNetwork(
+//																								FormListCompletedActivity.this,
+//																								httpServer,
+//																								numClient,
+//																								encodeXml,
+//																								FormListCompletedActivity.this);
+//																					} catch (InterruptedException e) {
+//																						// TODO
+//																						// Auto-generated
+//																						// catch
+//																						// block
+//																						e.printStackTrace();
+//																					}
+//																					adapter.notifyDataSetInvalidated();
+//																					adapter.notifyDataSetChanged();
+//
+//
+//																				} else if (selectedPosition == 1) {
+//																					sendSMS(numModem,
+//																							encodeXml,
+//																							FormListCompletedActivity.this);
+//
+//																				}
+//																			}
+//																		}).show();*/ //LL
+//                                                }
+//                                            } catch (Exception e) {
+//                                                e.printStackTrace();
+//                                            }
+//                                        } else if (!isNetworkConnected()) {
+//                                            try {
+//                                                // invio solo tramite sms
+//                                                if (connectionType
+//                                                        //.equalsIgnoreCase("sms") LL 14-01-14
+//                                                        .equalsIgnoreCase("sms only") //LL
+//                                                    //|| connectionType.equalsIgnoreCase("gprs/umts") //LL 14-01-14
+//                                                    //|| connectionType.equalsIgnoreCase("gprs/umts preferred")) { //LL
+//                                                        ) { //LL
+//
+//                                                    sendSMS(numModem,
+//                                                            encodeXml,
+//                                                            FormListCompletedActivity.this);
+//														/* LL
+//														CharSequence[] items = { "sms" };
+//														new AlertDialog.Builder(
+//																FormListCompletedActivity.this)
+//																.setSingleChoiceItems(
+//																		items, 0,
+//																		null)
+//																.setPositiveButton(
+//																		R.string.positive_choise,
+//																		new DialogInterface.OnClickListener() {
+//																			public void onClick(
+//																					DialogInterface dialog,
+//																					int whichButton) {
+//																				dialog.dismiss();
+//																				sendSMS(numModem,
+//																						encodeXml,
+//																						FormListCompletedActivity.this);
+//
+//
+//																			}
+//																		}).show();
+//
+//														 */    //LL
+//                                                } else if (connectionType.equalsIgnoreCase("gprs/umts only")) { // gprs/umts only
+//                                                    //it is not possible to send the form wait for the connection
+//                                                  //  CharSequence[] items = {"There isn't a connection. It's not possible to send the form"};
+//                                                    new AlertDialog.Builder(
+//                                                            FormListCompletedActivity.this)
+////                                                            .setSingleChoiceItems(
+////                                                                    items, 0,
+////                                                                    null)
+//                                                            .setMessage(R.string.notConnected)
+//                                                            .setPositiveButton(
+//                                                                    R.string.positive_choise,
+//                                                                    new DialogInterface.OnClickListener() {
+//                                                                        public void onClick(
+//                                                                                DialogInterface dialog,
+//                                                                                int whichButton) {
+//                                                                            dialog.dismiss();
+//                                                                        }
+//                                                                    }
+//                                                            )
+//                                                            .show();
+//
+//                                                } else if (connectionType.equalsIgnoreCase("gprs/umts preferred")) { //here there is no data connection
+//                                                    //it is not possible to send the form by network do u want to send it by sms?
+//                                                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(FormListCompletedActivity.this);
+//                                                    alertDialogBuilder.setTitle("Connection not present!");
+//                                                    alertDialogBuilder
+//                                                            .setMessage("do you want to send the form by sms?")
+//                                                            .setPositiveButton(
+//                                                                    R.string.positive_choise,
+//                                                                    new DialogInterface.OnClickListener() {
+//                                                                        public void onClick(
+//                                                                                DialogInterface dialog,
+//                                                                                int whichButton) {
+//                                                                            dialog.dismiss();
+//                                                                            sendSMS(numModem,
+//                                                                                    encodeXml,
+//                                                                                    FormListCompletedActivity.this);
+//                                                                        }
+//                                                                    }
+//                                                            )
+//                                                            .setNegativeButton(
+//                                                                    R.string.negative_choise,
+//                                                                    new DialogInterface.OnClickListener() {
+//                                                                        public void onClick(
+//                                                                                DialogInterface dialog,
+//                                                                                int whichButton) {
+//                                                                            dialog.dismiss();
+//                                                                        }
+//                                                                    }
+//                                                            )
+//
+//                                                            .show();
+//                                                }
+//                                            } catch (Exception e) {
+//                                                e.printStackTrace();
+//                                            }
+//                                        }
+//                                        //}	LL per form di test
+//                                    }
+//                                }
+//                        )
+//                        .setNegativeButton(getString(R.string.negative_choise),
+//                                new DialogInterface.OnClickListener() {
+//                                    public void onClick(DialogInterface dialog,
+//                                                        int id) {
+//                                        dialog.dismiss();
+//                                    }
+//                                }
+//                        );
+//                AlertDialog alert = builder.create();
+//                alert.show();
+//                //finish();
+//                return false;
+//            }
+//        });
     }
 
     /**
@@ -1496,5 +1505,268 @@ public void cleanDBAfterEditing(ArrayList<FormInnerListProxy> formList) {
             dbh.getReadableDatabase().execSQL(updatequery1);
         }
 }}
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v,
+                                    ContextMenu.ContextMenuInfo menuInfo) {
+        final int position;
+        if (v.getId()==R.id.listViewCompleted) {
+            AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)menuInfo;
+            menu.setHeaderTitle( complete.get(info.position).getFormName());
+            menu.setHeaderIcon(R.drawable.ic_menu_forms);
+            String[] menuItems = getResources().getStringArray(R.array.context_menu);
+            for (int i = 0; i<menuItems.length; i++) {
+                menu.add(Menu.NONE, i, i, menuItems[i]);
+            }
+        }
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)item.getMenuInfo();
+        switch(item.getItemId()) {
+            case 0:
+             deleteForm(positioncomplete);
+            //    complete.remove(positioncomplete);
+                return true;
+            case 1:
+
+                sendSingleForm(positioncomplete);
+                return true;
+//            case 2:
+//                // remove stuff here
+//
+//                return true;
+            default:
+                return super.onContextItemSelected(item);
+        }
+
+    }
+
+    private void deleteForm(final int position) {
+        final Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(getString(R.string.delete_form))
+                .setCancelable(false)
+                .setPositiveButton(R.string.confirm,
+                        new DialogInterface.OnClickListener(){
+                            public void onClick(DialogInterface dialog, int id)
+                            {
+							/*LL 14-05-2014 eliminato per dismissione del db grasp
+							//int positionSalvati = getRightCompletedParcelableObject(saved.get(position).getFormName()); LL eliminato per dismissione del db grasp
+							ApplicationExt.getDatabaseAdapter().open().delete("SAVED", saved.get(position).getFormName());
+							ApplicationExt.getDatabaseAdapter().close();
+							*/
+                                dialog.dismiss();
+                                DatabaseHelper dbh = new DatabaseHelper("forms.db");
+                                String query = "UPDATE forms SET status='cancelled' WHERE displayNameInstance = '"
+                                        + complete.get(position).getFormNameInstance()
+                                        + "' AND status='completed'";
+
+                                dbh.getWritableDatabase().execSQL(query);
+                                dbh.close();
+///if the folder is to be kept then comment lines from here ///////
+                                File file = new File(complete.get(position).getStrPathInstance());
+                                boolean deleted = file.delete();
+
+                                /**
+                                 * CANCELLAZIONE DELLA CARTELLA TEMPORANEA
+                                 */
+                                String path = complete.get(position).getStrPathInstance().replace(".xml", "");
+                                String folder[] = path.split("/", path.length());
+                                File f = new File(Environment.getExternalStorageDirectory()+"/GRASP/instances/"+folder[folder.length-1]);
+
+                                deleteDirectory(f);
+                                if(deleted)
+/////////till here//////////////
+                                    Toast.makeText(FormListCompletedActivity.this, getString(R.string.cancelform) + " " +complete.get(position).getFormName(), Toast.LENGTH_LONG).show();
+                                finish();
+
+                                //FormInnerListProxy filp1 = saved.remove(3);   //LL
+                                //FormInnerListProxy filp2 = salvati.remove(position); //LL
+                            }
+                        })
+                .setNegativeButton(getString(R.string.negative_choise),	new DialogInterface.OnClickListener()
+                {
+                    public void onClick(DialogInterface dialog,	int id)
+                    {
+                        dialog.dismiss();
+                    }
+                }).show();
+
+    }
+
+    private void sendSingleForm(final int position) {
+
+
+        if (connectionType.equalsIgnoreCase("")) {
+            connectionType = "GPRS/UMTS preferred";
+        }
+
+           ArrayList<FormInnerListProxy> mycompleted = getCompletedParceableList();//LL aggiunti perche' qui non avevo visibilita' sulle variabili d'istanza
+
+          idFormNameInstance = mycompleted.get(position).getFormName();
+                                        ///////////////////////////////////////////////////////////////c
+        String str = mycompleted.get(position).getStrPathInstance();
+//
+        String str1[] = str.substring(str.lastIndexOf("instances")).split("/");
+//
+        String formId= str1[1];
+
+        istance.clear();
+
+        encodeXml = decodeForm(complete.get(position));//LL 14-05-2014 rimesso per dismissione db grasp
+
+        nomeform = mycompleted.get(position).getFormName();
+        autore = mycompleted.get(position).getFormEnumeratorId();//qui ci sta il valore dell' enumeratorID da passare quando si invia la form per poter salvare il valore nella tabella delle inviate
+        FormCompletedDataDBUpdate myFormCompletedDataDBUpdate = new FormCompletedDataDBUpdate(idFormNameInstance, nomeform, autore);
+        listDataToUpdateDB.add(myFormCompletedDataDBUpdate);//qui dentro metto i dati per fare l'update del DB grasp che verra' effettuato dalla chiamata di callback una volta che la form e' stata inviata al server
+
+        if (!(readSubmittedImages(str).size() == 0)) {
+            formHasImages = true;
+        }
+
+        if (isNetworkConnected()) {
+            try {
+                // invio solo tramite sms
+                if (connectionType
+                        .equalsIgnoreCase("sms only")) {
+                    sendSMS(numModem,
+                            encodeXml,
+                            FormListCompletedActivity.this);
+                }
+                // invio solo tramite 2g/3g
+                else if (connectionType
+                        .equalsIgnoreCase("gprs/umts only")) {
+                    sendWithNetwork(
+                            FormListCompletedActivity.this,
+                            httpServer,
+                            numClient,
+                            encodeXml,
+                            FormListCompletedActivity.this, formId, formHasImages);
+                    adapter.notifyDataSetInvalidated();
+                    adapter.notifyDataSetChanged();
+                } else if (connectionType
+                        //.equalsIgnoreCase(getString(R.string.on_request))) {   LL 14-1-14
+                        .equalsIgnoreCase("gprs/umts preferred")) { //LL 14-1-14
+                    try {
+                                                        sendWithNetwork(
+                                                                FormListCompletedActivity.this,
+                                                                httpServer,
+                                                                numClient,
+                                                                encodeXml,
+                                                                FormListCompletedActivity.this, formId, formHasImages);
+                                                    } catch (InterruptedException e) {
+                                                        // TODO
+                                                        // Auto-generated
+                                                        // catch
+                                                        // block
+                                                        e.printStackTrace();
+                                                    }
+                                                    adapter.notifyDataSetInvalidated();
+                                                    adapter.notifyDataSetChanged();
+                                                }
+                                            } catch (Exception e) {
+                                                e.printStackTrace();
+                                            }
+                                        } else if (!isNetworkConnected()) {
+                                            try {
+                                                // invio solo tramite sms
+                                                if (connectionType
+                                                        //.equalsIgnoreCase("sms") LL 14-01-14
+                                                        .equalsIgnoreCase("sms only") //LL
+                                                    //|| connectionType.equalsIgnoreCase("gprs/umts") //LL 14-01-14
+                                                    //|| connectionType.equalsIgnoreCase("gprs/umts preferred")) { //LL
+                                                        ) { //LL
+
+                                                    sendSMS(numModem,
+                                                            encodeXml,
+                                                            FormListCompletedActivity.this);
+
+                                                } else if (connectionType.equalsIgnoreCase("gprs/umts only")) { // gprs/umts only
+                                                    //it is not possible to send the form wait for the connection
+                                                  //  CharSequence[] items = {"There isn't a connection. It's not possible to send the form"};
+                                                    new AlertDialog.Builder(
+                                                            FormListCompletedActivity.this)
+//                                                            .setSingleChoiceItems(
+//                                                                    items, 0,
+//                                                                    null)
+                                                            .setMessage(R.string.notConnected)
+                                                            .setPositiveButton(
+                                                                    R.string.positive_choise,
+                                                                    new DialogInterface.OnClickListener() {
+                                                                        public void onClick(
+                                                                                DialogInterface dialog,
+                                                                                int whichButton) {
+                                                                            dialog.dismiss();
+                                                                        }
+                                                                    }
+                                                            )
+                                                            .show();
+
+                                                } else if (connectionType.equalsIgnoreCase("gprs/umts preferred")) { //here there is no data connection
+                                                    //it is not possible to send the form by network do u want to send it by sms?
+                                                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(FormListCompletedActivity.this);
+                                                    alertDialogBuilder.setTitle("Connection not present!");
+                                                    alertDialogBuilder
+                                                            .setMessage("do you want to send the form by sms?")
+                                                            .setPositiveButton(
+                                                                    R.string.positive_choise,
+                                                                    new DialogInterface.OnClickListener() {
+                                                                        public void onClick(
+                                                                                DialogInterface dialog,
+                                                                                int whichButton) {
+                                                                            dialog.dismiss();
+                                                                            sendSMS(numModem,
+                                                                                    encodeXml,
+                                                                                    FormListCompletedActivity.this);
+                                                                        }
+                                                                    }
+                                                            )
+                                                            .setNegativeButton(
+                                                                    R.string.negative_choise,
+                                                                    new DialogInterface.OnClickListener() {
+                                                                        public void onClick(
+                                                                                DialogInterface dialog,
+                                                                                int whichButton) {
+                                                                            dialog.dismiss();
+                                                                        }
+                                                                    }
+                                                            )
+
+                                                            .show();
+                                                }
+                                            } catch (Exception e) {
+                                                e.printStackTrace();
+                                            }
+                                        }
+                                        //}	LL per form di test
+                                    }
+
+
+
+
+
+
+
+    public static boolean deleteDirectory(File path)
+    {
+        if(path.exists())  {
+            File[] files = path.listFiles();
+            if (files == null)	{
+                return true;
+            }
+            else if (files != null) {
+                for(int i=0; i<files.length; i++) {
+                    if(files[i].isDirectory()) {
+                        deleteDirectory(files[i]);
+                    }
+                    else {
+                        files[i].delete();
+                    }
+                }
+            }
+        }
+        return(path.delete());
+    }
+
 
 }

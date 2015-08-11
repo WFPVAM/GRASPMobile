@@ -8,9 +8,9 @@ package com.google.zxing.client.android;
 
 public final class R {
 	public static final class array {
-		public static final int country_codes = 0x7f07001a;
-		public static final int preferences_front_light_options = 0x7f07001d;
-		public static final int preferences_front_light_values = 0x7f07001e;
+		public static final int country_codes = 0x7f07001b;
+		public static final int preferences_front_light_options = 0x7f07001e;
+		public static final int preferences_front_light_values = 0x7f07001f;
 	}
 	public static final class color {
 		public static final int contents_text = 0x7f080017;
