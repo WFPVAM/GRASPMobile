@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-en-rZA/array.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values-en-rZA/array.xml -->
     <eat-comment/>
     <string-array name="connection_type">
         <item name="sms">SMS solamente</item>
@@ -160,7 +160,7 @@
         <item name="60000">60000</item>
         <item name="300000">300000</item>
     </string-array>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-en-rZA/color.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values-en-rZA/color.xml -->
     <eat-comment/>
     <color name="bg_err">#000000</color>
     <color name="bg_mand">#FFFFB5</color>
@@ -185,7 +185,7 @@
     <color name="wfp_azure2">#006DC2</color>
     <color name="white">#FFFFFF</color>
     <color name="yellow">#FFFF00</color>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-en-rZA/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values-en-rZA/strings.xml -->
     <eat-comment/>
     <string name="accept_location">Andika Mahali</string>
     <string name="access_error">Kosa wakati wa kufikia %s:</string>
@@ -384,10 +384,10 @@
     <string name="more_form">More than one possible parent form</string>
     <string name="negative">No</string>
     <string name="negative_choise">No</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-en-rZA/sysconfig.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values-en-rZA/sysconfig.xml -->
     <eat-comment/>
     <string name="new_app_url">http://www.brainsen.com/wfp/grasp/AndroidWFP.apk</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-en-rZA/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values-en-rZA/strings.xml -->
     <eat-comment/>
     <string name="new_form">KASHAPOKEZI</string>
     <string name="no">Hapana</string>
@@ -516,7 +516,7 @@
     <string name="wait">Please wait...</string>
     <string name="xform_parse_error">XKosa kuchambua fomu. %1$s haina elementi %2$s</string>
     <string name="yes_pref">Yes, delete all</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-en-rZA/style.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values-en-rZA/style.xml -->
     <eat-comment/>
     <style name="large" parent="@android:style/TextAppearance.Large">
         <item name="android:textSize">25sp</item>

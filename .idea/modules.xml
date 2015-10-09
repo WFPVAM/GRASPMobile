@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GRASPMobilePal.iml" filepath="$PROJECT_DIR$/GRASPMobilePal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GRASPMobilePal_PCD.iml" filepath="$PROJECT_DIR$/GRASPMobilePal_PCD.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

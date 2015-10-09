@@ -23,4 +23,4 @@
         android:title="@string/menu_encode_vcard"
         android:icon="@android:drawable/ic_menu_sort_alphabetically"
         android:orderInCategory="2"/>
-</menu><!-- From: file:/home/ralf/src/zxing-android-minimal/zxing-android/res/menu/zxing_encode.xml --><!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/menu/zxing_encode.xml -->
+</menu><!-- From: file:/home/ralf/src/zxing-android-minimal/zxing-android/res/menu/zxing_encode.xml --><!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/menu/zxing_encode.xml -->

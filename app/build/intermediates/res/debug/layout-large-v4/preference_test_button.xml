@@ -11,4 +11,4 @@
 	    android:layout_margin="5dp"
 		android:layout_height="fill_parent"
     	android:layout_gravity="center"/>
-</LinearLayout><!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/layout-large/preference_test_button.xml -->
+</LinearLayout><!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/layout-large/preference_test_button.xml -->

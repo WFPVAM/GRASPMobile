@@ -6,8 +6,10 @@
  ******************************************************************************/
 package it.fabaris.wfp.activities;
 
+import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -45,6 +47,7 @@ import javax.xml.transform.stream.StreamResult;
 
 import it.fabaris.wfp.application.Collect;
 import it.fabaris.wfp.listener.MyCallback;
+import it.fabaris.wfp.provider.FormProvider;
 import it.fabaris.wfp.provider.MessageProvider.DatabaseHelper;
 import it.fabaris.wfp.task.DownloadSmsTask;
 import it.fabaris.wfp.task.HttpXmlCheckAndSyncTask;
@@ -110,6 +113,7 @@ public class SmsListActivity extends ListActivity implements MyCallback{
                 final XmlParser px = new XmlParser();
                 strFormName = (arrFormName[position].toString());
                 strFormText = (arrFormText[position]).toString();
+                if(!formNameExists(strFormName)){
                 try {
                     byte[] decodedString = Base64.decode(strFormText, 0);
                     ByteArrayInputStream inStream = new ByteArrayInputStream(decodedString);
@@ -140,8 +144,21 @@ public class SmsListActivity extends ListActivity implements MyCallback{
                 }catch (Exception e) {
                     e.printStackTrace();
                 }
+            }else{
+                    final AlertDialog.Builder dialog = new AlertDialog.Builder(SmsListActivity.this);
+                    dialog.setTitle(R.string.form_exist_title);
+                    dialog.setMessage(R.string.form_exist);
+                    dialog.setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    });
+                    dialog.create().show();
+                }
             }
         });
+
     }
 
     /**
@@ -217,7 +234,7 @@ public class SmsListActivity extends ListActivity implements MyCallback{
         }catch(Exception e){
             e.printStackTrace();
         }
-        Log.i("formGiaSincronizzate",strXmlList);
+        Log.i("formGiaSincronizzate", strXmlList);
         return strXmlList;
     }
 
@@ -315,6 +332,21 @@ public class SmsListActivity extends ListActivity implements MyCallback{
             }
         }
         return formName;
+    }
+
+    public boolean formNameExists(String newFormName){
+        String formName = "";
+        FormProvider.DatabaseHelper dbh = new FormProvider.DatabaseHelper("forms.db");
+        String query = "SELECT * FROM forms WHERE displayName = '"+ newFormName +"'";
+        Cursor c = dbh.getReadableDatabase().rawQuery(query, null);
+        if(c.getCount() != 0){//if already exists a form with this id
+            if (c.moveToFirst()){
+                formName = c.getString(0);
+            }
+            return true;
+        }
+       else
+            return false;
     }
 
     /**

@@ -2,6 +2,7 @@ package it.fabaris.wfp.task;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -43,6 +44,7 @@ import it.fabaris.wfp.activities.FormListFinalizedActivity;
 import it.fabaris.wfp.activities.PreferencesActivity;
 import it.fabaris.wfp.activities.R;
 import it.fabaris.wfp.listener.MyCallback;
+import object.FormInnerListProxy;
 
 /**
  * Class that defines the task that send the xform to the server
@@ -62,7 +64,8 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
     private TelephonyManager mTelephonyManager;
     private String formName;
     boolean isImage= false;
-   boolean formHasImages;
+    boolean formHasImages;
+
     /**
      * set the data needed to send the form
      * @param context
@@ -140,7 +143,19 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
             }
             result = postCall(http, phone, data,formName);
         }
+//        if(result.equalsIgnoreCase("deleted")){
+//            FormListCompletedActivity.toBeDeleted.add(formName.split("_")[1]);
+//            return"deleted";
+//
+//        }
+//        else if(result.equalsIgnoreCase("updated")){
+//           FormListCompletedActivity. toBeDeleted.add(formName.split("_")[1]);
+//            return "updated";
+//        }
+        //else
+
         return result;
+
     }
 
     /**
@@ -181,6 +196,7 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
             {
                 Toast.makeText(context, R.string.error, Toast.LENGTH_LONG).show();
             }
+            ////////
             else if (result.trim().toLowerCase().startsWith("ok"))
             {
                 Log.i("RESULT", "messaggio ricevuto dal server");
@@ -251,10 +267,32 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
                     }
                   callback.finishFormListFinalized();
                 }
-
+                if (FormListCompletedActivity.formsChangedOnServer != null){
+                    if (FormListCompletedActivity.formsChangedOnServer.size() != 0){
+                        Intent i = new Intent(context,FormListCompletedActivity.class);
+                        context.startActivity(i);
+                        //  FormListCompletedActivity.FormChangedOnServer();
+                    }}
 
             }
+//            else if(result=="deleted"){
+//
+//                //  Toast.makeText(context, R.string.deleted, Toast.LENGTH_LONG).show();
+//                FormListCompletedActivity.formsForDeletion=true;
+//                Intent i = new Intent(context,FormListCompletedActivity.class);
+//                context.startActivity(i);
+//                FormListCompletedActivity.FormChangedOnServer(FormListCompletedActivity.toBeDeleted);
+//            }
+//            else if(result=="updated"){
+//                //  Toast.makeText(context, R.string.updated, Toast.LENGTH_LONG).show();
+//             //   FormListCompletedActivity.formsForDeletion=true;
+//                FormListCompletedActivity.formUpdated=true;
+//                Intent i = new Intent(context,FormListCompletedActivity.class);
+//                context.startActivity(i);
+//                FormListCompletedActivity.FormChangedOnServer(FormListCompletedActivity.toBeDeleted);
+//            }
         }
+
     }
 
 
@@ -301,7 +339,36 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
         try {
             HttpResponse response = httpClient.execute(httpPost);
             result = EntityUtils.toString(response.getEntity());
+            //trim the result to know the case :
+            String [] responses = result.split(",");
+            String part1 = responses[0];
+            String part2= responses[1];
+//            if( part2.equalsIgnoreCase("NewPublishedVersion")){
+//                String newFormName= responses[3];
+//            }
+            if (part1.equalsIgnoreCase("ok")){
+                if (part2.equalsIgnoreCase("Finalized")) {
 
+                    result = "ok";
+                }
+                else if (part2.equalsIgnoreCase("NewPublishedVersion")) {
+                    if (formName.contains("images")){
+                        FormListCompletedActivity.formsChangedOnServer.put(formName.split("_")[0],part2);
+                    }
+                    else
+                        FormListCompletedActivity.formsChangedOnServer.put(formName.split("_")[1],part2);
+                    FormListCompletedActivity.formsForDeletion=true;
+                    result = "ok";
+                }
+                else if(part2.equalsIgnoreCase("NotExisted") || part2.equalsIgnoreCase("NotFinalized") ||part2.equalsIgnoreCase("Deleted")) {
+                    if (formName.contains("images")){
+                        FormListCompletedActivity.formsChangedOnServer.put(formName.split("_")[0],part2);
+                    }
+                    FormListCompletedActivity.formsChangedOnServer.put(formName.split("_")[1],part2);
+                    FormListCompletedActivity.formsForDeletion=true;
+                    result = "ok";
+                }
+            }
             if (result.equalsIgnoreCase("\r\n")) {
                 return result = "formnotonserver";
             } else {
@@ -310,7 +377,8 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            return result = "error";
+            //return result = "error";
+            return result;
         }
     }
 

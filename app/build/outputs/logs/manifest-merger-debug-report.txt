@@ -16,6 +16,7 @@ ADDED from AndroidManifest.xml:12:1
 uses-sdk
 ADDED from AndroidManifest.xml:17:5
 MERGED from com.embarkmobile:zxing-android-minimal:1.2.1:23:3
+MERGED from com.android.support:support-v4:21.0.3:15:5
 	android:targetSdkVersion
 		ADDED from AndroidManifest.xml:19:9
 		INJECTED from AndroidManifest.xml:0:0
@@ -113,6 +114,7 @@ ADDED from AndroidManifest.xml:43:5
 application
 ADDED from AndroidManifest.xml:47:5
 MERGED from com.embarkmobile:zxing-android-minimal:1.2.1:43:3
+MERGED from com.android.support:support-v4:21.0.3:16:5
 	android:label
 		ADDED from AndroidManifest.xml:50:9
 	android:icon
@@ -266,35 +268,41 @@ ADDED from AndroidManifest.xml:125:17
 	android:mimeType
 		ADDED from AndroidManifest.xml:125:23
 provider#it.fabaris.wfp.provider.FormProvider
-ADDED from AndroidManifest.xml:131:9
+ADDED from AndroidManifest.xml:130:9
 	android:authorities
-		ADDED from AndroidManifest.xml:133:13
-	android:name
 		ADDED from AndroidManifest.xml:132:13
+	android:name
+		ADDED from AndroidManifest.xml:131:13
 provider#it.fabaris.wfp.provider.MessageProvider
-ADDED from AndroidManifest.xml:134:9
+ADDED from AndroidManifest.xml:133:9
 	android:authorities
-		ADDED from AndroidManifest.xml:136:13
-	android:name
 		ADDED from AndroidManifest.xml:135:13
+	android:name
+		ADDED from AndroidManifest.xml:134:13
 provider#it.fabaris.wfp.provider.InstanceProvider
-ADDED from AndroidManifest.xml:137:9
+ADDED from AndroidManifest.xml:136:9
 	android:authorities
-		ADDED from AndroidManifest.xml:139:13
-	android:name
 		ADDED from AndroidManifest.xml:138:13
+	android:name
+		ADDED from AndroidManifest.xml:137:13
 receiver#it.fabaris.wfp.broadcast.SmsReceiverBroadcast
-ADDED from AndroidManifest.xml:141:9
+ADDED from AndroidManifest.xml:140:9
 	android:name
-		ADDED from AndroidManifest.xml:141:19
+		ADDED from AndroidManifest.xml:140:19
 intent-filter#android.provider.Telephony.SMS_RECEIVED
-ADDED from AndroidManifest.xml:142:13
+ADDED from AndroidManifest.xml:141:13
 	android:priority
-		ADDED from AndroidManifest.xml:142:28
+		ADDED from AndroidManifest.xml:141:28
 action#android.provider.Telephony.SMS_RECEIVED
-ADDED from AndroidManifest.xml:143:17
+ADDED from AndroidManifest.xml:142:17
 	android:name
-		ADDED from AndroidManifest.xml:143:25
+		ADDED from AndroidManifest.xml:142:25
+activity#it.fabaris.wfp.activities.MapActivity
+ADDED from AndroidManifest.xml:146:9
+	android:label
+		ADDED from AndroidManifest.xml:148:13
+	android:name
+		ADDED from AndroidManifest.xml:147:13
 uses-permission#android.permission.FLASHLIGHT
 ADDED from com.embarkmobile:zxing-android-minimal:1.2.1:21:3
 	android:name

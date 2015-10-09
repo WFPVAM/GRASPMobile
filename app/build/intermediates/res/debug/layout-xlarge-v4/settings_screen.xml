@@ -48,4 +48,4 @@
 	   	android:textColor="@color/white"
 	    android:text="@string/please_insert_your_phone_number" />
 </RelativeLayout>
-<!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/layout-xlarge/settings_screen.xml -->
+<!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/layout-xlarge/settings_screen.xml -->

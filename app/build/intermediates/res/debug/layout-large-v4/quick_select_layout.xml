@@ -23,4 +23,4 @@
                 android:layout_width="wrap_content" android:layout_alignParentRight="true"
                 android:id="@+id/quick_select_right_arrow" />
 </RelativeLayout>
-<!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/layout-large/quick_select_layout.xml -->
+<!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/layout-large/quick_select_layout.xml -->

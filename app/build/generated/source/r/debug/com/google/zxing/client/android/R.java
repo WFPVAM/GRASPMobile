@@ -26,45 +26,45 @@ public final class R {
 		public static final int viewfinder_mask = 0x7f080021;
 	}
 	public static final class dimen {
-		public static final int half_padding = 0x7f0b0000;
-		public static final int standard_padding = 0x7f0b0001;
+		public static final int half_padding = 0x7f0b0002;
+		public static final int standard_padding = 0x7f0b0003;
 	}
 	public static final class id {
-		public static final int app_picker_list_item_icon = 0x7f0c0008;
-		public static final int app_picker_list_item_label = 0x7f0c0009;
+		public static final int app_picker_list_item_icon = 0x7f0c0009;
+		public static final int app_picker_list_item_label = 0x7f0c000a;
 		public static final int back_button = 0x7f0c0000;
-		public static final int barcode_image_view = 0x7f0c0065;
-		public static final int contents_supplement_text_view = 0x7f0c006c;
-		public static final int contents_text_view = 0x7f0c006b;
+		public static final int barcode_image_view = 0x7f0c0066;
+		public static final int contents_supplement_text_view = 0x7f0c006d;
+		public static final int contents_text_view = 0x7f0c006c;
 		public static final int decode = 0x7f0c0001;
 		public static final int decode_failed = 0x7f0c0002;
 		public static final int decode_succeeded = 0x7f0c0003;
-		public static final int done_button = 0x7f0c0071;
-		public static final int format_text_view = 0x7f0c0066;
-		public static final int help_contents = 0x7f0c0070;
-		public static final int image_view = 0x7f0c006f;
+		public static final int done_button = 0x7f0c0072;
+		public static final int format_text_view = 0x7f0c0067;
+		public static final int help_contents = 0x7f0c0071;
+		public static final int image_view = 0x7f0c0070;
 		public static final int launch_product_query = 0x7f0c0004;
-		public static final int menu_encode = 0x7f0c0074;
-		public static final int menu_help = 0x7f0c0072;
-		public static final int menu_share = 0x7f0c0073;
-		public static final int meta_text_view = 0x7f0c006a;
-		public static final int meta_text_view_label = 0x7f0c0069;
-		public static final int preview_view = 0x7f0c0062;
+		public static final int menu_encode = 0x7f0c0075;
+		public static final int menu_help = 0x7f0c0073;
+		public static final int menu_share = 0x7f0c0074;
+		public static final int meta_text_view = 0x7f0c006b;
+		public static final int meta_text_view_label = 0x7f0c006a;
+		public static final int preview_view = 0x7f0c0063;
 		public static final int quit = 0x7f0c0005;
 		public static final int restart_preview = 0x7f0c0006;
-		public static final int result_button_view = 0x7f0c006d;
-		public static final int result_view = 0x7f0c0064;
+		public static final int result_button_view = 0x7f0c006e;
+		public static final int result_view = 0x7f0c0065;
 		public static final int return_scan_result = 0x7f0c0007;
-		public static final int status_view = 0x7f0c006e;
-		public static final int time_text_view = 0x7f0c0068;
-		public static final int type_text_view = 0x7f0c0067;
-		public static final int viewfinder_view = 0x7f0c0063;
+		public static final int status_view = 0x7f0c006f;
+		public static final int time_text_view = 0x7f0c0069;
+		public static final int type_text_view = 0x7f0c0068;
+		public static final int viewfinder_view = 0x7f0c0064;
 	}
 	public static final class layout {
-		public static final int app_picker_list_item = 0x7f030000;
-		public static final int zxing_capture = 0x7f03002c;
-		public static final int zxing_encode = 0x7f03002d;
-		public static final int zxing_help = 0x7f03002e;
+		public static final int app_picker_list_item = 0x7f030001;
+		public static final int zxing_capture = 0x7f03002d;
+		public static final int zxing_encode = 0x7f03002e;
+		public static final int zxing_help = 0x7f03002f;
 	}
 	public static final class menu {
 		public static final int zxing_capture = 0x7f0d0000;
@@ -195,10 +195,10 @@ public final class R {
 		public static final int result_uri = 0x7f090183;
 		public static final int result_wifi = 0x7f090184;
 		public static final int sbc_name = 0x7f090191;
-		public static final int wifi_changing_network = 0x7f0901d6;
-		public static final int wifi_ssid_label = 0x7f0901d7;
-		public static final int wifi_type_label = 0x7f0901d8;
-		public static final int zxing_app_name = 0x7f0901dc;
+		public static final int wifi_changing_network = 0x7f0901d7;
+		public static final int wifi_ssid_label = 0x7f0901d8;
+		public static final int wifi_type_label = 0x7f0901d9;
+		public static final int zxing_app_name = 0x7f0901dd;
 	}
 	public static final class xml {
 		public static final int zxing_preferences = 0x7f050002;

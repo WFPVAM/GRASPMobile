@@ -1,7 +1,11 @@
 package it.fabaris.wfp.task;
 
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -61,6 +65,7 @@ import it.fabaris.wfp.activities.FormListCompletedActivity;
 import it.fabaris.wfp.activities.R;
 import it.fabaris.wfp.application.Collect;
 import it.fabaris.wfp.listener.MyCallback;
+import it.fabaris.wfp.provider.FormProvider;
 import it.fabaris.wfp.provider.FormProvider.DatabaseHelper;
 import it.fabaris.wfp.utility.FileUtils;
 import it.fabaris.wfp.utility.NewFileUtils;
@@ -97,6 +102,7 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
     static String date;
     private HashMap<String, String> formNotSent;
 
+   // public static ArrayList<String> toBeDeleted = new ArrayList<>();
 
     //public HttpSendAllFormsTask(Context context, String http, String phone, ArrayList<FormInnerListProxy> completedformslistfirst, ArrayList<FormInnerListProxy> completedformslistsecond,//LL 14-05-2014
 
@@ -165,10 +171,16 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
             numOfFormSent = 1;//set the number of forms to send, 1 to start
             for (FormInnerListProxy mydata : completedformslistfirst) {//loop on "the form to send" list
                 data = decodeForm(mydata);//the form to send, encoded
+
                     String str =mydata.getStrPathInstance();
+
 //                String str1[] = str.replace("/storage/emulated/0/GRASP/instances/","").split("/");
                 String str1[] = str.substring(str.lastIndexOf("instances")).split("/");
-                String formName = str1[1];
+                String fName = str1[1];
+
+
+                String  formName = mydata.getFormNameAndXmlFormid().split("&")[1] +"_"+ fName;
+
 ///////////////////////This is to check whether the file is 0kb/////////////////////////////////
                 if (data == null) {
                    // int i = completedformslistfirst.indexOf(mydata);
@@ -250,6 +262,16 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
                         formNotSent.put(mydata.getFormNameInstance(), result);//list of the forms not sent with the motivation of the failure
                     } else {
                         Log.i("the data is ", "fail to send message to server");
+//                        if(result.equalsIgnoreCase("deleted")){
+//                            FormListCompletedActivity.toBeDeleted.add(mydata.getFormName());
+//                          return"deleted";
+//
+//                        }
+//                        else if(result.equalsIgnoreCase("updated")){
+//                            FormListCompletedActivity.toBeDeleted.add(mydata.getFormName());
+//                           return "updated";
+//                        }
+                       // else
                         return "ko";
                     }
                     //form not sent name-> key = formNameInstance
@@ -258,6 +280,12 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
             }
             }
         }
+        if (FormListCompletedActivity.formsChangedOnServer != null){
+        if (FormListCompletedActivity.formsChangedOnServer.size() != 0){
+            Intent i = new Intent(context,FormListCompletedActivity.class);
+            context.startActivity(i);
+          //  FormListCompletedActivity.FormChangedOnServer();
+        }}
         if (formNotSent != null) {
             if (!formNotSent.isEmpty()) {
                 return "ko";
@@ -272,6 +300,8 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
         } else {
             return "ok";
         }
+
+
     }
 
     private void updateFormToFinalized(FormInnerListProxy form) {
@@ -360,13 +390,31 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
         }
         if(!(formResult=="empty")){
         if (result == "ok") {//if all the forms are been sent
+
             Toast.makeText(context, R.string.AllForms_sent, Toast.LENGTH_LONG).show();
             Toast.makeText(context,R.string.gotToSubmitImg,Toast.LENGTH_LONG).show();
-        } else {// not all the forms are been sent correctly
-
-           Toast.makeText(context, R.string.problemSending, Toast.LENGTH_SHORT).show();
-            Toast.makeText(context,R.string.gotToSubmitImg,Toast.LENGTH_LONG).show();
-        }}
+        }
+//        else if(result=="deleted"){
+//
+//                  //  Toast.makeText(context, R.string.deleted, Toast.LENGTH_LONG).show();
+//                    FormListCompletedActivity.formsForDeletion=true;
+//                    Intent i = new Intent(context,FormListCompletedActivity.class);
+//                    context.startActivity(i);
+//                 //   FormListCompletedActivity.FormChangedOnServer(FormListCompletedActivity.toBeDeleted);
+//                }
+//           else if(result=="updated"){
+//              //  Toast.makeText(context, R.string.updated, Toast.LENGTH_LONG).show();
+//                //FormListCompletedActivity.formsForDeletion=true;
+//                FormListCompletedActivity.formUpdated=true;
+//                Intent i = new Intent(context,FormListCompletedActivity.class);
+//                context.startActivity(i);
+//                FormListCompletedActivity.FormChangedOnServer(FormListCompletedActivity.toBeDeleted);
+//            }
+            else {
+                Toast.makeText(context, R.string.problemSending, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, R.string.gotToSubmitImg, Toast.LENGTH_LONG).show();
+            }
+            }
             else {// not all the forms are been sent correctly
                 Toast.makeText(context,R.string.formDNE, Toast.LENGTH_SHORT).show();
             //////metto il salvataggio di quelle che stanno qui nelle finalizzate?
@@ -400,10 +448,13 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
         if (finishFormListCompleted != null) {
 
             finishFormListCompleted.finishFormListCompleted();
+
         }
 
 
     }
+
+
 
     /**
      * effectively send the form to the server
@@ -446,6 +497,29 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
             HttpResponse response = httpClient.execute(httpPost);
             result = EntityUtils.toString(response.getEntity());
 
+            //trim the result to know the case :
+            String [] responses = result.split(",");
+            String part1 = responses[0];
+            String part2= responses[1];
+//            if( part2.equalsIgnoreCase("NewPublishedVersion")){
+//                String newFormName= responses[2];
+//            }
+            if (part1.equalsIgnoreCase("ok")){
+                if (part2.equalsIgnoreCase("Finalized")) {
+                    result = "ok";
+//
+                }else if (part2.equalsIgnoreCase("NewPublishedVersion")) {
+                    result = "ok";
+                    FormListCompletedActivity.formsChangedOnServer.put(id.split("_")[1], part2);
+                    FormListCompletedActivity.formsForDeletion=true;
+                }else if(part2.equalsIgnoreCase("NotExisted") || part2.equalsIgnoreCase("NotFinalized") ||part2.equalsIgnoreCase("Deleted")) {
+                    result = "ok";
+                    FormListCompletedActivity.formsChangedOnServer.put(id.split("_")[1], part2);
+                    FormListCompletedActivity.formsForDeletion=true;
+                }
+                }
+
+
             if (result.equalsIgnoreCase("\r\n")) {
                 return result = "formnotonserver";
             } else {
@@ -454,7 +528,8 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            return result = "error";
+          //  return result = "error";
+            return result;
         }
     }
 

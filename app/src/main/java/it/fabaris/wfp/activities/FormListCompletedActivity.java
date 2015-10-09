@@ -69,6 +69,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Locale;
 import java.util.Set;
@@ -87,6 +88,7 @@ import javax.xml.transform.stream.StreamResult;
 import content.FormCompletedAdapter;
 import it.fabaris.wfp.application.Collect;
 import it.fabaris.wfp.listener.MyCallback;
+import it.fabaris.wfp.provider.FormProvider;
 import it.fabaris.wfp.provider.FormProvider.DatabaseHelper;
 import it.fabaris.wfp.provider.InstanceProviderAPI;
 import it.fabaris.wfp.task.HttpCheckAndSendPostTask;
@@ -120,9 +122,9 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
     private FormCompletedAdapter adapter;
     private int positioncomplete = 0;
     private static String idFormNameInstance = null;
-
+    //public static ArrayList<String> toBeDeleted = new ArrayList<>();
     public static String editingEnabled =null;
-
+    public static HashMap<String,String> formsChangedOnServer = new HashMap<>();
     private static Notification notification;
     private NotificationManager nm;
     private ListView listview;
@@ -150,9 +152,11 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
     //private ArrayList<FormInnerListProxy> completed; LL 14-05-2014 eliminato per dismissione del db grasp
 
     private static ArrayList<FormCompletedDataDBUpdate> listDataToUpdateDB = new ArrayList<FormCompletedDataDBUpdate>();
-
+    public static boolean formsForDeletion=false;
+    public static boolean formUpdated=false;
+    static String deletedFormName;
     ProgressDialog pd;
-
+    String xmlID;
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tabcompleted);
@@ -270,7 +274,8 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
                     //we can't get the formId for the completed forms, so this is a work around to get it
                    String str =complete.get(position).getFormNameAndXmlFormid();
                    String str1[]= str.split("&");
-                   formId= str1[1];
+
+                    formId= str1[1];
 
                     //LL 14-05-2014 modificati per dismissione del db grasp
                     intent.putExtra(pkgName+keyIdentifer,  complete.get(position).getPathForm()); 			//formPathSalvate[position]);
@@ -597,6 +602,35 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
 //                return false;
 //            }
 //        });
+       // for(int i=0;i<formsChangedOnServer.size();i++) {
+        ArrayList<String> updatedForms= new ArrayList<>();
+        ArrayList<String> deletedForms= new ArrayList<>();
+        if(formsForDeletion){
+        if (formsChangedOnServer !=null){
+        if(formsChangedOnServer.size()!= 0) {
+            for (String key : formsChangedOnServer.keySet()) {
+                if (formsChangedOnServer.get(key).equalsIgnoreCase("newPublishedVersion"))
+                    updatedForms.add(key);
+                else if (formsChangedOnServer.get(key).equalsIgnoreCase("NotExisted") || formsChangedOnServer.get(key).equalsIgnoreCase("NotFinalized") || formsChangedOnServer.get(key).equalsIgnoreCase("Deleted"))
+                    deletedForms.add(key);
+            }
+
+            if (updatedForms.size() != 0) {
+                for (int i = 0; i < updatedForms.size(); i++) {
+                    String formName = updatedForms.get(i);
+                    messageDialog(FormListCompletedActivity.this, formName, getString(R.string.updated), getString(R.string.updated_title));
+                }
+            }
+            if (deletedForms.size() != 0) {
+                for (int i = 0; i < deletedForms.size(); i++) {
+                    String formName = deletedForms.get(i);
+                    messageDialog(FormListCompletedActivity.this, formName, getString(R.string.deleted), getString(R.string.deletd_title));
+                }
+            }
+
+        }
+        }
+        }
     }
 
     /**
@@ -1069,6 +1103,8 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
             }
         }
 
+
+
                 }
 
 
@@ -1382,7 +1418,74 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
 
 
     }
+    public void messageDialog(Activity a, final String formName, String message,String title){
+        final AlertDialog.Builder dialog = new AlertDialog.Builder(a);
+        //final AlertDialog.Builder dialog = new AlertDialog.Builder(FormListCompletedActivity.this);
+        dialog.setTitle(title);
+        dialog.setMessage("'"+ formName+ "'" +" "+ message);
 
+        dialog.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                formsForDeletion=false;
+//                formUpdated=false;
+                FormChangedOnServer(formName);
+                formsChangedOnServer.remove(formName);
+                   // finish();
+
+
+            }
+
+        });
+        dialog.setNegativeButton(R.string.cancel,new DialogInterface.OnClickListener(){
+
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                formsForDeletion=false;
+          //      finish();
+           //     dismissDialog();
+            }
+        });
+        dialog.create().show();
+
+//        dialog.setTitle(title);
+//        dialog.setMessage(message);
+//        dialog.setNeutralButton("OK", null);
+//        dialog.create().show();
+
+    }
+
+    public  void FormChangedOnServer(String deletedFormName) {
+
+      //  for(int i=0; i<f.size();i++){
+         //   deletedFormName=toBeDeleted.get(i);
+
+//            alertDialog.setButton(R.string.confirm,
+//                        new DialogInterface.OnClickListener(){
+//
+//                            public void onClick(DialogInterface dialog, int id)
+//                            {
+//							/*LL 14-05-2014 eliminato per dismissione del db grasp
+//							//int positionSalvati = getRightCompletedParcelableObject(saved.get(position).getFormName()); LL eliminato per dismissione del db grasp
+//							ApplicationExt.getDatabaseAdapter().open().delete("SAVED", saved.get(position).getFormName());
+//							ApplicationExt.getDatabaseAdapter().close();
+//							*/
+//                                dialog.dismiss();
+            //TODO update this query to DELETE or else it will cause serious crash
+            FormProvider.DatabaseHelper dbh = new FormProvider.DatabaseHelper("forms.db");
+            String query1 = "DELETE FROM forms WHERE displayName = '"
+                    + deletedFormName+"'" ;
+            // + "' AND status='new',status='completed,status='saved'";
+
+            dbh.getWritableDatabase().execSQL(query1);
+            dbh.close();
+//
+//
+//                            }
+//                        })
+            // .show();
+        }
+//}
     /**
      * updates the submission date in forms db after the form has been sent
      */
@@ -1437,6 +1540,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
 
 
     }
+
 
     /**
      * We destroy the Activity
@@ -1563,7 +1667,7 @@ public void cleanDBAfterEditing(ArrayList<FormInnerListProxy> formList) {
 
                                 dbh.getWritableDatabase().execSQL(query);
                                 dbh.close();
-///if the folder is to be kept then comment lines from here ///////
+                ///if the folder is to be kept then comment lines from here ///////
                                 File file = new File(complete.get(position).getStrPathInstance());
                                 boolean deleted = file.delete();
 
@@ -1608,8 +1712,9 @@ public void cleanDBAfterEditing(ArrayList<FormInnerListProxy> formList) {
         String str = mycompleted.get(position).getStrPathInstance();
 //
         String str1[] = str.substring(str.lastIndexOf("instances")).split("/");
-//
+        xmlID = mycompleted.get(position).getFormNameAndXmlFormid().split("&")[1];
         String formId= str1[1];
+        formId =xmlID +"_"+ formId;
 
         istance.clear();
 

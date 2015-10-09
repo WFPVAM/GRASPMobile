@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/array.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/array.xml -->
     <eat-comment/>
     <string-array name="connection_type">
         <item name="sms">SMS only</item>
@@ -17,7 +17,7 @@
         <item>Send Form</item>
 
     </string-array>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
     <eat-comment/>
     <string-array name="country_codes">
         <item>-</item>
@@ -52,7 +52,7 @@
         <item>TW</item>
         <item>US</item>
     </string-array>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/array.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/array.xml -->
     <eat-comment/>
     <string-array name="editing_completed">
         <item name="enabled">Enabled</item>
@@ -96,7 +96,7 @@
         <item>17</item>
         <item>13</item>
     </string-array>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
     <eat-comment/>
     <string-array name="preferences_front_light_options">
         <item>@string/preferences_front_light_on</item>
@@ -108,7 +108,7 @@
         <item>AUTO</item>
         <item>OFF</item>
     </string-array>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/array.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/array.xml -->
     <eat-comment/>
     <string-array name="protocol_choices_entries">
         <item>http</item>
@@ -226,7 +226,7 @@
         <item name="60000">60000</item>
         <item name="300000">300000</item>
     </string-array>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/color.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="bg_err">#000000</color>
     <color name="bg_mand">#FFFFB5</color>
@@ -237,16 +237,16 @@
     <color name="black_1">#000000</color>
     <color name="black_2">#202020</color>
     <color name="blue">#0000FF</color>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
     <eat-comment/>
     <color name="contents_text">#ff000000</color>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/color.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="dark_grey">#333333</color>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
     <eat-comment/>
     <color name="encode_view">#ffffffff</color>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/color.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="fg_err">#FF0000</color>
     <color name="fg_mand">#000000</color>
@@ -256,13 +256,13 @@
     <color name="fg_std">#FFFFFF</color>
     <color name="gray">#808080</color>
     <color name="green">#008000</color>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
     <eat-comment/>
     <color name="possible_result_points">#c0ffbd21</color>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/color.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="red">#FF0000</color>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
     <eat-comment/>
     <color name="result_minor_text">#ffc0c0c0</color>
     <color name="result_points">#c099cc00</color>
@@ -272,13 +272,17 @@
     <color name="transparent">#00000000</color>
     <color name="viewfinder_laser">#ffcc0000</color>
     <color name="viewfinder_mask">#60000000</color>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/color.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="wfp_azure1">#39ACFF</color>
     <color name="wfp_azure2">#006DC2</color>
     <color name="white">#FFFFFF</color>
     <color name="yellow">#FFFF00</color>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
     <eat-comment/>
     <dimen name="half_padding">4dip</dimen>
     <dimen name="standard_padding">8dip</dimen>
@@ -290,7 +294,7 @@
     <item name="quit" type="id"/>
     <item name="restart_preview" type="id"/>
     <item name="return_scan_result" type="id"/>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="AllForms_sent">All forms have been sent successfully</string>
     <string name="AllImgsSent">All images have been sent successfully</string>
@@ -302,6 +306,7 @@
     <string name="accept_location">Get GPS coordinates</string>
     <string name="access_error">Error while accessing %s: </string>
     <string name="accuracy">Accuracy</string>
+    <string name="action_settings">Settings</string>
     <string name="activity_not_found">No activity found to handle: %s</string>
     <string name="add_another">Yes</string>
     <string name="add_another_repeat">Add another entry?</string>
@@ -310,10 +315,10 @@
     <string name="advance">forward to\nnext\npage</string>
     <string name="altitude">Altitude</string>
     <string name="app_name">GRASP Mobile Tool</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
     <eat-comment/>
     <string name="app_picker_name">Applications</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="app_url">http://opendatakit.org</string>
     <string name="audio_capture">audio capture</string>
@@ -323,7 +328,7 @@
     <string name="bad_uri">Bad URI: </string>
     <string name="barcode_scanner_error">Sorry, Barcode Scanner is not installed!</string>
     <string name="blank_answer">The form is uncompleted please check blank answer</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
     <eat-comment/>
     <string name="bookmark_picker_name">Bookmarks</string>
     <string name="button_add_calendar">Add to calendar</string>
@@ -331,10 +336,10 @@
     <string name="button_back">Back</string>
     <string name="button_book_search">Book Search</string>
     <string name="button_cancel">Cancel</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="button_check">Update application</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
     <eat-comment/>
     <string name="button_custom_product_search">Custom search</string>
     <string name="button_dial">Dial number</string>
@@ -342,10 +347,10 @@
     <string name="button_email">Send email</string>
     <string name="button_get_directions">Get directions</string>
     <string name="button_google_shopper">Shopper</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="button_in">Login</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
     <eat-comment/>
     <string name="button_mms">Send MMS</string>
     <string name="button_ok">OK</string>
@@ -362,14 +367,14 @@
     <string name="button_sms">Send SMS</string>
     <string name="button_web_search">Web search</string>
     <string name="button_wifi">Connect to Network</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="by">Title:</string>
     <string name="cancel">Cancel</string>
     <string name="cancel_loading_form">Cancel</string>
     <string name="cancel_location">Cancel</string>
     <string name="cancel_saving_form">Cancel</string>
-    <string name="cancelform">You delete the form</string>
+    <string name="cancelform">You deleted the form</string>
     <string name="cannot_edit_completed_form">This form cannot be edited once it has been marked as complete.</string>
     <string name="capture_audio">Record Sound</string>
     <string name="capture_image">Take Picture</string>
@@ -415,7 +420,7 @@
     <string name="completed_date">Completed on:</string>
     <string name="confirm">Yes</string>
     <string name="contDesc">Description</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
     <eat-comment/>
     <string name="contents_contact">Contact info</string>
     <string name="contents_email">Email address</string>
@@ -423,7 +428,7 @@
     <string name="contents_phone">Phone number</string>
     <string name="contents_sms">SMS address</string>
     <string name="contents_text">Plain text</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="convert_form_to_complate">Are you sure you want to convert all submitted forms to completed?</string>
     <string name="convert_submitted_to_complete">Convert submitted forms to completed </string>
@@ -441,6 +446,7 @@
     <string name="default_server_telephone"/>
     <string name="default_server_url"/>
     <string name="default_splash_path">ODK Default</string>
+    <string name="deletd_title">Form is not available!</string>
     <string name="delete_confirm">Delete %s form(s)?</string>
     <string name="delete_file">Delete Selected</string>
     <string name="delete_form">Do you want to delete the selected form?</string>
@@ -450,6 +456,7 @@
     <string name="delete_repeat_confirm">Remove group \"%s\" and all of its sub-groups?</string>
     <string name="delete_repeat_no">Cancel</string>
     <string name="delete_yes">Delete Forms</string>
+    <string name="deleted">form no longer exists on server. The instances of this form will be deleted.</string>
     <string name="designed">Designed and Developed by Brains Engineering srl</string>
     <string name="device_not_online">Your device is not online</string>
     <string name="dialog_save">There are saved forms, you want to complete them before you compile a new one?</string>
@@ -503,6 +510,8 @@
     <string name="first_run">Do first run on restart</string>
     <string name="font_size">Text Font Size</string>
     <string name="form_download_progress">%1$s. Getting media files: %2$s of %3$s</string>
+    <string name="form_exist">The form you are trying to import already exist. Delete the old version in order to import the new one.</string>
+    <string name="form_exist_title">Form already exist!</string>
     <string name="form_name">Form Name:</string>
     <string name="form_not_available">The form is not available on server</string>
     <string name="form_present">This form already exist in saved list, do you want continue?</string>
@@ -526,8 +535,10 @@
     <string name="gps">Network</string>
     <string name="grasp">GRASP - Geo Referential realtime Acquisition Statistic Platform</string>
     <string name="hard_reset">Do you want to make a cancellation of forms previously completed and sync, and restore the application as a new installation?</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_world">Hello world!</string>
     <string name="help">HELP</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
     <eat-comment/>
     <string name="history_clear_one_history_text">Clear</string>
     <string name="history_clear_text">Clear history</string>
@@ -536,7 +547,7 @@
     <string name="history_empty_detail">No barcode scans have been recorded</string>
     <string name="history_send">Send history</string>
     <string name="history_title">History</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="home">HOME</string>
     <string name="image_directory_creation_faild">Failed to create image directory</string>
@@ -567,9 +578,10 @@
     <string name="manage_files">Delete Saved Form</string>
     <string name="manifest_server_error">Manifest reply does not report an OpenRosa version -- bad server?</string>
     <string name="manifest_tag_error">Manifest entry %s is missing one or more tags: filename, hash, or downloadUrl</string>
+    <string name="map">View Map</string>
     <string name="mark_finished">Mark form as finalized</string>
     <string name="menu">MENU</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
     <eat-comment/>
     <string name="menu_encode_mecard">Use MECARD</string>
     <string name="menu_encode_vcard">Use vCard</string>
@@ -577,10 +589,10 @@
     <string name="menu_history">History</string>
     <string name="menu_settings">Settings</string>
     <string name="menu_share">Share</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="more_form">More than one possible parent form</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
     <eat-comment/>
     <string name="msg_bulk_mode_scanned">Bulk mode: barcode scanned and saved</string>
     <string name="msg_camera_framework_bug">Sorry, the Android camera encountered a problem. You may need to restart the device.</string>
@@ -610,14 +622,14 @@
     <string name="msg_share_text">Or type some text and press Enter</string>
     <string name="msg_sure">Are you sure?</string>
     <string name="msg_unmount_usb">Sorry, the SD card is not accessible.</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="negative">No</string>
     <string name="negative_choise">No</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/sysconfig.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/sysconfig.xml -->
     <eat-comment/>
     <string name="new_app_url">http://www.brainsen.com/wfp/grasp/AndroidWFP.apk</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="new_form">INBOX</string>
     <string name="no">No</string>
@@ -666,7 +678,7 @@
     <string name="portrait">Keep screen portrait</string>
     <string name="positive_choise">Ok</string>
     <string name="powered_by_odk">v1.1.7 - Powered by Open Data Kit</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
     <eat-comment/>
     <string name="preferences_actions_title">When a barcode is found\u2026</string>
     <string name="preferences_auto_focus_title">Use auto focus</string>
@@ -702,7 +714,7 @@
     <string name="preferences_try_bsplus">Try Barcode Scanner+</string>
     <string name="preferences_try_bsplus_summary">Enhanced with new features and interface</string>
     <string name="preferences_vibrate_title">Vibrate</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="problemSending">There has been some problems sending one or more forms</string>
     <string name="problemSendingImg">There has been some problems sending one or more images</string>
@@ -717,7 +729,7 @@
     <string name="replace_location">Replace Location</string>
     <string name="replace_video">Replace Video</string>
     <string name="required_answer_error">Check for yellow fields they are required!</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
     <eat-comment/>
     <string name="result_address_book">Found contact info</string>
     <string name="result_calendar">Found calendar event</string>
@@ -730,7 +742,7 @@
     <string name="result_text">Found plain text</string>
     <string name="result_uri">Found URL</string>
     <string name="result_wifi">Found WLAN Configuration</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="review">continue</string>
     <string name="review_data">Edit Saved Form</string>
@@ -744,10 +756,10 @@
     <string name="save_form_as">Name this form:</string>
     <string name="saved_data">Incomplete (%s)</string>
     <string name="saving_form">Saving Form</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
     <eat-comment/>
     <string name="sbc_name">Google Book Search</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="select_another_image">Select Another Image</string>
     <string name="select_answer">Select Answer</string>
@@ -803,12 +815,15 @@
     <string name="textcolor_mandatory_background">Background color of mandatory text</string>
     <string name="textcolor_mandatory_foreground">Foreground color of mandatory text</string>
     <string name="time_before">Time before re-submit allowed</string>
+    <string name="title_activity_map">MapActivity</string>
     <string name="todo">TODO</string>
     <string name="toggle_selected">Toggle All</string>
     <string name="trigger">OK. Please continue.</string>
     <string name="unrecognized_uri">unrecognized URI:</string>
     <string name="update">Are you sure you want to update the application with newer version?</string>
     <string name="update_toast">Can\'\t download updates: SD not present</string>
+    <string name="updated">form was updated and has new version.The instances of this form will be deleted. Please contact the administrator.</string>
+    <string name="updated_title">Form has new version!</string>
     <string name="upload_all_successful">%s form(s) sent successfully.</string>
     <string name="upload_results">Upload Results</string>
     <string name="upload_some_failed">Sorry, %s form(s) failed to send!</string>
@@ -819,20 +834,20 @@
     <string name="username">Username</string>
     <string name="view_hierarchy">Go To Prompt</string>
     <string name="wait">Please wait...</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
     <eat-comment/>
     <string name="wifi_changing_network">Requesting connection to network\u2026</string>
     <string name="wifi_ssid_label">Network Name</string>
     <string name="wifi_type_label">Type</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="xform_parse_error">XForm parse error. %1$s is missing element %2$s</string>
     <string name="yes">Yes</string>
     <string name="yes_pref">Yes, delete all</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
     <eat-comment/>
     <string name="zxing_app_name">Barcode Scanner</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values/style.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values/style.xml -->
     <eat-comment/>
     <style name="large" parent="@android:style/TextAppearance.Large">
         <item name="android:textSize">25sp</item>

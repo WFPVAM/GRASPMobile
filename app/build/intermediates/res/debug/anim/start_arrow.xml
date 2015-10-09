@@ -13,4 +13,4 @@
         <translate android:fromXDelta="25%p" android:toXDelta="-30%p" android:duration="1500" android:repeatCount="5" />
         <alpha android:fromAlpha="0.0" android:toAlpha="1.0" android:duration="750" android:repeatCount="11" android:repeatMode="reverse" />
 </set>
-<!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/anim/start_arrow.xml -->
+<!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/anim/start_arrow.xml -->

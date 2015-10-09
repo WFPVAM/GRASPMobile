@@ -455,7 +455,7 @@ public class FormListActivity extends TabActivity  implements 	FormListHandlerNe
         
         try
         {
-	        while (cursor.moveToNext())  
+	        while (cursor.moveToNext())
 	        { 
 	        	
 	        	FormInnerListProxy saved = new FormInnerListProxy(); 
@@ -626,6 +626,7 @@ public class FormListActivity extends TabActivity  implements 	FormListHandlerNe
             notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);
             notification.defaults |= Notification.DEFAULT_VIBRATE;
             notification.defaults |= Notification.DEFAULT_SOUND;
+         //   notification.flags |= Notification.FLAG_ONLY_ALERT_ONCE;
             mNotificationManager.notify(sendImages_ID, notification);
 
 

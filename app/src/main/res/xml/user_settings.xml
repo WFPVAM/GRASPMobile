@@ -7,6 +7,7 @@
         android:entryValues="@array/editing_completed_values"
         android:key="button_Portrait"
         android:title="@string/portrait" />
+
     <ListPreference
         android:defaultValue="21"
         android:dialogTitle="@string/change_font_size"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-ar/array.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values-ar/array.xml -->
     <eat-comment/>
     <string-array name="connection_type">
         <item name="sms">SMS only</item>
@@ -165,7 +165,7 @@
         <item name="60000">60000</item>
         <item name="300000">300000</item>
     </string-array>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-ar/color.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values-ar/color.xml -->
     <eat-comment/>
     <color name="bg_err">#000000</color>
     <color name="bg_mand">#FFFFB5</color>
@@ -190,7 +190,7 @@
     <color name="wfp_azure2">#006DC2</color>
     <color name="white">#FFFFFF</color>
     <color name="yellow">#FFFF00</color>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-ar/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values-ar/strings.xml -->
     <eat-comment/>
     <string name="AllForms_sent">تم ارسال جميع النماذج بنجاح</string>
     <string name="AllImgsSent">تم ارسال جميع الصور بنجاح!</string>
@@ -209,10 +209,10 @@
     <string name="advance">	 إلى \n الصفحة \n التالية	</string>
     <string name="altitude">	ارتفاع	</string>
     <string name="app_name">تطبيق GRASP للأجهزه المحموله</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
     <eat-comment/>
     <string name="app_picker_name">تطبيقات</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-ar/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values-ar/strings.xml -->
     <eat-comment/>
     <string name="app_url">	http://opendatakit.org	</string>
     <string name="audio_capture">audio capture</string>
@@ -222,7 +222,7 @@
     <string name="bad_uri">Bad URI: </string>
     <string name="barcode_scanner_error">	عذرا، لم يتم تثبيت الماسح الضوئى للباركود!	</string>
     <string name="blank_answer"> النموذج غير مكتمل يرجى مراجعة الإجابات الفارغة</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
     <eat-comment/>
     <string name="bookmark_picker_name">إشارات مرجعية</string>
     <string name="button_add_calendar">إضافة إلى التقويم</string>
@@ -230,10 +230,10 @@
     <string name="button_back">السابق</string>
     <string name="button_book_search">بحث في الكتب</string>
     <string name="button_cancel">إلغاء</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-ar/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values-ar/strings.xml -->
     <eat-comment/>
     <string name="button_check">تحديث التطبيق</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
     <eat-comment/>
     <string name="button_custom_product_search">بحث مخصص</string>
     <string name="button_dial">طلب رقم</string>
@@ -241,10 +241,10 @@
     <string name="button_email">إرسال بريد</string>
     <string name="button_get_directions">معرفة الاتجاهات</string>
     <string name="button_google_shopper">Shopper</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-ar/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values-ar/strings.xml -->
     <eat-comment/>
     <string name="button_in">تسجيل الدخول</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
     <eat-comment/>
     <string name="button_mms">إرسال MMS</string>
     <string name="button_ok">موافق</string>
@@ -261,7 +261,7 @@
     <string name="button_sms">إرسال SMS</string>
     <string name="button_web_search">بحث في الويب</string>
     <string name="button_wifi">الاتصال بشبك</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-ar/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values-ar/strings.xml -->
     <eat-comment/>
     <string name="by">By:</string>
     <string name="cancel">	إلغاء	</string>
@@ -312,7 +312,7 @@
     <string name="completed_data">	اكمال (%s)	</string>
     <string name="confirm">نعم</string>
     <string name="contDesc">التفصيل	</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
     <eat-comment/>
     <string name="contents_contact">معلومات جهة اتصال</string>
     <string name="contents_email">عنوان البريد</string>
@@ -320,7 +320,7 @@
     <string name="contents_phone">رقم الهاتف</string>
     <string name="contents_sms">عنوان SMS</string>
     <string name="contents_text">نص عادي</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-ar/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values-ar/strings.xml -->
     <eat-comment/>
     <string name="convert_form_to_complate">هل انت متأكد انك تريد تحويل جميع الاستمارات المرسلة الى تامة؟</string>
     <string name="convert_submitted_to_complete">تحويل الاستمارات المرسلة الى تامة </string>
@@ -422,7 +422,7 @@
     <string name="grasp">GRASP - Geo Referential realtime Acquisition Statistic Platform</string>
     <string name="hard_reset">هل تريد إلغاء النماذج التامة سابقا، واستعادة التطبيق كتثبيت جديد؟</string>
     <string name="help">المساعدة	</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
     <eat-comment/>
     <string name="history_clear_one_history_text">حذف</string>
     <string name="history_clear_text">مسح السجل</string>
@@ -431,7 +431,7 @@
     <string name="history_empty_detail">لم تسجل حتى الآن بمسح الباركود</string>
     <string name="history_send">إرسال السجل</string>
     <string name="history_title">سجل</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-ar/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values-ar/strings.xml -->
     <eat-comment/>
     <string name="home">الرئيسيه	</string>
     <string name="image_directory_creation_faild">Failed to create image directory</string>
@@ -462,7 +462,7 @@
     <string name="manifest_tag_error">	سجل لبيانات به واحد أو أكثرمن معرف : اسم الملف، هاش، رابط التحميل	</string>
     <string name="mark_finished">	جعل النماذج المحفوظه نهائية	</string>
     <string name="menu">	القائمة	</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
     <eat-comment/>
     <string name="menu_encode_mecard">استخدام MECARD</string>
     <string name="menu_encode_vcard">استخدام vCard</string>
@@ -470,10 +470,10 @@
     <string name="menu_history">سجل</string>
     <string name="menu_settings">إعدادات</string>
     <string name="menu_share">مشاركة</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-ar/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values-ar/strings.xml -->
     <eat-comment/>
     <string name="more_form">أكثر من نموذج اصلي واحد</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
     <eat-comment/>
     <string name="msg_bulk_mode_scanned">معظم الدراسي : الباركود الممسوحة ضوئيا وحفظها</string>
     <string name="msg_camera_framework_bug">عفوا، حدثت مشكلة في كاميرا جهاز Android. قد تحتاج إلى إعادة تشغيل الجهاز.</string>
@@ -503,14 +503,14 @@
     <string name="msg_share_text">أو اكتب بعض النص</string>
     <string name="msg_sure">هل أنت متأكد؟</string>
     <string name="msg_unmount_usb">رجاء إيقاف التخزين على USB للمتابعة.</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-ar/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values-ar/strings.xml -->
     <eat-comment/>
     <string name="negative">لا</string>
     <string name="negative_choise">لا</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-ar/sysconfig.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values-ar/sysconfig.xml -->
     <eat-comment/>
     <string name="new_app_url">http://www.brainsen.com/wfp/grasp/AndroidWFP.apk</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-ar/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values-ar/strings.xml -->
     <eat-comment/>
     <string name="new_form">صندوق الوارد</string>
     <string name="no">	لا	</string>
@@ -559,7 +559,7 @@
     <string name="portrait">إبقاء الشاشة عمودي</string>
     <string name="positive_choise">نعم</string>
     <string name="powered_by_odk">		</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
     <eat-comment/>
     <string name="preferences_actions_title">عند العثور على رمز شريطي</string>
     <string name="preferences_auto_focus_title">استخدام التركيز التلقائي</string>
@@ -595,7 +595,7 @@
     <string name="preferences_try_bsplus">محاولة الباركود +</string>
     <string name="preferences_try_bsplus_summary">معززة مع الميزات الجديدة واجهة</string>
     <string name="preferences_vibrate_title">اهتزاز</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-ar/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values-ar/strings.xml -->
     <eat-comment/>
     <string name="problemSending">هناك مشكلة في ارسال بعض النماذج</string>
     <string name="problemSendingImg">هناك مشكلة في ارسال بعض الصور!</string>
@@ -610,7 +610,7 @@
     <string name="replace_location">	استبدال الموقع	</string>
     <string name="replace_video">	استبدال فيديو	</string>
     <string name="required_answer_error">	تحقق من المدخلات الصفراء فهى مطلوبة!	</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
     <eat-comment/>
     <string name="result_address_book">تم العثور على معلومات جهة الاتصال</string>
     <string name="result_calendar">تم العثور على حدث التقويم</string>
@@ -623,7 +623,7 @@
     <string name="result_text">تم العثور على نص عادي</string>
     <string name="result_uri">تم العثور على العنوان</string>
     <string name="result_wifi">العثور على التكوين اللاسلك</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-ar/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values-ar/strings.xml -->
     <eat-comment/>
     <string name="review">	استمرار	</string>
     <string name="review_data">	تعديل النموذج المحفوظ	</string>
@@ -637,10 +637,10 @@
     <string name="save_form_as">	اسم النموذج:	</string>
     <string name="saved_data">	غير كامل %s	</string>
     <string name="saving_form">	حفظ النموذج 	</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
     <eat-comment/>
     <string name="sbc_name">البحث في Google Book</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-ar/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values-ar/strings.xml -->
     <eat-comment/>
     <string name="select_another_image">	حدد صورة أخرى	</string>
     <string name="select_answer">	اختر الاجابة	</string>
@@ -679,7 +679,7 @@
     <string name="submitted_on">تم تسليمهافي :</string>
     <string name="success">	نجاح	</string>
     <string name="suggest">..كلمة المرور</string>
-    <string name="syncronyze">لمزامنة الملف ...</string>
+    <string name="syncronyze">تحميل النماذج</string>
     <string name="tab_completed">تام</string>
     <string name="tab_finalized">ارسال الصور</string>
     <string name="tab_new">جديد</string>
@@ -707,23 +707,24 @@
     <string name="uploading_data">	إرسال النموذج	</string>
     <string name="url_error">	لطفا، عنوان الخادم لا يعمل!	</string>
     <string name="use_odk_default">	استخدام الصورة القياسية	</string>
+    <string name="user_setting">تعديل اعدادات المستخدم</string>
     <string name="username">	اسم المستخدم 	</string>
     <string name="view_hierarchy">	 الذهاب الى شاشة الأوامر	</string>
     <string name="wait">الرجاء الانتظار...</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
     <eat-comment/>
     <string name="wifi_changing_network">طلب الاتصال بالشبكة\u2026</string>
     <string name="wifi_ssid_label">اسم الشبكة</string>
     <string name="wifi_type_label">نوع</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-ar/strings.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values-ar/strings.xml -->
     <eat-comment/>
     <string name="xform_parse_error">	ظهر خطأ فى تحليل ملف %1$s عرض البيانات %2$s	</string>
     <string name="yes">نعم</string>
     <string name="yes_pref">نعم، حذف الجميع</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values-ar/values.xml -->
     <eat-comment/>
     <string name="zxing_app_name">ماسح الرمز الشريطي</string>
-    <!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/values-ar/style.xml -->
+    <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/values-ar/style.xml -->
     <eat-comment/>
     <style name="large" parent="@android:style/TextAppearance.Large">
         <item name="android:textSize">25sp</item>

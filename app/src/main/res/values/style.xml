@@ -6,4 +6,5 @@
     <style name="small" parent="@android:style/TextAppearance.Small">
         <item name="android:textSize">21sp</item>
     </style>
+
 </resources>

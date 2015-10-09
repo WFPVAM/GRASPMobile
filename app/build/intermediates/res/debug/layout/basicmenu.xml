@@ -119,7 +119,18 @@
             android:text="@string/settings"
             android:textColor="@color/white"
             android:textSize="20sp" />
+            <!--<Button-->
+                <!--android:id="@+id/map"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="25dp"-->
+                <!--android:background="@drawable/button_blue"-->
+                <!--android:drawableLeft="@drawable/rsz_11geofence"-->
+                <!--android:gravity="center"-->
+                <!--android:text="@string/map"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="20sp" />-->
     </LinearLayout>
     </ScrollView>
 
-</RelativeLayout><!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/layout/basicmenu.xml -->
+</RelativeLayout><!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/layout/basicmenu.xml -->

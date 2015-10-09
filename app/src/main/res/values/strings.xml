@@ -328,7 +328,7 @@
 	
 	<string name="double_back">Please click BACK again to exit</string>
 	
-	<string name="cancelform">You delete the form</string>
+	<string name="cancelform">You deleted the form</string>
 	
 	<string name="dialog_save">There are saved forms, you want to complete them before you compile a new one?</string>
 	<string name="hard_reset">Do you want to make a cancellation of forms previously completed and sync, and restore the application as a new installation?</string>
@@ -342,7 +342,8 @@
 	<string name="gps">Network</string>
 	<string name="sms">Sms</string>
 	
-	
+	<string name="form_exist_title">Form already exist!</string>
+	<string name="form_exist">The form you are trying to import already exist. Delete the old version in order to import the new one.</string>
 	<string name="portocol_choice">Protocol</string>
 	<string name="choose_protocol">Choose the protocol</string>
 	<string name="digit_server_ip">Digit server IP</string>
@@ -381,5 +382,15 @@
 	<string name="not_list_text">You have items that are not submitted</string>
 	<string name="not_list_ticker">Check List Forms to see pending items</string>
 	<string name="not_list_title">Pending Items!</string>
+    <string name="title_activity_map">MapActivity</string>
 
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+<string name="map">View Map</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+<string name="updated">form was updated and has new version.The instances of this form will be deleted. Please contact the administrator.</string>
+	<string name="deletd_title">Form is not available!</string>
+	<string name="updated_title">Form has new version!</string>
+	<string name="deleted">form no longer exists on server. The instances of this form will be deleted.</string>
 </resources>

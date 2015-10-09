@@ -222,7 +222,7 @@
     <string name="menu">	القائمة	</string>
     <string name="done">	تم</string>
     <string name="please_insert_your_phone_number">	يرجى إدراج رقم الهاتف يسبقه كود البلد</string>
-    <string name="syncronyze">لمزامنة الملف ...</string>
+    <string name="syncronyze">تحميل النماذج</string>
 
     <string name="cancelform">تم حذف الملف</string>
     <string name="dialog_save">هناك نماذج محفوظة ، هل ترغب في إنجازها قبل تجميع واحدة جديدة؟</string>
@@ -376,4 +376,5 @@
     <string name="not_list_text">لديك عناصر لم ترسل</string>
     <string name="not_list_ticker">تحقق من قائمة النماذج لرؤية العناصر المعلقة</string>
     <string name="not_list_title">عناصر معلقة</string>
+    <string name="user_setting">تعديل اعدادات المستخدم</string>
 </resources>

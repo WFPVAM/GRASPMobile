@@ -74,12 +74,13 @@ public class FormInnerListProxy implements Parcelable
     {
         this.formEnumeratorId = formEnumeratorId;
     }
-    public String getFormId() {
-        return formId;
-    }
     public void setFormId(String formId) {
         this.formId = formId;
     }
+    public String getFormId() {
+        return formId;
+    }
+
     public String getPathForm() {
         return pathForm;
     }

@@ -13,4 +13,4 @@
         <translate android:fromXDelta="-100%p" android:toXDelta="0" android:duration="500"/>
         <alpha android:fromAlpha="0.0" android:toAlpha="1.0" android:duration="500" />
 </set>
-<!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/anim/push_right_in.xml -->
+<!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/anim/push_right_in.xml -->

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="osmdroid-third-party-4.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/lib/osmdroid-third-party-4.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/app/lib/osmdroid-third-party-4.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

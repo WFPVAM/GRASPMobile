@@ -3,6 +3,7 @@ package it.fabaris.wfp.task;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -224,7 +225,12 @@ public class HttpSendAllImages extends AsyncTask<String, Void, String> {
                         //form not sent name-> key = formNameInstance
                         //motivation of the failure-> value = answer from the server
                     }
-
+                if (FormListCompletedActivity.formsChangedOnServer != null){
+                    if (FormListCompletedActivity.formsChangedOnServer.size() != 0){
+                        Intent i = new Intent(context,FormListCompletedActivity.class);
+                        context.startActivity(i);
+                        //  FormListCompletedActivity.FormChangedOnServer();
+                    }}
             }
         }
         if (imageNotSent != null) {
@@ -353,7 +359,24 @@ public class HttpSendAllImages extends AsyncTask<String, Void, String> {
         try {
             HttpResponse response = httpClient.execute(httpPost);
             result = EntityUtils.toString(response.getEntity());
+            String [] responses = result.split(",");
+            String part1 = responses[0];
+            String part2= responses[1];
 
+            if (part1.equalsIgnoreCase("ok")){
+                if (part2.equalsIgnoreCase("Finalized")) {
+                    result = "ok";
+//
+                }else if (part2.equalsIgnoreCase("NewPublishedVersion")) {
+                    result = "ok";
+                    FormListCompletedActivity.formsChangedOnServer.put(formName.split("_")[0], part2);
+                    FormListCompletedActivity.formsForDeletion=true;
+                }else if(part2.equalsIgnoreCase("NotExisted") || part2.equalsIgnoreCase("NotFinalized") ||part2.equalsIgnoreCase("Deleted")) {
+                    result = "ok";
+                    FormListCompletedActivity.formsChangedOnServer.put(formName.split("_")[0], part2);
+                    FormListCompletedActivity.formsForDeletion=true;
+                }
+            }
             if (result.equalsIgnoreCase("\r\n")) {
                 return result = "formnotonserver";
             } else {

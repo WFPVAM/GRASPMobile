@@ -431,7 +431,15 @@ public class MenuActivity extends Activity {
             }
         });
 
-
+//        final Button buttonMap = (Button) findViewById(R.id.map);
+//        buttonMap.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent myIntent = new Intent(v.getContext(), MapActivity.class);
+////				myIntent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+//                startActivity(myIntent);
+//            }
+//        });
     }
 
 
@@ -524,10 +532,12 @@ public class MenuActivity extends Activity {
         Notification notification = new Notification(icon, tickerText, when);
         notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);
 
-        notification.defaults |= Notification.DEFAULT_SOUND;
-        notification.defaults |= Notification.DEFAULT_VIBRATE;
+//        notification.defaults |= Notification.DEFAULT_SOUND;
+//        notification.defaults |= Notification.DEFAULT_VIBRATE;
         notification.defaults |= Notification.DEFAULT_LIGHTS;
+      //  notification.flags |= Notification.FLAG_ONLY_ALERT_ONCE;
         mNotificationManager.notify(Pending_ID, notification);
+
 
     }
 

@@ -371,6 +371,7 @@ public class PreferencesActivity extends PreferenceActivity implements
         //updateServerUrl(); LL
         updateConnectType();
         isEditingEnabled();
+        keepPortrait();
     }
 
     /**
@@ -410,6 +411,7 @@ public class PreferencesActivity extends PreferenceActivity implements
     private void keepPortrait() {
         ListPreference lp =(ListPreference) findPreference(KEY_BUTTON_PORTRAIT);
         lp.setSummary(lp.getEntry());
+
     }
 
     private void isEditingEnabled() {

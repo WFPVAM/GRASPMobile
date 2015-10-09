@@ -11,25 +11,33 @@
 package it.fabaris.wfp.activities;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.view.ContextMenu;
+import android.view.Menu;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import content.FormNewAdapter;
+import it.fabaris.wfp.provider.FormProvider;
 import it.fabaris.wfp.provider.FormProviderAPI;
 import object.FormInnerListProxy;
 
@@ -127,6 +135,47 @@ public class FormListNewActivity extends Activity
                 }catch (Exception e){
                     e.printStackTrace();
                 }
+            }
+        });
+
+        listview.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View v, final int position, long id) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(FormListNewActivity.this);
+                builder.setMessage(getString(R.string.delete_form))
+                        .setCancelable(false)
+                        .setPositiveButton(R.string.confirm,
+                                new DialogInterface.OnClickListener(){
+                                    public void onClick(DialogInterface dialog, int id)
+                                    {
+							/*LL 14-05-2014 eliminato per dismissione del db grasp
+							//int positionSalvati = getRightCompletedParcelableObject(saved.get(position).getFormName()); LL eliminato per dismissione del db grasp
+							ApplicationExt.getDatabaseAdapter().open().delete("SAVED", saved.get(position).getFormName());
+							ApplicationExt.getDatabaseAdapter().close();
+							*/
+                                        dialog.dismiss();
+                                        FormProvider.DatabaseHelper dbh = new FormProvider.DatabaseHelper("forms.db");
+                                        String query1 = "UPDATE forms SET status='cancelled' WHERE displayName = '"
+                                                + nuove.get(position).getFormName()+"'";
+                                               // + "' AND status='new',status='completed,status='saved'";
+
+                                        dbh.getWritableDatabase().execSQL(query1);
+                                        dbh.close();
+
+                                        Toast.makeText(FormListNewActivity.this, getString(R.string.cancelform) + " " +nuove.get(position).getFormName(), Toast.LENGTH_LONG).show();
+                                        finish();
+                                    }
+                                })
+                        .setNegativeButton(getString(R.string.negative_choise),	new DialogInterface.OnClickListener()
+                        {
+                            public void onClick(DialogInterface dialog,	int id)
+                            {
+                                dialog.dismiss();
+                            }
+                        }).show();
+
+
+                return false;
             }
         });
     }

@@ -7,6 +7,7 @@
         android:entryValues="@array/editing_completed_values"
         android:key="button_Portrait"
         android:title="@string/portrait" />
+
     <ListPreference
         android:defaultValue="21"
         android:dialogTitle="@string/change_font_size"
@@ -18,4 +19,4 @@
         android:key="button_check_conn"
         android:title="@string/check_connection" />
 
-</PreferenceScreen><!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/xml/user_settings.xml -->
+</PreferenceScreen><!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/xml/user_settings.xml -->

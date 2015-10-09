@@ -16,4 +16,4 @@
     <item android:drawable="@drawable/icontab_complited" 
 			android:state_selected="false"/>
 </selector>
-<!-- From: file:/C:/Projects/GRASPMobilePal/app/src/main/res/layout-large/icontab_formcompleted.xml -->
+<!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/src/main/res/layout-large/icontab_formcompleted.xml -->
