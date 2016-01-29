@@ -67,7 +67,7 @@ public class PreferencesActivity extends PreferenceActivity implements
     public static String KEY_BUTTON_CONVERT_SUBM_TO_COMP = "button_convert_submitted_to_complete";
     public static String KEY_BUTTON_CHECK = "button_check_conn";
     public static String KEY_BUTTON_EDIT="button_completed_Editing";
-    public static String KEY_BUTTON_EDIT_DISABLE="button_completed_Editing_disable";
+    public static String KEY_BUTTON_EDIT_SUBMITTED="button_submitted_Editing";
     public static String KEY_BUTTON_PORTRAIT="button_Portrait";
     public static String TEXT_BACKGROUND_COLOR = "textcolor_background";
     public static String TEXT_FOREGROUND_COLOR = "textcolor_foreground";
@@ -371,6 +371,7 @@ public class PreferencesActivity extends PreferenceActivity implements
         //updateServerUrl(); LL
         updateConnectType();
         isEditingEnabled();
+        isEditingSubmittedEnabled();
         keepPortrait();
     }
 
@@ -403,9 +404,17 @@ public class PreferencesActivity extends PreferenceActivity implements
          else if (key.equals(KEY_BUTTON_EDIT)) {
         isEditingEnabled();
         }
+        else if (key.equals(KEY_BUTTON_EDIT_SUBMITTED)) {
+            isEditingSubmittedEnabled();
+        }
         else if (key.equals(KEY_BUTTON_PORTRAIT)){
             keepPortrait();
         }
+    }
+
+    private void isEditingSubmittedEnabled() {
+        ListPreference lp = (ListPreference) findPreference(KEY_BUTTON_EDIT_SUBMITTED);
+        lp.setSummary(lp.getEntry());
     }
 
     private void keepPortrait() {

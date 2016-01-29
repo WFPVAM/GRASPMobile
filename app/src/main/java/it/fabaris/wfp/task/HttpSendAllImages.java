@@ -143,8 +143,15 @@ public class HttpSendAllImages extends AsyncTask<String, Void, String> {
                 String str =mydata.getStrPathInstance();
 //                String str1[] = str.replace("/storage/emulated/0/GRASP/instances/","").split("/");
 //                String formName = str1[0];
+              //  String str1[] = str.substring(str.lastIndexOf("instances")).split("/");
+               // String formName = str1[1];
+
+
                 String str1[] = str.substring(str.lastIndexOf("instances")).split("/");
-                String formName = str1[1];
+                String fName = str1[1];
+
+
+                String  formName = mydata.getFormNameAndXmlFormid().split("&")[1] +"_"+ fName;
 
                 byte[] fileBytes = FileUtils.getFileAsBytes(new File(str));
                 TreeElement dataElements = XFormParser.restoreDataModel(fileBytes, null).getRoot();
@@ -334,13 +341,32 @@ public class HttpSendAllImages extends AsyncTask<String, Void, String> {
         String result = null;
         HttpPost httpPost = new HttpPost(url);
         HttpParams httpParameters = new BasicHttpParams();
+
+
+        String[] parts= formName.split("_",2);
+        String name, ID;
+        ID = parts[0];
+        if (ID.length() < 7){
+            String [] temp;
+            name= parts[1];
+            temp = name.split("_",2);
+            ID =ID+"_" + temp[0];
+            name = temp[1];
+        }
+        else {
+            name = parts[1];
+        }
+
+
         // HttpConnectionParams.setConnectionTimeout(httpParameters, 10000);
         // HttpConnectionParams.setSoTimeout(httpParameters, 10000);
         DefaultHttpClient httpClient = new DefaultHttpClient(httpParameters);
         List<NameValuePair> nameValuePair = new ArrayList<NameValuePair>(3);
         nameValuePair.add(new BasicNameValuePair("phoneNumber", phone));
         nameValuePair.add(new BasicNameValuePair("Image", encodedImage));
-        nameValuePair.add(new BasicNameValuePair("formName", formName));
+       // nameValuePair.add(new BasicNameValuePair("formName", formName));
+        nameValuePair.add(new BasicNameValuePair("formName", name));
+        nameValuePair.add(new BasicNameValuePair("ID", ID));
 
         if (http.contains(".aspx")) {
             nameValuePair.add(new BasicNameValuePair("imei", IMEI));//only if we are sending the form to the server, we send the IMEI
@@ -364,18 +390,25 @@ public class HttpSendAllImages extends AsyncTask<String, Void, String> {
             String part2= responses[1];
 
             if (part1.equalsIgnoreCase("ok")){
-                if (part2.equalsIgnoreCase("Finalized")) {
+                //to check status for images just un-comment lines below
+//                if (part2.equalsIgnoreCase("Finalized")) {
                     result = "ok";
-//
-                }else if (part2.equalsIgnoreCase("NewPublishedVersion")) {
-                    result = "ok";
-                    FormListCompletedActivity.formsChangedOnServer.put(formName.split("_")[0], part2);
-                    FormListCompletedActivity.formsForDeletion=true;
-                }else if(part2.equalsIgnoreCase("NotExisted") || part2.equalsIgnoreCase("NotFinalized") ||part2.equalsIgnoreCase("Deleted")) {
-                    result = "ok";
-                    FormListCompletedActivity.formsChangedOnServer.put(formName.split("_")[0], part2);
-                    FormListCompletedActivity.formsForDeletion=true;
-                }
+////
+//                }else if (part2.equalsIgnoreCase("NewPublishedVersion")) {
+//                    result = "ok";
+//                    if(formName.split("_").length ==5)
+//                        FormListCompletedActivity.formsChangedOnServer.put(formName.split("_")[0], part2);
+//                    else
+//                        FormListCompletedActivity.formsChangedOnServer.put(formName.split("_")[0]+"_"+formName.split("_")[1], part2);
+//                    FormListCompletedActivity.formsForDeletion=true;
+//                }else if(part2.equalsIgnoreCase("NotExisted") || part2.equalsIgnoreCase("NotFinalized") ||part2.equalsIgnoreCase("Deleted")) {
+//                    result = "ok";
+//                    if(formName.split("_").length ==5)
+//                        FormListCompletedActivity.formsChangedOnServer.put(formName.split("_")[0], part2);
+//                    else
+//                        FormListCompletedActivity.formsChangedOnServer.put(formName.split("_")[0]+"_"+formName.split("_")[1], part2);
+//                    FormListCompletedActivity.formsForDeletion=true;
+//                }
             }
             if (result.equalsIgnoreCase("\r\n")) {
                 return result = "formnotonserver";

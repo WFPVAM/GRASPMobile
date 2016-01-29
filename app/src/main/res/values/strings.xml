@@ -343,21 +343,21 @@
 	<string name="sms">Sms</string>
 	
 	<string name="form_exist_title">Form already exist!</string>
-	<string name="form_exist">The form you are trying to import already exist. Delete the old version in order to import the new one.</string>
+	<string name="form_exist">The form you are trying to import already exist. Delete the old version under New tab to import the new one.</string>
 	<string name="portocol_choice">Protocol</string>
 	<string name="choose_protocol">Choose the protocol</string>
-	<string name="digit_server_ip">Digit server IP</string>
+	<string name="digit_server_ip">Enter server IP or name</string>
 	<string name="server_IP">Server Address</string>
-	<string name="digit_server_port">Digit server port</string>
+	<string name="digit_server_port">Enter server port</string>
 	<string name="server_port">Port</string>
-    <string name="digit_server_directory">Digit virtual directory</string>
+    <string name="digit_server_directory">Enter directory name</string>
     <string name="server_directory">Directory</string>
-
+<string name="editing_not_enabled">You must enable editing in settings!</string>
     <string name="take_signature">Take Signature</string>
 
     <string name="convert_submitted_to_complete">Convert submitted forms to completed </string>
     <string name="convert_form_to_complate">Are you sure you want to convert all submitted forms to completed?</string>
-	<string name="complete_Editing">Enable Editing completed forms</string>
+	<string name="complete_Editing">Enable editing completed forms</string>
 	<string name="complete_Editing_disable">Disable Editing completed forms</string>
     <string name="portrait">Keep screen portrait</string>
     <string name="Suitable_N">Suitable for identifying the Neighbourhood only!</string>
@@ -383,14 +383,14 @@
 	<string name="not_list_ticker">Check List Forms to see pending items</string>
 	<string name="not_list_title">Pending Items!</string>
     <string name="title_activity_map">MapActivity</string>
-
+<string name="submitted_Editing">Enable editing submitted forms</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 <string name="map">View Map</string>
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-<string name="updated">form was updated and has new version.The instances of this form will be deleted. Please contact the administrator.</string>
+<string name="updated">form was updated and has new version.Do you want to delete all instances of this form?</string>
 	<string name="deletd_title">Form is not available!</string>
 	<string name="updated_title">Form has new version!</string>
-	<string name="deleted">form no longer exists on server. The instances of this form will be deleted.</string>
+	<string name="deleted">form no longer exists on server.Do you want to delete all instances of this form?</string>
 </resources>

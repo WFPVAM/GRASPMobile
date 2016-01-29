@@ -17,6 +17,10 @@
         <item>ارسال النموذج</item>
 
     </string-array>
+    <string-array name="context_menu_submitted">
+        <item>اعادة ارسال</item>
+        <item>تعديل</item>
+    </string-array>
     <string-array name="entries_list_preference">
         <item>Saved, Not Completed</item>
         <item>Completed, Not Submitted</item>
@@ -338,6 +342,7 @@
     <string name="default_server_telephone">		</string>
     <string name="default_server_url">		</string>
     <string name="default_splash_path">	ODK قياسات	</string>
+    <string name="deletd_title">النموذج غير متاح!</string>
     <string name="delete_confirm">	حذف النموذج %s	</string>
     <string name="delete_file">	 حذف المختار	</string>
     <string name="delete_form">هل تريد حذف النموذج المختار؟</string>
@@ -347,6 +352,7 @@
     <string name="delete_repeat_confirm">	حذف هذه المجموعه و المجموعات الفرعية منها؟	</string>
     <string name="delete_repeat_no">	إلغاء	</string>
     <string name="delete_yes">	حذف النماذج	</string>
+    <string name="deleted">هذا النموذج غير متاح على الخادم . هل تريد حذف جميع الكيانات الاخرى من هذا النموذج؟</string>
     <string name="designed">Designed and Developed by Brains Engineering srl</string>
     <string name="device_not_online">الجهاز غير متصل</string>
     <string name="dialog_save">هناك نماذج محفوظة ، هل ترغب في إنجازها قبل تجميع واحدة جديدة؟</string>
@@ -367,6 +373,7 @@
     <string name="download_forms_result">	تحميل النتائج	</string>
     <string name="downloading_data">	الاتصال بالخادم	</string>
     <string name="edit_prompt">	أمر 	</string>
+    <string name="editing_not_enabled">يجب تفعيل امكانية التعديل من الاعدادات اولا</string>
     <string name="enter">	ابدأ	</string>
     <string name="enter_data">	ملء نموذج فارغ	</string>
     <string name="enter_data_button">	ملء نموذج فارغ	</string>
@@ -399,6 +406,8 @@
     <string name="font_size">	حجم خط النص	</string>
     <string name="formDNE">لا يمكن ايجاد النموذج الذي تحاول ارساله!</string>
     <string name="form_download_progress">	الحصول على ملفات الوسائط	</string>
+    <string name="form_exist">النموذج الذي تحاول استيراده موجود اصلا. احذف النسخة القديمة من علامة التبويب جديد لاستيراد النسخة الجديدة</string>
+    <string name="form_exist_title">النموذج موجود اصلا!</string>
     <string name="form_name">	اسم النموذج	</string>
     <string name="form_not_available">المنوذج غير مناح حلى الخادم</string>
     <string name="form_present">هذا النموذج موجود بالفعل في القائمة المحفوظة، هل تريد المتابعة؟</string>
@@ -676,6 +685,7 @@
     <string name="sms_delivered">SMS delivered</string>
     <string name="splash_path">	اختيار  صورة البدء	</string>
     <string name="submission_url">	مسار (عنوان) التسليم	</string>
+    <string name="submitted_Editing">تفعيل امكانية تعديل النماذج المرسلة</string>
     <string name="submitted_on">تم تسليمهافي :</string>
     <string name="success">	نجاح	</string>
     <string name="suggest">..كلمة المرور</string>
@@ -701,6 +711,8 @@
     <string name="unrecognized_uri">مجهول URI:</string>
     <string name="update">هل انت متأكد انك تريد تحديث التطبيق؟</string>
     <string name="update_toast">Can\'\t download updates: SD not present</string>
+    <string name="updated">هذا النموذج تم تعديله على الخادم .هل تريد حذف جميع الكيانات الاخرى من هذا النموذج؟</string>
+    <string name="updated_title">تم تعديل النموذج </string>
     <string name="upload_all_successful">	تم إرسال النموذج بنجاح %s.	</string>
     <string name="upload_results">	تحميل النتائج	</string>
     <string name="upload_some_failed">	عذرا، لم يتم ارسال النموذج %s!	</string>

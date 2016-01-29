@@ -16,6 +16,11 @@
         <item >ارسال النموذج</item>
 
     </string-array>
+
+    <string-array name="context_menu_submitted">
+        <item>اعادة ارسال</item>
+        <item>تعديل</item>
+    </string-array>
     <string-array name="entries_list_preference">
         <item>Saved, Not Completed</item>
         <item>Completed, Not Submitted</item>

@@ -41,6 +41,7 @@ import javax.xml.xpath.XPathFactory;
 
 import it.fabaris.wfp.activities.FormListCompletedActivity;
 import it.fabaris.wfp.activities.FormListFinalizedActivity;
+import it.fabaris.wfp.activities.FormListSubmittedActivity;
 import it.fabaris.wfp.activities.PreferencesActivity;
 import it.fabaris.wfp.activities.R;
 import it.fabaris.wfp.listener.MyCallback;
@@ -197,8 +198,7 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
                 Toast.makeText(context, R.string.error, Toast.LENGTH_LONG).show();
             }
             ////////
-            else if (result.trim().toLowerCase().startsWith("ok"))
-            {
+            else if (result.trim().toLowerCase().startsWith("ok")) {
                 Log.i("RESULT", "messaggio ricevuto dal server");
 
                 //--------------------------------------------------------------------------
@@ -206,8 +206,7 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
                 XPath xPath = factory.newXPath();
                 XPathExpression xPathExpression;
                 DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
-                try
-                {
+                try {
                     DocumentBuilder builder = builderFactory.newDocumentBuilder();
                     ByteArrayInputStream bin = new ByteArrayInputStream(result
                             .substring(result.indexOf("-") + 1).getBytes());
@@ -219,9 +218,7 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
                     FormListCompletedActivity.setID(id);
 
                     //------------------------------------------------------------------------
-                }
-                catch (XPathExpressionException e)
-                {
+                } catch (XPathExpressionException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
                 } catch (ParserConfigurationException e) {
@@ -238,18 +235,17 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
                 /**
                  * UPDATE THE FORM STATE IN FORMS DB
                  */
-                if(!isImage) {
-                   if(!formHasImages)
-                   {
-                       FormListCompletedActivity.updateFormToSubmitted();
-                   }
-                    else {
-                       FormListCompletedActivity.updateFormToFinalized();
-                   }
-                }
-                else{
-                    FormListFinalizedActivity.updateFormToSubmitted();
-                }
+                if (!FormListSubmittedActivity.resendTask){
+                    if (!isImage) {
+                        if (!formHasImages) {
+                            FormListCompletedActivity.updateFormToSubmitted();
+                        } else {
+                            FormListCompletedActivity.updateFormToFinalized();
+                        }
+                    } else {
+                        FormListFinalizedActivity.updateFormToSubmitted();
+                    }
+            }
                 if(!isSendAllForms)//se non si stanno inviando piu' form insieme
                 {
                     if(!isImage) {
@@ -315,11 +311,27 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
         HttpParams httpParameters = new BasicHttpParams();
         // HttpConnectionParams.setConnectionTimeout(httpParameters, 10000);
         // HttpConnectionParams.setSoTimeout(httpParameters, 10000);
+        String name, ID = "";
+
+            String[] parts = formName.split("_", 2);
+
+            ID = parts[0];
+            if (ID.length() < 7) {
+                String[] temp;
+                name = parts[1];
+                temp = name.split("_", 2);
+                ID = ID + "_" + temp[0];
+                formName = temp[1];
+            } else {
+                formName = parts[1];
+            }
+
         DefaultHttpClient httpClient = new DefaultHttpClient(httpParameters);
         List<NameValuePair> nameValuePair = new ArrayList<NameValuePair>(3);
         nameValuePair.add(new BasicNameValuePair("phoneNumber", phone));
         nameValuePair.add(new BasicNameValuePair("data", data));
         nameValuePair.add(new BasicNameValuePair("formName", formName));
+        nameValuePair.add(new BasicNameValuePair("ID", ID));
 
         if(http.contains(".aspx")){
             nameValuePair.add(new BasicNameValuePair("imei", IMEI));//solo se stiamo spedendo la form al server web inviamo anche l'IMEI
@@ -352,20 +364,34 @@ public class HttpSendPostTask extends AsyncTask<String, Void, String> {
                     result = "ok";
                 }
                 else if (part2.equalsIgnoreCase("NewPublishedVersion")) {
-                    if (formName.contains("images")){
-                        FormListCompletedActivity.formsChangedOnServer.put(formName.split("_")[0],part2);
+                    if (formName.contains("image")){
+                        if(formName.split("_").length ==5)
+                            FormListCompletedActivity.formsChangedOnServer.put(formName.split("_")[0], part2);
+                        else
+                            FormListCompletedActivity.formsChangedOnServer.put(formName.split("_")[0]+"_"+formName.split("_")[1], part2);
                     }
                     else
-                        FormListCompletedActivity.formsChangedOnServer.put(formName.split("_")[1],part2);
+                    if(formName.split("_").length ==4)
+                        FormListCompletedActivity.formsChangedOnServer.put(formName.split("_")[1], part2);
+                    else
+                        FormListCompletedActivity.formsChangedOnServer.put(formName.split("_")[1]+"_"+formName.split("_")[2], part2);
                     FormListCompletedActivity.formsForDeletion=true;
                     result = "ok";
                 }
                 else if(part2.equalsIgnoreCase("NotExisted") || part2.equalsIgnoreCase("NotFinalized") ||part2.equalsIgnoreCase("Deleted")) {
-                    if (formName.contains("images")){
-                        FormListCompletedActivity.formsChangedOnServer.put(formName.split("_")[0],part2);
+                    if (formName.contains("image")){
+                        if(formName.split("_").length ==5)
+                            FormListCompletedActivity.formsChangedOnServer.put(formName.split("_")[0], part2);
+                        else
+                            FormListCompletedActivity.formsChangedOnServer.put(formName.split("_")[0]+"_"+formName.split("_")[1], part2);
                     }
-                    FormListCompletedActivity.formsChangedOnServer.put(formName.split("_")[1],part2);
+                    if(formName.split("_").length ==4)
+                        FormListCompletedActivity.formsChangedOnServer.put(formName.split("_")[1], part2);
+                    else
+                        FormListCompletedActivity.formsChangedOnServer.put(formName.split("_")[1]+"_"+formName.split("_")[2], part2);
                     FormListCompletedActivity.formsForDeletion=true;
+                    ///////
+                    FormListCompletedActivity.deleteFormsInMessageDB.add(formName.split("_")[0]);
                     result = "ok";
                 }
             }

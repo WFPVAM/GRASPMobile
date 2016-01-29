@@ -471,13 +471,27 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
         String result = null;
         HttpPost httpPost = new HttpPost(url);
         HttpParams httpParameters = new BasicHttpParams();
+        String[] parts= id.split("_",2);
+        String name, ID;
+        ID = parts[0];
+        if (ID.length() < 7){
+            String [] temp;
+            name= parts[1];
+            temp = name.split("_",2);
+            ID =ID+"_" + temp[0];
+            name = temp[1];
+        }
+        else {
+            name = parts[1];
+        }
         // HttpConnectionParams.setConnectionTimeout(httpParameters, 10000);
         // HttpConnectionParams.setSoTimeout(httpParameters, 10000);
         DefaultHttpClient httpClient = new DefaultHttpClient(httpParameters);
         List<NameValuePair> nameValuePair = new ArrayList<NameValuePair>(3);
         nameValuePair.add(new BasicNameValuePair("phoneNumber", phone));
         nameValuePair.add(new BasicNameValuePair("data", data));
-        nameValuePair.add(new BasicNameValuePair("formName", id));
+        nameValuePair.add(new BasicNameValuePair("formName", name));
+        nameValuePair.add(new BasicNameValuePair("ID", ID));
 
         if (http.contains(".aspx")) {
             nameValuePair.add(new BasicNameValuePair("imei", IMEI));//only if we are sending the form to the server, we send the IMEI
@@ -510,12 +524,19 @@ public class HttpSendAllFormsTask extends AsyncTask<String, Void, String> {
 //
                 }else if (part2.equalsIgnoreCase("NewPublishedVersion")) {
                     result = "ok";
+                   if(id.split("_").length ==4)
                     FormListCompletedActivity.formsChangedOnServer.put(id.split("_")[1], part2);
+                    else
+                       FormListCompletedActivity.formsChangedOnServer.put(id.split("_")[1]+"_"+id.split("_")[2], part2);
                     FormListCompletedActivity.formsForDeletion=true;
                 }else if(part2.equalsIgnoreCase("NotExisted") || part2.equalsIgnoreCase("NotFinalized") ||part2.equalsIgnoreCase("Deleted")) {
                     result = "ok";
-                    FormListCompletedActivity.formsChangedOnServer.put(id.split("_")[1], part2);
+                    if(id.split("_").length ==4)
+                        FormListCompletedActivity.formsChangedOnServer.put(id.split("_")[1], part2);
+                    else
+                        FormListCompletedActivity.formsChangedOnServer.put(id.split("_")[1]+"_"+id.split("_")[2], part2);
                     FormListCompletedActivity.formsForDeletion=true;
+                    FormListCompletedActivity.deleteFormsInMessageDB.add(id.split("_")[0]);
                 }
                 }
 

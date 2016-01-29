@@ -377,4 +377,12 @@
     <string name="not_list_ticker">تحقق من قائمة النماذج لرؤية العناصر المعلقة</string>
     <string name="not_list_title">عناصر معلقة</string>
     <string name="user_setting">تعديل اعدادات المستخدم</string>
+    <string name="updated_title">تم تعديل النموذج </string>
+    <string name="deletd_title">النموذج غير متاح!</string>
+    <string name="updated">هذا النموذج تم تعديله على الخادم .هل تريد حذف جميع الكيانات الاخرى من هذا النموذج؟</string>
+    <string name="deleted">هذا النموذج غير متاح على الخادم . هل تريد حذف جميع الكيانات الاخرى من هذا النموذج؟</string>
+    <string name="editing_not_enabled">يجب تفعيل امكانية التعديل من الاعدادات اولا</string>
+    <string name="submitted_Editing">تفعيل امكانية تعديل النماذج المرسلة</string>
+    <string name="form_exist_title">النموذج موجود اصلا!</string>
+    <string name="form_exist">النموذج الذي تحاول استيراده موجود اصلا. احذف النسخة القديمة من علامة التبويب جديد لاستيراد النسخة الجديدة</string>
 </resources>

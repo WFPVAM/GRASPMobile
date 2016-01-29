@@ -813,6 +813,7 @@ public boolean formHasVideos;
             showView(current, AnimationType.FADE, index);
         } else {
             finish();
+            SaveToDiskTask.sumbitted= false;
         }
     }
 
@@ -1619,7 +1620,9 @@ public boolean formHasVideos;
                 switch (i) {
                     case DialogInterface.BUTTON1:
                         if (shouldExit) {
+                            SaveToDiskTask.sumbitted= false;
                             finish();
+
                         }
                         break;
                 }
@@ -1930,6 +1933,7 @@ public boolean formHasVideos;
                         mFormLoaderTask.setFormLoaderListener(null);
                         mFormLoaderTask.cancel(true);
                         finish();
+                        SaveToDiskTask.sumbitted= false;
                     }
                 };
                 mProgressDialog.setIcon(android.R.drawable.ic_dialog_info);
@@ -2349,6 +2353,7 @@ public boolean formHasVideos;
         }
         QuestionWidget.clearColorLabelStoredForRequiredCheckBox();
         finish();
+        SaveToDiskTask.sumbitted= false;
     }
 
     public boolean onDown(MotionEvent e) {

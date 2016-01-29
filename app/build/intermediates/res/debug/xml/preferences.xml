@@ -90,6 +90,13 @@
             android:entryValues="@array/editing_completed_values"
             android:key="button_completed_Editing"
             android:title="@string/complete_Editing" />
+        <ListPreference
+            android:defaultValue="Disabled"
+            android:dialogTitle="Edit submitted forms"
+            android:entries="@array/editing_completed"
+            android:entryValues="@array/editing_completed_values"
+            android:key="button_submitted_Editing"
+            android:title="@string/submitted_Editing" />
 
         <ListPreference
             android:defaultValue="Disabled"

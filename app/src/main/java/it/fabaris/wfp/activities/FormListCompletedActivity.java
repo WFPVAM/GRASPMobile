@@ -91,6 +91,7 @@ import it.fabaris.wfp.listener.MyCallback;
 import it.fabaris.wfp.provider.FormProvider;
 import it.fabaris.wfp.provider.FormProvider.DatabaseHelper;
 import it.fabaris.wfp.provider.InstanceProviderAPI;
+import it.fabaris.wfp.provider.MessageProvider;
 import it.fabaris.wfp.task.HttpCheckAndSendPostTask;
 import it.fabaris.wfp.task.HttpSendAllFormsTask;
 import it.fabaris.wfp.utility.FileUtils;
@@ -103,6 +104,8 @@ import utils.ApplicationExt;
  * Class that defines the tab for the list of the completed forms
  */
 public class FormListCompletedActivity extends Activity implements MyCallback {
+
+
 
 
     public interface FormListHandlerCompleted {
@@ -153,7 +156,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
 
     private static ArrayList<FormCompletedDataDBUpdate> listDataToUpdateDB = new ArrayList<FormCompletedDataDBUpdate>();
     public static boolean formsForDeletion=false;
-    public static boolean formUpdated=false;
+    public static  ArrayList<String> deleteFormsInMessageDB= new ArrayList<>()  ;
     static String deletedFormName;
     ProgressDialog pd;
     String xmlID;
@@ -217,6 +220,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
         numModem = settings.getString(PreferencesActivity.KEY_SERVER_TELEPHONE, getString(R.string.default_server_telephone));
         httpServer = settings.getString(PreferencesActivity.KEY_SERVER_URL,getString(R.string.default_server_url));
         editingEnabled= settings.getString((PreferencesActivity.KEY_BUTTON_EDIT),"");
+
 
         Button sendAll = (Button) findViewById(R.id.sendAll);
 
@@ -1431,6 +1435,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
 //                formUpdated=false;
                 FormChangedOnServer(formName);
                 formsChangedOnServer.remove(formName);
+                DeleteFromMessage();
                    // finish();
 
 
@@ -1453,6 +1458,19 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
 //        dialog.setNeutralButton("OK", null);
 //        dialog.create().show();
 
+    }
+
+    private void DeleteFromMessage() {
+        if(deleteFormsInMessageDB.size() != 0){
+            for (int i=0 ; i<deleteFormsInMessageDB.size();i++){
+        it.fabaris.wfp.provider.MessageProvider.DatabaseHelper dbh = new MessageProvider.DatabaseHelper("message.db");
+        String query1 = "DELETE FROM message WHERE formId = '"
+                + deleteFormsInMessageDB.get(i)+"'" ;
+        // + "' AND status='new',status='completed,status='saved'";
+
+        dbh.getWritableDatabase().execSQL(query1);
+        dbh.close();
+    }}
     }
 
     public  void FormChangedOnServer(String deletedFormName) {
@@ -1479,6 +1497,7 @@ public class FormListCompletedActivity extends Activity implements MyCallback {
 
             dbh.getWritableDatabase().execSQL(query1);
             dbh.close();
+
 //
 //
 //                            }
@@ -1627,14 +1646,15 @@ public void cleanDBAfterEditing(ArrayList<FormInnerListProxy> formList) {
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)item.getMenuInfo();
+        int index = info.position;
         switch(item.getItemId()) {
             case 0:
-             deleteForm(positioncomplete);
+             deleteForm(index);
             //    complete.remove(positioncomplete);
                 return true;
             case 1:
 
-                sendSingleForm(positioncomplete);
+                sendSingleForm(index);
                 return true;
 //            case 2:
 //                // remove stuff here

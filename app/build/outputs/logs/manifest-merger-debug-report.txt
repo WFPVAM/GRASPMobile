@@ -105,7 +105,7 @@ ADDED from AndroidManifest.xml:41:5
 MERGED from com.embarkmobile:zxing-android-minimal:1.2.1:26:3
 	android:name
 		ADDED from AndroidManifest.xml:41:19
-android:uses-permission#android.permission.READ_EXTERNAL_STORAGE
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from AndroidManifest.xml:43:5
 	android:maxSdkVersion
 		ADDED from AndroidManifest.xml:45:9

@@ -13,17 +13,26 @@ package it.fabaris.wfp.activities;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.preference.PreferenceManager;
 import android.util.Base64;
+import android.view.ContextMenu;
+import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import org.w3c.dom.Document;
 
@@ -35,6 +44,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
+import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -50,8 +60,12 @@ import javax.xml.transform.stream.StreamResult;
 
 import content.FormSubmittedAdapter;
 import database.DbAdapterGrasp;
+import it.fabaris.wfp.listener.MyCallback;
 import it.fabaris.wfp.provider.FormProvider.DatabaseHelper;
 import it.fabaris.wfp.provider.InstanceProviderAPI;
+import it.fabaris.wfp.task.HttpCheckAndSendPostTask;
+import it.fabaris.wfp.task.SaveToDiskTask;
+import it.fabaris.wfp.utility.FileUtils;
 import object.FormInnerListProxy;
 import utils.ApplicationExt;
 
@@ -60,14 +74,30 @@ import utils.ApplicationExt;
  *
  */
 
-public class FormListSubmittedActivity extends Activity {
+public class FormListSubmittedActivity extends Activity implements MyCallback {
+    @Override
+    public void callbackCall() {
+
+    }
+
+    @Override
+    public void finishFormListCompleted() {
+
+    }
+
+    @Override
+    public void finishFormListFinalized() {
+
+    }
+
     public interface FormListHandlerSubmitted {
         public ArrayList<FormInnerListProxy> getSubmittedForm();
     }
+    private SharedPreferences settings;
 
     public FormListHandlerSubmitted formListHandler;
-
-    public int positionInviate;
+    public static boolean resendTask = false;
+    public int positionInviate=0;
 
     public ListView listview;
     private FormSubmittedAdapter adapter;
@@ -78,6 +108,7 @@ public class FormListSubmittedActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tabsubmitted);
+      settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
 
         inviate = new ArrayList<FormInnerListProxy>();
         inviate = getIntent().getExtras().getParcelableArrayList("submitted");
@@ -95,6 +126,7 @@ public class FormListSubmittedActivity extends Activity {
 
         adapter = new FormSubmittedAdapter(this, inviate);
         listview.setAdapter(adapter);
+        registerForContextMenu(listview);
 
         /**
          * When the user clicks on one of the items in the submitted forms list,
@@ -136,70 +168,161 @@ public class FormListSubmittedActivity extends Activity {
          * implemented to test the function of sending massive form.
          * The form chosen will be duplicated 20 times in the forms db as completed form
          */
-        listview.setOnItemLongClickListener(new OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View v, final int position, long id) {
-                boolean debug = false;
-                if (debug) {
-                    //in the db 20 new rows of completed form
-                    it.fabaris.wfp.provider.FormProvider.DatabaseHelper dbh = new it.fabaris.wfp.provider.FormProvider.DatabaseHelper("forms.db");
-                    for (int i = 1; i <= 20; i++) {// mette 50 nuove form nello
-                        // stato di completate nel
-                        // deb
-                        // forms.db
-                        String xmlpath = ""; // path dell'xml delle risposte
-                        //int indexSubmitted = getIndexSubmitted(inviate.get(positionInviate)); //LL 14-05-2014 modificato per dismissione db grasp
+//        listview.setOnItemLongClickListener(new OnItemLongClickListener() {
+//            @Override
+//            public boolean onItemLongClick(AdapterView<?> parent, View v, final int position, long id) {
+//                boolean debug = false;
+//                if (debug) {
+//                    //in the db 20 new rows of completed form
+//                    it.fabaris.wfp.provider.FormProvider.DatabaseHelper dbh = new it.fabaris.wfp.provider.FormProvider.DatabaseHelper("forms.db");
+//                    for (int i = 1; i <= 20; i++) {// mette 50 nuove form nello
+//                        // stato di completate nel
+//                        // deb
+//                        // forms.db
+//                        String xmlpath = ""; // path dell'xml delle risposte
+//                        //int indexSubmitted = getIndexSubmitted(inviate.get(positionInviate)); //LL 14-05-2014 modificato per dismissione db grasp
+//
+//                        //FormInnerListProxy form = inviate.get(positionInviate);// prendo
+//                        FormInnerListProxy form = inviate.get(position);  // la
+//                        // form
+//                        //take the xml string of the form
+//                        String xmlFormInstance = getXmlFormInstance(form);
+//
+//                        //Delete the last part of the string that contains the FormIdentificator
+//                        xmlFormInstance = xmlFormInstance.substring(0, xmlFormInstance.indexOf("?formidentificator?"));
+//
+//                        //change enumerator to string Random or sequential...
+//                        xmlFormInstance = xmlFormInstance.replace("</enumerator_1>", "_Clone" + Integer.toString(i) + "</enumerator_1>");
+//
+//                        try {
+//                            //save the xml in the externalStorage e return back the path of the saved xml
+//                            xmlpath = saveInstance(form, i, xmlFormInstance);
+//                        }
+//                        catch (IOException e) {
+//                            // TODO Auto-generated catch block
+//                            e.printStackTrace();
+//                        }
+//                        //create a new folder with a new xml file in the instances folder
+//                        //insert the form in the forms db
+//                        String completed_by = inviate.get(position).getFormEnumeratorId();
+//                        String formname = inviate.get(position).getFormName();
+//                        String displayNameInstance = inviate.get(position).getFormNameInstance();
+//                        String formid = inviate.get(position).getFormId();// empty
+//                        //xml's template path of the form
+//                        String pathxml = inviate.get(position).getPathForm();
+//                        String data = inviate.get(position).getDataInvio();
+//                        //path of the xml file of the answers
+//                        String myinstanceFilePath = xmlpath;
+//
+//                        String query = "INSERT INTO forms" + "(status," + "displayName," + "displayNameInstance," + "description," + "jrFormId,"
+//                                + "formFilePath," + "base64RsaPublicKey," + "displaySubtext," + "md5Hash," + "date," + "jrcacheFilePath," + "formMediaPath,"
+//                                + "modelVersion," + "uiVersion," + "submissionUri," + "canEditWhenComplete," + "instanceFilePath," + "language)" + "VALUES"
+//                                + "('completed','" + formname + "','" + displayNameInstance + "','','" + formid + "','" + pathxml + "','','','','" + data
+//                                + "','','','','','','','" + myinstanceFilePath + "','IT')";
+//                        dbh.getWritableDatabase().execSQL(query);
+//
+//
+//
+//                        // metti la form nella tabelle completed del DB grasp //LL 14-05-2014 eliminato per dismissione del db grasp
+//                        //ApplicationExt.getDatabaseAdapter().open().insert("COMPLETED", displayNameInstance, formname, data, completed_by); LL 14-05-2014 eliminato per dismissione del db grasp
+//                    }
+//                    dbh.close();
+//
+//                }
+//
+//                return true;
+//            }
+//        }
+    //    );
 
-                        //FormInnerListProxy form = inviate.get(positionInviate);// prendo
-                        FormInnerListProxy form = inviate.get(position);  // la
-                        // form
-                        //take the xml string of the form
-                        String xmlFormInstance = getXmlFormInstance(form);
-
-                        //Delete the last part of the string that contains the FormIdentificator
-                        xmlFormInstance = xmlFormInstance.substring(0, xmlFormInstance.indexOf("?formidentificator?"));
-
-                        //change enumerator to string Random or sequential...
-                        xmlFormInstance = xmlFormInstance.replace("</enumerator_1>", "_Clone" + Integer.toString(i) + "</enumerator_1>");
-
-                        try {
-                            //save the xml in the externalStorage e return back the path of the saved xml
-                            xmlpath = saveInstance(form, i, xmlFormInstance);
-                        }
-                        catch (IOException e) {
-                            // TODO Auto-generated catch block
-                            e.printStackTrace();
-                        }
-                        //create a new folder with a new xml file in the instances folder
-                        //insert the form in the forms db
-                        String completed_by = inviate.get(position).getFormEnumeratorId();
-                        String formname = inviate.get(position).getFormName();
-                        String displayNameInstance = inviate.get(position).getFormNameInstance();
-                        String formid = inviate.get(position).getFormId();// empty
-                        //xml's template path of the form
-                        String pathxml = inviate.get(position).getPathForm();
-                        String data = inviate.get(position).getDataInvio();
-                        //path of the xml file of the answers
-                        String myinstanceFilePath = xmlpath;
-
-                        String query = "INSERT INTO forms" + "(status," + "displayName," + "displayNameInstance," + "description," + "jrFormId,"
-                                + "formFilePath," + "base64RsaPublicKey," + "displaySubtext," + "md5Hash," + "date," + "jrcacheFilePath," + "formMediaPath,"
-                                + "modelVersion," + "uiVersion," + "submissionUri," + "canEditWhenComplete," + "instanceFilePath," + "language)" + "VALUES"
-                                + "('completed','" + formname + "','" + displayNameInstance + "','','" + formid + "','" + pathxml + "','','','','" + data
-                                + "','','','','','','','" + myinstanceFilePath + "','IT')";
-                        dbh.getWritableDatabase().execSQL(query);
-
-
-
-                        // metti la form nella tabelle completed del DB grasp //LL 14-05-2014 eliminato per dismissione del db grasp
-                        //ApplicationExt.getDatabaseAdapter().open().insert("COMPLETED", displayNameInstance, formname, data, completed_by); LL 14-05-2014 eliminato per dismissione del db grasp
-                    }
-                    dbh.close();
-
-                }
-                return true;
+    }
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v,
+                                    ContextMenu.ContextMenuInfo menuInfo) {
+        final int position;
+        if (v.getId()==R.id.listViewSubmitted) {
+            AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)menuInfo;
+            menu.setHeaderTitle( inviate.get(info.position).getFormName());
+            menu.setHeaderIcon(R.drawable.ic_menu_forms);
+            String[] menuItems = getResources().getStringArray(R.array.context_menu_submitted);
+            for (int i = 0; i<menuItems.length; i++) {
+                menu.add(Menu.NONE, i, i, menuItems[i]);
             }
-        });
+        }
+    }
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)item.getMenuInfo();
+       int index = info.position;
+        switch(item.getItemId()) {
+            case 0:
+                resendForm(index);
+                return true;
+            case 1:
+
+                editForm(index);
+                return true;
+//
+            default:
+                return super.onContextItemSelected(item);
+        }
+
+    }
+
+    private void resendForm(int position) {
+        resendTask=true;
+        String number = settings.getString(PreferencesActivity.KEY_CLIENT_TELEPHONE, getString(R.string.default_client_telephone));
+        String url = settings.getString(PreferencesActivity.KEY_SERVER_URL,getString(R.string.default_server_url));
+//        String str=inviate.get(positionInviate).getFormNameAndXmlFormid();
+//        String str1[]= str.split("&");
+//        String formId= str1[1];
+        String str = inviate.get(position).getStrPathInstance();
+        String str1[] = str.substring(str.lastIndexOf("instances")).split("/");
+        String xmlID = inviate.get(position).getFormNameAndXmlFormid().split("&")[1];
+        String formId= str1[1];
+        formId =xmlID +"_"+ formId;
+        String form = FileUtils.decodeForm(inviate.get(position));
+        HttpCheckAndSendPostTask asyncTask = new HttpCheckAndSendPostTask(FormListSubmittedActivity.this, url, number, form,FormListSubmittedActivity.this , false,formId,false);
+        asyncTask.execute();
+    }
+
+    private void editForm(int position) {
+        if(settings.getString((PreferencesActivity.KEY_BUTTON_EDIT_SUBMITTED),"").equalsIgnoreCase("enabled")){
+            Intent intent = new Intent(getApplicationContext(), FormEntryActivity.class);
+            String keyIdentifer = "ciao";
+            String keyIdentifer1 = "ciao1";
+            String keyIdentifer2 = "ciao2";
+            String keyIdentifer3 = "ciao3";
+            String pkgName = getPackageName();
+            SaveToDiskTask.sumbitted= true;
+            intent.putExtra(pkgName + keyIdentifer,  inviate.get(position).getPathForm());
+            intent.putExtra(pkgName + keyIdentifer1, inviate.get(position).getFormName());
+            intent.putExtra(pkgName + keyIdentifer2, inviate.get(position).getFormNameInstance());
+            intent.putExtra(pkgName + keyIdentifer3, inviate.get(position).getFormNameAutoGen());
+
+            FormEntryActivity.fromHyera = true;
+
+
+//            if (Intent.ACTION_PICK.equals(action))
+//            {
+//                //setResult(RESULT_OK, new Intent().setData(Uri.parse(salvati.get(positionSalvati).getStrPathInstance()))); LL 14-05-2014 modificata per dismissione del db grasp
+//                setResult(RESULT_OK, new Intent().setData(Uri.parse(inviate.get(positionInviate).getStrPathInstance()))); //LL 14-05-2014 modificata per dismissione del db grasp
+//            }
+//
+//            else
+//            {
+                intent.setAction(Intent.ACTION_EDIT);
+                FormListSavedActivity.SAVE = true;
+                String extension = MimeTypeMap.getFileExtensionFromUrl(inviate.get(position).getStrPathInstance()).toLowerCase();
+                String mimeType= MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
+                intent.setDataAndType(InstanceProviderAPI.InstanceColumns.CONTENT_URI, mimeType);
+                startActivity(intent);//chiama formEntry
+            }
+        else{
+            Toast toast1 = Toast.makeText(getBaseContext(),
+                    R.string.editing_not_enabled, Toast.LENGTH_LONG);
+            toast1.show();
+        }
 
     }
 

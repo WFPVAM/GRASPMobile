@@ -69,7 +69,7 @@ public class SaveToDiskTask extends AsyncTask<Void, String, Integer> {
     public static final int VALIDATE_ERROR = 502;
     public static final int VALIDATED = 503;
     public static final int SAVED_AND_EXIT = 504;
-
+    public static boolean sumbitted= false;
     public String substr;
     public String author;
 
@@ -398,6 +398,7 @@ public class SaveToDiskTask extends AsyncTask<Void, String, Integer> {
         // Since we saved a reloadable instance, it is flagged as re-openable so that if any error 
         // occurs during the packaging of the data for the server fails (e.g., encryption),
         // we can still reopen the filled-out form and re-save it at a later time.
+        if(!sumbitted)
         updateInstanceDatabase(true, true);
         try {
             Thread.sleep(2000);
@@ -552,7 +553,9 @@ public class SaveToDiskTask extends AsyncTask<Void, String, Integer> {
         synchronized (this) {
             if (mSavedListener != null)
                 mSavedListener.savingComplete(result);
+
         }
+
     }
     public void setFormSavedListener(FormSavedListener fsl) {
         synchronized (this) {

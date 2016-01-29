@@ -218,6 +218,10 @@ public class FormListFinalizedActivity extends Activity implements MyCallback {
                                                 String str1[] = str.substring(str.lastIndexOf("instances")).split("/");
                                                 String formId = str1[1] + "_" + imageName + "_image";
 
+
+                                                formId = myFinalized.get(position).getFormNameAndXmlFormid().split("&")[1] +"_"+ formId;
+
+
                                                 istance.clear();
 
                                                 if (isNetworkConnected()) {
@@ -408,7 +412,7 @@ public class FormListFinalizedActivity extends Activity implements MyCallback {
             toast.setGravity(Gravity.CENTER, 40, 40);
             toast.show();
         } else {
-            HttpSendAllImages asyncTask = new HttpSendAllImages(FormListFinalizedActivity.this, httpServer, numClient, finalizzate, FormListFinalizedActivity.this);//chiamo l'async task con la lista di tutte le form da inviare
+            HttpSendAllImages asyncTask = new HttpSendAllImages(FormListFinalizedActivity.this, httpServer, numClient, finalizzate, FormListFinalizedActivity.this);//
 
             asyncTask.execute();
         }

@@ -13,9 +13,13 @@
         <item name="gprsumtspref">gprs/umts preferred</item>
     </string-array>
     <string-array name="context_menu">
-        <item>Delete Form</item>
-        <item>Send Form</item>
+        <item>Delete form</item>
+        <item>Send form</item>
 
+    </string-array>
+    <string-array name="context_menu_submitted">
+        <item>Resend</item>
+        <item>Edit</item>
     </string-array>
     <!-- From: file:/C:/Projects/GRASPMobilePal_PCD/app/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/1.2.1/res/values/values.xml -->
     <eat-comment/>
@@ -414,7 +418,7 @@
     <string name="client">Client</string>
     <string name="client_telephone">Client Telephone</string>
     <string name="colors">Colors</string>
-    <string name="complete_Editing">Enable Editing completed forms</string>
+    <string name="complete_Editing">Enable editing completed forms</string>
     <string name="complete_Editing_disable">Disable Editing completed forms</string>
     <string name="completed_data">Complete (%s)</string>
     <string name="completed_date">Completed on:</string>
@@ -456,13 +460,13 @@
     <string name="delete_repeat_confirm">Remove group \"%s\" and all of its sub-groups?</string>
     <string name="delete_repeat_no">Cancel</string>
     <string name="delete_yes">Delete Forms</string>
-    <string name="deleted">form no longer exists on server. The instances of this form will be deleted.</string>
+    <string name="deleted">form no longer exists on server.Do you want to delete all instances of this form?</string>
     <string name="designed">Designed and Developed by Brains Engineering srl</string>
     <string name="device_not_online">Your device is not online</string>
     <string name="dialog_save">There are saved forms, you want to complete them before you compile a new one?</string>
-    <string name="digit_server_directory">Digit virtual directory</string>
-    <string name="digit_server_ip">Digit server IP</string>
-    <string name="digit_server_port">Digit server port</string>
+    <string name="digit_server_directory">Enter directory name</string>
+    <string name="digit_server_ip">Enter server IP or name</string>
+    <string name="digit_server_port">Enter server port</string>
     <string name="discard_answer">Remove response</string>
     <string name="discard_group">Remove group</string>
     <string name="do_not_change">Cancel</string>
@@ -478,6 +482,7 @@
     <string name="download_forms_result">Download Result</string>
     <string name="downloading_data">Connecting to Server</string>
     <string name="edit_prompt">Edit Prompt</string>
+    <string name="editing_not_enabled">You must enable editing in settings!</string>
     <string name="empty">The form you are trying to send does not exist!</string>
     <string name="enter">start</string>
     <string name="enter_data">Fill Blank Form</string>
@@ -510,7 +515,7 @@
     <string name="first_run">Do first run on restart</string>
     <string name="font_size">Text Font Size</string>
     <string name="form_download_progress">%1$s. Getting media files: %2$s of %3$s</string>
-    <string name="form_exist">The form you are trying to import already exist. Delete the old version in order to import the new one.</string>
+    <string name="form_exist">The form you are trying to import already exist. Delete the old version under New tab to import the new one.</string>
     <string name="form_exist_title">Form already exist!</string>
     <string name="form_name">Form Name:</string>
     <string name="form_not_available">The form is not available on server</string>
@@ -796,6 +801,7 @@
     <string name="sms_delivered">SMS delivered</string>
     <string name="splash_path">Selected Splash Image</string>
     <string name="submission_url">Submission Path</string>
+    <string name="submitted_Editing">Enable editing submitted forms</string>
     <string name="submitted_on">Submitted on:</string>
     <string name="success">Success</string>
     <string name="suggest">...password</string>
@@ -822,7 +828,7 @@
     <string name="unrecognized_uri">unrecognized URI:</string>
     <string name="update">Are you sure you want to update the application with newer version?</string>
     <string name="update_toast">Can\'\t download updates: SD not present</string>
-    <string name="updated">form was updated and has new version.The instances of this form will be deleted. Please contact the administrator.</string>
+    <string name="updated">form was updated and has new version.Do you want to delete all instances of this form?</string>
     <string name="updated_title">Form has new version!</string>
     <string name="upload_all_successful">%s form(s) sent successfully.</string>
     <string name="upload_results">Upload Results</string>

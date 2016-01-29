@@ -18,9 +18,14 @@
         <item>Submitted</item>
     </string-array>
     <string-array name="context_menu">
-        <item >Delete Form</item>
-        <item >Send Form</item>
+        <item >Delete form</item>
+        <item >Send form</item>
 
+    </string-array>
+
+    <string-array name="context_menu_submitted">
+        <item>Resend</item>
+        <item>Edit</item>
     </string-array>
     <!-- Used in app/menu examples -->
     <string-array name="entryvalues_list_preference">

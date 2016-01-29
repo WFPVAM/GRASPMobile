@@ -2,32 +2,11 @@
 <items version="2" >
 
     <item
-        jar="C:\Projects\GRASPMobilePal\app\lib\xercesImpl.jar"
+        jar="C:\Users\claudia.alawi\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="78e8536aa8b161c13232f37a32910666f787a5af">
-        <dex dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\xercesImpl-b0d00df5e4dc644816a5bceb49468de82c41a447.jar" />
-    </item>
-    <item
-        jar="C:\Projects\GRASPMobilePal\app\lib\w3c-dom.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="c9dbc011544bfe3790f940cde9af0986addac744">
-        <dex dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\w3c-dom-fbb10ceb71b51d7fe9bb90927dd57e129a3794e3.jar" />
-    </item>
-    <item
-        jar="C:\Projects\GRASPMobilePal\app\build\intermediates\exploded-aar\com.embarkmobile\zxing-android-minimal\1.2.1\jars\classes.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="37064eecdb827788e50302f6e1b094541a831760">
-        <dex dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\classes-23e8e8cea3199e0e646e56441a11d430e36b9b29.jar" />
-    </item>
-    <item
-        jar="C:\Projects\GRASPMobilePal_PCD\app\lib\osmdroid-packager-4.2-javadoc.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="da58f38ae49f8885839873e36b3c8d3e638c1466">
-        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\osmdroid-packager-4.2-javadoc-591313c03808eeb18bb3550d36e96b342c39fea0.jar" />
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-c61c46f565a9d517e2a6840bbac38d0d67f394e0.jar" />
     </item>
     <item
         jar="C:\Projects\GRASPMobilePal\app\lib\joda-time-2.0.jar"
@@ -37,88 +16,11 @@
         <dex dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\joda-time-2.0-2cf3c0fd813eeb12246632a7f6873e378839ca8d.jar" />
     </item>
     <item
-        jar="C:\Projects\GRASPMobilePal_PCD\app\lib\osmdroid-android-4.2-sources.jar"
+        jar="C:\Projects\GRASPMobilePal_PCD\app\lib\xercesImpl.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="dda05dceb3a5666e116e019c738dd85bd4ca0954">
-        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\osmdroid-android-4.2-sources-a1a88132b951f53c30d69109d5a25c60c3f848c6.jar" />
-    </item>
-    <item
-        jar="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-6e9b3f7a08b1874774be2cdd6fb3ff940b40aa61.jar" />
-    </item>
-    <item
-        jar="C:\Programs\android-studio\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-e2caa82d2bf76f07b498ad380ddf1917ab0dfcb6.jar" />
-    </item>
-    <item
-        jar="C:\Projects\GRASPMobilePal_PCD\app\lib\kxml2-2.2.3.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="2c239293db424c0cc7dac6076f6dc406694a8356">
-        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\kxml2-2.2.3-80919d0bc8cdba088c618efaa68e0ad8c49d8c90.jar" />
-    </item>
-    <item
-        jar="C:\Projects\GRASPMobilePal_PCD\app\lib\regexp-me.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="27edcd147dfc908a3c3c837a57d3672d52f2f609">
-        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\regexp-me-fbce94d7cfcac93677579e198067ec3efbca1ea6.jar" />
-    </item>
-    <item
-        jar="C:\Projects\GRASPMobilePal_PCD\app\lib\osmdroid-third-party-4.2-sources.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="17866b0a7f885638ab1ec5ce6df2691681a208ef">
-        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\osmdroid-third-party-4.2-sources-54452bf68bac5617361bd36b68437469f588af06.jar" />
-    </item>
-    <item
-        jar="C:\Projects\GRASPMobilePal_PCD\app\lib\w3c-dom.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="c9dbc011544bfe3790f940cde9af0986addac744">
-        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\w3c-dom-76dfcec75389ee83603decf64fbce4a941dc00b4.jar" />
-    </item>
-    <item
-        jar="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\exploded-aar\com.embarkmobile\zxing-android-minimal\1.2.1\jars\classes.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="37064eecdb827788e50302f6e1b094541a831760">
-        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\classes-90990f7260c088d26e42281085c49cbcf34cc946.jar" />
-    </item>
-    <item
-        jar="C:\Projects\GRASPMobilePal_PCD\app\lib\osmdroid-packager-4.2-sources.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="3dc873d1c184b90a5145fe4b358ef493c2738e47">
-        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\osmdroid-packager-4.2-sources-1123027fe7bd52ec19574d06f35f81e5645a6ff6.jar" />
-    </item>
-    <item
-        jar="C:\Projects\GRASPMobilePal\app\lib\regexp-me.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="27edcd147dfc908a3c3c837a57d3672d52f2f609">
-        <dex dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\regexp-me-4cecfd2d22eae45f1117c4036b8fdf7b33b96e5c.jar" />
-    </item>
-    <item
-        jar="C:\Projects\GRASPMobilePal_PCD\app\lib\osmdroid-packager-4.2.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="bb35d0cd2b5218119643c8629d65cf0abdeabbcb">
-        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\osmdroid-packager-4.2-f38612c67f874b873120918f07786cf668289c66.jar" />
-    </item>
-    <item
-        jar="C:\Projects\GRASPMobilePal\app\lib\kxml2-2.2.3.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="2c239293db424c0cc7dac6076f6dc406694a8356">
-        <dex dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\kxml2-2.2.3-c36fc58c247b8f1931d38d7c867d9ccbad619a04.jar" />
+        sha1="78e8536aa8b161c13232f37a32910666f787a5af">
+        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\xercesImpl-b88e3879cc59dc84aad77212b59e33edbacfa036.jar" />
     </item>
     <item
         jar="C:\Projects\GRASPMobilePal_PCD\app\lib\osmdroid-android-4.2.jar"
@@ -128,11 +30,11 @@
         <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\osmdroid-android-4.2-cb28f19246d194be0a7577ef122b63c0910390e1.jar" />
     </item>
     <item
-        jar="C:\Projects\GRASPMobilePal_PCD\app\lib\joda-time-2.0.jar"
+        jar="C:\Projects\GRASPMobilePal_PCD\app\lib\osmdroid-packager-4.2-javadoc.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="752c0fe8a5b2d6704c9d9d6f06d9abdcacf4045d">
-        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\joda-time-2.0-d0e8eda1fe1111e5ad55b0d3db5bbf137ef8f5b8.jar" />
+        sha1="da58f38ae49f8885839873e36b3c8d3e638c1466">
+        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\osmdroid-packager-4.2-javadoc-591313c03808eeb18bb3550d36e96b342c39fea0.jar" />
     </item>
     <item
         jar="C:\Projects\GRASPMobilePal_PCD\app\lib\osmdroid-third-party-4.2.jar"
@@ -142,18 +44,18 @@
         <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\osmdroid-third-party-4.2-54736499e8789e32e8b0fadef255fd759f17e952.jar" />
     </item>
     <item
-        jar="C:\Projects\GRASPMobilePal_PCD\app\lib\xercesImpl.jar"
+        jar="C:\Projects\GRASPMobilePal\app\build\intermediates\exploded-aar\com.embarkmobile\zxing-android-minimal\1.2.1\jars\classes.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="78e8536aa8b161c13232f37a32910666f787a5af">
-        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\xercesImpl-b88e3879cc59dc84aad77212b59e33edbacfa036.jar" />
+        sha1="37064eecdb827788e50302f6e1b094541a831760">
+        <dex dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\classes-23e8e8cea3199e0e646e56441a11d430e36b9b29.jar" />
     </item>
     <item
-        jar="C:\Projects\GRASPMobilePal_PCD\app\lib\slf4j-android-1.6.1-RC1.jar"
+        jar="C:\Projects\GRASPMobilePal\app\lib\w3c-dom.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="a0b527e8aabcc1f1e97d1674dc3f4f0794ec5df1">
-        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\slf4j-android-1.6.1-RC1-3e2bfbfda7263ace1d256909fb2bde7ef18caf2a.jar" />
+        sha1="c9dbc011544bfe3790f940cde9af0986addac744">
+        <dex dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\w3c-dom-fbb10ceb71b51d7fe9bb90927dd57e129a3794e3.jar" />
     </item>
     <item
         jar="C:\Users\claudia.alawi\.gradle\caches\modules-2\files-2.1\com.google.zxing\core\3.2.0\e019d15a13a9786f881141d2df6654b8510bce8b\core-3.2.0.jar"
@@ -163,11 +65,88 @@
         <dex dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\core-3.2.0-0468317e48db82061ebedf5d6ccada239edae65d.jar" />
     </item>
     <item
+        jar="C:\Projects\GRASPMobilePal\app\lib\xercesImpl.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="78e8536aa8b161c13232f37a32910666f787a5af">
+        <dex dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\xercesImpl-b0d00df5e4dc644816a5bceb49468de82c41a447.jar" />
+    </item>
+    <item
+        jar="C:\Projects\GRASPMobilePal\app\lib\kxml2-2.2.3.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="2c239293db424c0cc7dac6076f6dc406694a8356">
+        <dex dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\kxml2-2.2.3-c36fc58c247b8f1931d38d7c867d9ccbad619a04.jar" />
+    </item>
+    <item
+        jar="C:\Projects\GRASPMobilePal\app\lib\regexp-me.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="27edcd147dfc908a3c3c837a57d3672d52f2f609">
+        <dex dex="C:\Projects\GRASPMobilePal\app\build\intermediates\pre-dexed\debug\regexp-me-4cecfd2d22eae45f1117c4036b8fdf7b33b96e5c.jar" />
+    </item>
+    <item
+        jar="C:\Projects\GRASPMobilePal_PCD\app\lib\regexp-me.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="27edcd147dfc908a3c3c837a57d3672d52f2f609">
+        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\regexp-me-fbce94d7cfcac93677579e198067ec3efbca1ea6.jar" />
+    </item>
+    <item
+        jar="C:\Projects\GRASPMobilePal_PCD\app\lib\joda-time-2.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="752c0fe8a5b2d6704c9d9d6f06d9abdcacf4045d">
+        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\joda-time-2.0-d0e8eda1fe1111e5ad55b0d3db5bbf137ef8f5b8.jar" />
+    </item>
+    <item
+        jar="C:\Projects\GRASPMobilePal_PCD\app\lib\slf4j-android-1.6.1-RC1.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="a0b527e8aabcc1f1e97d1674dc3f4f0794ec5df1">
+        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\slf4j-android-1.6.1-RC1-3e2bfbfda7263ace1d256909fb2bde7ef18caf2a.jar" />
+    </item>
+    <item
+        jar="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-6e9b3f7a08b1874774be2cdd6fb3ff940b40aa61.jar" />
+    </item>
+    <item
+        jar="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\exploded-aar\com.embarkmobile\zxing-android-minimal\1.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="37064eecdb827788e50302f6e1b094541a831760">
+        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\classes-90990f7260c088d26e42281085c49cbcf34cc946.jar" />
+    </item>
+    <item
+        jar="C:\Projects\GRASPMobilePal_PCD\app\lib\kxml2-2.2.3.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="2c239293db424c0cc7dac6076f6dc406694a8356">
+        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\kxml2-2.2.3-80919d0bc8cdba088c618efaa68e0ad8c49d8c90.jar" />
+    </item>
+    <item
         jar="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
         <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\classes-0eaabdc5e72b32402bede7993d373e16b9faa820.jar" />
+    </item>
+    <item
+        jar="C:\Projects\GRASPMobilePal_PCD\app\lib\w3c-dom.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="c9dbc011544bfe3790f940cde9af0986addac744">
+        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\w3c-dom-76dfcec75389ee83603decf64fbce4a941dc00b4.jar" />
+    </item>
+    <item
+        jar="C:\Projects\GRASPMobilePal_PCD\app\lib\osmdroid-packager-4.2.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="bb35d0cd2b5218119643c8629d65cf0abdeabbcb">
+        <dex dex="C:\Projects\GRASPMobilePal_PCD\app\build\intermediates\pre-dexed\debug\osmdroid-packager-4.2-f38612c67f874b873120918f07786cf668289c66.jar" />
     </item>
 
 </items>

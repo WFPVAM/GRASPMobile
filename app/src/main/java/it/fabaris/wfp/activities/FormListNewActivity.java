@@ -155,7 +155,7 @@ public class FormListNewActivity extends Activity
 							*/
                                         dialog.dismiss();
                                         FormProvider.DatabaseHelper dbh = new FormProvider.DatabaseHelper("forms.db");
-                                        String query1 = "UPDATE forms SET status='cancelled' WHERE displayName = '"
+                                        String query1 = "DELETE FROM forms WHERE displayName = '"
                                                 + nuove.get(position).getFormName()+"'";
                                                // + "' AND status='new',status='completed,status='saved'";
 

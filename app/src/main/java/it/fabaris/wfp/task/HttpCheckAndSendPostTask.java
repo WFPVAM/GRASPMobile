@@ -26,6 +26,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 import it.fabaris.wfp.activities.FormListCompletedActivity;
+import it.fabaris.wfp.activities.FormListSubmittedActivity;
 import it.fabaris.wfp.activities.PreferencesActivity;
 import it.fabaris.wfp.activities.R;
 import it.fabaris.wfp.listener.MyCallback;
@@ -45,6 +46,7 @@ public class HttpCheckAndSendPostTask extends AsyncTask<String, Void, String> {
     String http;
     String http1;//test url
     String http2;//response url
+    String http3;
     String phone;
     String data;//the form to send
     boolean isSendAllForms;
@@ -66,11 +68,13 @@ public class HttpCheckAndSendPostTask extends AsyncTask<String, Void, String> {
         {
             this.http1 = http+"?call=test";
             this.http2 = http+"?call=response";
+            this.http3= http+"?call=editedResponse";
         }
         else//if the server is the desktop designer
         {
             this.http1 = http+"/test";
             this.http2 = http+"/response";
+            this.http3= http+"/call=editedResponse";
         }
         this.phone = phone;
         this.data = data;
@@ -142,8 +146,12 @@ public class HttpCheckAndSendPostTask extends AsyncTask<String, Void, String> {
                     synchronized (lock)
                     {
                         //send the form to the server
+                        if (FormListSubmittedActivity.resendTask)
+                        http2=http3;
+
                         HttpSendPostTask asyncTask = new HttpSendPostTask(context, http2, phone, data, callback, lock, isSendAllForms,formId,formHasImages);
-                        //Log.i("FUNZIONE HttpSendPostTask", "thread: "+ data);
+
+                        Log.i("FUNZIONE HttpSendPostTask", "thread: "+ data);
                         Log.i("FUNZIONE HttpSendPostTask", "thread: ");
                         asyncTask.execute();
 
