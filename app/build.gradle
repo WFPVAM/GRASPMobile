@@ -19,6 +19,7 @@ android {
         applicationId 'it.fabaris.wfp.activities'
         minSdkVersion 8
         targetSdkVersion 10
+
     }
     buildTypes {
         release {

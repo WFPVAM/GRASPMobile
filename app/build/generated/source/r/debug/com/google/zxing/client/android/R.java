@@ -201,6 +201,6 @@ public final class R {
 		public static final int zxing_app_name = 0x7f0901e5;
 	}
 	public static final class xml {
-		public static final int zxing_preferences = 0x7f050002;
+		public static final int zxing_preferences = 0x7f050003;
 	}
 }

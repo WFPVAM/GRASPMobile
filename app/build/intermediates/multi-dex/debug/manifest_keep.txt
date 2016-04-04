@@ -1,0 +1,34 @@
+-keep class utils.ApplicationExt {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
+-keep class it.fabaris.wfp.activities.SplashScreenActivity { <init>(); }
+-keep class it.fabaris.wfp.activities.FormListActivity { <init>(); }
+-keep class it.fabaris.wfp.activities.FormListNewActivity { <init>(); }
+-keep class it.fabaris.wfp.activities.FormListSavedActivity { <init>(); }
+-keep class it.fabaris.wfp.activities.FormListCompletedActivity { <init>(); }
+-keep class it.fabaris.wfp.activities.FormListSubmittedActivity { <init>(); }
+-keep class it.fabaris.wfp.activities.FormListFinalizedActivity { <init>(); }
+-keep class it.fabaris.wfp.activities.SmsListActivity { <init>(); }
+-keep class it.fabaris.wfp.activities.GeoPointActivity { <init>(); }
+-keep class it.fabaris.wfp.activities.MenuActivity { <init>(); }
+-keep class it.fabaris.wfp.activities.PreferencesActivity { <init>(); }
+-keep class it.fabaris.wfp.activities.FormHierarchyActivity { <init>(); }
+-keep class it.fabaris.wfp.activities.CreditsActivity { <init>(); }
+-keep class it.fabaris.wfp.activities.HelpActivity { <init>(); }
+-keep class it.fabaris.wfp.activities.ControlActivity { <init>(); }
+-keep class it.fabaris.wfp.activities.userPreferencesActivity { <init>(); }
+-keep class it.fabaris.wfp.activities.FormEntryActivity { <init>(); }
+-keep class it.fabaris.wfp.provider.FormProvider { <init>(); }
+-keep class it.fabaris.wfp.provider.MessageProvider { <init>(); }
+-keep class it.fabaris.wfp.provider.InstanceProvider { <init>(); }
+-keep class it.fabaris.wfp.broadcast.SmsReceiverBroadcast { <init>(); }
+-keep class it.fabaris.wfp.activities.MapActivity { <init>(); }
+-keep class com.google.zxing.client.android.CaptureActivity { <init>(); }
+-keep class com.google.zxing.client.android.HelpActivity { <init>(); }
+-keep public class * extends android.app.backup.BackupAgent {
+    <init>();
+}
+-keep public class * extends java.lang.annotation.Annotation {
+    *;
+}
